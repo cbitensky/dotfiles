@@ -1,0 +1,302 @@
+post_src_install() {
+	rm -rf $D/usr/lib64/firefox/{browser/defaults,distribution} || die
+	clog Gentoo defatuls disabled
+}
+
+pre_src_prepare() {
+	local N=$(($NTHREADS/2))
+	sed -i \
+		-e "s/multiprocessing.cpu_count()/$N/" \
+		"${S}"/build/moz.configure/lto-pgo.configure \
+		|| die "sed failed to set num_cores"
+
+	sed -i \
+		-e "s/multiprocessing.cpu_count()/$N/" \
+		"${S}"/intl/icu_sources_data.py \
+		|| die "sed failed to set num_cores"
+
+	clog flto set to $N
+}
+
+post_src_prepare() {
+	sed -i -r 's/^(\s*\{\s*TEXT_XML,\s*")xml("\s*\},)/\0\n\1fb2\2/' \
+		$S/uriloader/exthandler/nsExternalHelperAppService.cpp || die
+	clog nsExternalHelperAppService.cpp: fb2 added
+
+	sed -i -r 's/("privatebrowsing", ")[^"]+(")/\1about:blank\2/' \
+		$S/browser/components/about/AboutRedirector.cpp || die
+	clog AboutRedirector.cpp: private browsing window cleared
+
+	sed -i 's/ mIsLocked = aValue;/ mIsLocked = false;/' \
+		$S/modules/libpref/Preferences.cpp || die
+	clog Preferences.cpp: locked preferences disabled
+
+	echo "\
+ac_add_options --disable-sandbox
+ac_add_options --disable-content-sandbox
+" >> $S/build/mozconfig.common.override || die
+	clog mozconfig.common.override: sandbox disabled
+
+	sed -i -r 's/!importBookmarks/true/' "$S/browser/components/BrowserGlue.jsm" || die
+	clog default bookmarks removed
+
+	echo "\
+MOZ_COLLECTING_RUNNABLE_TELEMETRY=0
+MOZ_CRASHREPORTER=0
+MOZ_DATA_REPORTING=0
+MOZ_GFX_CRASH_TELEMETRY=0
+MOZ_SERVICES_HEALTHREPORT=0
+MOZ_TELEMETRY_ON_BY_DEFAULT=0
+MOZ_TELEMETRY_REPORTING=0
+" >> $S/browser/confvars.sh || die
+	clog MOZ_* zeroed
+
+	cd "$S/browser/components/search/extensions"
+	for d in *; do
+	    if [[ $d != google* && $d != ddg* ]]; then
+	       rm -rf "$d"
+	    fi
+	done
+	cd -
+	clog search engines filtered
+
+	add_sed(){
+		SED+=$'\n/^- name: '${1//./\.}'$/,/^-/s/(^\s+value:\s*).*$/\1'$2/
+	}
+
+	add_sed browser.newtabpage.enabled false
+	add_sed browser.safebrowsing.malware.enabled false
+	add_sed browser.safebrowsing.phishing.enabled false
+	add_sed datareporting.healthreport.uploadEnabled false
+	add_sed dom.forms.autocapitalize true
+	add_sed dom.forms.enterkeyhint true
+	add_sed dom.reporting.enabled false
+	add_sed dom.reporting.featurePolicy.enabled false
+	add_sed dom.security.https_first_pbm false
+	add_sed dom.security.unexpected_system_load_telemetry_enabled false
+	add_sed dom.select_events.textcontrols.selectstart.enabled true
+	add_sed dom.webcomponents.formAssociatedCustomElement.enabled true
+	add_sed dom.webgpu.enabled true
+	add_sed general.smoothScroll false
+	add_sed geo.enabled false
+	add_sed image.jxl.enabled true
+	add_sed javascript.options.property_error_message_fix true
+	add_sed layers.acceleration.force-enabled true
+	add_sed layout.css.color-mix.enabled true
+	add_sed layout.css.constructable-stylesheets.enabled true
+	add_sed layout.css.d-property.enabled true
+	add_sed layout.css.grid-template-masonry-value.enabled true
+	add_sed layout.css.math-style.enabled true
+	add_sed layout.css.motion-path-ray.enabled true
+	add_sed mathml.mathspace_names.disabled true
+	add_sed media.allowed-to-play.enabled true
+	add_sed media.ffmpeg.vaapi.enabled true
+	add_sed print.default_dpi 600.0f
+	add_sed privacy.donottrackheader.enabled true
+	add_sed privacy.socialtracking.block_cookies.enabled false
+	add_sed privacy.trackingprotection.annotate_channels false
+	add_sed privacy.trackingprotection.cryptomining.enabled false
+	add_sed privacy.trackingprotection.enabled false
+	add_sed privacy.trackingprotection.fingerprinting.enabled false
+	add_sed privacy.trackingprotection.origin_telemetry.enabled false
+	add_sed privacy.trackingprotection.pbmode.enabled false
+	add_sed privacy.trackingprotection.socialtracking.enabled false
+	add_sed view_source.tab_size 3
+	add_sed view_source.wrap_long_lines true
+	add_sed webgl.force-enabled true
+	add_sed widget.content.allow-gtk-dark-theme true
+
+	sed -i -r "$SED" $S/modules/libpref/init/StaticPrefList.yaml || die
+	clog StaticPrefList.yaml settings set
+
+	SED=
+	add_sed(){
+		SED+=$'\ns/(pref\("'${1//./\.}'",\s*)[^\)]*(\);)/\1'$2'\2/g'
+	}
+
+	add_sed accessibility.force_disabled 1
+	add_sed accessibility.typeaheadfind false
+	add_sed app.normandy.enabled false
+	add_sed app.normandy.first_run false
+	add_sed app.update.auto false
+	add_sed app.update.checkInstallTime false
+	add_sed app.update.checkInstallTime.days 9999
+	add_sed browser.aboutConfig.showWarning false
+	add_sed browser.bookmarks.max_backups 0
+	add_sed browser.chrome.toolbar_tips false
+	add_sed browser.chrome.toolbar_tips false
+	add_sed browser.compactmode.show true
+	add_sed browser.crashReports.unsubmittedCheck.enabled false
+	add_sed browser.discovery.enabled false
+	add_sed browser.display.show_loading_image_placeholder true
+	add_sed browser.download.animateNotifications false
+	add_sed browser.download.autohideButton false
+	add_sed browser.download.forbid_open_with true
+	add_sed browser.download.manager.addToRecentDocs false
+	add_sed browser.download.saveLinkAsFilenameTimeout 2500
+	add_sed browser.menu.showViewImageInfo true
+	add_sed browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons false
+	add_sed browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features false
+	add_sed browser.newtabpage.activity-stream.section.highlights.includeBookmarks false
+	add_sed browser.newtabpage.activity-stream.section.highlights.includeDownloads false
+	add_sed browser.newtabpage.activity-stream.section.highlights.includeVisited false
+	add_sed browser.partnerlink.attributionURL '""'
+	add_sed browser.partnerlink.campaign.topsites '""'
+	add_sed browser.ping-centre.telemetry false
+	add_sed browser.privatebrowsing.infoEnabled false
+	add_sed browser.privatebrowsing.infoTitleEnable false
+	add_sed browser.privatebrowsing.promoEnabled false
+	add_sed browser.privatebrowsing.promoTitleEnabled false
+	add_sed browser.quitShortcut.disabled true
+	add_sed browser.safebrowsing.downloads.enabled false
+	add_sed browser.safebrowsing.downloads.remote.block_potentially_unwanted false
+	add_sed browser.safebrowsing.downloads.remote.block_uncommon false
+	add_sed browser.search.suggest.enabled false
+	add_sed browser.sessionstore.resume_from_crash false
+	add_sed browser.shell.checkDefaultBrowser false
+	add_sed browser.startup.homepage '"about:blank"'
+	add_sed browser.startup.page 0
+	add_sed browser.startup.upgradeDialog.enabled false
+	add_sed browser.tabs.closeWindowWithLastTab false
+	add_sed browser.tabs.insertRelatedAfterCurrent false
+	add_sed browser.tabs.selectOwnerOnClose false
+	add_sed browser.tabs.warnOnClose false
+	add_sed browser.tabs.warnOnCloseOtherTabs false
+	add_sed browser.tabs.warnOnOpen false
+	add_sed browser.toolbars.bookmarks.2h2020 false
+	add_sed browser.toolbars.bookmarks.visibility '"never"'
+	add_sed browser.uidensity 1
+	add_sed browser.uitour.enabled false
+	add_sed browser.urlbar.accessibility.tabToSearch.announceResults false
+	add_sed browser.urlbar.autoFill false
+	add_sed browser.urlbar.dnsResolveSingleWordsAfterSearch 0
+	add_sed browser.urlbar.eventTelemetry.enabled false
+	add_sed browser.urlbar.filter.javascript false
+	add_sed browser.urlbar.groupLabels.enabled false
+	add_sed browser.urlbar.maxRichResults 0
+	add_sed browser.urlbar.quicksuggest.enabled false
+	add_sed browser.urlbar.richSuggestions.tail false
+	add_sed browser.urlbar.showSearchSuggestionsFirst false
+	add_sed browser.urlbar.speculativeConnect.enabled false
+	add_sed browser.urlbar.sponsoredTopSites false
+	add_sed browser.urlbar.suggest.bookmark false
+	add_sed browser.urlbar.suggest.engines false
+	add_sed browser.urlbar.suggest.history false
+	add_sed browser.urlbar.suggest.openpage false
+	add_sed browser.urlbar.suggest.quicksuggest false
+	add_sed browser.urlbar.suggest.searches false
+	add_sed browser.urlbar.suggest.topsites false
+	add_sed browser.urlbar.trimURLs false
+	add_sed browser.warnOnQuit false
+	add_sed clipboard.plainTextOnly true
+	add_sed corroborator.enabled false
+	add_sed datareporting.healthreport.uploadEnabled false
+	add_sed datareporting.policy.dataSubmissionEnabled false
+	add_sed datareporting.policy.firstRunURL '""'
+	add_sed devtools.browsertoolbox.fission true
+	add_sed devtools.selfxss.count 5
+	add_sed devtools.theme '"dark"'
+	add_sed devtools.webconsole.input.context true
+	add_sed dom.push.connection.enabled false
+	add_sed dom.push.enabled false
+	add_sed dom.serviceWorkers.enabled false
+	add_sed extensions.abuseReport.enabled false
+	add_sed extensions.blocklist.enabled false
+	add_sed extensions.experiments.enabled true
+	add_sed extensions.htmlaboutaddons.recommendations.enabled false
+	add_sed extensions.langpacks.signatures.required false
+	add_sed extensions.pocket.enabled false
+	add_sed extensions.pocket.showHome false
+	add_sed extensions.update.autoUpdateDefault false
+	add_sed extensions.webcompat-reporter.enabled false
+	add_sed findbar.highlightAll true
+	add_sed general.autoScroll false
+	add_sed identity.fxaccounts.toolbar.enabled false
+	add_sed intl.multilingual.downloadEnabled false
+	add_sed intl.multilingual.enabled false
+	add_sed layout.spellcheckDefault 0
+	add_sed media.throttle-factor 8
+	add_sed media.videocontrols.picture-in-picture.enabled false
+	add_sed media.videocontrols.picture-in-picture.video-toggle.enabled false
+	add_sed network.connectivity-service.enabled false
+	add_sed network.http.connection-timeout 30
+	add_sed network.http.response.timeout 45
+	add_sed pdfjs.firstRun false
+	add_sed permissions.default.desktop-notification 2
+	add_sed permissions.default.geo 2
+	add_sed plugins.flashBlock.enabled false
+	add_sed plugins.show_infobar true
+	add_sed print.more-settings.open true
+	add_sed print.print_footercenter '""'
+	add_sed print.print_footerleft '""'
+	add_sed print.print_footerright '""'
+	add_sed print.print_headercenter '""'
+	add_sed print.print_headerleft '""'
+	add_sed print.print_headerright '""'
+	add_sed privacy.webrtc.legacyGlobalIndicator false
+	add_sed reader.parse-on-load.enabled false
+	add_sed security.OCSP.enabled 0
+	add_sed security.dialog_enable_delay 0
+	add_sed services.sync.engine.creditcards.available false
+	add_sed services.sync.prefs.sync.general.smoothScroll false
+	add_sed signon.generation.enabled false
+	add_sed signon.management.page.breach-alerts.enabled false
+	add_sed startup.homepage_override_url '""'
+	add_sed startup.homepage_welcome_url '""'
+	add_sed startup.homepage_welcome_url.additional '""'
+	add_sed toolkit.legacyUserProfileCustomizations.stylesheets true
+	add_sed toolkit.telemetry.archive.enabled false
+	add_sed toolkit.telemetry.bhrPing.enabled false
+	add_sed toolkit.telemetry.firstShutdownPing.enabled false
+	add_sed toolkit.telemetry.newProfilePing.enabled false
+	add_sed toolkit.telemetry.server '""'
+	add_sed toolkit.telemetry.server_owner '""'
+	add_sed toolkit.telemetry.shutdownPingSender.enabled false
+	add_sed toolkit.telemetry.unified false
+	add_sed toolkit.telemetry.updatePing.enabled false
+
+	#add_sed browser.chrome.site_icons false
+	#add_sed browser.region.network.url '""'
+	#add_sed browser.region.update.enabled '""'
+	#add_sed browser.tabs.tooltipsShowPidAndActiveness true
+	#add_sed devtools.performance.popup.feature-flag false
+	#add_sed devtools.performance.recording.ui-base-url '""'
+	#add_sed dom.push.serverURL '""'
+	#add_sed font.default.x-cyrillic '"sans-serif"'
+	#add_sed geo.provider.network.url '""'
+	#add_sed network.dns.disablePrefetch true
+	#add_sed network.http.active_tab_priority false
+	#add_sed xpinstall.whitelist.required false
+
+	PREFFILES="$S/modules/libpref/init/all.js $S/browser/app/profile/firefox.js $S/browser/branding/*/pref/firefox-branding.js"
+	sed -i -r 's/,\s*sticky\);/\);/'"$SED" $PREFFILES || die
+	
+	add_pref() { PREF+='pref("'$1'", '$2$');\n'; }
+
+	add_pref app.update.langpack.enabled false
+	add_pref browser.newtabpage.activity-stream.feeds.topsites false
+	add_pref browser.newtabpage.activity-stream.showSearch false
+	add_pref browser.newtabpage.activity-stream.showSponsoredTopSites false
+	add_pref browser.rights.3.shown true
+	add_pref browser.urlbar.hideGoButton true
+	add_pref media.gmp-gmpopenh264.autoupdate false
+	add_pref spellchecker.dictionary_path '"/usr/share/myspell"'
+	add_pref toolkit.telemetry.enabled false
+	add_pref toolkit.telemetry.reportingpolicy.firstRun false
+	add_pref ui.prefersReducedMotion 1
+	echo "$PREF" >> "$S/modules/libpref/init/all.js"
+	clog prefs patched
+
+#new-tab-button,
+
+	echo '
+.tab-close-button, #star-button-box, #urlbar-go-button, #tracking-protection-icon-container, #tabs-newtab-button { display: none !important }
+#urlbar-input::placeholder { opacity: 0 !important }
+' >> "$S/browser/base/content/browser.css" || die
+	clog browser.css appended
+
+	sed -i -r '/^\s*"spring",$|this\._updateForNew|"new-tab-button",|, 0, "spring"\);/d' "$S/browser/components/customizableui/CustomizableUI.jsm"
+	sed -i -r '/toolbarspring/d' "$S/browser/base/content/navigator-toolbox.inc.xhtml" 
+	clog springs removed
+
+}

@@ -1,0 +1,73 @@
+diff --git a/src/DefaultPieceStorage.cc b/src/DefaultPieceStorage.cc
+index 456058a..279b873 100644
+--- a/src/DefaultPieceStorage.cc
++++ b/src/DefaultPieceStorage.cc
+@@ -90,7 +90,7 @@ DefaultPieceStorage::DefaultPieceStorage(
+       // than that.
+       nextHaveIndex_(1),
+       pieceStatMan_(std::make_shared<PieceStatMan>(
+-          downloadContext->getNumPieces(), true)),
++          downloadContext->getNumPieces(), !option_->getAsBool(PREF_BT_EVIL))),
+       pieceSelector_(make_unique<RarestPieceSelector>(pieceStatMan_)),
+       wrDiskCache_(nullptr)
+ {
+diff --git a/src/OptionHandlerFactory.cc b/src/OptionHandlerFactory.cc
+index fd96361..0429901 100644
+--- a/src/OptionHandlerFactory.cc
++++ b/src/OptionHandlerFactory.cc
+@@ -1458,6 +1458,16 @@ std::vector<OptionHandler*> OptionHandlerFactory::createOptionHandlers()
+     handlers.push_back(op);
+   }
+   {
++    OptionHandler* op(new BooleanOptionHandler(PREF_BT_EVIL,
++                                               TEXT_BT_EVIL, A2_V_FALSE,
++                                               OptionHandler::OPT_ARG));
++    op->addTag(TAG_BITTORRENT);
++    op->setInitialOption(true);
++    op->setChangeGlobalOption(true);
++    op->setChangeOptionForReserved(true);
++    handlers.push_back(op);
++  }
++  {
+     OptionHandler* op(new BooleanOptionHandler(PREF_BT_ENABLE_LPD,
+                                                TEXT_BT_ENABLE_LPD, A2_V_FALSE,
+                                                OptionHandler::OPT_ARG));
+diff --git a/src/prefs.cc b/src/prefs.cc
+index c0e1af6..06787c1 100644
+--- a/src/prefs.cc
++++ b/src/prefs.cc
+@@ -526,6 +526,8 @@ PrefPtr PREF_BT_MAX_PEERS = makePref("bt-max-peers");
+ PrefPtr PREF_BT_EXTERNAL_IP = makePref("bt-external-ip");
+ // values: 1*digit '=' a string that your file system recognizes as a file name.
+ PrefPtr PREF_INDEX_OUT = makePref("index-out");
++// value: true | false
++PrefPtr PREF_BT_EVIL = makePref("evil");
+ // values: 1*digit
+ PrefPtr PREF_BT_TRACKER_INTERVAL = makePref("bt-tracker-interval");
+ // values: 1*digit
+diff --git a/src/prefs.h b/src/prefs.h
+index fb06472..20d761d 100644
+--- a/src/prefs.h
++++ b/src/prefs.h
+@@ -460,6 +460,8 @@ extern PrefPtr PREF_DHT_ENTRY_POINT_PORT6;
+ extern PrefPtr PREF_DHT_ENTRY_POINT6;
+ // values: a string
+ extern PrefPtr PREF_DHT_FILE_PATH6;
++// value: true | false
++extern PrefPtr PREF_BT_EVIL;
+ // values: plain | arc4
+ extern PrefPtr PREF_BT_MIN_CRYPTO_LEVEL;
+ // values:: true | false
+diff --git a/src/usage_text.h b/src/usage_text.h
+index 3bd835e..e94a265 100644
+--- a/src/usage_text.h
++++ b/src/usage_text.h
+@@ -35,6 +35,8 @@
+ 
+ // clang-format off
+ 
++#define TEXT_BT_EVIL                                             \
++  _(" --evil=N                     Evil mode.")
+ #define TEXT_DIR                                                        \
+   _(" -d, --dir=DIR                The directory to store the downloaded file.")
+ #define TEXT_OUT                                                        \

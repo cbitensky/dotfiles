@@ -1,0 +1,6 @@
+post_src_prepare() {
+	sed -i '
+		s/^Exec=feh /Exec=feh -. --force-aliasing /
+		' share/applications/feh.pre || die "Sed failed"
+	clog --force-aliasing added to default
+}

@@ -1,0 +1,4 @@
+post_src_install() {
+	sed -i '/$(id -u) -eq/,+4d' $D/usr/bin/eclipse-bin*
+	clog root check removed
+}

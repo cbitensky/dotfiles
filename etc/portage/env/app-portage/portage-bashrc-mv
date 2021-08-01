@@ -1,0 +1,8 @@
+post_src_install() {
+	sed -i "
+		s|\${CC:-gcc}|\${CC:-/usr/bin/gcc}|
+		s|\${CXX:-g++}|\${CXX:-/usr/bin/g++}|
+		s|\${LD:-ld}|\${LD:-/usr/bin/ld}|
+		" $D/etc/portage/bashrc.d/10-flag.sh || die
+	clog Fixed: 10-flag.sh
+}

@@ -1,0 +1,44 @@
+diff --git a/source/Linux/fasm.asm b/source/Linux/fasm.asm
+index 8ed9d78..6c1fe7b 100644
+--- a/source/Linux/fasm.asm
++++ b/source/Linux/fasm.asm
+@@ -11,8 +11,6 @@ segment readable executable
+ start:
+ 
+ 	mov	[con_handle],1
+-	mov	esi,_logo
+-	call	display_string
+ 
+ 	mov	[command_line],esp
+ 	mov	ecx,[esp]
+@@ -100,6 +98,8 @@ start:
+ 	jmp	exit_program
+ 
+ information:
++	mov	esi,_logo
++	call	display_string
+ 	mov	esi,_usage
+ 	call	display_string
+ 	mov	al,1
+diff --git a/source/Linux/x64/fasm.asm b/source/Linux/x64/fasm.asm
+index b79fa31..948eb4a 100644
+--- a/source/Linux/x64/fasm.asm
++++ b/source/Linux/x64/fasm.asm
+@@ -13,8 +13,6 @@ segment readable executable
+ start:
+ 
+ 	mov	[con_handle],1
+-	mov	esi,_logo
+-	call	display_string
+ 
+ 	mov	[command_line],rsp
+ 	mov	rcx,[rsp]
+@@ -102,6 +100,8 @@ start:
+ 	jmp	exit_program
+ 
+ information:
++	mov	esi,_logo
++	call	display_string
+ 	mov	esi,_usage
+ 	call	display_string
+ 	mov	al,1

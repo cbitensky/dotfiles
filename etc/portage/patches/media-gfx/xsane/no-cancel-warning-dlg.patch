@@ -1,0 +1,26 @@
+diff --git a/xsane-0.999/src/xsane-scan.c b/xsane-0.999/src/xsane-scan.c
+index 88f954a..7c8e010 100644
+--- a/src/xsane-scan.c
++++ b/src/xsane-scan.c
+@@ -188,8 +188,10 @@ static void xsane_read_image_data(gpointer data, gint source, GdkInputCondition
+       if (status == SANE_STATUS_CANCELLED)
+       {
+         xsane_scan_done(status); /* status = return of sane_read */
++/*
+         snprintf(buf, sizeof(buf), "%s.", XSANE_STRSTATUS(status));
+         xsane_back_gtk_warning(buf, TRUE);
++*/
+         return;
+       }
+ 
+@@ -548,8 +550,10 @@ static void xsane_read_image_data(gpointer data, gint source, GdkInputCondition
+       if (status == SANE_STATUS_CANCELLED)
+       {
+         xsane_scan_done(status); /* status = return of sane_read */
++/*
+         snprintf(buf, sizeof(buf), "%s.", XSANE_STRSTATUS(status));
+         xsane_back_gtk_warning(buf, TRUE);
++*/
+         return;
+       }
+ 

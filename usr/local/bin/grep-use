@@ -1,0 +1,6 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(setq D (pack (in-line (list "portageq" "get_repo_path" (in-line '("portageq" "envvar" "EROOT")) "gentoo")) "/profiles")
+	Str (argv) )
+(fcall "grep" (pack "\^\\w*" Str) (pack D "/use.desc"))
+(fexec "grep" (pack ":\\w*" Str) (pack D "/use.local.desc"))
+(bye)

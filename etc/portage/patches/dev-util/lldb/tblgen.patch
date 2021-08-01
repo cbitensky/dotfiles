@@ -1,0 +1,12 @@
+diff --git a/lldb/utils/TableGen/CMakeLists.txt b/lldb/utils/TableGen/CMakeLists.txt
+index 47a6400..5e729b9 100644
+--- a/lldb/utils/TableGen/CMakeLists.txt
++++ b/lldb/utils/TableGen/CMakeLists.txt
+@@ -13,6 +13,7 @@ if (NOT DEFINED LLDB_TABLEGEN_EXE)
+       LLDBTableGen.cpp
+       LLDBTableGenUtils.cpp
+       )
++    set_target_properties(lldb-tblgen PROPERTIES LINK_FLAGS "-Wl,--push-state,--no-as-needed -lpthread -Wl,--pop-state")
+     set_target_properties(lldb-tblgen PROPERTIES FOLDER "LLDB tablegenning")
+   endif()
+ endif()

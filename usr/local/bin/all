@@ -1,0 +1,4 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(for f (filter '((x) (not (member x '("." "..")))) (dir NIL T))
+	(fcall (argv) f) )
+(bye)

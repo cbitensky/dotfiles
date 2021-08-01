@@ -1,0 +1,13 @@
+diff --git a/scintilla/src/EditView.cxx b/scintilla/src/EditView.cxx
+index 57567b1..37da259 100644
+--- a/scintilla/src/EditView.cxx
++++ b/scintilla/src/EditView.cxx
+@@ -304,7 +304,7 @@ static void DrawTabArrow(Surface *surface, PRectangle rcTab, int ymid, const Vie
+ 
+ 	// Draw the arrow head if needed
+ 	if (vsDraw.tabDrawMode == tdLongArrow) {
+-		int ydiff = (ircTab.bottom - ircTab.top) / 2;
++		int ydiff = (ircTab.bottom - ircTab.top) / 3;
+ 		int xhead = ircTab.right - 1 - ydiff;
+ 		if (xhead <= rcTab.left) {
+ 			ydiff -= ircTab.left - xhead - 1;

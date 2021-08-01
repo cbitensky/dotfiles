@@ -1,0 +1,4 @@
+post_src_install() {
+	rm $D/usr/bin/mlame
+	clog mlame removed
+}

@@ -1,0 +1,94 @@
+diff --git a/lib/xhtml.l b/lib/xhtml.l
+index ce3b4d4..1856586 100644
+--- a/lib/xhtml.l
++++ b/lib/xhtml.l
+@@ -141,7 +141,7 @@
+    (or Str `(pack (char 160) (char 160))) )
+ 
+ (de <javascript> @
+-   (prin "<script type=\"text/javascript\">")
++   (prin "<script>")
+    (pass prin)
+    (prinl "</script>") )
+ 
+@@ -158,13 +158,12 @@
+          (micro Head
+             (and (fin Ttl) (<tag> "title" NIL @) (prinl))
+             (mapc prinl Ttl)
+-            (and *Host *Port (prinl "<base href=\"" (baseHRef) "\"/>"))
+             (when Css
+                (if (atom Css)
+                   (css Css)
+                   (mapc css Css)
+                   (when (fin Css)
+-                     (prinl "<style type=\"text/css\">")
++                     (prinl "<style>")
+                      (prinl @)
+                      (prinl "</style>") ) ) )
+             (and *SesId (<javascript> "SesId='" @ "'"))
+@@ -174,12 +173,12 @@
+          (micro End) ) ) )
+ 
+ (de css (Css)
+-   (prinl "<link rel=\"stylesheet\" type=\"text/css\" href=\"" (srcUrl Css) "\"/>") )
++   (prinl "<link rel=\"stylesheet\" href=\"" (srcUrl Css) "\"/>") )
+ 
+ (de javascript (JS . @)
+    (when *JS
+       (when JS
+-         (prinl "<script type=\"text/javascript\" src=\"" (srcUrl JS) "\"></script>") )
++         (prinl "<script src=\"" (srcUrl JS) "\"></script>") )
+       (and (rest) (<javascript> @)) ) )
+ 
+ (de serverSentEvent (Id Var . Prg)
+@@ -246,7 +245,7 @@
+    (prinl "<hr/>") )
+ 
+ (de <nbsp> (N)
+-   (do (or N 1) (prin "&nbsp;")) )
++   (do (or N 1) (prin " ")) )
+ 
+ (de <small> Prg
+    (tag "small" NIL 2 Prg) )
+@@ -684,7 +683,7 @@
+                (<tip> ,"Next object of the same type"
+                   (<href> "<<<" (mkUrl @)) )
+                (prin "&lt;&lt;&lt;") )
+-            (prin "&nbsp;--&nbsp;")
++            (prin " -- ")
+             (if (and S2 (send Msg @ *Tab))
+                (<tip> ,"Next object of the same type"
+                   (<href> ">>>" (mkUrl @)) )
+@@ -749,10 +748,10 @@
+       (when (=T Attr)
+          (off Attr)
+          " target=\"_blank\"" )
+-      ">" )
+-   (prin "<noscript><input type=\"hidden\" name=\"*JS\" value=\"\"/></noscript>")
++      ">^J" )
++   (prin "<noscript><input type=\"hidden\" name=\"*JS\" value=\"\"/></noscript>^J")
+    (tag "fieldset" Attr 2 Prg)
+-   (prinl "</form>") )
++   (prinl "^J</form>") )
+ 
+ (de htmlVar ("Var")
+    (prin "name=\"")
+diff --git a/lib/xhtml/html b/lib/xhtml/html
+index 200b5da..f5e8476 100644
+--- a/lib/xhtml/html
++++ b/lib/xhtml/html
+@@ -1,8 +1,11 @@
+ <!DOCTYPE html>
+-<html lang="¦LANG¦">
++<html xmlns="http://www.w3.org/1999/xhtml" lang="¦LANG¦">
+ <head>
++	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+-   ¦(run PRG)¦</head>
++   ¦(run PRG)¦
++</head>
+ <body¦(and ATTR (htStyle @))¦>
+-   ¦(run PRG)¦</body>
++   ¦(run PRG)¦
++</body>
+ </html>

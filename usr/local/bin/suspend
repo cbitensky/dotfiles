@@ -1,0 +1,3 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(out "/sys/power/state" (print 'mem))
+(bye)

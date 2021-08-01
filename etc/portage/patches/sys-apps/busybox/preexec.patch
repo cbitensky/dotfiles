@@ -1,0 +1,20 @@
+diff --git a/shell/ash.c b/shell/ash.c
+index d1d8e65..19e88ea 100644
+--- a/shell/ash.c
++++ b/shell/ash.c
+@@ -9701,6 +9701,7 @@ static const struct builtincmd builtintab[] = {
+ #endif
+ 	{ BUILTIN_SPEC_REG      "unset"   , unsetcmd   },
+ 	{ BUILTIN_REGULAR       "wait"    , waitcmd    },
++	{ BUILTIN_REGULAR       "preexec" , truecmd    },
+ };
+ 
+ /* Should match the above table! */
+@@ -12871,6 +12872,7 @@ cmdloop(int top)
+ 			/* job_warning can only be 2,1,0. Here 2->1, 1/0->0 */
+ 			job_warning >>= 1;
+ 			numeof = 0;
++			if (inter) evalstring("preexec", 0);
+ 			i = evaltree(n, 0);
+ 			if (n)
+ 				status = i;

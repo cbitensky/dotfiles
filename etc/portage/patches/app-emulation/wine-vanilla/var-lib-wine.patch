@@ -1,0 +1,42 @@
+diff --git a/libs/wine/config.c b/libs/wine/config.c
+index 2a3314c..fb62d38 100644
+--- a/libs/wine/config.c
++++ b/libs/wine/config.c
+@@ -296,12 +296,7 @@ static void init_paths(void)
+     }
+     else
+     {
+-        if (!home) fatal_error( "could not determine your home directory\n" );
+-        if (home[0] != '/') fatal_error( "your home directory %s is not an absolute path\n", home );
+-        config_dir = xmalloc( strlen(home) + sizeof(server_config_dir) );
+-        strcpy( config_dir, home );
+-        remove_trailing_slashes( config_dir );
+-        strcat( config_dir, server_config_dir );
++        if (!(config_dir = strdup( "/var/lib/wine" ))) fatal_error( "virtual memory exhausted\n" );
+         if (stat( config_dir, &st ) == -1)
+         {
+             if (errno == ENOENT) return;  /* will be created later on */
+diff --git a/server/request.c b/server/request.c
+index 200c269..c7170c9 100644
+--- a/server/request.c
++++ b/server/request.c
+@@ -634,18 +634,7 @@ static char *create_server_dir( int force )
+     }
+     else
+     {
+-        const char *home = getenv( "HOME" );
+-        if (!home)
+-        {
+-            struct passwd *pwd = getpwuid( getuid() );
+-            if (pwd) home = pwd->pw_dir;
+-        }
+-        if (!home) fatal_error( "could not determine your home directory\n" );
+-        if (home[0] != '/') fatal_error( "your home directory %s is not an absolute path\n", home );
+-        if (!(config_dir = malloc( strlen(home) + sizeof("/.wine") ))) fatal_error( "out of memory\n" );
+-        strcpy( config_dir, home );
+-        for (p = config_dir + strlen(config_dir); p > config_dir; p--) if (p[-1] != '/') break;
+-        strcpy( p, "/.wine" );
++        if (!(config_dir = strdup( "/var/lib/wine" ))) fatal_error( "out of memory\n" );
+     }
+ 
+     if (chdir( config_dir ) == -1)

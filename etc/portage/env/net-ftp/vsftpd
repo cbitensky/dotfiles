@@ -1,0 +1,14 @@
+src_compile() {
+	clog My src_compile
+	# Override LIBS variable. Bug #508192
+	LIBS=-lcrypt
+	use caps && LIBS+=" -lcap"
+	use pam && LIBS+=" -lpam"
+	use tcpd && LIBS+=" -lwrap"
+	use ssl && LIBS+=" -lssl"
+
+	CFLAGS="${CFLAGS}" \
+	CC="$(tc-getCC)" \
+	emake LIBS="${LIBS}"
+	clog My src_compile finished
+}

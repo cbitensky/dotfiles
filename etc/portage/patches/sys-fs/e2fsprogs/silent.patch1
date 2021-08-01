@@ -1,0 +1,20 @@
+diff --git e2fsck/unix.c e2fsck/unix.c
+index 51eeb25..0abf598 100644
+--- e2fsck/unix.c
++++ e2fsck/unix.c
+@@ -423,8 +422,0 @@ static void check_if_skip(e2fsck_t ctx)
+-	/* Print the summary message when we're skipping a full check */
+-	log_out(ctx, _("%s: clean, %u/%u files, %llu/%llu blocks"),
+-		ctx->device_name,
+-		fs->super->s_inodes_count - fs->super->s_free_inodes_count,
+-		fs->super->s_inodes_count,
+-		ext2fs_blocks_count(fs->super) -
+-		ext2fs_free_blocks_count(fs->super),
+-		ext2fs_blocks_count(fs->super));
+@@ -448,0 +441 @@ static void check_if_skip(e2fsck_t ctx)
++		log_out(ctx, "\n");
+@@ -450 +442,0 @@ static void check_if_skip(e2fsck_t ctx)
+-	log_out(ctx, "\n");
+@@ -1220 +1212 @@ int main (int argc, char *argv[])
+-	if (!(ctx->options & E2F_OPT_PREEN) || show_version_only)
++	if (show_version_only)

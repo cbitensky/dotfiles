@@ -1,0 +1,12 @@
+diff --git a/src/subshell/common.c b/src/subshell/common.c
+index cb8bbe3..5266999 100644
+--- a/src/subshell/common.c
++++ b/src/subshell/common.c
+@@ -1081,6 +1082,7 @@ init_subshell_precmd (char *precmd, size_t buff_size)
+         break;
+ 
+     case SHELL_ASH_BUSYBOX:
++		  break;
+         /* BusyBox ash needs a somewhat complicated precmd emulation via PS1, and it is vital
+          * that BB be built with active CONFIG_ASH_EXPAND_PRMT, but this is the default anyway.
+          *

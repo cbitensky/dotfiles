@@ -1,0 +1,21 @@
+diff --git a/st.c b/st.c
+index 233d301..2af361a 100644
+--- st.c
++++ st.c
+@@ -3184,6 +3184,8 @@ tresize(int col, int row)
+ 	tmoveto(term.c.x, term.c.y);
+ 	/* Clearing both screens (it makes dirty all lines) */
+ 	c = term.c;
++	unsigned int oldbg = term.c.attr.bg;
++	term.c.attr.bg = defaultbg;
+ 	for (i = 0; i < 2; i++) {
+ 		if (mincol < col && 0 < minrow) {
+ 			tclearregion(mincol, 0, col - 1, minrow - 1);
+@@ -3194,6 +3196,7 @@ tresize(int col, int row)
+ 		tswapscreen();
+ 		tcursor(CURSOR_LOAD);
+ 	}
++	term.c.attr.bg = oldbg;
+ 	term.c = c;
+ }
+ 

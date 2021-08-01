@@ -1,0 +1,15 @@
+diff --git a/xsane-0.999/src/xsane-preview.c b/xsane-0.999/src/xsane-preview.c
+index 6eaf687..a383127 100644
+--- a/src/xsane-preview.c
++++ b/src/xsane-preview.c
+@@ -1535,8 +1535,10 @@ static void preview_read_image_data(gpointer data, gint source, GdkInputConditio
+         p->invalid = FALSE; /* preview is valid now - although it is cancled */
+         p->scan_incomplete = TRUE; /* preview is incomplete */
+         preview_scan_done(p, 1); /* save scanned part of the preview */
++/*
+         snprintf(buf, sizeof(buf), "%s", XSANE_STRSTATUS(status));
+         xsane_back_gtk_info(buf, TRUE);
++*/
+        return;
+       }
+ 

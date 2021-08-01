@@ -1,0 +1,13 @@
+diff --git src/ls.c src/ls.c
+index cd5996e..f2e0da4 100644
+--- src/ls.c
++++ src/ls.c
+@@ -2683,7 +2683,7 @@ print_dir (char const *name, char const *realname, bool command_line_arg)
+   if (recursive)
+     extract_dirs_from_files (name, false);
+ 
+-  if (format == long_format || print_block_size)
++  if (0)
+     {
+       const char *p;
+       char buf[LONGEST_HUMAN_READABLE + 1];

@@ -1,0 +1,106 @@
+diff --git a/src/first.S b/src/first.S
+index 48b5021..f564b43 100644
+--- a/src/first.S
++++ b/src/first.S
+@@ -175,14 +175,6 @@ start:
+ # endif
+ #endif
+ 
+-#if (VIDEO_ENABLE&1) == 0
+-	mov	al,#0x0d	! gimme a CR ...
+-	call	display
+-; the suspect call for trashing DX on one BIOS:
+-	mov	al,#0x0a	! ... an LF ...
+-	call	display
+-#endif
+-
+ #if defined(DEBUG_NEW)
+ 	mov	ah,dl
+ 	call	bout		! code in AH
+diff --git a/src/second.S b/src/second.S
+index 37e9f1b..57e1124 100644
+--- a/src/second.S
++++ b/src/second.S
+@@ -1423,10 +1423,6 @@ pwfail:	mov	bx,#msg_pf	; display an error message
+ ! Boot the image BX points to
+ 
+ doboot:	mov	byte ptr prechr,#61 ; switch to equal sign
+-	push	bx		; save image descr
+-	mov	bx,#msg_l	; say hi
+-	call	say
+-	pop	bx		; display the image name
+ 	push	bx
+ 	call	say
+ 	pop	si
+@@ -1781,8 +1777,8 @@ noteof:	add	si,#sa_size	; increment pointer
+         pop     ax              ; restore the hi-nibble
+ 	mov     hinib,al        ; 
+ 
+-	mov	al,#0x2e	; print a dot
+-	call	display
++;	mov	al,#0x2e	; print a dot
++;	call	display
+ 	jmp	lfetch		; try again
+ 
+ ! Start the kernel
+@@ -1952,15 +1948,11 @@ boot_real_msg_k:
+ 	call	say
+ #endif
+ #ifdef LCF_BDATA
+-	mov	bx,#msg_bc
+-	call	say
+ 	BEG_FS
+ 	SEG_FS		; suppress BIOS data collection?
+ 	test	byte ptr par1_prompt+SSDIFF,#FLAG_NOBD	; suppress?
+ 	END_FS
+ 	jz	start_setup3
+-	mov	bx,#msg_by
+-	call	say
+ 	jmp	start_setup2
+ start_setup3:
+ 
+@@ -1996,8 +1988,6 @@ no_remove:
+ 
+ 	call	io_biosdata
+ 
+-	mov	bx,#msg_s
+-	call	say
+ #ifndef LCF_READONLY
+ ; if the BIOS data collection was successful, do not suppress it on future boots
+ 	and	byte ptr [KEYTABLE+256+mt_flag],#~FLAG_NOBD	;  no suppress
+@@ -3837,18 +3827,6 @@ msg_fs_okay:
+ msg_p:	.ascii	"boot: "
+ 	.byte	0
+ 
+-msg_l:	.ascii	"Loading "
+-	.byte	0
+-
+-msg_bc:	.ascii	"BIOS data check "
+-	.byte	0
+-
+-msg_s:	.ascii	"successful\n"
+-	.byte	0
+-
+-msg_by:	.ascii	"bypassed\n"
+-	.byte	0
+-
+ msg_re:	.byte	10
+ 	.ascii	"Error 0x"
+ 	.byte	0
+@@ -4007,16 +3985,6 @@ msg_rd4M: .byte	10
+ #endif
+ 
+ ospc:	.ascii	"O"
+-#ifdef LCF_BEEP
+-	.byte	7
+-#endif
+-#ifdef LCF_VERSION
+-	.ascii	" "	
+-	.ascii	SA(VERSION_MAJOR)
+-	.ascii	"."
+-	.ascii	SA(VERSION_MINOR)
+-	.ascii	VERSION_EDIT
+-#endif
+ 	.byte	32,0
+ 
+ bs:	.byte	8,32,8,0

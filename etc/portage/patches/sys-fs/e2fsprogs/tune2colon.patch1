@@ -1,0 +1,13 @@
+diff --git misc/tune2fs.c misc/tune2fs.c
+index 849f3a0..7c655b6 100644
+--- misc/tune2fs.c
++++ misc/tune2fs.c
+@@ -1138,7 +1138,7 @@ static int parse_extended_opts(ext2_filsys fs, const char *opts)
+ 	}
+ 	strcpy(buf, opts);
+ 	for (token = buf; token && *token; token = next) {
+-		p = strchr(token, ',');
++		p = strchr(token, ':');
+ 		next = 0;
+ 		if (p) {
+ 			*p = 0;

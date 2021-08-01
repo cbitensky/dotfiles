@@ -1,0 +1,21 @@
+diff --git a/ft.c b/ft.c
+index ce38bee..cef79ea 100644
+--- a/ft.c
++++ b/ft.c
+@@ -13,11 +13,11 @@
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <ft2build.h>
+-#include <freetype2/freetype.h>
+-#include <freetype2/ftglyph.h>
+-#include <freetype2/ftsnames.h>
+-#include <freetype2/ttnameid.h>
+-#include <freetype2/ftoutln.h>
++#include <freetype/freetype.h>
++#include <freetype/ftglyph.h>
++#include <freetype/ftsnames.h>
++#include <freetype/ttnameid.h>
++#include <freetype/ftoutln.h>
+ #include "pt1.h"
+ #include "global.h"
+ 

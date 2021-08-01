@@ -1,0 +1,232 @@
+diff --git a/browser.c b/browser.c
+index 6d022e5..8997a3d 100644
+--- a/browser.c
++++ b/browser.c
+@@ -7,7 +7,6 @@
+ #include <string.h>
+ 
+ #include <gtk/gtk.h>
+-#include <gtk/gtkx.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <gio/gio.h>
+ #include <webkit2/webkit2.h>
+@@ -50,7 +49,6 @@ static gboolean quit_if_nothing_active(void);
+ static gboolean remote_msg(GIOChannel *, GIOCondition, gpointer);
+ static void search(gpointer, gint);
+ static void show_web_view(WebKitWebView *, gpointer);
+-static Window tabbed_launch(void);
+ static void trust_user_certs(WebKitWebContext *);
+ 
+ 
+@@ -81,7 +79,6 @@ static int cooperative_pipe_fp = 0;
+ static gchar *download_dir = "/var/tmp";
+ static gboolean enable_webgl = FALSE;
+ static gboolean enable_console_to_stdout = FALSE;
+-static Window embed = 0;
+ static gchar *fifo_suffix = "main";
+ static gdouble global_zoom = 1.0;
+ static gchar *history_file = NULL;
+@@ -89,7 +86,6 @@ static gchar *home_uri = "about:blank";
+ static gboolean initial_wc_setup_done = FALSE;
+ static GHashTable *keywords = NULL;
+ static gchar *search_text = NULL;
+-static gboolean tabbed_automagic = TRUE;
+ static gchar *user_agent = NULL;
+ 
+ 
+@@ -140,18 +136,6 @@ client_new(const gchar *uri, WebKitWebView *related_wv, gboolean show)
+         exit(EXIT_FAILURE);
+     }
+ 
+-    if (embed != 0)
+-    {
+-        c->win = gtk_plug_new(embed);
+-        if (!gtk_plug_get_embedded(GTK_PLUG(c->win)))
+-        {
+-            fprintf(stderr, __NAME__": Can't plug-in to XID %ld.\n", embed);
+-            gtk_widget_destroy(c->win);
+-            c->win = NULL;
+-            embed = 0;
+-        }
+-    }
+-
+     if (c->win == NULL)
+         c->win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+ 
+@@ -247,6 +231,8 @@ client_new(const gchar *uri, WebKitWebView *related_wv, gboolean show)
+         webkit_web_view_load_uri(WEBKIT_WEB_VIEW(c->web_view), f);
+         g_free(f);
+     }
++    else
++       gtk_widget_grab_focus(c->location);
+ 
+     clients++;
+ 
+@@ -815,23 +801,11 @@ key_common(GtkWidget *widget, GdkEvent *event, gpointer data)
+         {
+             switch (((GdkEventKey *)event)->keyval)
+             {
+-                case GDK_KEY_q:  /* close window (left hand) */
+-                    gtk_widget_destroy(c->win);
+-                    return TRUE;
+                 case GDK_KEY_w:  /* home (left hand) */
+                     f = ensure_uri_scheme(home_uri);
+                     webkit_web_view_load_uri(WEBKIT_WEB_VIEW(c->web_view), f);
+                     g_free(f);
+                     return TRUE;
+-                case GDK_KEY_e:  /* new tab (left hand) */
+-                    f = ensure_uri_scheme(home_uri);
+-                    client_new(f, NULL, TRUE);
+-                    g_free(f);
+-                    return TRUE;
+-                case GDK_KEY_r:  /* reload (left hand) */
+-                    webkit_web_view_reload_bypass_cache(WEBKIT_WEB_VIEW(
+-                                                        c->web_view));
+-                    return TRUE;
+                 case GDK_KEY_d:  /* download manager (left hand) */
+                     gtk_widget_show_all(dm.win);
+                     return TRUE;
+@@ -842,14 +816,6 @@ key_common(GtkWidget *widget, GdkEvent *event, gpointer data)
+                 case GDK_KEY_3:  /* search backward (left hand) */
+                     search(c, -1);
+                     return TRUE;
+-                case GDK_KEY_l:  /* location (BOTH hands) */
+-                    gtk_widget_grab_focus(c->location);
+-                    return TRUE;
+-                case GDK_KEY_k:  /* initiate search (BOTH hands) */
+-                    gtk_widget_grab_focus(c->location);
+-                    gtk_entry_set_text(GTK_ENTRY(c->location), ":/");
+-                    gtk_editable_set_position(GTK_EDITABLE(c->location), -1);
+-                    return TRUE;
+                 case GDK_KEY_c:  /* reload trusted certs (left hand) */
+                     trust_user_certs(wc);
+                     return TRUE;
+@@ -862,18 +828,43 @@ key_common(GtkWidget *widget, GdkEvent *event, gpointer data)
+                     return TRUE;
+             }
+         }
+-        /* navigate backward (left hand) */
++        else if (((GdkEventKey *)event)->keyval == GDK_KEY_F1)
++        {
++            client_new(NULL, NULL, TRUE);
++            return TRUE;
++        }
++        /* location (left hand) */
+         else if (((GdkEventKey *)event)->keyval == GDK_KEY_F2)
++        {
++            gtk_widget_grab_focus(c->location);
++            return TRUE;
++        }
++        /* navigate backward (left hand) */
++        else if (((GdkEventKey *)event)->keyval == GDK_KEY_F3)
+         {
+             webkit_web_view_go_back(WEBKIT_WEB_VIEW(c->web_view));
+             return TRUE;
+         }
+         /* navigate forward (left hand) */
+-        else if (((GdkEventKey *)event)->keyval == GDK_KEY_F3)
++        else if (((GdkEventKey *)event)->keyval == GDK_KEY_F4)
+         {
+             webkit_web_view_go_forward(WEBKIT_WEB_VIEW(c->web_view));
+             return TRUE;
+         }
++        /* reload (left hand) */
++        else if (((GdkEventKey *)event)->keyval == GDK_KEY_F5)
++        {
++            webkit_web_view_reload_bypass_cache(WEBKIT_WEB_VIEW(c->web_view));
++            return TRUE;
++        }
++        /* initiate search (left hand) */
++        else if (((GdkEventKey *)event)->keyval == GDK_KEY_F7)
++        {
++            gtk_widget_grab_focus(c->location);
++            gtk_entry_set_text(GTK_ENTRY(c->location), ":/");
++            gtk_editable_set_position(GTK_EDITABLE(c->location), -1);
++            return TRUE;
++        }
+     }
+ 
+     return FALSE;
+@@ -1165,46 +1156,6 @@ show_web_view(WebKitWebView *web_view, gpointer data)
+     gtk_widget_show_all(c->win);
+ }
+ 
+-Window
+-tabbed_launch(void)
+-{
+-    gint tabbed_stdout;
+-    GIOChannel *tabbed_stdout_channel;
+-    GError *err = NULL;
+-    gchar *output = NULL;
+-    char *argv[] = { "tabbed", "-c", "-d", "-p", "s1", "-n", __NAME__, NULL };
+-    Window plug_into;
+-
+-    if (!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_SEARCH_PATH, NULL,
+-                                  NULL, NULL, NULL, &tabbed_stdout, NULL,
+-                                  &err))
+-    {
+-        fprintf(stderr, __NAME__": Could not launch tabbed: %s\n", err->message);
+-        g_error_free(err);
+-        return 0;
+-    }
+-
+-    tabbed_stdout_channel = g_io_channel_unix_new(tabbed_stdout);
+-    if (tabbed_stdout_channel == NULL)
+-    {
+-        fprintf(stderr, __NAME__": Could open tabbed's stdout\n");
+-        return 0;
+-    }
+-    g_io_channel_read_line(tabbed_stdout_channel, &output, NULL, NULL, NULL);
+-    g_io_channel_shutdown(tabbed_stdout_channel, FALSE, NULL);
+-    if (output == NULL)
+-    {
+-        fprintf(stderr, __NAME__": Could not read XID from tabbed\n");
+-        return 0;
+-    }
+-    g_strstrip(output);
+-    plug_into = strtol(output, NULL, 16);
+-    g_free(output);
+-    if (plug_into == 0)
+-        fprintf(stderr, __NAME__": The XID from tabbed is 0\n");
+-    return plug_into;
+-}
+-
+ void
+ trust_user_certs(WebKitWebContext *wc)
+ {
+@@ -1249,16 +1200,9 @@ main(int argc, char **argv)
+     {
+         switch (opt)
+         {
+-            case 'e':
+-                embed = atol(optarg);
+-                tabbed_automagic = FALSE;
+-                break;
+             case 'C':
+                 cooperative_instances = FALSE;
+                 break;
+-            case 'T':
+-                tabbed_automagic = FALSE;
+-                break;
+             default:
+                 fprintf(stderr, "Usage: "__NAME__" [OPTION]... [URI]...\n");
+                 exit(EXIT_FAILURE);
+@@ -1270,9 +1214,6 @@ main(int argc, char **argv)
+         cooperation_setup();
+     downloadmanager_setup();
+ 
+-    if (tabbed_automagic && !(cooperative_instances && !cooperative_alone))
+-        embed = tabbed_launch();
+-
+     if (!cooperative_instances || cooperative_alone)
+     {
+         c = g_build_filename(g_get_user_config_dir(), __NAME__, "web_extensions",
+@@ -1283,7 +1224,7 @@ main(int argc, char **argv)
+     }
+ 
+     if (optind >= argc)
+-        client_new(home_uri, NULL, TRUE);
++        client_new(NULL, NULL, TRUE);
+     else
+     {
+         for (i = optind; i < argc; i++)

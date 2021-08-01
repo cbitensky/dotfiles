@@ -1,0 +1,5 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(setq D "/usr/src/linux")
+(fcall "cp" "/usr/local/conf/linux" (pack D "/.config"))
+(cd D)
+(fexec "make" "oldconfig")

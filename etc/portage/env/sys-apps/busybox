@@ -1,0 +1,5 @@
+post_src_configure() {
+	restore_config .config
+	emake -j1 oldconfig >/dev/null
+	clog Overrided .config file
+}

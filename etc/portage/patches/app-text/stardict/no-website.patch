@@ -1,0 +1,20 @@
+diff --git a/dict/src/mainwin.cpp b/dict/src/mainwin.cpp
+index 2ce0fa9..29fc7df 100644
+--- a/dict/src/mainwin.cpp
++++ b/dict/src/mainwin.cpp
+@@ -2918,15 +2918,6 @@ void BottomWin::Create(GtkWidget *vbox)
+ 	gtk_box_pack_end(GTK_BOX(hbox),button,false,false,0);
+ 	gtk_widget_set_tooltip_text(button,_("Manage dictionaries"));
+ 
+-	button=gtk_button_new();
+-	gtk_container_add(GTK_CONTAINER(button),gtk_image_new_from_stock(GTK_STOCK_INDEX,GTK_ICON_SIZE_SMALL_TOOLBAR));
+-	gtk_widget_show_all(button);
+-	gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
+-	gtk_widget_set_can_focus (button, FALSE);
+-	g_signal_connect(G_OBJECT(button),"clicked", G_CALLBACK(NewVersionCallback),this);
+-	g_signal_connect(G_OBJECT(button),"enter_notify_event", G_CALLBACK(stardict_on_enter_notify), NULL);
+-	gtk_box_pack_end(GTK_BOX(hbox),button,false,false,0);
+-	gtk_widget_set_tooltip_text(button,_("Go to the StarDict website"));
+ #endif
+ 
+ 	button=gtk_button_new();

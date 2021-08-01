@@ -1,0 +1,57 @@
+diff --git a/libbb/lineedit.c b/libbb/lineedit.c
+index d5e92e8..4bc7474 100644
+--- a/libbb/lineedit.c
++++ b/libbb/lineedit.c
+@@ -108,7 +108,7 @@ static bool BB_isalnum_or_underscore(CHAR_T c)
+ #define ESC "\033"
+ 
+ #define SEQ_CLEAR_TILL_END_OF_SCREEN  ESC"[J"
+-//#define SEQ_CLEAR_TILL_END_OF_LINE  ESC"[K"
++#define SEQ_CLEAR_TILL_END_OF_LINE  ESC"[K"
+ 
+ 
+ enum {
+@@ -433,6 +433,7 @@ static void goto_new_line(void)
+ 	/* "cursor == 0" is only if prompt is "" and user input is empty */
+ 	if (cursor == 0 || cmdedit_x != 0)
+ 		bb_putchar('\n');
++	fputs(ESC"[0m", stdout);
+ }
+ 
+ static void beep(void)
+@@ -547,7 +548,7 @@ static void draw_custom(int y, int back_cursor, bool is_full)
+ 	bb_putchar('\r');
+ 	put_prompt_custom(is_full);
+ 	put_till_end_and_adv_cursor();
+-	printf(SEQ_CLEAR_TILL_END_OF_SCREEN);
++	printf(SEQ_CLEAR_TILL_END_OF_LINE);
+ 	input_backward(back_cursor);
+ }
+ 
+@@ -592,7 +593,7 @@ static void input_delete(int save)
+ 	command_len--;
+ 	put_till_end_and_adv_cursor();
+ 	/* Last char is still visible, erase it (and more) */
+-	printf(SEQ_CLEAR_TILL_END_OF_SCREEN);
++	printf(SEQ_CLEAR_TILL_END_OF_LINE);
+ 	input_backward(cursor - j);     /* back to old pos cursor */
+ }
+ 
+@@ -1060,6 +1061,8 @@ static void showfiles(void)
+ 	int nrows = nfiles;
+ 	int l;
+ 
++	fputs(ESC"[0m"ESC"[K", stdout);
++
+ 	/* find the longest file name - use that as the column width */
+ 	for (row = 0; row < nrows; row++) {
+ 		l = unicode_strwidth(matches[row]);
+@@ -2507,7 +2510,7 @@ int FAST_FUNC read_line_input(line_input_t *st, const char *prompt, char *comman
+ 			/* Control-k -- clear to end of line */
+ 			command_ps[cursor] = BB_NUL;
+ 			command_len = cursor;
+-			printf(SEQ_CLEAR_TILL_END_OF_SCREEN);
++			printf(SEQ_CLEAR_TILL_END_OF_LINE);
+ 			break;
+ 		case CTRL('L'):
+ 		vi_case(CTRL('L')|VI_CMDMODE_BIT:)

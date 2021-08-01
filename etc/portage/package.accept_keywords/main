@@ -1,0 +1,21 @@
+dev-go/gopls
+app-emacs/go-mode
+media-libs/flif
+x11-terms/alacritty
+app-eselect/eselect-gradle
+dev-java/gradle-bin
+net-libs/nodejs
+dev-db/mongodb
+media-gfx/pngout
+app-vim/vim-toml
+dev-util/rust-analyzer
+app-editors/neovim
+app-misc/doublecmd
+x11-terms/wayst
+mail-client/yam
+media-gfx/psftools
+dev-util/goland
+dev-lisp/picolisp **
+x11-misc/gbdfed
+dev-lang/rust
+dev-util/github-cli

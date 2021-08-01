@@ -1,0 +1,51 @@
+diff --git a/data/filedefs/filetypes.latex b/data/filedefs/filetypes.latex
+index f5a3d8b..d4374b9 100644
+--- a/data/filedefs/filetypes.latex
++++ b/data/filedefs/filetypes.latex
+@@ -11,9 +11,9 @@ tag2=tag
+ math2=number_1
+ comment2=comment
+ verbatim=default
+-shortcmd=keyword_1
++shortcmd=keyword_2
+ special=keyword_2
+-cmdopt=keyword_1
++cmdopt=keyword_2
+ error=error
+ 
+ [keywords]
+@@ -57,25 +57,18 @@ context_action_cmd=
+ # %f will be replaced by the complete filename
+ # %e will be replaced by the filename without extension
+ # (use only one of it at one time)
+-compiler=latex --file-line-error-style "%f"
++compiler=lualatex --file-line-error-style "%f"
+ # it is called linker, but here it is an alternative compiler command
+-linker=pdflatex --file-line-error-style "%f"
+-run_cmd=evince "%e.dvi"
+-run_cmd2=evince "%e.pdf"
++#linker=lualatex --file-line-error-style "%f"
++run_cmd=zathura "%e.pdf"
+ 
+ [build-menu]
+-FT_00_LB=LaTeX -> _DVI
+-FT_00_CM=latex --file-line-error-style "%f"
++FT_00_LB=_LuaLaTeX
++FT_00_CM=lualatex --file-line-error-style "%f"
+ FT_00_BD=false
+-FT_01_LB=LaTeX -> _PDF
+-FT_01_CM=pdflatex --file-line-error-style "%f"
+-FT_01_BD=false
+-FT_02_LB=Bibtex
+-FT_02_CM=bibtex "%e"
+-FT_02_WD=
+-EX_00_LB=V_iew PDF File
+-EX_00_CM=evince "%e.pdf"
++EX_00_LB=Zathura
++EX_00_CM=zathura "%e.pdf"
+ EX_00_BD=false
+-EX_01_LB=_View DVI File
+-EX_01_CM=evince "%e.dvi"
++EX_01_LB=Firefox
++EX_01_CM=firefox "%e.pdf"
+ EX_01_BD=false

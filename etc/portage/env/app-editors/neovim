@@ -1,0 +1,6 @@
+post_src_install() {
+	dosym ../../../vim/vimfiles/pack/plugins /usr/share/nvim/site/pack/vim-plugins
+	dosym ../../../../local/nvim-plugins /usr/share/nvim/site/pack/local-plugins
+
+	clog Added symlink to vim plugins
+}

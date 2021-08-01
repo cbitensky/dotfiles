@@ -1,0 +1,29 @@
+diff --git a/data/filetype_extensions.conf b/data/filetype_extensions.conf
+index 5619fa0..1c3dc63 100644
+--- a/data/filetype_extensions.conf
++++ b/data/filetype_extensions.conf
+@@ -46,7 +46,7 @@ Javascript=*.js;
+ JSON=*.json;
+ Kotlin=*.kt;*.kts;
+ LaTeX=*.tex;*.sty;*.idx;*.ltx;*.latex;*.aux;
+-Lisp=*.lisp;
++Lisp=*.lisp;*.l;
+ Lua=*.lua;
+ Make=*.mak;*.mk;GNUmakefile;makefile;Makefile;makefile.*;Makefile.*;
+ Markdown=*.mdml;*.markdown;*.md;*.mkd;*.mkdn;*.mdwn;*.mdown;*.mdtxt;*.mdtext;
+diff --git a/src/filetypes.c b/src/filetypes.c
+index b5f1cfc..e5fdaf0 100644
+--- a/src/filetypes.c
++++ b/src/filetypes.c
+@@ -623,6 +623,11 @@ static GeanyFiletype *find_shebang(const gchar *utf8_filename, const gchar *line
+ 		gchar *basename_interpreter = tmp;
+ 		guint i;
+ 
++		if (g_strrstr(line, "picolisp")){
++			g_free(tmp);
++			return filetypes[GEANY_FILETYPES_LISP];
++		}
++
+ 		if (g_str_has_prefix(tmp, "env "))
+ 		{	/* skip "env" and read the following interpreter */
+ 			basename_interpreter += 4;

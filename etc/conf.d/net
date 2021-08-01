@@ -1,0 +1,4 @@
+config_eno2="dhcp"
+dns_domain_lo="daglabs"
+dns_domain_eno2="daglabs"
+udhcpc_eno2="-t 10"

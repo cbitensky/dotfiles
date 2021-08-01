@@ -1,0 +1,5 @@
+post_src_install() {
+
+	rm -r ${D}sbin ${D}usr/share/man/man{1,8}
+	clog removed sbin, man
+}

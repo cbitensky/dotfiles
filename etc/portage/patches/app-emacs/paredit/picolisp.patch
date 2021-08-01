@@ -1,0 +1,80 @@
+diff --git a/paredit.el b/paredit.el
+index c35ba66..acb1914 100644
+--- a/paredit.el
++++ b/paredit.el
+@@ -694,7 +694,8 @@ Used by `paredit-yank-pop'; for internal paredit use only.")
+ (defun paredit-move-past-close-and (close if-moved)
+   (if (or (paredit-in-string-p)
+           (paredit-in-comment-p))
+-      (insert close)
++      (progn (insert close)
++             (paredit-delete-leading-whitespace))
+     (if (paredit-in-char-p) (forward-char))
+     (paredit-move-past-close-and-reindent close)
+     (funcall if-moved)))
+@@ -747,6 +748,7 @@ If such a comment exists, delete the comment (including all leading
+                  (paredit-in-comment-p))
+             (newline))
+         (insert close)
++        (paredit-delete-leading-whitespace)
+         (if (paredit-space-for-delimiter-p t close)
+             (insert " "))))))
+ 
+@@ -826,7 +828,8 @@ Each predicate should examine only text before the point, if ENDP is
+         (if (eq close (matching-paren open))
+             (save-excursion
+               (message "Missing closing delimiter: %c" close)
+-              (insert close))
++              (insert close)
++              (paredit-delete-leading-whitespace))
+             (error "Mismatched missing closing delimiter: %c ... %c"
+                    open close))))
+   (up-list)
+@@ -1966,6 +1969,7 @@ By default OPEN and CLOSE are round delimiters."
+                ((paredit-region-active-p) nil)
+                (t 1)))
+       (insert close)
++      (paredit-delete-leading-whitespace)
+       (backward-char)))
+   (save-excursion (backward-up-list) (indent-sexp)))
+ 
+@@ -2232,8 +2236,10 @@ If in a string, move the opening double-quote forward by one
+             (setq close                 ; adjusting for mixed
+                   (prog1 (char-before)  ;   delimiters as necessary,
+                     (backward-delete-char 1)
+-                    (insert close))))))
++                  (insert close)
++                  (paredit-delete-leading-whitespace))))))
+       (insert close)                    ; to insert that delimiter.
++      (paredit-delete-leading-whitespace)
+       (indent-region start (point) nil))))
+ 
+ (defun paredit-forward-slurp-into-string ()
+@@ -2244,7 +2250,8 @@ If in a string, move the opening double-quote forward by one
+   (let ((close (char-before)))
+     (backward-delete-char 1)
+     (paredit-forward-for-quote (save-excursion (forward-sexp) (point)))
+-    (insert close)))
++    (insert close)
++    (paredit-delete-leading-whitespace)))
+ 
+ (defun paredit-forward-barf-sexp ()
+   "Remove the last S-expression in the current list from that list
+@@ -2264,7 +2271,8 @@ Automatically reindent the newly barfed S-expression with respect to
+              (error "Barfing all subexpressions with no open-paren?"))
+             ((paredit-in-comment-p)     ; Don't put the close-paren in
+              (newline)))                ;   a comment.
+-      (insert close))
++      (insert close)
++      (paredit-delete-leading-whitespace))
+     ;; Reindent all of the newly barfed S-expressions.
+     (paredit-forward-and-indent)))
+ 
+@@ -2360,6 +2368,7 @@ Automatically reindent the barfed S-expression and the form from which
+                                         (char-before))))
+              (delete-horizontal-space)
+              (insert close)
++             (paredit-delete-leading-whitespace)
+              (save-excursion (insert ?\ )
+                              (insert open)
+                              (backward-char)

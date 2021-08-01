@@ -1,0 +1,13 @@
+diff --git a/surf.c b/surf.c
+index 9f09754..16f568a 100644
+--- a/surf.c
++++ b/surf.c
+@@ -32,7 +32,7 @@
+ #include "arg.h"
+ 
+ #define LENGTH(x)               (sizeof(x) / sizeof(x[0]))
+-#define CLEANMASK(mask)         (mask & (MODKEY|GDK_SHIFT_MASK))
++#define CLEANMASK(mask)         (mask)
+ 
+ enum { AtomFind, AtomGo, AtomUri, AtomLast };
+ 

@@ -1,0 +1,160 @@
+diff --git a/data/Makefile.am b/data/Makefile.am
+index b8501b8..22d87dd 100644
+--- a/data/Makefile.am
++++ b/data/Makefile.am
+@@ -30,6 +30,7 @@ filetypes_dist = \
+ 	filedefs/filetypes.docbook \
+ 	filedefs/filetypes.erlang \
+ 	filedefs/filetypes.f77 \
++	filedefs/filetypes.fb2 \
+ 	filedefs/filetypes.ferite \
+ 	filedefs/filetypes.forth \
+ 	filedefs/filetypes.fortran \
+diff --git a/data/Makefile.in b/data/Makefile.in
+index 938a4e3..1f6dc1d 100644
+--- a/data/Makefile.in
++++ b/data/Makefile.in
+@@ -155,6 +155,7 @@ am__nobase_dist_pkgdata_DATA_DIST = colorschemes/alt.conf \
+ 	filedefs/filetypes.CUDA.conf filedefs/filetypes.Cython.conf \
+ 	filedefs/filetypes.d filedefs/filetypes.diff \
+ 	filedefs/filetypes.docbook filedefs/filetypes.erlang \
++	filedefs/filetypes.fb2 \
+ 	filedefs/filetypes.f77 filedefs/filetypes.ferite \
+ 	filedefs/filetypes.forth filedefs/filetypes.fortran \
+ 	filedefs/filetypes.freebasic filedefs/filetypes.Genie.conf \
+@@ -438,6 +439,7 @@ filetypes_dist = \
+ 	filedefs/filetypes.docbook \
+ 	filedefs/filetypes.erlang \
+ 	filedefs/filetypes.f77 \
++	filedefs/filetypes.fb2 \
+ 	filedefs/filetypes.ferite \
+ 	filedefs/filetypes.forth \
+ 	filedefs/filetypes.fortran \
+diff --git a/data/filedefs/filetypes.fb2 b/data/filedefs/filetypes.fb2
+new file mode 100644
+index 0000000..591ed9c
+--- /dev/null
++++ b/data/filedefs/filetypes.fb2
+@@ -0,0 +1,39 @@
++[styling]
++default=default
++tag=tag
++tagunknown=tag_unknown
++attribute=attribute
++attributeunknown=attribute_unknown
++number=number_1
++doublestring=string_1
++singlestring=string_1
++other=other
++comment=comment
++entity=entity
++tagend=tag_end
++xmlstart=tag
++xmlend=tag_end
++cdata=string_2
++question=number_2
++value=value
++xccomment=comment
++
++[keywords]
++elements=a annotation author binary body book-name book-title cite city code coverpage custom-info date description document-info email emphasis empty-line epigraph fictionbook first-name genre history home-page id image isbn keywords lang last-name middle-name nickname output output-document-class p part poem program-used publisher publish-info section sequence src-lang src-ocr src-title-info src-url stanza strikethrough strong style stylesheet sub subtitle sup table td text-author th title title-info tr translator v version xml xml-stylesheet year align alt colspan content-type create currency id include include-all info-type match mode name number price rowspan type valign value xmlns xmlns:l xmlns:xlink encoding href l:href xlink:href
++
++[lexer_properties]
++fold.html=1
++
++[settings]
++extension=fb2
++mime_type=application/x-fictionbook+xml
++comment_open=<!--
++comment_close=-->
++comment_use_indent=true
++context_action_cmd=
++xml_indent_tags=false
++
++[build-menu]
++FT_00_LB=_Compile
++FT_00_CM=fb2-lint "%f"
++FT_00_WD=
+diff --git a/data/filetype_extensions.conf b/data/filetype_extensions.conf
+index 09d57dd..5619fa0 100644
+--- a/data/filetype_extensions.conf
++++ b/data/filetype_extensions.conf
+@@ -28,6 +28,7 @@ Diff=*.diff;*.patch;*.rej;
+ Docbook=*.docbook;
+ Erlang=*.erl;*.hrl;
+ F77=*.f;*.for;*.ftn;*.f77;*.F;*.FOR;*.FTN;*.fpp;*.FPP;
++FB2=*.fb2;
+ Ferite=*.fe;
+ Forth=*.fs;*.fth;
+ Fortran=*.f90;*.f95;*.f03;*.f08;*.F90;*.F95;*.F03;*.F08;
+diff --git a/src/filetypes.c b/src/filetypes.c
+index 3d2a1e3..b5f1cfc 100644
+--- a/src/filetypes.c
++++ b/src/filetypes.c
+@@ -187,6 +187,7 @@ static void init_builtin_filetypes(void)
+ 	FT_INIT( GO,         GO,           "Go",               NULL,                      SOURCE_FILE, COMPILED );
+ 	FT_INIT( ZEPHIR,     ZEPHIR,       "Zephir",           NULL,                      SOURCE_FILE, COMPILED );
+ 	FT_INIT( SMALLTALK,  NONE,         "Smalltalk",        NULL,                      SOURCE_FILE, SCRIPT   );
++	FT_INIT( FB2,        NONE,         "FB2",              "FictionBook",             DOCUMENT,    MARKUP   );
+ }
+ 
+ 
+@@ -651,7 +652,7 @@ static GeanyFiletype *find_shebang(const gchar *utf8_filename, const gchar *line
+ 		/* HTML and DocBook files might also start with <?xml, so detect them based on filename
+ 		 * extension and use the detected filetype, else assume XML */
+ 		if (! shebang_find_and_match_filetype(utf8_filename,
+-				GEANY_FILETYPES_HTML, GEANY_FILETYPES_DOCBOOK,
++				GEANY_FILETYPES_HTML, GEANY_FILETYPES_DOCBOOK, GEANY_FILETYPES_FB2,
+ 				/* Perl, Python and PHP only to be safe */
+ 				GEANY_FILETYPES_PERL, GEANY_FILETYPES_PHP, GEANY_FILETYPES_PYTHON, -1))
+ 		{
+diff --git a/src/filetypes.h b/src/filetypes.h
+index d7cfbd9..3d829de 100644
+--- a/src/filetypes.h
++++ b/src/filetypes.h
+@@ -107,6 +107,7 @@ typedef enum
+ 	GEANY_FILETYPES_ZEPHIR,
+ 	GEANY_FILETYPES_BIBTEX,
+ 	GEANY_FILETYPES_SMALLTALK,
++	GEANY_FILETYPES_FB2,
+ 	/* ^ append items here */
+ 	GEANY_MAX_BUILT_IN_FILETYPES	/* Don't use this, use filetypes_array->len instead */
+ }
+diff --git a/src/highlighting.c b/src/highlighting.c
+index 938e543..e4b3269 100644
+--- a/src/highlighting.c
++++ b/src/highlighting.c
+@@ -1017,6 +1017,7 @@ void highlighting_init_styles(guint filetype_idx, GKeyFile *config, GKeyFile *co
+ 		init_styleset_case(DOCBOOK);
+ 		init_styleset_case(FERITE);
+ 		init_styleset_case(F77);
++		init_styleset_case(FB2);
+ 		init_styleset_case(FORTH);
+ 		init_styleset_case(FORTRAN);
+ 		init_styleset_case(GO);
+@@ -1106,6 +1107,7 @@ void highlighting_set_styles(ScintillaObject *sci, GeanyFiletype *ft)
+ 		styleset_case(DOCBOOK);
+ 		styleset_case(FERITE);
+ 		styleset_case(F77);
++		styleset_case(FB2);
+ 		styleset_case(FORTH);
+ 		styleset_case(FORTRAN);
+ 		styleset_case(GO);
+diff --git a/src/highlightingmappings.h b/src/highlightingmappings.h
+index d62b7e2..9a00da3 100644
+--- a/src/highlightingmappings.h
++++ b/src/highlightingmappings.h
+@@ -606,6 +606,13 @@ static const HLKeyword highlighting_keywords_F77[] =
+ #define highlighting_properties_F77		EMPTY_PROPERTIES
+ 
+ 
++/* FB2 */
++#define highlighting_lexer_FB2			SCLEX_XML
++#define highlighting_styles_FB2			highlighting_styles_DOCBOOK
++#define highlighting_keywords_FB2		highlighting_keywords_DOCBOOK
++#define highlighting_properties_FB2		EMPTY_PROPERTIES
++
++
+ /* Ferite */
+ #define highlighting_lexer_FERITE		SCLEX_CPP
+ #define highlighting_styles_FERITE		highlighting_styles_C

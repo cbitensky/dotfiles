@@ -1,0 +1,7 @@
+post_src_prepare() {
+	F=hyph_ru_RU.dic
+	mv $F $F.old
+	iconv -f koi8 $F.old > $F
+	sed -i '1cUTF-8' $F
+	clog $F iconved to UTF-8
+}

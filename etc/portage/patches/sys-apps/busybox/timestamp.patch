@@ -1,0 +1,33 @@
+diff --git a/shell/ash.c b/shell/ash.c
+index d5c3e93..61361d8 100644
+--- a/shell/ash.c
++++ b/shell/ash.c
+@@ -2021,6 +2021,7 @@ freeparam(volatile struct shparam *param)
+ #if ENABLE_ASH_GETOPTS
+ static void FAST_FUNC getoptsreset(const char *value);
+ #endif
++static void change_timestamp(const char *) FAST_FUNC;
+ 
+ struct var {
+ 	struct var *next;               /* next entry in hash list */
+@@ -2120,6 +2121,7 @@ static const struct {
+ #if ENABLE_FEATURE_EDITING_SAVEHISTORY
+ 	{ VSTRFIXED|VTEXTFIXED|VUNSET, "HISTFILE"  , NULL            },
+ #endif
++	{ VSTRFIXED|VTEXTFIXED|VUNSET|VDYNAMIC, "TIMESTAMP", change_timestamp },
+ };
+ 
+ struct redirtab;
+@@ -11227,6 +11229,12 @@ shiftcmd(int argc UNUSED_PARAM, char **argv)
+ 	return 0;
+ }
+ 
++static void FAST_FUNC
++change_timestamp(const char *value)
++{
++	setvar("TIMESTAMP", utoa(monotonic_ms()), VNOFUNC);
++}
++
+ /*
+  * POSIX requires that 'set' (but not export or readonly) output the
+  * variables in lexicographic order - by the locale's collating order (sigh).

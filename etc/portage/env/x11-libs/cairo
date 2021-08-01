@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's/$LDFLAGS /\0-Wl,--no-gc-sections /g' configure || die
+	clog configure ← --no-gc-sections
+}

@@ -1,0 +1,5 @@
+post_src_prepare() {
+	sed -i "s/'-fuse-ld=lld'/'-fuse-ld=gold'/" SConstruct || die
+
+	clog SConstruct: lld → gold
+}

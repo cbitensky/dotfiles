@@ -1,0 +1,18 @@
+diff --git a/src/flac/main.c b/src/flac/main.c
+index be072a3..91db05a 100644
+--- a/src/flac/main.c
++++ b/src/flac/main.c
+@@ -478,11 +478,11 @@ int do_it(void)
+ 		}
+ 	}
+ 
+-	flac__utils_printf(stderr, 2, "\n");
++	/*flac__utils_printf(stderr, 2, "\n");
+ 	flac__utils_printf(stderr, 2, "flac %s\n", FLAC__VERSION_STRING);
+ 	flac__utils_printf(stderr, 2, "Copyright (C) 2000-2009  Josh Coalson, 2011-2016  Xiph.Org Foundation\n");
+ 	flac__utils_printf(stderr, 2, "flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are\n");
+-	flac__utils_printf(stderr, 2, "welcome to redistribute it under certain conditions.  Type `flac' for details.\n\n");
++	flac__utils_printf(stderr, 2, "welcome to redistribute it under certain conditions.  Type `flac' for details.\n\n");*/
+ 
+ 	if(option_values.mode_decode) {
+ 		FLAC__bool first = true;

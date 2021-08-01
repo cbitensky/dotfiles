@@ -1,0 +1,18 @@
+post_src_prepare() {
+	sed -i '
+	1a\
+XDG_CACHE_HOME=/var/cache
+	/winetricks_latest_version_check$/d
+	s|\[ "$(id -u)" = 0 \]|false|
+	s|echo "Using winetricks|: #echo "Using winetricks|
+	s|w_mount OFFICE12|#w_mount OFFICE12\n    cd $W_CACHE/$W_PACKAGE/|
+	s|"$WINE" ${W_ISO_MOUNT_LETTER}:|"$WINE" |
+	s|$HOME/.wine|/var/lib/wine|
+	' src/winetricks || die
+	
+	clog Cache dir changed to /var/cache
+	clog root warning, banner and latest version check removed
+	clog ISO mounting fixed for office
+	clog WINEPREFIX defaults to /var/lib/wine
+}
+

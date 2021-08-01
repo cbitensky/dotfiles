@@ -1,0 +1,25 @@
+post_src_prepare() {
+	sed -i '
+		/INSTALLKERNEL\s*:=/c\INSTALLKERNEL := ../usr/local/kernel/installkernel
+		s@INSTALL_PATH ?= /boot@INSTALL_PATH ?= /var/boot@
+	' Makefile || die 
+	clog Makefile: INSTALLKERNEL → local/kernel/installkernel
+	clog Makefile: INSTALL_PATH: /boot → /var/boot
+
+	sed -i 's/int C_A_D = 1;/int C_A_D = 0;/' kernel/reboot.c || die
+	clog reboot.c: C_A_D → 0
+
+	sed -i 's/possible += disabled_cpus;/;/' arch/x86/kernel/smpboot.c || die
+	clog smpboot.c: removed: possible += disabled_cpus;
+
+	sed -i 's/spectre_v2_select_mitigation();//' arch/x86/kernel/cpu/bugs.c || die
+	clog 'bugs.c: removed: spectre_v2_select_mitigation()'
+
+	F=/home/cnxt/font_8x16.c
+	if [ -f $F ]; then
+		cp $F lib/fonts/
+		clog $F used
+	else
+		clog Cannot find $F!
+	fi
+}

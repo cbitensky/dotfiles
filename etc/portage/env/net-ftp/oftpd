@@ -1,0 +1,7 @@
+post_src_prepare() {
+	sed -i 's/^\tassert(/\tdaemon_assert(/' src/ftp_listener.c || die
+	use ipv6 || sed -i 's#test "${enable_ipv6+set}" = set#false#' configure || die
+	clog no ipv6 fixed
+}
+
+

@@ -1,0 +1,6 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(setq filename (car (argv)))
+(fexec "cwebp" "-lossless" "-q" "100" "-m" "6" "-pass" "10" "-z" "9"
+	(argv)
+	"-o"
+	(pack (remext (last (argv))) ".webp" ) )

@@ -1,0 +1,4 @@
+post_src_install() {
+	rm -r ${D}sbin/{mkfs,fsck}.ext{2,3}
+	clog removed: '/sbin/{mkfs,fsck}.ext{2,3}'
+}

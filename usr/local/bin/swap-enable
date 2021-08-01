@@ -1,0 +1,10 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+PAGEFILE=/var/cache/swap
+if [ -z "`swapon --show`" ]; then
+	if [ ! -f $PAGEFILE ]; then
+		dd if=/dev/zero of=$PAGEFILE bs=1048576 count=8192
+		mkswap $PAGEFILE
+		chmod 600 $PAGEFILE
+	fi
+	swapon $PAGEFILE
+fi

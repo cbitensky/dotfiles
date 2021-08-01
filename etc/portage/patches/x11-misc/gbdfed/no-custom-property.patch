@@ -1,0 +1,20 @@
+diff --git a/guifile.c b/guifile.c
+index a9f21e3..d289ce8 100644
+--- a/guifile.c
++++ b/guifile.c
+@@ -298,13 +298,13 @@ export_font(gchar *filename, gbdfed_editor_t *ed, gboolean copy_filename)
+         /*
+          * Add a custom property if the font has been
+          */
+-        if (font->modified || local_font == TRUE) {
++        /*if (font->modified || local_font == TRUE) {
+             sprintf(buffer2, "Edited with gbdfed %s.", GBDFED_VERSION);
+             vanity.name = "_GBDFED_INFO";
+             vanity.format = BDF_ATOM;
+             vanity.value.atom = buffer2;
+             bdf_add_font_property(font, &vanity);
+-        }
++        }*/
+         bdf_save_font(out, font, &options.font_opts, 0, 0);
+         if (local_font == TRUE)
+           bdf_free_font(font);

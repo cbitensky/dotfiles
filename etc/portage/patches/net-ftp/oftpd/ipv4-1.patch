@@ -1,0 +1,22 @@
+diff --git a/oftpd-0.3.7/src/ftp_listener.c b/oftpd-0.3.7/src/ftp_listener.c
+index e70664b..3977078 100644
+--- a/oftpd-0.3.7/src/ftp_listener.c
++++ b/oftpd-0.3.7/src/ftp_listener.c
+@@ -489,7 +489,6 @@ static char *addr2string(const struct sockaddr *s)
+ 
+     daemon_assert(s != NULL);
+ 
+-#ifdef INET6
+     error = getnameinfo((struct sockaddr *)s, 
+                          sizeof(struct sockaddr_storage),
+                          addr, 
+@@ -503,9 +502,6 @@ static char *addr2string(const struct sockaddr *s)
+     } else {
+         ret_val = addr;
+     }
+-#else
+-    ret_val = inet_ntoa(s->sin_addr);
+-#endif
+ 
+     return ret_val;
+ }

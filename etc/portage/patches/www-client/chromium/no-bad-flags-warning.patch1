@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/ui/startup/bad_flags_prompt.cc b/chrome/browser/ui/startup/bad_flags_prompt.cc
+index 284e328..323abfb 100644
+--- a/chrome/browser/ui/startup/bad_flags_prompt.cc
++++ b/chrome/browser/ui/startup/bad_flags_prompt.cc
+@@ -34,6 +34,7 @@
+ namespace chrome {
+ 
+ void ShowBadFlagsPrompt(Browser* browser) {
++  return;
+   content::WebContents* web_contents =
+       browser->tab_strip_model()->GetActiveWebContents();
+   if (!web_contents)

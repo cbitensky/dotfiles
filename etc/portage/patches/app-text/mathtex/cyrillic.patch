@@ -1,0 +1,14 @@
+diff --git mathtex.c mathtex.c
+index 077d537..45b4cd0 100644
+--- mathtex.c
++++ mathtex.c
+@@ -1272,7 +1272,8 @@ Allocations and Declarations
+ /* --- latex wrapper document template --- */
+ char  latexwrapper[MAXEXPRSZ+16384] =
+ 	"\\documentclass[10pt]{article}\n"
+-	"\\usepackage[latin1]{inputenc}\n"
++	"\\usepackage[T2A]{fontenc}\n"
++	"\\usepackage[utf8]{inputenc}\n"
+ 	"\\usepackage{amsmath}\n"
+ 	"\\usepackage{amsfonts}\n"
+ 	"\\usepackage{amssymb}\n"

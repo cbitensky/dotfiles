@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's#g_get_user_config_dir(), "geany"#"/local", "geany"#' src/utils.c
+	sed -i 's#mkdir_result = create_config_dir();#mkdir_result = 0;#' src/libmain.c
+}

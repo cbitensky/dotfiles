@@ -1,0 +1,14 @@
+diff --git a/gbdfed.c b/gbdfed.c
+index 2ec8ceb..1407648 100644
+--- a/gbdfed.c
++++ b/gbdfed.c
+@@ -2264,7 +2264,8 @@ editor_setup(int argc, char *argv[])
+         options.unicode_name_file = options.adobe_name_file = 0;
+     options.pixel_size = 10;
+     options.resolution = 0;
+-    options.no_blanks = options.really_exit = 
++    options.really_exit = FALSE;
++    options.no_blanks =
+         options.overwrite_mode = options.power2 =
+         options.backups = TRUE;
+     options.show_cap_height = options.show_x_height =

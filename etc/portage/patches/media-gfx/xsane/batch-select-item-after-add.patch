@@ -1,0 +1,12 @@
+diff --git a/xsane-0.999/src/xsane-batch-scan.c b/xsane-0.999/src/xsane-batch-scan.c
+index 90cc0e0..8afefa3 100644
+--- a/src/xsane-batch-scan.c
++++ b/src/xsane-batch-scan.c
+@@ -733,6 +733,7 @@ void xsane_batch_scan_add()
+   }
+ 
+   list_item = xsane_batch_scan_create_list_entry(parameters);
++  gtk_list_select_child(GTK_LIST(xsane.batch_scan_list), GTK_WIDGET(list_item));
+ 
+   /* scroll list to end */
+   gtk_adjustment_set_value(xsane.batch_scan_vadjustment, xsane.batch_scan_vadjustment->upper);

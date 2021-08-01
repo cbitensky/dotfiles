@@ -1,0 +1,21 @@
+remove() {
+	DD=$1
+	M=$2
+	shift
+	shift
+	for F in $@; do
+		rm $D$DD/$F ${D}usr/share/man/man$M/$F.$M
+	done
+	clog removed from $DD: $@
+}
+
+post_src_install() {
+
+	remove bin 8 wdctl
+	remove usr/bin 1 eject lslogins utmpdump
+	remove sbin 8 agetty fsck.minix mkfs.minix mkfs.bfs ctrlaltdel sulogin
+	clog Removed: wdctl eject lslogins utmpdump agetty fsck.* mkfs.* ctrlaltdel sulogin
+
+	rm -r $D/usr/share/bash-completion
+	clog removed: bash-completion
+}

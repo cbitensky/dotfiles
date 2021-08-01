@@ -1,0 +1,63 @@
+#!/usr/bin/picolisp /usr/share/picolisp/lib.l
+(load "@lib/math.l")
+
+(de avg (a b)
+	(/ (+ a b) 2) )
+
+(de -^2 (a b)
+	('((a) (* a a)) (- a b)) )
+
+(de distance/2 (z1 z2)
+	(/
+		(sqrt 
+			(+
+				(-^2 (car z1) (car z2))
+				(-^2 (cdr z1) (cdr z2)) ) )
+		2) )
+
+(de starts-with (l a)
+	(= (car l) a) )
+
+(de trimfloat (a)
+	(let z (flip (chop (format a 6)))
+		(while (starts-with z "0")
+			(pop 'z) )
+		(when (starts-with z ".")
+			(pop 'z) )
+		(flip z) ) )
+		
+(de center (l) 
+	((printn (avg (car l) (caddr l)))) )
+
+(setq *Scl 6)
+
+(let 
+	(ys (mapcar '((a) (format (if (member "." (chop a)) a (pack a ".")) *Scl)) (argv)) xs (cut 4 'ys) )
+	(setq ps (sort (mapcar cons xs ys))) )
+	
+(setq
+	z1 (pop 'ps)
+	z2 (pop 'ps)
+	z3 (pop 'ps)
+	z4 (pop 'ps) 
+	cx (trimfloat (avg (car z1) (car z4)))
+	cy (trimfloat (avg (cdr z1) (cdr z4)))
+	)
+
+(prinl
+	"<ellipse cx=\"" 
+	cx
+	"\" cy=\""
+	cy
+	"\" rx=\""
+	(trimfloat (distance/2 z1 z4))
+	"\" ry=\""
+	(trimfloat (distance/2 z2 z3))
+	"\" transform=\"rotate("
+	(trimfloat (*/ (atan2 (- (cdr z4) (cdr z1)) (- (car z4) (car z1))) 180. pi))
+	" "
+	cx
+	" "
+	cy 
+	")\"/>" )
+(bye)

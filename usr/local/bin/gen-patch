@@ -1,0 +1,45 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(setq
+	argsl (argv)
+	arg1 (car argsl)
+	argsopt (cdr argsl) )
+	
+(fcall "git" "diff" "--quiet" argsopt)
+
+(unless (= @@ 1)
+	(prinl "no diff or git diff error")
+	#(bye 1)
+	)
+
+(setq
+	tmpdir (pack (in-line '("portageq" "envvar" "PORTAGE_TMPDIR")) "/portage/")
+	curdir (pwd) )
+
+(unless (pre? tmpdir curdir)
+	(prinl "not in " tmpdir)
+	(bye 2) )
+
+(setq curdirl (chop curdir))
+(cut (length tmpdir) 'curdirl)
+
+(unless
+	(and
+		(match '(@cat "/" @pnv "/" @__) curdirl)
+		(match '(@pv "-" @pn) (reverse @pnv)) )
+	(prinl "can’t parse: " curdirl)
+	(bye 3) )
+
+(setq outdir (pack "/etc/portage/patches/" @cat "/" (reverse @pn)))
+(mkdirp outdir)
+
+
+
+#git diff $2 --quiet
+#[[ $? -eq 1 && -n $1 && $PWD =~ /var/tmp/portage/([^/]*/[^/]*) ]] && {
+#	A=(`qatom ${BASH_REMATCH[1]}`)
+#	P=/local/portage/patches/${A[0]}/${A[1]}
+#	mkdir -p $P
+#	F=$P/$1.patch
+#	git diff $2 --minimal > $F
+#	echo Created: $F
+#}

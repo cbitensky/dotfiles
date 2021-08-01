@@ -1,0 +1,15 @@
+diff --git a/src/gui/sdlmain.cpp b/src/gui/sdlmain.cpp
+index 1cb0a77..b59649c 100644
+--- a/src/gui/sdlmain.cpp
++++ b/src/gui/sdlmain.cpp
+@@ -1906,10 +1906,6 @@ int main(int argc, char* argv[]) {
+         setbuf(stderr, NULL);
+ #endif
+ 
+-	/* Display Welcometext in the console */
+-	LOG_MSG("DOSBox version %s",VERSION);
+-	LOG_MSG("Copyright 2002-2015 DOSBox Team, published under GNU GPL.");
+-	LOG_MSG("---");
+ 
+ 	/* Init SDL */
+ #if SDL_VERSION_ATLEAST(1, 2, 14)

@@ -1,0 +1,33 @@
+(de flat @ (fish '((x) (and (atom x) (<> NIL x))) (rest)))
+(de fexec @ (apply exec (flat (rest))))
+(de fcall @ (apply call (flat (rest))))
+(de envor (name defval) (let (val (sys name)) (if val val defval)))
+(de envorset (name defval) (unless (sys name) (sys name defval)))
+(de remext (filename) (pack (flip (cdr (member "." (flip (chop filename)))))))
+(de in-line (L) (in L (line T)))
+(de mkdir (dir) (native "@" "mkdir" NIL dir 493))
+(de setsid () (native "@" "setsid"))
+(de cp (from to) (fcall "cp" from to) (prinl from " → " to))
+(de realpath (filename)
+	(let pchar (%@ "realpath" 'N filename 0)
+		(finally (%@ "free" NIL pchar)
+			(struct pchar 'S) ) ) )
+
+(de secrand (maxexcl)
+	(let (num 0 upper (* maxexcl (/ 256 maxexcl)))
+		(loop
+			(%@ "getentropy" NIL '(num (1 . B)) 1)
+			(T (< num upper) (% num maxexcl) ) ) ) )
+
+(de mkdirp (path)
+	(let (dirs (split (chop path) "/") path (pop 'dirs))
+		(mkdir (pack path))
+		(for dir dirs
+			(setq path (append path '("/") dir))
+			(mkdir (pack path)) ) ) )
+
+(de opendup (fname fd isread)
+	(%@ "dup2" NIL (open fname isread) fd) )
+
+(de stdin  (fname) (opendup fname 0 T  ))
+(de stdout (fname) (opendup fname 1 NIL))

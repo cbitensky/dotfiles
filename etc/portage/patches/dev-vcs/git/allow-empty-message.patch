@@ -1,0 +1,12 @@
+diff --git a/builtin/commit.c b/builtin/commit.c
+index 739110c..2a6dfbf 100644
+--- a/builtin/commit.c
++++ b/builtin/commit.c
+@@ -1652,6 +1652,7 @@ int cmd_commit(int argc, const char **argv, const char *prefix)
+ 
+ 	cleanup_message(&sb, cleanup_mode, verbose);
+ 
++	allow_empty_message = 1;
+ 	if (message_is_empty(&sb, cleanup_mode) && !allow_empty_message) {
+ 		rollback_index_files();
+ 		fprintf(stderr, _("Aborting commit due to empty commit message.\n"));

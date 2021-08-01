@@ -1,0 +1,26 @@
+diff --git a/data/filetype_extensions.conf b/data/filetype_extensions.conf
+index 5619fa0..1c3dc63 100644
+--- a/data/filetype_extensions.conf
++++ b/data/filetype_extensions.conf
+@@ -46,7 +46,7 @@ Javascript=*.js;
+ JSON=*.json;
+ Kotlin=*.kt;*.kts;
+ LaTeX=*.tex;*.sty;*.idx;*.ltx;*.latex;*.aux;
+-Lisp=*.lisp;
++Lisp=*.lisp;*.l;
+ Lua=*.lua;
+ Make=*.mak;*.mk;GNUmakefile;makefile;Makefile;makefile.*;Makefile.*;
+ Markdown=*.mdml;*.markdown;*.md;*.mkd;*.mkdn;*.mdwn;*.mdown;*.mdtxt;*.mdtext;
+diff --git a/src/filetypes.c b/src/filetypes.c
+index b5f1cfc..08b0e41 100644
+--- a/src/filetypes.c
++++ b/src/filetypes.c
+@@ -618,6 +618,7 @@ static GeanyFiletype *find_shebang(const gchar *utf8_filename, const gchar *line
+ 			{ "wish",	GEANY_FILETYPES_TCL },
+ 			{ "node",	GEANY_FILETYPES_JS },
+-			{ "rust",	GEANY_FILETYPES_RUST }
++			{ "rust",	GEANY_FILETYPES_RUST },
++			{ "picolisp",	GEANY_FILETYPES_LISP }
+ 		};
+ 		gchar *tmp = g_path_get_basename(line + 2);
+ 		gchar *basename_interpreter = tmp;

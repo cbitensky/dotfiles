@@ -1,0 +1,18 @@
+diff --git a/seccompsandbox.c b/seccompsandbox.c
+index 0543db0..76c5b22 100644
+--- a/seccompsandbox.c
++++ b/seccompsandbox.c
+@@ -664,11 +664,11 @@ seccomp_sandbox_lockdown()
+   }
+ #endif
+ 
+-  ret = prctl(PR_SET_SECCOMP, 2, &prog, 0, 0);
++/*  ret = prctl(PR_SET_SECCOMP, 2, &prog, 0, 0);
+   if (ret != 0)
+   {
+     die("prctl PR_SET_SECCOMP failed");
+-  }
++  }*/
+ }
+ 
+ #else /* __linux__ && __x86_64__ */

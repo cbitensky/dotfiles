@@ -1,0 +1,43 @@
+colorscheme gruvbox
+noremap / l
+noremap l k
+noremap k j
+noremap j h
+noremap h <Nop>
+noremap _ /
+set number
+set linebreak
+set fcs=eob: 
+set tabstop=3
+set softtabstop=3
+set shiftwidth=3
+set clipboard+=unnamedplus
+
+set selection=exclusive
+set virtualedit+=onemore
+set list listchars=tab:›‐
+au BufWinEnter * set tabstop=3 shiftwidth=3 softtabstop=0 noexpandtab 
+nnoremap vd <Nop>
+noremap p P<Right>
+noremap $ $<Right>
+" noremap a i
+" make i<Esc> not move the cursor
+inoremap <Esc> <Right><Esc>
+for mode in ['c', 'i', 'n', 'v']
+	exec mode . 'noremap' '<Up>'       '<Nop>'
+	exec mode . 'noremap' '<Down>'     '<Nop>'
+	exec mode . 'noremap' '<Left>'     '<Nop>'
+	exec mode . 'noremap' '<Right>'    '<Nop>'
+	exec mode . 'noremap' '<Home>'     '<Nop>'
+	exec mode . 'noremap' '<End>'      '<Nop>'
+	exec mode . 'noremap' '<Insert>'   '<Nop>'
+	exec mode . 'noremap' '<Delete>'   '<Nop>'
+	exec mode . 'noremap' '<PageUp>'   '<Nop>'
+	exec mode . 'noremap' '<PageDown>' '<Nop>'
+endfor
+set guicursor=v-c-sm:ver20,n-i-ci-ve:ver20
+lua << EOF
+require('lspconfig').rls.setup({})
+require('rust-tools').setup({})
+require("dapui").setup()
+EOF

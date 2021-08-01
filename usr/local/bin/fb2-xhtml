@@ -1,0 +1,2 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(fexec "xsltproc" "/usr/local/xsl/fb2-xhtml.xsl" "-")

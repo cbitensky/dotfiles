@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's/if (prefs_common.user_agent_str)/if (0)/' src/compose.c || die
+	clog Disabled user-agent string in mails
+}

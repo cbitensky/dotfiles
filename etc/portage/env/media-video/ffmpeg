@@ -1,0 +1,5 @@
+post_src_prepare() {
+	sed -i 's/hide_banner = 0;/hide_banner = 1;/' fftools/cmdutils.c || die
+	clog Banner hided
+}
+

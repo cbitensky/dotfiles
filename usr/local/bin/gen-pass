@@ -1,0 +1,8 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(do (format (envor "L" "24"))
+	(setq num (secrand 62) shift 0)
+	(for (L '((10 . 7) (36 . 6)) (and L (>= num (caar L))) (cdr L)) (setq shift (+ shift (cdar L))))
+	(push 'chars (char (+ 48 num shift))) )
+(setq string (pack chars))
+(prinl string) 
+(fexec "wl-copy" string)

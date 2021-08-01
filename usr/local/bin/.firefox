@@ -1,0 +1,157 @@
+#!/bin/sh
+T=`basename "$0"`
+T=${T:0:3}
+P=/var/tmp/firefox
+O=$P/prefs.js
+rm -rf $P
+mkdir -p $P/chrome
+cp -r /res/firefox/* $P
+
+cat <<EOF >$P/chrome/userContent.css
+input, textarea, button, select { background-color: white; color: black }
+EOF
+
+cat <<EOF >$P/chrome/userChrome.css
+#tabbrowser-tabs, #tabbrowser-tabs > #tabbrowser-arrowscrollbox { min-height: 0 !important }
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] { visibility: collapse }
+.tab-close-button, .tab-icon-image{ display:none !important; }
+* { transition: none !important; animation-duration: 0s !important; }
+EOF
+
+
+cat <<EOF >$O
+user_pref("accessibility.force_disabled", 1);
+user_pref("accessibility.typeaheadfind", false);
+user_pref("app.update.auto", false);
+user_pref("beacon.enable", false);
+user_pref("browser.aboutConfig.showWarning", false);
+user_pref("browser.chrome.favicons", false);
+user_pref("browser.chrome.toolbar_tips", false);
+user_pref("browser.contentblocking.category", "custom");
+user_pref("browser.contentblocking.introCount", 20);
+user_pref("browser.contentblocking.report.monitor.enabled", false);
+user_pref("browser.ctrlTab.recentlyUsedOrder", false);
+user_pref("browser.discovery.enabled", false);
+user_pref("browser.display.use_system_colors", false);
+user_pref("browser.download.animateNotifications", false);
+user_pref("browser.download.dir", "/down");
+user_pref("browser.download.folderList", 2);
+user_pref("browser.download.forbid_open_with", true);
+user_pref("browser.fixup.alternate.enabled", false);
+user_pref("browser.fullscreen.animate", false);
+user_pref("browser.helperApps.neverAsk.saveToDisk", "application/zip");
+user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
+user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.pageActions.persistedActions", "{\"version\":1,\"ids\":[\"bookmark\",\"bookmarkSeparator\",\"copyURL\",\"emailLink\",\"sendToDevice\",\"pocket\"],\"idsInUrlbar\":[]}");
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.search.update", false);
+user_pref("browser.startup.blankWindow", true);
+user_pref("browser.startup.homepage", "about:blank");
+user_pref("browser.startup.page", 0);
+user_pref("browser.stopReloadAnimation.enabled", false);
+user_pref("browser.tabs.closeWindowWithLastTab", false);
+user_pref("browser.tabs.warnOnClose", false);
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"urlbar-container\",\"downloads-button\",\"ublock0_raymondhill_net-browser-action\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"developer-button\",\"addon_darkreader_org-browser-action\",\"ublock0_raymondhill_net-browser-action\"],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"toolbar-menubar\"],\"currentVersion\":16,\"newElementCount\":4}");
+user_pref("browser.uidensity", 1);
+user_pref("browser.urlbar.autoFill", false);
+user_pref("browser.urlbar.oneOffSearches", false);
+user_pref("browser.urlbar.openViewOnFocus", false);
+user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.history", false);
+user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.searches", false);
+user_pref("browser.urlbar.suggest.topsites", false); 
+user_pref("browser.urlbar.update1", false);
+user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("datareporting.policy.firstRunURL", "");
+user_pref("devtools.theme", "dark");
+user_pref("dom.ipc.processCount", 2);
+user_pref("dom.push.enabled", false);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+user_pref("extensions.fxmonitor.firstAlertShown", true);
+user_pref("general.smoothScroll", false);
+user_pref("general.warnOnAboutConfig", false);
+user_pref("geo.enabled", false);
+user_pref("network.cookie.cookieBehavior", 3); 
+user_pref("permissions.default.desktop-notification", 2);
+user_pref("permissions.default.geo", 2);
+user_pref("print.print_bgcolor", true);
+user_pref("print.print_bgimages", true);
+user_pref("print.print_margin_top", "0.2");
+user_pref("print.print_margin_bottom", "0");
+user_pref("print.print_margin_left", "0");
+user_pref("print.print_margin_right", "0");
+user_pref("print.print_to_filename", "/down/firefox.pdf");
+user_pref("print.print_footerleft", "");
+user_pref("print.print_footerright", "");
+user_pref("print.print_headerleft", "");
+user_pref("print.print_headerright", "");
+user_pref("privacy.socialtracking.notification.enabled", false);
+user_pref("privacy.trackingprotection.cryptomining.enabled", false);
+user_pref("privacy.trackingprotection.enabled", false);
+user_pref("privacy.trackingprotection.fingerprinting.enabled", false);
+user_pref("privacy.trackingprotection.pbmode.enabled", false);
+user_pref("reader.parse-on-load.enabled", false);
+user_pref("security.dialog_enable_delay", 0);
+user_pref("security.OCSP.enabled", 0);
+user_pref("signon.rememberSignons", false);
+user_pref("signon.management.page.breach-alerts.enabled", false);
+user_pref("startup.homepage_welcome_url", "about:blank");
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.server", "");
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("browser.tabs.tabClipWidth", 999999);
+user_pref("ui.systemUsesDarkTheme", 1);
+user_pref("widget.content.allow-gtk-dark-theme", true);
+EOF
+
+# Interesting prefs:
+#browser.ui.zoom.force-user-scalable
+#clipboard.autocopy
+#dom.battery.enabled
+#dom.block_download_insecure
+#dom.block_download_in_sandboxed_iframe
+#dom.css_pseudo_element.enabled
+#dom.dialog_element.enabled
+#dom.disable_beforeunload
+#dom.imagecapture.enabled
+
+if [ "$T" == tor ]; then
+cat <<EOF >>$O
+user_pref("network.proxy.socks", "127.0.0.1");
+user_pref("network.proxy.socks_port", 9050);
+user_pref("network.proxy.type", 1);
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36");
+user_pref("privacy.resistFingerprinting", true);
+EOF
+mkdir -p -m777 /var/run/tor
+pidof tor || exec tor &
+export LANG=en_US.UTF-8
+export TZ=GMT
+#else 
+#cat <<EOF >>$O
+#user_pref("intl.accept_languages", "de");
+#EOF
+fi
+
+if [ "$T" == sfi ]; then
+V=-private
+cat <<EOF >>$O
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36");
+EOF
+else
+cat <<EOF >>$O
+user_pref("security.fileuri.strict_origin_policy", false);
+EOF
+fi
+exec /usr/bin/firefox-bin-wayland $V -profile $P "$@"
+#GDK_BACKEND=wayland exec /usr/lib64/firefox/firefox $V -profile $P "$@"

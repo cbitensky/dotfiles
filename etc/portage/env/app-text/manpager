@@ -1,0 +1,21 @@
+post_src_prepare() {
+	F=manpager.c
+	cp -L "$FILESDIR/$F" "$S"
+	sed -i '
+		s/SE(mb, [0-9]*, [0-9]*)/SE(mb, 5, 91)/
+		s/SE(md, [0-9]*, [0-9]*)/SE(md, 0, 92)/
+		s/SE(us, [0-9]*, [0-9]*)/SE(us, 4, 97)/
+	' $F || die 
+	clog colors changed
+}
+
+src_compile() {
+	clog modified src_compile
+	local cmd=(
+		$(tc-getCC) ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
+		"${S}"/manpager.c -o ${PN}
+	)
+	echo "${cmd[@]}"
+	"${cmd[@]}" || die
+}
+

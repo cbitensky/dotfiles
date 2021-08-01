@@ -1,0 +1,5 @@
+post_src_prepare() {
+	sed -i '/winemenubuilder/d' configure configure.ac loader/wine.inf.in dlls/shell32/changenotify.c || die
+	rm -r programs/winemenubuilder || die
+	clog removed: winemenubuilder
+}

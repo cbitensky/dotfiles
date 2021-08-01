@@ -1,0 +1,11 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(in "/usr/local/conf/ys.cf"
+	(while (line)
+		(let chars (car (split (chop @) " "))
+			(unless (= (car chars) "#")
+				(queue 'ids (pack "https://www.youtube.com/playlist?list=" chars)) ) ) ) )
+(fexec "y"
+	"--match-filter" "!is_live" 
+	"--download-archive" "/var/lib/seen.txt"
+	"--playlist-end" "20"
+	ids)

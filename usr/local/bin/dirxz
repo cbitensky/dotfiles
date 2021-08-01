@@ -1,0 +1,7 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(load "/usr/share/picolisp/lib/misc.l")
+(envorset "XZ_OPT" "-9e")
+(fexec "tar"
+	"-cJf"
+	(pack "../" (basename (pwd)) ".tar.xz")
+	"-S" "--sort=name" "--numeric-owner" "--owner=0" "--group=0" ".")

@@ -1,0 +1,15 @@
+# Remove files that shall not be installed from this list.
+amdgpu/polaris12_pfp_2.bin
+amdgpu/polaris12_k_mc.bin
+amdgpu/polaris12_sdma1.bin
+amdgpu/polaris12_sdma.bin
+amdgpu/polaris12_k_smc.bin
+amdgpu/polaris12_uvd.bin
+amdgpu/polaris12_rlc.bin
+amdgpu/polaris12_mec_2.bin
+amdgpu/polaris12_vce.bin
+amdgpu/polaris12_ce_2.bin
+amdgpu/polaris12_mec2_2.bin
+amdgpu/polaris12_me_2.bin
+i915/kbl_dmc_ver1_04.bin
+iwlwifi-9000-pu-b0-jf-b0-46.ucode

@@ -1,0 +1,34 @@
+diff --git a/data/geany.css b/data/geany.css
+index f4e9f0b..afcd0fa 100644
+--- a/data/geany.css
++++ b/data/geany.css
+@@ -27,7 +27,7 @@
+ 
+ /* document status colors */
+ #geany-document-status-changed {
+-	color: #ff0000;
++	color: #ff7f7f;
+ }
+ #geany-document-status-disk-changed {
+ 	color: #ff7f00;
+@@ -38,16 +38,16 @@
+ 
+ /* compiler message colors */
+ #geany-compiler-error {
+-    color: #ff0000;
++    color: #ff3f3f;
+ }
+ #geany-compiler-context {
+-    color: #7f0000;
++    color: #ff7f7f;
+ }
+ #geany-compiler-message {
+-    color: #0000D0;
++    color: #7f7fff;
+ }
+ 
+ /* red "Terminal" label when terminal dirty */
+ #geany-terminal-dirty {
+-	color: #ff0000;
++	color: #ff7f7f;
+ }

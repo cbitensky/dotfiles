@@ -1,0 +1,6 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(do (format (envor "N" "30"))
+	(do (format (envor "L" "5"))
+		(prin (char (+ (secrand 25) 97))) )
+	(prinl NIL) )
+(bye)

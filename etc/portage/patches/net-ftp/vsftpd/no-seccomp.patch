@@ -1,0 +1,24 @@
+diff --git a/seccompsandbox.c b/seccompsandbox.c
+index 2c350a9..0e58999 100644
+--- a/seccompsandbox.c
++++ b/seccompsandbox.c
+@@ -681,16 +681,16 @@ seccomp_sandbox_lockdown()
+   }
+ #endif
+ 
+-  ret = prctl(PR_SET_SECCOMP, 2, &prog, 0, 0);
++/*  ret = prctl(PR_SET_SECCOMP, 2, &prog, 0, 0);
+   if (ret != 0)
+   {
+     if (errno == EINVAL)
+     {
+-      /* Kernel isn't good enough. */
++      /* Kernel isn't good enough. 
+       return;
+     }
+     die("prctl PR_SET_SECCOMP failed");
+-  }
++  }*/
+ }
+ 
+ #else /* __linux__ && __x86_64__ */

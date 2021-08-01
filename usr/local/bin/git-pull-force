@@ -1,0 +1,4 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(fcall "git" "fetch" "--all")
+(fcall "git" "reset" "--hard" "origin/main")
+(bye)

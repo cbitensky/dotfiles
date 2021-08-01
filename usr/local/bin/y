@@ -1,0 +1,12 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(setq
+	res (envor "RES" "1080")
+	dir (envor "DIR" "/var/cache/youtube")
+	prg (envor "PRG" "youtube-dl") )
+(fexec prg
+	"-i"
+	"--output" (pack dir "/%(upload_date)s-%(id)s-%(uploader)s-%(title).64s.%(ext)s")
+	"-f" (pack "bestvideo[height<=" res "]+bestaudio/best[height<=" res "]")
+	"--write-sub" "--write-auto-sub" "--embed-subs" "--sub-lang" "en,ru,uk"
+	"--hls-use-mpegts"
+	(argv) )

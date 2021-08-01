@@ -1,0 +1,4 @@
+net-im/telegram-desktop -dbus -gtk -hunspell -spell
+dev-qt/qtnetwork ssl
+sys-libs/zlib minizip
+app-arch/libarchive bzip2

@@ -1,0 +1,19 @@
+post_src_prepare() {
+	sed -i -r '
+		s|(\*download_dir\s*=\s*")[^\"]+("\s*;)|\1/down\2|
+		/GDK_KEY_a/s|GDK_KEY_a:|GDK_KEY_q:|g
+		/GDK_KEY_s/s|GDK_KEY_s:|GDK_KEY_w:|g
+		/GDK_KEY_c/s|GDK_KEY_c:|GDK_KEY_t:|g
+		/GDK_KEY_d/s|GDK_KEY_d:|GDK_KEY_b:|g
+		/GDK_KEY_w/s|GDK_KEY_w:|GDK_KEY_s:|g
+		/GDK_KEY_2/d
+		/GDK_KEY_q/s|GDK_KEY_q:|GDK_KEY_a:|g
+		/GDK_KEY_e/s|GDK_KEY_e:|GDK_KEY_d:|g
+		/GDK_KEY_l/s|GDK_KEY_l:|GDK_KEY_f:|g
+		/GDK_KEY_r/s|GDK_KEY_r:|GDK_KEY_w:|g
+		/GDK_KEY_k/s|GDK_KEY_k:|GDK_KEY_v:|g
+		/GDK_KEY_n/s|GDK_KEY_n:|GDK_KEY_c:|g
+		/GDK_KEY_3/s|GDK_KEY_3:|GDK_KEY_x:|g
+	' $S/browser.c || die
+	clog Download dir changed to \down, keybindings changed
+}

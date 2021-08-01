@@ -1,0 +1,2 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(fexec "grep" "-R" (argv) ".")

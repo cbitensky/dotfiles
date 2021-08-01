@@ -1,0 +1,20 @@
+[user]
+	name = Constantine Bitensky
+	email = cbitensky1@gmail.com
+
+[color "diff"]
+	meta = brightwhite
+	frag = brightcyan
+	old = brightred
+	new = brightgreen
+
+[color "status"]
+	added = brightgreen
+	changed = brightyellow
+	untracked = brightblue
+
+[color "branch"]
+	remote = cyan
+	current = brightcyan
+[init]
+	defaultBranch = main

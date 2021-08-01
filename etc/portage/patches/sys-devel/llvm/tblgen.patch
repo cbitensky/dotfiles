@@ -1,0 +1,10 @@
+diff --git a/llvm/utils/TableGen/CMakeLists.txt b/llvm/utils/TableGen/CMakeLists.txt
+index 8673a257..5723c6b0 100644
+--- a/llvm/utils/TableGen/CMakeLists.txt
++++ b/llvm/utils/TableGen/CMakeLists.txt
+@@ -57,4 +57,5 @@ add_tablegen(llvm-tblgen LLVM
+   CTagsEmitter.cpp
+   )
+ target_link_libraries(llvm-tblgen PRIVATE LLVMTableGenGlobalISel)
++set_target_properties(llvm-tblgen PROPERTIES LINK_FLAGS "-Wl,--push-state,--no-as-needed -lpthread -Wl,--pop-state")
+ set_target_properties(llvm-tblgen PROPERTIES FOLDER "Tablegenning")

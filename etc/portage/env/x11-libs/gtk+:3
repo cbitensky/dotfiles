@@ -1,0 +1,5 @@
+post_src_prepare() {
+	sed -i '
+		s@$shlibpath_var=\\"$temp_rpath@$shlibpath_var=\\"/lib64:$temp_rpath@
+	' build-aux/ltmain.sh || die
+}

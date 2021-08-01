@@ -1,0 +1,22 @@
+diff --git utility/shared.c utility/shared.c
+index 8a4d395..ab98212 100644
+--- utility/shared.c
++++ utility/shared.c
+@@ -1584,17 +1584,7 @@ void free_nls(void)
+ ***************************************************************************/
+ void dont_run_as_root(const char *argv0, const char *fallback)
+ {
+-#if (defined(ALWAYS_ROOT) || defined(__EMX__) || defined(__BEOS__))
+   return;
+-#else
+-  if (getuid()==0 || geteuid()==0) {
+-    fc_fprintf(stderr,
+-	       _("%s: Fatal error: you're trying to run me as superuser!\n"),
+-	       (argv0 ? argv0 : fallback ? fallback : "freeciv"));
+-    fc_fprintf(stderr, _("Use a non-privileged account instead.\n"));
+-    exit(EXIT_FAILURE);
+-  }
+-#endif /* ALWAYS_ROOT */
+ }
+ 
+ /***************************************************************************

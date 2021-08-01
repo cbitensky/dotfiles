@@ -1,0 +1,139 @@
+diff --git a/README b/README
+index 6f8d0cc..b502397 100644
+--- a/README
++++ b/README
+@@ -144,7 +144,7 @@ Thanks go to the following people:
+   Solofo <solofo@mpi-sb.mpg.de> for reporting a problem when creating an
+   XLFD name.  The old name was saved in the FONT property and some
+   versions of "mkfontdir" use that instead of the first FONT field.  Also
+-  for recommending that the Ctrl+F4 accelerator be configurable if
++  for recommending that the Ctrl+W accelerator be configurable if
+   it does not suit the user.
+ 
+   Dave Bodenstab <imdave@mcs.net> for providing a patch for a problem
+diff --git a/gbdfed.c b/gbdfed.c
+index d0343f7..c5c41ad 100644
+--- a/gbdfed.c
++++ b/gbdfed.c
+@@ -956,7 +956,7 @@ make_file_menu(gbdfed_editor_t *ed, GtkWidget *menubar)
+     (void) g_signal_connect(G_OBJECT(ed->file_save), "activate",
+                             G_CALLBACK(guifile_save),
+                             GUINT_TO_POINTER(ed->id));
+-    mitem = make_accel_menu_item(menu, "Save _As...", "<Control>W", ed->ag);
++    mitem = make_accel_menu_item(menu, "Save _As...", "<Shift><Control>S", ed->ag);
+     (void) g_signal_connect(G_OBJECT(mitem), "activate",
+                             G_CALLBACK(guifile_save_as),
+                             GUINT_TO_POINTER(ed->id));
+@@ -1064,13 +1064,13 @@ make_file_menu(gbdfed_editor_t *ed, GtkWidget *menubar)
+ #endif
+ 
+     if (ed->id == 0) {
+-        mitem = make_accel_menu_item(menu, "E_xit", "<Control>F4", ed->ag);
++        mitem = make_accel_menu_item(menu, "E_xit", "<Control>Q", ed->ag);
+ 
+         (void) g_signal_connect(G_OBJECT(mitem), "activate",
+                                 G_CALLBACK(quit_application),
+                                 GUINT_TO_POINTER(ed->id));
+     } else {
+-        mitem = make_accel_menu_item(menu, "Clos_e", "<Control>F4", ed->ag);
++        mitem = make_accel_menu_item(menu, "Clos_e", "<Control>W", ed->ag);
+ 
+         (void) g_signal_connect_object(G_OBJECT(mitem), "activate",
+                                        G_CALLBACK(gtk_widget_hide),
+diff --git a/gbdfed.man b/gbdfed.man
+index a3e4839..60c7ed0 100644
+--- a/gbdfed.man
++++ b/gbdfed.man
+@@ -179,7 +179,7 @@ _XFREE86_GLYPH_RANGE properties containing a list of glyph codes available in
+ the font.
+ .PP
+ .TP 4
+-.I Save As <Ctrl+W>
++.I Save As <Ctrl+Shift+S>
+ Save the current font with some other name.
+ .br
+ When the font is saved, it will automatically generate a list of
+@@ -257,7 +257,7 @@ This will export the current BDF font into the HEX format (see
+ http://czyborra.com/unifont/).
+ .PP
+ .TP 4
+-.I Exit/Close <Ctrl+F4>
++.I Exit/Close <Ctrl+Q>
+ Exit the program if this is the primary Font Grid or simply hide (unmap) the
+ current Font Grid window.
+ .PP
+@@ -496,7 +496,7 @@ This will update the FontGrid with the modified glyph and move to the previous
+ glyph.
+ .PP
+ .TP 4
+-.I Close <Ctrl+F4>
++.I Close <Ctrl+W>
+ This will close the Glyph Editor.
+ .PP
+ The
+diff --git a/guigedit.c b/guigedit.c
+index 235341c..b916056 100644
+--- a/guigedit.c
++++ b/guigedit.c
+@@ -654,7 +654,7 @@ make_file_menu(GlypheditRec *ge, GtkWidget *menubar)
+     gtk_widget_set_sensitive(sep, FALSE);
+     gtk_menu_shell_append(GTK_MENU_SHELL(menu), sep);
+ 
+-    mitem = make_accel_menu_item(menu, "_Close", "<Control>F4", ge->ag);
++    mitem = make_accel_menu_item(menu, "_Close", "<Control>W", ge->ag);
+     (void) g_signal_connect(G_OBJECT(mitem), "activate",
+                             G_CALLBACK(activate_close_glyph_editor),
+                             GUINT_TO_POINTER(ge->id));
+diff --git a/htext.h b/htext.h
+index d3339b4..4c69af6 100644
+--- a/htext.h
++++ b/htext.h
+@@ -144,7 +144,7 @@ static gchar *fgrid_text = "<help>"
+ "<margin1>Save &lt;Ctrl+S&gt;</margin1> "
+ "<margin2>Save the current font.</margin2>\n"
+ "\n"
+-"<margin1>Save As &lt;Ctrl+W&gt;</margin1> "
++"<margin1>Save As &lt;Ctrl+Shift+S&gt;</margin1> "
+ "<margin2>Save the current font with some other name.</margin2>\n"
+ "\n"
+ "<margin1.5>Import</margin1.5>\n"
+@@ -198,7 +198,7 @@ static gchar *fgrid_text = "<help>"
+ "<margin3>This will export the current BDF font into the "
+ "HEX format (See the <b>HEX Font Notes</b> entry).</margin3>\n"
+ "\n"
+-"<margin1>Exit/Close &lt;Ctrl+F4&gt;</margin1> "
++"<margin1>Exit/Close &lt;Ctrl+W&gt;</margin1> "
+ "<margin2>Exit the program if this is the primary Font "
+ "Grid or simply hide the current Font Grid window.</margin2>\n"
+ "\n"
+@@ -561,7 +561,7 @@ static gchar *gedit_text = "<help>"
+ "<margin2>This will update the FontGrid with the "
+ "modified glyph and move to the previous glyph.</margin2>\n"
+ "\n"
+-"<margin1>Close &lt;Ctrl+F4&gt;</margin1> "
++"<margin1>Close &lt;Ctrl+W&gt;</margin1> "
+ "<margin2>This will close the Glyph Editor.</margin2>\n"
+ "\n"
+ "<b>Edit</b>\n"
+@@ -893,18 +893,18 @@ static gchar *conf_text = "<help>"
+ "\n"
+ "<margin1>This feature is toggled using the <b>Preferences</b> dialog.</margin1> \n"
+ "\n"
+-"<margin>close_accelerator_text &lt;labelstring&gt; [default: \"Ctrl+F4\"]</margin>\n"
++"<margin>close_accelerator_text &lt;labelstring&gt; [default: \"Ctrl+W\"]</margin>\n"
+ "\n"
+ "<margin1>The default close accelerator text shown on the "
+ "Close/Exit menu options of the FontGrids and "
+-"GlyphEditors is \"Ctrl+F4\". This option changes the "
++"GlyphEditors is \"Ctrl+W\". This option changes the "
+ "label string on those menu options. This option should "
+ "be used in conjunction with the next option.</margin1>\n"
+ "\n"
+ "<margin1>This feature is only available in the configuration "
+ "file.</margin1>\n"
+ "\n"
+-"<margin>close_accelerator &lt;translation&gt; [default: \"&lt;Control&gt;F4\"]</margin>\n"
++"<margin>close_accelerator &lt;translation&gt; [default: \"&lt;Control&gt;W\"]</margin>\n"
+ "\n"
+ "<margin1>The default accelerator for the Close/Exit menu options "
+ "in the FontGrids and GlyphEditors can sometimes be "

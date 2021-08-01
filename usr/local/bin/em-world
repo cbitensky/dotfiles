@@ -1,0 +1,3 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(sys "I_KNOW_WHAT_I_AM_DOING" "yes")
+(fexec "emerge" "-uDNv" "--with-bdeps=y" "--complete-graph" (argv) "world")

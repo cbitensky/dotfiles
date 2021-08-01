@@ -1,0 +1,10 @@
+diff --git a/clang/utils/TableGen/CMakeLists.txt b/clang/utils/TableGen/CMakeLists.txt
+index 26589ec7..b944e3be 100644
+--- a/clang/utils/TableGen/CMakeLists.txt
++++ b/clang/utils/TableGen/CMakeLists.txt
+@@ -21,4 +21,5 @@ add_tablegen(clang-tblgen CLANG
+   SveEmitter.cpp
+   TableGen.cpp
+   )
++set_target_properties(clang-tblgen PROPERTIES LINK_FLAGS "-Wl,--push-state,--no-as-needed -lpthread -Wl,--pop-state")
+ set_target_properties(clang-tblgen PROPERTIES FOLDER "Clang tablegenning")

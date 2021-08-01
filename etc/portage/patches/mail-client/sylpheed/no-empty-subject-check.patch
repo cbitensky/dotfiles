@@ -1,0 +1,22 @@
+diff --git a/src/compose.c b/src/compose.c
+index c89ac75..db9a4de 100644
+--- a/src/compose.c
++++ b/src/compose.c
+@@ -3082,7 +3082,7 @@ static gboolean compose_check_entries(Compose *compose)
+ 		return FALSE;
+ 	}
+ 
+-	str = gtk_entry_get_text(GTK_ENTRY(compose->subject_entry));
++	/*str = gtk_entry_get_text(GTK_ENTRY(compose->subject_entry));
+ 	if (*str == '\0') {
+ 		AlertValue aval;
+ 
+@@ -3091,7 +3091,7 @@ static gboolean compose_check_entries(Compose *compose)
+ 				  GTK_STOCK_YES, GTK_STOCK_NO, NULL);
+ 		if (aval != G_ALERTDEFAULT)
+ 			return FALSE;
+-	}
++	}*/
+ 
+ 	return TRUE;
+ }

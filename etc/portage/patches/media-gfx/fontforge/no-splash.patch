@@ -1,0 +1,22 @@
+diff --git a/fontforgeexe/startui.c b/fontforgeexe/startui.c
+index a032333..afc4d36 100644
+--- a/fontforgeexe/startui.c
++++ b/fontforgeexe/startui.c
+@@ -950,7 +950,7 @@ int fontforge_main( int argc, char **argv ) {
+ 	    quiet = 1;
+     }
+ 
+-    if (!quiet) {
++    if (0) {
+         time_t tm = FONTFORGE_MODTIME_RAW;
+         struct tm* modtime = gmtime(&tm);
+         fprintf( stderr, "Copyright (c) 2000-%d. See AUTHORS for Contributors.\n", modtime->tm_year+1900 );
+@@ -1141,7 +1141,7 @@ int fontforge_main( int argc, char **argv ) {
+ 	    else
+ 	        use_cairo = true;
+ 	    GDrawEnableCairo(use_cairo);
+-	} else if ( strcmp(pt,"-nosplash")==0 )
++	} else if ( 1 )
+ 	    splash = 0;
+ 	else if ( strcmp(pt,"-quiet")==0 )
+ 	    /* already checked for this earlier, no need to do it again */;

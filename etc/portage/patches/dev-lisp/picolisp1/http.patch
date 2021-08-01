@@ -1,0 +1,57 @@
+diff --git a/lib/http.l b/lib/http.l
+index 6b28e24..0e31ec9 100644
+--- a/lib/http.l
++++ b/lib/http.l
+@@ -16,6 +16,7 @@
+ (zero *Http1)
+ 
+ (de *Mimes
++   (`(chop "xhtml") "application/xhtml+xml; charset=utf-8")
+    (`(chop "html") "text/html; charset=utf-8")
+    (`(chop "svg") "image/svg+xml; charset=utf-8")
+    (`(chop "au") "audio/basic" 3600)
+@@ -363,7 +364,7 @@
+ # Http Transfer Header
+ (de http1 (Typ Upd File Att)
+    (prinl "HTTP/1." *Http1 " 200 OK^M")
+-   (prinl "Server: PicoLisp^M")
++#   (prinl "Server: PicoLisp^M")
+    (prin "Date: ")
+    (httpDate (date T) (time T))
+    (when Upd
+@@ -451,19 +452,26 @@
+    (let B (fin X)
+       (if (pair X)
+          (setq X (car X))
+-         (setq B (pack "<H1>" B "</H1>")) )
++         (setq B (pack "<h1>" B "</h1>")) )
+       (prinl "HTTP/1." *Http1 " " N " " X "^M")
+-      (prinl "Server: PicoLisp^M")
++#      (prinl "Server: PicoLisp^M")
+       (while (args)
+          (prinl (next) "^M") )
+-      (prinl "Content-Type: text/html^M")
++      (prinl "Content-Type: application/xhtml+xml; charset=utf-8^M")
+       (httpCookies)
+-      (prinl "Content-Length: " (+ 59 (length N) (length X) (length B)) "^M")
+-      (prinl "^M")
+-      (prinl "<HTML>")
+-      (prinl "<HEAD><TITLE>" N " " X "</TITLE></HEAD>")
+-      (prinl "<BODY>" B "</BODY>")
+-      (prinl "</HTML>") ) )
++      (prin "Content-Length: " (+ 202 (length N) (length X) (length B))
++      "^M^J^M^J"
++      "<!DOCTYPE html>^J"
++      "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\">^J"
++      "<head>^J"
++      "<meta name=\"viewport\" content=\"width=device-width\"/>^J"
++      "<meta charset=\"utf-8\"/>^J"
++      "<title>" N " " X "</title>^J"
++      "</head>^J"
++      "<body>^J"
++      B "^J"
++      "</body>^J"
++      "</html>") ) )
+ 
+ (de noContent ()
+    (prinl "HTTP/1.0 204 No Content^M")

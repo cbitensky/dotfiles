@@ -1,0 +1,13 @@
+diff --git a/e2fsck/unix.c b/e2fsck/unix.c
+index faf5af9..1dc19c3 100644
+--- a/e2fsck/unix.c
++++ b/e2fsck/unix.c
+@@ -1413,7 +1413,7 @@ int main (int argc, char *argv[])
+ 	}
+ 
+ 	init_resource_track(&ctx->global_rtrack, NULL);
+-	if (!(ctx->options & E2F_OPT_PREEN) || show_version_only)
++	if (show_version_only)
+ 		log_err(ctx, "e2fsck %s (%s)\n", my_ver_string,
+ 			 my_ver_date);
+ 

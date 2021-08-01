@@ -1,0 +1,12 @@
+diff --git a/src/libmain.c b/src/libmain.c
+index 3a60dd7..90c8917 100644
+--- a/src/libmain.c
++++ b/src/libmain.c
+@@ -1212,7 +1212,6 @@ gint main_lib(gint argc, gchar **argv)
+ #endif
+ 	ui_create_recent_menus();
+ 
+-	ui_set_statusbar(TRUE, _("This is Geany %s."), main_get_version_string());
+ 	if (config_dir_result != 0)
+ 	{
+ 		const gchar *message = _("Configuration directory could not be created (%s).");

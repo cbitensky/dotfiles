@@ -1,0 +1,12 @@
+post_src_prepare() {
+	sed -i '
+		s@if \[ "$dir" = "/boot" \];@if true;@g
+		s@img_dest=[a-z]\+@img_dest=linux@g
+	' installkernel || die "sed failed"
+	clog Check dir removed: /boot
+}
+
+post_src_install() {
+	rm -r $D/etc $D/sbin/installkernel $D/usr/share/man/man8/installkernel*
+	clog Removed: installkernel
+}

@@ -1,0 +1,21 @@
+diff --git a/oftpd-0.3.7/src/ftp_session.c b/oftpd-0.3.7/src/ftp_session.c
+index 81e9c8e..7a1cbb1 100644
+--- a/oftpd-0.3.7/src/ftp_session.c
++++ b/oftpd-0.3.7/src/ftp_session.c
+@@ -1957,11 +1957,16 @@ static int ip_equal(const struct sockaddr *a, const struct sockaddr *b)
+ 
+ static int ip_equal(const struct sockaddr *a, const struct sockaddr *b)
+ {
++    struct sockaddr *aa, *bb;
++
+     daemon_assert(a != NULL);
+     daemon_assert(b != NULL);
+     daemon_assert(a->sa_family == AF_INET);
+     daemon_assert(b->sa_family == AF_INET);
+ 
++    aa = (struct sockaddr *)a;
++    bb = (struct sockaddr *)b;
++
+     if (((struct sockaddr_in *)aa)->sin_addr.s_addr != 
+ 	((struct sockaddr_in *)bb)->sin_addr.s_addr) return 0;
+     

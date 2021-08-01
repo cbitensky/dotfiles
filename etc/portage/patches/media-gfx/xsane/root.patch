@@ -1,0 +1,13 @@
+diff --git a/src/xsane.c b/src/xsane.c
+index 775610e..ce354b8 100644
+--- a/src/xsane.c
++++ b/src/xsane.c
+@@ -5832,7 +5832,7 @@ static int xsane_init(int argc, char **argv)
+   xsane_pref_restore_media();
+ 
+ #ifndef HAVE_OS2_H
+-  if (!getuid()) /* root ? */
++  if (0) /* root ? */
+   {
+     if (xsane_back_gtk_decision(ERR_HEADER_WARNING, (gchar **) warning_xpm, WARN_XSANE_AS_ROOT,
+         BUTTON_CANCEL, BUTTON_CONT_AT_OWN_RISK, TRUE /* wait */) == TRUE)

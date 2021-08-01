@@ -1,0 +1,21 @@
+diff --git a/xwayland/window-manager.c b/xwayland/window-manager.c
+index c307e19..c2f529e 100644
+--- a/xwayland/window-manager.c
++++ b/xwayland/window-manager.c
+@@ -501,7 +501,7 @@ weston_wm_window_read_properties(struct weston_wm_window *window)
+ 					     props[i].atom,
+ 					     XCB_ATOM_ANY, 0, 2048);
+ 
+-	window->decorate = window->override_redirect ? 0 : MWM_DECOR_EVERYTHING;
++	window->decorate = 0;
+ 	window->size_hints.flags = 0;
+ 	window->motif_hints.flags = 0;
+ 	window->delete_window = 0;
+@@ -568,6 +568,7 @@ weston_wm_window_read_properties(struct weston_wm_window *window)
+ 			}
+ 			break;
+ 		case TYPE_MOTIF_WM_HINTS:
++			break;
+ 			memcpy(&window->motif_hints,
+ 			       xcb_get_property_value(reply),
+ 			       sizeof window->motif_hints);

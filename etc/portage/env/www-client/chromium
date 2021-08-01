@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's#{"text/xml", "xml"},#{"text/xml", "xml,fb2"},#' net/base/mime_util.cc || die
+	clog FB2 added
+}

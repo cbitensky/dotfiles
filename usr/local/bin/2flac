@@ -1,0 +1,2 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(fexec "flac" "-8" "--lax" "-l" "32" "-r" "15" "-S-" "-P-" (argv))
