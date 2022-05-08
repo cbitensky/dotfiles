@@ -1,4 +1,4 @@
 /dev/nvme0n1p1 / ext4 noatime,lazytime 0 1
-/dev/nvme0n1p2 /boot vfat noatime,nodev,nosuid,fmask=0111,utf8=1 0 0
+/dev/nvme0n1p2 /boot vfat noatime,nodev,nosuid,fmask=0111,utf8=1 0 2
 / /var/nfsroot none bind
-/swap swap swap default 0 0
+/var/swap none swap defaults 0 0

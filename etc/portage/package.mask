@@ -1,2 +1,9 @@
 >dev-libs/protobuf-3.12.3
 #>=media-libs/freetype-2.11
+>=dev-util/goland-2021.3
+
+app-shells/push::mv
+app-shells/quoter::mv
+sys-apps/less::mv
+app-portage/eix::mv 
+x11-libs/gtk+::mv

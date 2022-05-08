@@ -1,0 +1,42 @@
+@import url("base.css");
+
+p, li { line-height: 135% }
+li { list-style-position: inside }
+ol > li:before { content: "  " }
+ul, ol { padding-inline-start: 0 }
+
+img, video, iframe { max-width: 100% }
+blockquote { font-size: smaller }
+
+figure, figcaption, .caption { text-align: center }
+figure img { line-height: 0 }
+table, math[display="block"] { margin: 1.em auto }
+figcaption, th, .caption { opacity: .7; font-size: 91% }
+figure > figcaption, .caption { margin-top: 5px; margin-left: 2rem; margin-right: 2rem }
+.caption { margin-bottom: 1.em }
+figure p { font-size: 120% }
+figure > div:not([class]) { display: flex; justify-content: center }
+
+table { margin-bottom: 0 }
+table + :not(.caption) { margin-bottom: 1.em }
+
+div > img { margin: 5px }
+div > img:first-child { margin-left: 0px }
+div > img:last-child { margin-right: 0px }
+
+p > img { vertical-align: bottom }
+
+section { margin: 2rem 0 }
+body > section { margin: em 0 }
+section.notes > section { margin: .7em 0 }
+body > *:last-child, body > *:last-child > *:last-child { margin-bottom: 0 }*/
+blockquote { margin: 1.8em 2em }
+
+small strong, small b { opacity: .8 }
+
+header { margin-bottom: 2rem }
+
+.border th, .border td { border-width: 1px; border-style: solid }
+
+.author, .title, .annotation { opacity: .6 }
+blockquote .author { text-align: right; font-style: italic; margin-top: .8rem; text-indent: 0 }

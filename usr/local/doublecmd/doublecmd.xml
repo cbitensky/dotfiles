@@ -1,0 +1,2629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd DCVersion="1.0.5 beta" ConfigVersion="12">
+  <Configuration Save="True" SortOrder="0" TreeType="0">
+    <UseConfigInProgramDir>False</UseConfigInProgramDir>
+    <FolderTabs Save="True"/>
+  </Configuration>
+  <Colors>
+    <FileFilters>
+      <Filter>
+        <Name>Executables</Name>
+        <FileMasks>*</FileMasks>
+        <Color>11206655</Color>
+        <Attributes>-*x*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Directories</Name>
+        <FileMasks>*</FileMasks>
+        <Color>16777215</Color>
+        <Attributes>d*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Text</Name>
+        <FileMasks>*.am;*.asm;*.bdf;*.c;*.cc;*.coffee;*.conf;*.cpp;*.css;*.csv;*.cxx;*.diff;*.docbook;*.ebuild;*.eclass;*.el;*.env;*.erb;*.example;*.fb2;*.gitignore;*.go;*.h;*.hpp;*.htm;*.html;*.in;*.inc;*.ini;*.java;*.js;*.json;*.l;*.la;*.ll;*.log;*.lua;*.luadoc;*.m4;*.md;*.mht;*.mk;*.mount;*.nfo;*.pas;*.patch;*.path;*.pc;*.php;*.ps;*.py;*.rb;*.rc;*.rdoc;*.rs;*.s;*.scss;*.service;*.sh;*.socket;*.sql;*.srt;*.sty;*.svg;*.target;*.tex;*.texi;*.timer;*.toml;*.txt;*.vim;*.xbel;*.xhtml;*.xml;*.xsd;*.xsl;*.yml;Cargo.lock;Makefile</FileMasks>
+        <Color>49152</Color>
+        <Attributes>-*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Packed</Name>
+        <FileMasks>*.7z;*.bz2;*.cab;*.cpio;*.deb;*.gem;*.gz;*.epub;*.iso;*.jar;*.lzma;*.rar;*.rpm;*.tar;*.tbz2;*.tgz;*.tlz;*.txz;*.xpak;*.xz;*.Z;*.zip</FileMasks>
+        <Color>16711935</Color>
+        <Attributes>-*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Images</Name>
+        <FileMasks>*.avif;*.bmp;*.djvu;*.gif;*.flif;*.ico;*.jpeg;*.jpg;*.pbm;*.ppm;*.png;*.tif;*.tiff;*.webp;*.xcf;*.xpm</FileMasks>
+        <Color>16736352</Color>
+        <Attributes>-*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Video</Name>
+        <FileMasks>*.3gp;*.avi;*.flv;*.m2p;*.m2ts;*.m4b;*.m4v;*.mkv;*.mov;*.mp4;*.mpg;*.ogv;*.rm;*.smk;*.ts;*.VOB;*.webm;*.wmv</FileMasks>
+        <Color>8355839</Color>
+        <Attributes>-*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Binary</Name>
+        <FileMasks>*.a;*.bc;*.bin;*.class;*.pcf;*.pdf;*.psfu;*.so;*.torrent</FileMasks>
+        <Color>32727</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
+        <Name>Audio</Name>
+        <FileMasks>*.flac;*.m4a;*.mka;*.mp3;*.opus;*.ogg;*.wav</FileMasks>
+        <Color>32896</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
+        <Name>To delete</Name>
+        <FileMasks>*.bak;*.keep;*.lock;*.old;*.orig;* .swp</FileMasks>
+        <Color>2039680</Color>
+        <Attributes/>
+      </Filter>
+    </FileFilters>
+    <Foreground>12632256</Foreground>
+    <Background>2039583</Background>
+    <Background2>2039583</Background2>
+    <Mark>2039807</Mark>
+    <Cursor>8388736</Cursor>
+    <CursorText>-2147483634</CursorText>
+    <UseInvertedSelection>False</UseInvertedSelection>
+    <InactivePanelBrightness>100</InactivePanelBrightness>
+    <UseFrameCursor>True</UseFrameCursor>
+    <FreeSpaceIndicator>
+      <ForeColor>0</ForeColor>
+      <BackColor>16777215</BackColor>
+      <UseGradient>True</UseGradient>
+    </FreeSpaceIndicator>
+    <UseCursorBorder>False</UseCursorBorder>
+    <CursorBorderColor>-2147483635</CursorBorderColor>
+    <InactiveCursor>-2147483645</InactiveCursor>
+    <InactiveMark>128</InactiveMark>
+    <UseInactiveSelColor>False</UseInactiveSelColor>
+    <AllowOverColor>True</AllowOverColor>
+    <gBorderFrameWidth>1</gBorderFrameWidth>
+    <LogWindow>
+      <Info>8388608</Info>
+      <Error>255</Error>
+      <Success>32768</Success>
+    </LogWindow>
+    <PathLabel>
+      <ActiveColor>-2147483635</ActiveColor>
+      <ActiveFontColor>-2147483634</ActiveFontColor>
+      <InactiveColor>-2147483633</InactiveColor>
+      <InactiveFontColor>-2147483630</InactiveFontColor>
+    </PathLabel>
+  </Colors>
+  <Plugins>
+    <WlxPlugins>
+      <WlxPlugin Enabled="True">
+        <Name>wlxMplayer</Name>
+        <Path>%commander_path%/plugins/wlx/wlxmplayer/wlxmplayer.wlx</Path>
+        <DetectString>(EXT="MPG")|(EXT="AVI")|(EXT="MPEG")|(EXT="FLV")</DetectString>
+      </WlxPlugin>
+    </WlxPlugins>
+    <DsxPlugins/>
+    <WcxPlugins>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zip</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>735</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>223</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>bz2</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tbz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>gz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tgz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>lzma</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>tlz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>xz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>txz</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>95</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zipx</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>223</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>cpio</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/cpio/cpio.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>deb</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/deb/deb.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>rpm</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/rpm/rpm.wcx</Path>
+        <Flags>4</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>rar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
+        <Flags>607</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>jar</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>990</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>zst</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>91</Flags>
+      </WcxPlugin>
+    </WcxPlugins>
+    <WdxPlugins>
+      <WdxPlugin>
+        <Name>deb_wdx</Name>
+        <Path>%COMMANDER_PATH%/plugins/wdx/deb_wdx/deb_wdx.wdx</Path>
+        <DetectString>EXT="DEB"</DetectString>
+      </WdxPlugin>
+      <WdxPlugin>
+        <Name>rpm_wdx</Name>
+        <Path>%COMMANDER_PATH%/plugins/wdx/rpm_wdx/rpm_wdx.wdx</Path>
+        <DetectString>EXT="RPM"</DetectString>
+      </WdxPlugin>
+      <WdxPlugin>
+        <Name>audioinfo</Name>
+        <Path>%COMMANDER_PATH%/plugins/wdx/audioinfo/audioinfo.wdx</Path>
+        <DetectString>(EXT="MP3") | (EXT="MP2") | (EXT="MP1") | (EXT="OGG") | (EXT="WMA") | (EXT="WAV") | (EXT="VQF") | (EXT="AAC") | (EXT="APE") | (EXT="MPC") | (EXT="FLAC") | (EXT="CDA") | (EXT="TTA") | (EXT="AC3") | (EXT="DTS") | (EXT="WV") | (EXT="WVC") | (EXT="OFR") | (EXT="OFS") | (EXT="M4A") | (EXT="MP4")</DetectString>
+      </WdxPlugin>
+    </WdxPlugins>
+    <WfxPlugins>
+      <WfxPlugin Enabled="True">
+        <Name>FTP</Name>
+        <Path>%commander_path%/plugins/wfx/ftp/ftp.wfx</Path>
+      </WfxPlugin>
+      <WfxPlugin Enabled="True">
+        <Name>Windows Network</Name>
+        <Path>%commander_path%/plugins/wfx/samba/samba.wfx</Path>
+      </WfxPlugin>
+    </WfxPlugins>
+    <TweakPluginWidth0>0</TweakPluginWidth0>
+    <TweakPluginHeight0>0</TweakPluginHeight0>
+    <TweakPluginWidth1>0</TweakPluginWidth1>
+    <TweakPluginHeight1>0</TweakPluginHeight1>
+    <TweakPluginWidth2>0</TweakPluginWidth2>
+    <TweakPluginHeight2>0</TweakPluginHeight2>
+    <TweakPluginWidth3>0</TweakPluginWidth3>
+    <TweakPluginHeight3>0</TweakPluginHeight3>
+    <TweakPluginWidth4>0</TweakPluginWidth4>
+    <TweakPluginHeight4>0</TweakPluginHeight4>
+    <AutoTweak>False</AutoTweak>
+    <WCXConfigViewMode>0</WCXConfigViewMode>
+    <PluginFilenameStyle>0</PluginFilenameStyle>
+    <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
+  </Plugins>
+  <Toolbars>
+    <MainToolbar>
+      <Row>
+        <Command>
+          <ID>{E62B0303-C60C-401C-A31A-D04CEFE555FC}</ID>
+          <Icon>cm_refresh</Icon>
+          <Command>cm_Refresh</Command>
+        </Command>
+        <Command>
+          <ID>{529ED611-2AA7-48E4-8F7F-EAB7DFE7EDA4}</ID>
+          <Icon>cm_runterm</Icon>
+          <Command>cm_RunTerm</Command>
+        </Command>
+        <Command>
+          <ID>{5D7024B5-8F5A-49A9-A15A-1761474041BB}</ID>
+          <Icon>cm_options</Icon>
+          <Command>cm_Options</Command>
+        </Command>
+        <Separator/>
+        <Command>
+          <ID>{E5132465-8741-489D-B525-5E0D3F46F75B}</ID>
+          <Icon>cm_briefview</Icon>
+          <Command>cm_BriefView</Command>
+        </Command>
+        <Command>
+          <ID>{F40D25BB-34A0-4582-892E-476A83FB9B1B}</ID>
+          <Icon>cm_columnsview</Icon>
+          <Command>cm_ColumnsView</Command>
+        </Command>
+        <Command>
+          <ID>{348A18B9-D7BC-45EC-BFA6-2C39F5C4D3F7}</ID>
+          <Icon>cm_thumbnailsview</Icon>
+          <Command>cm_ThumbnailsView</Command>
+        </Command>
+        <Separator/>
+        <Command>
+          <ID>{7AA385D0-E95A-43FD-97C5-A3F5D2FDE471}</ID>
+          <Icon>cm_flatview</Icon>
+          <Command>cm_FlatView</Command>
+        </Command>
+        <Separator/>
+        <Command>
+          <ID>{E1E32446-EB7B-469E-A5AD-F8A84FE184E7}</ID>
+          <Icon>cm_viewhistoryprev</Icon>
+          <Command>cm_ViewHistoryPrev</Command>
+        </Command>
+        <Command>
+          <ID>{7C9FCBE7-40AC-4DC5-A606-69EC099B1175}</ID>
+          <Icon>cm_viewhistorynext</Icon>
+          <Command>cm_ViewHistoryNext</Command>
+        </Command>
+        <Separator/>
+        <Command>
+          <ID>{56632879-65F2-4209-8174-268695348608}</ID>
+          <Icon>cm_markplus</Icon>
+          <Command>cm_MarkPlus</Command>
+        </Command>
+        <Command>
+          <ID>{70E7DD48-4E1E-499D-810B-16724672C570}</ID>
+          <Icon>cm_markminus</Icon>
+          <Command>cm_MarkMinus</Command>
+        </Command>
+        <Command>
+          <ID>{2B1B5B9C-B4CB-44B0-B720-CA587CE8C0B3}</ID>
+          <Icon>cm_markinvert</Icon>
+          <Command>cm_MarkInvert</Command>
+        </Command>
+        <Separator/>
+        <Command>
+          <ID>{E5CE0AC4-BB84-49C1-97C2-4A1123882CF0}</ID>
+          <Icon>cm_packfiles</Icon>
+          <Command>cm_PackFiles</Command>
+        </Command>
+        <Command>
+          <ID>{BB4F9D10-2EE4-4CEA-A4EE-E978078C69C5}</ID>
+          <Icon>cm_extractfiles</Icon>
+          <Command>cm_ExtractFiles</Command>
+        </Command>
+        <Separator/>
+        <Command>
+          <ID>{1F691E8C-5A08-4FED-9C12-845FF28A7A54}</ID>
+          <Icon>cm_search</Icon>
+          <Command>cm_Search</Command>
+        </Command>
+        <Command>
+          <ID>{55758630-A4EA-4D03-83ED-B856DFB8557C}</ID>
+          <Icon>cm_multirename</Icon>
+          <Command>cm_MultiRename</Command>
+        </Command>
+        <Command>
+          <ID>{082619F5-25A7-49BA-8827-96A1CAD7633F}</ID>
+          <Icon>cm_syncdirs</Icon>
+          <Command>cm_SyncDirs</Command>
+        </Command>
+        <Command>
+          <ID>{75D98182-817B-4664-AFA6-DEF39D5E86AF}</ID>
+          <Icon>cm_copyfullnamestoclip</Icon>
+          <Command>cm_CopyFullNamesToClip</Command>
+        </Command>
+      </Row>
+    </MainToolbar>
+    <MiddleToolbar>
+      <Row>
+        <Command>
+          <ID>{510FF898-40C7-410D-B123-C083209F4947}</ID>
+          <Icon>cm_view</Icon>
+          <Command>cm_View</Command>
+        </Command>
+        <Command>
+          <ID>{78FE17FC-14E4-467F-A0CF-D377E69CC447}</ID>
+          <Icon>cm_edit</Icon>
+          <Command>cm_Edit</Command>
+        </Command>
+        <Command>
+          <ID>{E9EF8E3B-0389-4D6C-9438-AFA4DC3E51C7}</ID>
+          <Icon>cm_copy</Icon>
+          <Command>cm_Copy</Command>
+        </Command>
+        <Command>
+          <ID>{1AA4FE4E-2390-42ED-8201-9BE5D45F2225}</ID>
+          <Icon>cm_rename</Icon>
+          <Command>cm_Rename</Command>
+        </Command>
+        <Separator>
+          <Style>True</Style>
+        </Separator>
+        <Command>
+          <ID>{0E549D1A-013D-473E-A436-7509E73AD8D0}</ID>
+          <Icon>cm_packfiles</Icon>
+          <Command>cm_PackFiles</Command>
+        </Command>
+        <Command>
+          <ID>{A587166C-4863-4019-A211-E576FC978F23}</ID>
+          <Icon>cm_makedir</Icon>
+          <Command>cm_MakeDir</Command>
+        </Command>
+      </Row>
+    </MiddleToolbar>
+  </Toolbars>
+  <Language>
+    <POFileName>doublecmd.po</POFileName>
+  </Language>
+  <Behaviours>
+    <GoToRoot>False</GoToRoot>
+    <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
+    <ActiveRight>False</ActiveRight>
+    <RunInTerminalStayOpenCmd>foot</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenParams>-e sh -c '{command}; echo -n Press ENTER to exit... ; read a'</RunInTerminalStayOpenParams>
+    <RunInTerminalCloseCmd>foot</RunInTerminalCloseCmd>
+    <RunInTerminalCloseParams>-e bb -c '{command}'</RunInTerminalCloseParams>
+    <JustRunTerminal>foot</JustRunTerminal>
+    <JustRunTermParams/>
+    <OnlyOneAppInstance>True</OnlyOneAppInstance>
+    <LynxLike>True</LynxLike>
+    <FileSizeFormat>1</FileSizeFormat>
+    <OperationSizeFormat>0</OperationSizeFormat>
+    <HeaderSizeFormat>0</HeaderSizeFormat>
+    <FooterSizeFormat>0</FooterSizeFormat>
+    <FileSizeDigits>1</FileSizeDigits>
+    <HeaderDigits>1</HeaderDigits>
+    <FooterDigits>1</FooterDigits>
+    <OperationSizeDigits>1</OperationSizeDigits>
+    <PersonalizedByte>B</PersonalizedByte>
+    <PersonalizedKilo>KB</PersonalizedKilo>
+    <PersonalizedMega>MB</PersonalizedMega>
+    <PersonalizedGiga>GB</PersonalizedGiga>
+    <PersonalizedTera>TB</PersonalizedTera>
+    <MinimizeToTray>False</MinimizeToTray>
+    <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
+    <Mouse>
+      <Selection Enabled="False">
+        <Button>0</Button>
+        <IconClick>0</IconClick>
+      </Selection>
+      <SingleClickStart>0</SingleClickStart>
+      <ScrollMode>1</ScrollMode>
+      <WheelScrollLines>3</WheelScrollLines>
+    </Mouse>
+    <AutoFillColumns>True</AutoFillColumns>
+    <AutoSizeColumn>1</AutoSizeColumn>
+    <CustomColumnsChangeAllColumns>False</CustomColumnsChangeAllColumns>
+    <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
+    <DateTimeFormat>dd.mm.yyyy hh:nn:ss</DateTimeFormat>
+    <CutTextToColumnWidth>False</CutTextToColumnWidth>
+    <ExtendCellWidth>False</ExtendCellWidth>
+    <ShowSystemFiles>True</ShowSystemFiles>
+    <ListFilesInThread>True</ListFilesInThread>
+    <LoadIconsSeparately>True</LoadIconsSeparately>
+    <DelayLoadingTabs>True</DelayLoadingTabs>
+    <HighlightUpdatedFiles>True</HighlightUpdatedFiles>
+    <DriveBlackList/>
+    <DriveBlackListUnmounted>False</DriveBlackListUnmounted>
+  </Behaviours>
+  <Tools>
+    <Viewer Enabled="False">
+      <Path/>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+    </Viewer>
+    <Editor Enabled="True">
+      <Path>e</Path>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+    </Editor>
+    <Differ Enabled="False">
+      <Path/>
+      <Parameters/>
+      <RunInTerminal>False</RunInTerminal>
+      <KeepTerminalOpen>False</KeepTerminalOpen>
+      <FramePosAfterComp>0</FramePosAfterComp>
+    </Differ>
+  </Tools>
+  <Fonts>
+    <Main>
+      <Name>cnxt</Name>
+      <Size>14</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Main>
+    <Editor>
+      <Name>cnxt</Name>
+      <Size>14</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Editor>
+    <Viewer>
+      <Name>cnxt</Name>
+      <Size>14</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Viewer>
+    <Log>
+      <Name>cnxt</Name>
+      <Size>14</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Log>
+    <ViewerBook>
+      <Name>Sans</Name>
+      <Size>14</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </ViewerBook>
+    <Console>
+      <Name>cnxt</Name>
+      <Size>14</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </Console>
+    <OptionsTree>
+      <Name>default</Name>
+      <Size>10</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </OptionsTree>
+    <OptionsMain>
+      <Name>default</Name>
+      <Size>10</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </OptionsMain>
+    <SearchResults>
+      <Name>default</Name>
+      <Size>10</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </SearchResults>
+    <PathEdit>
+      <Name>default</Name>
+      <Size>11</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </PathEdit>
+    <FunctionButtons>
+      <Name>default</Name>
+      <Size>8</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </FunctionButtons>
+    <TreeViewMenu>
+      <Name>default</Name>
+      <Size>10</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </TreeViewMenu>
+  </Fonts>
+  <ToolTips>
+    <ShowToolTipMode>True</ShowToolTipMode>
+    <CustomFields/>
+    <ActualToolTipMode>0</ActualToolTipMode>
+    <ToolTipHideTimeOut>0</ToolTipHideTimeOut>
+  </ToolTips>
+  <Layout>
+    <MainMenu>True</MainMenu>
+    <ButtonBar Enabled="False">
+      <FlatIcons>True</FlatIcons>
+      <ButtonHeight>24</ButtonHeight>
+      <IconSize>16</IconSize>
+      <ShowCaptions>False</ShowCaptions>
+      <ReportErrorWithCommands>False</ReportErrorWithCommands>
+      <FilenameStyle>0</FilenameStyle>
+      <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+      <PathModifierElements>0</PathModifierElements>
+    </ButtonBar>
+    <MiddleBar Enabled="False">
+      <FlatIcons>True</FlatIcons>
+      <ButtonHeight>24</ButtonHeight>
+      <IconSize>16</IconSize>
+      <ShowCaptions>False</ShowCaptions>
+      <ReportErrorWithCommands>False</ReportErrorWithCommands>
+    </MiddleBar>
+    <DriveBar1>False</DriveBar1>
+    <DriveBar2>True</DriveBar2>
+    <DriveBarFlat>True</DriveBarFlat>
+    <DrivesListButton Enabled="False">
+      <ShowLabel>True</ShowLabel>
+      <ShowFileSystem>True</ShowFileSystem>
+      <ShowFreeSpace>True</ShowFreeSpace>
+    </DrivesListButton>
+    <SeparateTree>False</SeparateTree>
+    <DirectoryTabs>False</DirectoryTabs>
+    <CurrentDirectory>True</CurrentDirectory>
+    <TabHeader>False</TabHeader>
+    <StatusBar>True</StatusBar>
+    <CmdLine>False</CmdLine>
+    <LogWindow>False</LogWindow>
+    <TermWindow>False</TermWindow>
+    <KeyButtons>False</KeyButtons>
+    <InterfaceFlat>True</InterfaceFlat>
+    <DriveFreeSpace>False</DriveFreeSpace>
+    <DriveIndicator>False</DriveIndicator>
+    <ProgressInMenuBar>False</ProgressInMenuBar>
+    <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
+    <HorizontalFilePanels>False</HorizontalFilePanels>
+    <ShortFormatDriveInfo>False</ShortFormatDriveInfo>
+    <UppercaseDriveLetter>False</UppercaseDriveLetter>
+    <ShowColonAfterDrive>False</ShowColonAfterDrive>
+  </Layout>
+  <FilesViews>
+    <Sorting>
+      <CaseSensitivity>0</CaseSensitivity>
+      <NaturalSorting>False</NaturalSorting>
+      <SortFolderMode>0</SortFolderMode>
+      <NewFilesPosition>2</NewFilesPosition>
+      <UpdatedFilesPosition>2</UpdatedFilesPosition>
+      <SpecialSorting>False</SpecialSorting>
+    </Sorting>
+    <ColumnsView>
+      <AutoSaveWidth>True</AutoSaveWidth>
+      <TitleStyle>1</TitleStyle>
+    </ColumnsView>
+    <BriefView>
+      <FileExtAligned>False</FileExtAligned>
+      <Columns>
+        <FixedWidth>100</FixedWidth>
+        <FixedCount>2</FixedCount>
+        <AutoSize>2</AutoSize>
+      </Columns>
+    </BriefView>
+    <ExtraLineSpan>2</ExtraLineSpan>
+    <FolderPrefix>[</FolderPrefix>
+    <FolderPostfix>]</FolderPostfix>
+  </FilesViews>
+  <Keyboard>
+    <Typing>
+      <Actions>
+        <NoModifier>2</NoModifier>
+        <Alt>0</Alt>
+        <CtrlAlt>3</CtrlAlt>
+      </Actions>
+    </Typing>
+  </Keyboard>
+  <FileOperations>
+    <BufferSize>524288</BufferSize>
+    <UseMmapInSearch>False</UseMmapInSearch>
+    <PartialNameSearch>True</PartialNameSearch>
+    <WipePassNumber>1</WipePassNumber>
+    <DropReadOnlyFlag>False</DropReadOnlyFlag>
+    <ProcessComments>False</ProcessComments>
+    <RenameSelOnlyName>False</RenameSelOnlyName>
+    <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
+    <UseTrash>False</UseTrash>
+    <SkipFileOpError>False</SkipFileOpError>
+    <TypeOfDuplicatedRename>2</TypeOfDuplicatedRename>
+    <ShowDialogOnDragDrop>False</ShowDialogOnDragDrop>
+    <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
+    <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
+    <DragAndDropTextUnicodeDesireLevel>2</DragAndDropTextUnicodeDesireLevel>
+    <DragAndDropTextSimpletextDesireLevel>3</DragAndDropTextSimpletextDesireLevel>
+    <DragAndDropAskFormatEachTime>False</DragAndDropAskFormatEachTime>
+    <DragAndDropTextAutoFilename>False</DragAndDropTextAutoFilename>
+    <DragAndDropSaveUnicodeTextInUFT8>True</DragAndDropSaveUnicodeTextInUFT8>
+    <OverwriteFolder>False</OverwriteFolder>
+    <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
+    <ProgressKind>2</ProgressKind>
+    <Confirmations>7</Confirmations>
+    <Options>
+      <Symlink>0</Symlink>
+      <CorrectLinks>False</CorrectLinks>
+      <FileExists>0</FileExists>
+      <DirectoryExists>0</DirectoryExists>
+      <SetPropertyError>0</SetPropertyError>
+      <ReserveSpace>False</ReserveSpace>
+      <CheckFreeSpace>True</CheckFreeSpace>
+      <CopyAttributes>True</CopyAttributes>
+      <CopyTime>True</CopyTime>
+      <CopyOwnership>True</CopyOwnership>
+      <CopyPermissions>False</CopyPermissions>
+      <ExcludeEmptyTemplateDirectories>True</ExcludeEmptyTemplateDirectories>
+      <Verify>False</Verify>
+      <CopyOnWrite>2</CopyOnWrite>
+      <CopyXattributes>True</CopyXattributes>
+    </Options>
+    <HashBufferSize>8388608</HashBufferSize>
+    <AutoExtractOpenMask/>
+    <SearchDefaultTemplate/>
+    <InitiallyClearFileMask>True</InitiallyClearFileMask>
+    <NewSearchClearFiltersAction>0</NewSearchClearFiltersAction>
+    <ShowMenuBarInFindFiles>True</ShowMenuBarInFindFiles>
+    <Extract>
+      <Overwrite>False</Overwrite>
+    </Extract>
+    <LongNameAlert>True</LongNameAlert>
+    <MultiRename>
+      <MulRenShowMenuBarOnTop>True</MulRenShowMenuBarOnTop>
+      <MulRenInvalidCharReplacement>.</MulRenInvalidCharReplacement>
+      <MulRenLaunchBehavor>0</MulRenLaunchBehavor>
+      <MulRenExitModifiedPreset>0</MulRenExitModifiedPreset>
+      <MulRenSaveRenamingLog>0</MulRenSaveRenamingLog>
+      <MulRenLogFilename>%DC_CONFIG_PATH%/multirename.log</MulRenLogFilename>
+      <MultRenDailyIndividualDirLog>True</MultRenDailyIndividualDirLog>
+      <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
+      <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
+    </MultiRename>
+  </FileOperations>
+  <Tabs>
+    <Options>49936</Options>
+    <CharacterLimit>32</CharacterLimit>
+    <Position>0</Position>
+    <OpenedTabs>
+      <Left>
+        <ActiveTab>3</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="Tom and Jerry">/ready/movies/</Path>
+                  <Path Filename="003 The Night Before Christmas.mkv">/ready/movies/Tom and Jerry/</Path>
+                  <Path Filename="Tom and Jerry">/ready/movies/</Path>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="CHARIOT.S3M">/down/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="20200922-Sir Troglodyte-Герои III, PvP, Причал, Jebus King, XL, 160%, часть вторая-orKcpdESHrk.mkv">/cache/youtube/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="..">/cache/youtube/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="..">/cache/youtube/</Path>
+                  <Path Filename="..">/cache/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="..">/cache/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="..">/down/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="20200924-MinuteEarth-The Miscommunication Game (Ft. 15 other channels!)-MCuCBt24hAk.webm">/cache/youtube/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="ready">/</Path>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="ハウルの動く城.mkv">/ready/movies/</Path>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="Bergensbanen minutt for minutt Bergen–Oslo (full HD 50fps)-d_S_13TWn1c.mp4">/cache/youtube/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="..">/down/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="20200927-The Curious-Вторая фаза Российско-Украинской войны-mYDTGPK8O50.f137.mp4.part">/cache/youtube/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="ready">/</Path>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="..">/ready/movies/</Path>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="..">/ready/movies/</Path>
+                  <Path Filename="movies">/ready/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="">/cache/youtube/</Path>
+                  <Path Filename="">/cache/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>2</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="projects">/workshop/</Path>
+                  <Path Filename="branches">/workshop/projects/</Path>
+                  <Path Filename="..">/workshop/projects/branches/</Path>
+                  <Path Filename="branches">/workshop/projects/</Path>
+                  <Path Filename="projects">/workshop/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="bin">/local/</Path>
+                  <Path Filename="mke4fs">/local/bin/</Path>
+                  <Path Filename="bin">/local/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="..">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="sys-fs">/var/tmp/portage/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/</Path>
+                  <Path Filename="work">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/</Path>
+                  <Path Filename="misc">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="mke2fs.c">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/e2fsprogs-1.45.5/misc/</Path>
+                  <Path Filename="misc">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/</Path>
+                  <Path Filename="..">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/</Path>
+                  <Path Filename="configure.ac">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/</Path>
+                  <Path Filename="..">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/work/</Path>
+                  <Path Filename="work">/var/tmp/portage/sys-fs/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-fs/</Path>
+                  <Path Filename="sys-libs">/var/tmp/portage/</Path>
+                  <Path Filename="e2fsprogs-libs-1.45.5">/var/tmp/portage/sys-libs/</Path>
+                  <Path Filename="work">/var/tmp/portage/sys-libs/e2fsprogs-libs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-libs/e2fsprogs-libs-1.45.5/work/</Path>
+                  <Path Filename="..">/var/tmp/portage/sys-libs/e2fsprogs-libs-1.45.5/work/e2fsprogs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-1.45.5">/var/tmp/portage/sys-libs/e2fsprogs-libs-1.45.5/work/</Path>
+                  <Path Filename="work">/var/tmp/portage/sys-libs/e2fsprogs-libs-1.45.5/</Path>
+                  <Path Filename="e2fsprogs-libs-1.45.5">/var/tmp/portage/sys-libs/</Path>
+                  <Path Filename="x11-terms">/var/tmp/portage/</Path>
+                  <Path Filename="..">/var/tmp/portage/x11-terms/</Path>
+                  <Path Filename="sys-libs">/var/tmp/portage/</Path>
+                  <Path Filename="..">/var/tmp/portage/sys-libs/</Path>
+                  <Path Filename="sys-libs">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="youtube">/cache/</Path>
+                  <Path Filename="">/cache/youtube/</Path>
+                  <Path Filename="">/cache/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/res/h3/Mp3/</Path>
+                  <Path Filename="random_maps">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/random_maps/</Path>
+                  <Path Filename="Uninstall_HotA">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Uninstall_HotA/</Path>
+                  <Path Filename="Warlords of the Wasteland">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Warlords of the Wasteland/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h3hota">/res/</Path>
+                  <Path Filename="..">/res/h3hota/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h2">/res/</Path>
+                  <Path Filename="..">/res/h2/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="Data">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Data/</Path>
+                  <Path Filename="Games">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Games/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h3hota">/res/</Path>
+                  <Path Filename="..">/res/h3hota/</Path>
+                  <Path Filename="hota">/res/</Path>
+                  <Path Filename="games">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/games/</Path>
+                  <Path Filename="HotA_Data">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/HotA_Data/</Path>
+                  <Path Filename="MP3">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/MP3/</Path>
+                  <Path Filename="..">/res/hota/</Path>
+                  <Path Filename="hota">/res/</Path>
+                  <Path Filename="Data">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/Data/</Path>
+                  <Path Filename="..">/res/hota/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="Games">/res/h3/</Path>
+                  <Path Filename="Prisoner of Doom">/res/h3/Games/</Path>
+                  <Path Filename="Games">/res/h3/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="distfiles">/var/cache/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="16tons">/home/</Path>
+                  <Path Filename="..">/home/16tons/</Path>
+                  <Path Filename="16tons">/home/</Path>
+                  <Path Filename="home">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="main">/local/portage/package.use/</Path>
+                  <Path Filename="package.use">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="media-sound">/var/tmp/portage/</Path>
+                  <Path Filename="audacity-2.4.2-r1">/var/tmp/portage/media-sound/</Path>
+                  <Path Filename="temp">/var/tmp/portage/media-sound/audacity-2.4.2-r1/</Path>
+                  <Path Filename="build.log">/var/tmp/portage/media-sound/audacity-2.4.2-r1/temp/</Path>
+                  <Path Filename="work">/var/tmp/portage/media-sound/audacity-2.4.2-r1/</Path>
+                  <Path Filename="..">/var/tmp/portage/media-sound/audacity-2.4.2-r1/work/</Path>
+                  <Path Filename="homedir">/var/tmp/portage/media-sound/audacity-2.4.2-r1/</Path>
+                  <Path Filename="..">/var/tmp/portage/media-sound/audacity-2.4.2-r1/homedir/</Path>
+                  <Path Filename="distdir">/var/tmp/portage/media-sound/audacity-2.4.2-r1/</Path>
+                  <Path Filename="audacity-2.4.2-r1">/var/tmp/portage/media-sound/</Path>
+                  <Path Filename="media-sound">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="sets">/local/portage/</Path>
+                  <Path Filename="..">/local/portage/sets/</Path>
+                  <Path Filename="package.use">/local/portage/</Path>
+                  <Path Filename="main">/local/portage/package.use/</Path>
+                  <Path Filename="package.use">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="xdg">/etc/</Path>
+                  <Path Filename="wayst">/etc/xdg/</Path>
+                  <Path Filename="..">/etc/xdg/wayst/</Path>
+                  <Path Filename="user-dirs.conf">/etc/xdg/</Path>
+                  <Path Filename="xdg">/etc/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="package.use">/local/portage/</Path>
+                  <Path Filename="main">/local/portage/package.use/</Path>
+                  <Path Filename="package.use">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="ready">/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="0.xhtml">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="..">/down/</Path>
+                  <Path Filename="israel">/</Path>
+                  <Path Filename="info.txt">/israel/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/var/mnt/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/workshop/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>2</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="profiles">/local/portage/overlay/</Path>
+                  <Path Filename="repo_name">/local/portage/overlay/profiles/</Path>
+                  <Path Filename="www-client">/local/portage/overlay/</Path>
+                  <Path Filename="lariza">/local/portage/overlay/www-client/</Path>
+                  <Path Filename="lariza-9999.ebuild">/local/portage/overlay/www-client/lariza/</Path>
+                  <Path Filename="sys-devel">/var/ports/</Path>
+                  <Path Filename="gcc">/var/ports/sys-devel/</Path>
+                  <Path Filename="gcc-10.1.1_pre9999.ebuild">/var/ports/sys-devel/gcc/</Path>
+                  <Path Filename="gcc">/var/ports/sys-devel/</Path>
+                  <Path Filename="www-client">/var/ports/</Path>
+                  <Path Filename="firefox">/var/ports/www-client/</Path>
+                  <Path Filename="firefox-68.8.0.ebuild">/var/ports/www-client/firefox/</Path>
+                  <Path Filename="firefox">/var/ports/www-client/</Path>
+                  <Path Filename="www-client">/var/ports/</Path>
+                  <Path Filename="ports">/var/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="..">/local/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="package.accept_keywords">/local/portage/</Path>
+                  <Path Filename="libvpx">/local/portage/package.accept_keywords/</Path>
+                  <Path Filename="package.accept_keywords">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="packages">/cache/</Path>
+                  <Path Filename="dev-libs">/cache/packages/</Path>
+                  <Path Filename="nss">/cache/packages/dev-libs/</Path>
+                  <Path Filename="nss-3.51.1-1.xpak">/cache/packages/dev-libs/nss/</Path>
+                  <Path Filename="nss">/cache/packages/dev-libs/</Path>
+                  <Path Filename="dev-libs">/cache/packages/</Path>
+                  <Path Filename="packages">/cache/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="packages">/cache/</Path>
+                  <Path Filename="dev-java">/cache/packages/</Path>
+                  <Path Filename="..">/cache/packages/dev-java/</Path>
+                  <Path Filename="dev-java">/cache/packages/</Path>
+                  <Path Filename="icedtea-bin">/cache/packages/dev-java/</Path>
+                  <Path Filename="..">/cache/packages/dev-java/icedtea-bin/</Path>
+                  <Path Filename="icedtea-bin">/cache/packages/dev-java/</Path>
+                  <Path Filename="dev-java">/cache/packages/</Path>
+                  <Path Filename="packages">/cache/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="bash-completion">/usr/share/</Path>
+                  <Path Filename="completions">/usr/share/bash-completion/</Path>
+                  <Path Filename="picolisp">/usr/share/bash-completion/completions/</Path>
+                  <Path Filename="completions">/usr/share/bash-completion/</Path>
+                  <Path Filename="bash-completion">/usr/share/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="work">/var/tmp/portage/app-portage/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/</Path>
+                  <Path Filename="src">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/</Path>
+                  <Path Filename="x86.c">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/src/</Path>
+                  <Path Filename="src">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/</Path>
+                  <Path Filename="work">/var/tmp/portage/app-portage/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/</Path>
+                  <Path Filename="app-portage">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="install-amd64-minimal-20200916T214503Z.iso">/cache/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="make.conf">/local/portage/</Path>
+                  <Path Filename="opts.conf">/local/portage/make.conf/</Path>
+                  <Path Filename="make.conf">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="init">/workshop/</Path>
+                  <Path Filename="ready">/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="habr.com">/ready/doc/wolfram/</Path>
+                  <Path Filename="ru">/ready/doc/wolfram/habr.com/</Path>
+                  <Path Filename="habr.com">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр_files">/ready/doc/wolfram/</Path>
+                  <Path Filename="..">/ready/doc/wolfram/Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр_files/</Path>
+                  <Path Filename="1">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр.htm">/down/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="..">/local/css/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="0.xhtml">/down/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="arab-israeli-wars.xhtml">/workshop/bytensky.gitlab.io/public/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="">/local/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="work">/var/tmp/portage/app-portage/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/</Path>
+                  <Path Filename="src">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/</Path>
+                  <Path Filename="x86.c">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/src/</Path>
+                  <Path Filename="src">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/</Path>
+                  <Path Filename="work">/var/tmp/portage/app-portage/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/</Path>
+                  <Path Filename="app-portage">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="install-amd64-minimal-20200916T214503Z.iso">/cache/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="make.conf">/local/portage/</Path>
+                  <Path Filename="opts.conf">/local/portage/make.conf/</Path>
+                  <Path Filename="make.conf">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="init">/workshop/</Path>
+                  <Path Filename="ready">/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="habr.com">/ready/doc/wolfram/</Path>
+                  <Path Filename="ru">/ready/doc/wolfram/habr.com/</Path>
+                  <Path Filename="habr.com">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр_files">/ready/doc/wolfram/</Path>
+                  <Path Filename="..">/ready/doc/wolfram/Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр_files/</Path>
+                  <Path Filename="1">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр.htm">/down/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="..">/local/css/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="0.xhtml">/down/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="arab-israeli-wars.xhtml">/workshop/bytensky.gitlab.io/public/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="">/local/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="work">/var/tmp/portage/app-portage/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/</Path>
+                  <Path Filename="src">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/</Path>
+                  <Path Filename="x86.c">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/src/</Path>
+                  <Path Filename="src">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/cpuid2cpuflags-10/work/</Path>
+                  <Path Filename="work">/var/tmp/portage/app-portage/cpuid2cpuflags-10/</Path>
+                  <Path Filename="cpuid2cpuflags-10">/var/tmp/portage/app-portage/</Path>
+                  <Path Filename="app-portage">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="install-amd64-minimal-20200916T214503Z.iso">/cache/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="make.conf">/local/portage/</Path>
+                  <Path Filename="opts.conf">/local/portage/make.conf/</Path>
+                  <Path Filename="make.conf">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="init">/workshop/</Path>
+                  <Path Filename="ready">/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="habr.com">/ready/doc/wolfram/</Path>
+                  <Path Filename="ru">/ready/doc/wolfram/habr.com/</Path>
+                  <Path Filename="habr.com">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр_files">/ready/doc/wolfram/</Path>
+                  <Path Filename="..">/ready/doc/wolfram/Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр_files/</Path>
+                  <Path Filename="1">/ready/doc/wolfram/</Path>
+                  <Path Filename="wolfram">/ready/doc/</Path>
+                  <Path Filename="doc">/ready/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="Стивен Вольфрам кажется, мы близки к пониманию фундаментальной теории физики, и она прекрасна _ Хабр.htm">/down/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="..">/local/css/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="0.xhtml">/down/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="arab-israeli-wars.xhtml">/workshop/bytensky.gitlab.io/public/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="">/local/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Left>
+      <Right>
+        <ActiveTab>16</ActiveTab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="surf">/local/</Path>
+                  <Path Filename="..">/local/surf/</Path>
+                  <Path Filename="surf">/local/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="firefox">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="..">/usr/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="home">/var/</Path>
+                  <Path Filename="root">/var/home/</Path>
+                  <Path Filename=".1C">/var/home/root/</Path>
+                  <Path Filename="root">/var/home/</Path>
+                  <Path Filename="home">/var/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="bin">/local/</Path>
+                  <Path Filename="v7">/local/bin/</Path>
+                  <Path Filename="bin">/local/</Path>
+                  <Path Filename="fe">/</Path>
+                  <Path Filename="1c">/fe/</Path>
+                  <Path Filename="kb.txt">/fe/1c/</Path>
+                  <Path Filename="fe.txt">/fe/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="vsftpd.conf">/local/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="fb2-xhtml">/workshop/</Path>
+                  <Path Filename="..">/workshop/fb2-xhtml/</Path>
+                  <Path Filename="fb2-xhtml">/workshop/</Path>
+                  <Path Filename="museum">/</Path>
+                  <Path Filename="fb2">/museum/</Path>
+                  <Path Filename="Юдковский Элиезер. Гарри Поттер и методы рационального мышления.fb2">/museum/fb2/</Path>
+                  <Path Filename="fb2">/museum/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="..">/etc/</Path>
+                  <Path Filename="fe">/</Path>
+                  <Path Filename="1c">/fe/</Path>
+                  <Path Filename="art">/fe/1c/</Path>
+                  <Path Filename="Данные.xml">/fe/1c/art/</Path>
+                  <Path Filename="art">/fe/1c/</Path>
+                  <Path Filename="1c">/fe/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="GTA V Speedrun - Classic% in 6_19_53-i3GvqLMH9mo">/down/</Path>
+                  <Path Filename="..">/down/GTA V Speedrun - Classic% in 6_19_53-i3GvqLMH9mo/</Path>
+                  <Path Filename="Чернобыль. Мини-сериал. 2019. EniaHD (WEB-DL 720p)">/down/</Path>
+                  <Path Filename="..">/down/Чернобыль. Мини-сериал. 2019. EniaHD (WEB-DL 720p)/</Path>
+                  <Path Filename="Чернобыль. Мини-сериал. 2019. EniaHD (WEB-DL 720p)">/down/</Path>
+                  <Path Filename="Chernobyl.s01e01. 1-23-45.mkv">/down/Чернобыль. Мини-сериал. 2019. EniaHD (WEB-DL 720p)/</Path>
+                  <Path Filename="Чернобыль. Мини-сериал. 2019. EniaHD (WEB-DL 720p)">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="app-emulation">/etc/portage/patches/</Path>
+                  <Path Filename="wine-vanilla">/etc/portage/patches/app-emulation/</Path>
+                  <Path Filename="var-lib-wine.patch">/etc/portage/patches/app-emulation/wine-vanilla/</Path>
+                  <Path Filename="app-emulation">/var/db/repos/gentoo/</Path>
+                  <Path Filename="wine-staging">/var/db/repos/gentoo/app-emulation/</Path>
+                  <Path Filename="..">/var/db/repos/gentoo/app-emulation/wine-staging/</Path>
+                  <Path Filename="wine-vanilla">/var/db/repos/gentoo/app-emulation/</Path>
+                  <Path Filename="wine-vanilla-5.0.2.ebuild">/var/db/repos/gentoo/app-emulation/wine-vanilla/</Path>
+                  <Path Filename="wine-vanilla">/var/db/repos/gentoo/app-emulation/</Path>
+                  <Path Filename="app-emulation">/var/db/repos/gentoo/</Path>
+                  <Path Filename="gentoo">/var/db/repos/</Path>
+                  <Path Filename="repos">/var/db/</Path>
+                  <Path Filename="db">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="youtube">/var/cache/</Path>
+                  <Path Filename="..">/var/cache/youtube/</Path>
+                  <Path Filename="youtube">/var/cache/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="res">/</Path>
+                  <Path Filename="caesar3">/res/</Path>
+                  <Path Filename="555">/res/caesar3/</Path>
+                  <Path Filename="..">/res/caesar3/555/</Path>
+                  <Path Filename="smk">/res/caesar3/</Path>
+                  <Path Filename="..">/res/caesar3/smk/</Path>
+                  <Path Filename="wavs">/res/caesar3/</Path>
+                  <Path Filename="..">/res/caesar3/wavs/</Path>
+                  <Path Filename="..">/res/caesar3/</Path>
+                  <Path Filename="caesar3">/res/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="youtube">/var/cache/</Path>
+                  <Path Filename="..">/var/cache/youtube/</Path>
+                  <Path Filename="youtube">/var/cache/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="sway">/etc/</Path>
+                  <Path Filename="config">/etc/sway/</Path>
+                  <Path Filename="sway">/etc/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="Tiny-master">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/Tiny-master/</Path>
+                  <Path Filename="2pdf.pdf">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="images">/var/tmp/</Path>
+                  <Path Filename="">/var/tmp/images/</Path>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="binpkgs">/var/cache/</Path>
+                  <Path Filename="dev-lisp">/var/cache/binpkgs/</Path>
+                  <Path Filename="picolisp">/var/cache/binpkgs/dev-lisp/</Path>
+                  <Path Filename="picolisp-9999-16.xpak">/var/cache/binpkgs/dev-lisp/picolisp/</Path>
+                  <Path Filename="picolisp">/var/cache/binpkgs/dev-lisp/</Path>
+                  <Path Filename="dev-lisp">/var/cache/binpkgs/</Path>
+                  <Path Filename="binpkgs">/var/cache/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="src">/usr/</Path>
+                  <Path Filename="picolisp">/usr/src/</Path>
+                  <Path Filename="lib">/usr/src/picolisp/</Path>
+                  <Path Filename="..">/usr/src/picolisp/lib/</Path>
+                  <Path Filename="lib">/usr/src/picolisp/</Path>
+                  <Path Filename="..">/usr/src/picolisp/lib/</Path>
+                  <Path Filename="..">/usr/src/picolisp/</Path>
+                  <Path Filename="linux-5.4.38-gentoo">/usr/src/</Path>
+                  <Path Filename="src">/usr/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="youtube">/var/cache/</Path>
+                  <Path Filename="..">/var/cache/youtube/</Path>
+                  <Path Filename="youtube">/var/cache/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="info.txt">/local/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="..">/var/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="portage">/etc/</Path>
+                  <Path Filename="package.use">/etc/portage/</Path>
+                  <Path Filename="wine">/etc/portage/package.use/</Path>
+                  <Path Filename="package.use">/etc/portage/</Path>
+                  <Path Filename="portage">/etc/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="db">/var/</Path>
+                  <Path Filename="..">/var/db/</Path>
+                  <Path Filename="lib">/var/</Path>
+                  <Path Filename="..">/var/lib/</Path>
+                  <Path Filename="db">/var/</Path>
+                  <Path Filename="pkg">/var/db/</Path>
+                  <Path Filename="games-strategy">/var/db/pkg/</Path>
+                  <Path Filename="julius-1.4.1">/var/db/pkg/games-strategy/</Path>
+                  <Path Filename="games-strategy">/var/db/pkg/</Path>
+                  <Path Filename="pkg">/var/db/</Path>
+                  <Path Filename="db">/var/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="..">/down/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="">/var/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/var/ports/</Path>
+                  <Path Filename="">/var/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>7</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/usr/src/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="3">/down/</Path>
+                  <Path Filename="..">/down/3/</Path>
+                  <Path Filename="3">/down/</Path>
+                  <Path Filename="..">/down/3/</Path>
+                  <Path Filename="3">/down/</Path>
+                  <Path Filename="..">/down/3/</Path>
+                  <Path Filename="3">/down/</Path>
+                  <Path Filename="..">/down/3/</Path>
+                  <Path Filename="bushwacker">/down/</Path>
+                  <Path Filename="..">/down/bushwacker/</Path>
+                  <Path Filename="bushwacker">/down/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="atlas-shrugged.xhtml">/workshop/bytensky.gitlab.io/public/</Path>
+                  <Path Filename="public">/workshop/bytensky.gitlab.io/</Path>
+                  <Path Filename="bytensky.gitlab.io">/workshop/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="overlay">/local/portage/</Path>
+                  <Path Filename="dev-lisp">/local/portage/overlay/</Path>
+                  <Path Filename="picolisp">/local/portage/overlay/dev-lisp/</Path>
+                  <Path Filename="picolisp-9999.ebuild">/local/portage/overlay/dev-lisp/picolisp/</Path>
+                  <Path Filename="picolisp">/local/portage/overlay/dev-lisp/</Path>
+                  <Path Filename="dev-lisp">/local/portage/overlay/</Path>
+                  <Path Filename="overlay">/local/portage/</Path>
+                  <Path Filename="portage">/local/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="wireguard">/local/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="picolisp">/down/</Path>
+                  <Path Filename="dist">/down/picolisp/</Path>
+                  <Path Filename="picoLisp">/down/picolisp/dist/</Path>
+                  <Path Filename="src">/down/picolisp/dist/picoLisp/</Path>
+                  <Path Filename="..">/down/picolisp/dist/picoLisp/src/</Path>
+                  <Path Filename="src">/down/picolisp/dist/picoLisp/</Path>
+                  <Path Filename="Makefile">/down/picolisp/dist/picoLisp/src/</Path>
+                  <Path Filename="src">/down/picolisp/dist/picoLisp/</Path>
+                  <Path Filename="picoLisp">/down/picolisp/dist/</Path>
+                  <Path Filename="dist">/down/picolisp/</Path>
+                  <Path Filename="1">/down/</Path>
+                  <Path Filename="..">/down/1/</Path>
+                  <Path Filename="bin">/down/</Path>
+                  <Path Filename="..">/down/bin/</Path>
+                  <Path Filename="1">/down/</Path>
+                  <Path Filename="..">/down/1/</Path>
+                  <Path Filename="bin">/down/</Path>
+                  <Path Filename="">/down/bin/</Path>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/israel/tel-ran/telran/game/tasks/</Path>
+                  <Path Filename="tasks">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="game">/israel/tel-ran/telran/</Path>
+                  <Path Filename="telran">/israel/tel-ran/</Path>
+                  <Path Filename="game">/israel/tel-ran/telran/</Path>
+                  <Path Filename="controller">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="tasks">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/tasks/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/model/</Path>
+                  <Path Filename="controller">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/model/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="tasks">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/tasks/</Path>
+                  <Path Filename="controller">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="SecretNumber.java">/israel/tel-ran/telran/game/model/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="game">/israel/tel-ran/telran/</Path>
+                  <Path Filename="telran">/israel/tel-ran/</Path>
+                  <Path Filename="tel-ran">/israel/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="youtube-subscriptions.txt">/local/</Path>
+                  <Path Filename="israel">/</Path>
+                  <Path Filename="tel-ran">/israel/</Path>
+                  <Path Filename="..">/israel/tel-ran/</Path>
+                  <Path Filename="tel-ran">/israel/</Path>
+                  <Path Filename="telran">/israel/tel-ran/</Path>
+                  <Path Filename="game">/israel/tel-ran/telran/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/model/</Path>
+                  <Path Filename="controller">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="BullsAndCowsAppl.class">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="tasks">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="Gamer.java">/israel/tel-ran/telran/game/tasks/</Path>
+                  <Path Filename="controller">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="BullsAndCowsAppl.java">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="tasks">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/tasks/</Path>
+                  <Path Filename="model">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="..">/israel/tel-ran/telran/game/model/</Path>
+                  <Path Filename="controller">/israel/tel-ran/telran/game/</Path>
+                  <Path Filename="">/israel/tel-ran/telran/game/controller/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="wayland-fm.s">/workshop/wayland/aux/</Path>
+                  <Path Filename="main.lst">/workshop/wayland/</Path>
+                  <Path Filename="wayland">/workshop/</Path>
+                  <Path Filename="main.lst">/workshop/wayland/</Path>
+                  <Path Filename="wayland">/workshop/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="Предательство тела-Dateien">/down/</Path>
+                  <Path Filename="fb2.css">/down/Предательство тела-Dateien/</Path>
+                  <Path Filename="1.rkt">/down/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="main.css">/local/css/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="lowen">/down/</Path>
+                  <Path Filename="Лоуэн Александр. Предательство тела.xhtml">/down/lowen/</Path>
+                  <Path Filename="lowen">/down/</Path>
+                  <Path Filename="..">/down/lowen/</Path>
+                  <Path Filename="Heroes of Might and Magic III Complete GOG">/down/</Path>
+                  <Path Filename="res">/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="kolibrios">/down/</Path>
+                  <Path Filename="..">/down/kolibrios/</Path>
+                  <Path Filename="Метод Сильва">/down/</Path>
+                  <Path Filename="workshop">/</Path>
+                  <Path Filename="wayland">/workshop/</Path>
+                  <Path Filename="aux">/workshop/wayland/</Path>
+                  <Path Filename="wayland-fm.s">/workshop/wayland/aux/</Path>
+                  <Path Filename="aux">/workshop/wayland/</Path>
+                  <Path Filename="dark">/workshop/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="lowen">/down/</Path>
+                  <Path Filename="css">/down/lowen/</Path>
+                  <Path Filename="book.css">/down/lowen/css/</Path>
+                  <Path Filename="Лоуэн Александр. Предательство тела.xhtml">/down/lowen/</Path>
+                  <Path Filename="lowen">/down/</Path>
+                  <Path Filename="local">/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="book.css">/local/css/</Path>
+                  <Path Filename="css">/local/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="1.xhtml">/down/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="..">/etc/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/res/h3/maps/</Path>
+                  <Path Filename="Mp3">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Mp3/</Path>
+                  <Path Filename="Mp3">/res/h3/</Path>
+                  <Path Filename="1">/res/h3/Mp3/</Path>
+                  <Path Filename="..">/res/h3/Mp3/1/</Path>
+                  <Path Filename="..">/res/h3/Mp3/</Path>
+                  <Path Filename="random_maps">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/random_maps/</Path>
+                  <Path Filename="Uninstall_HotA">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Uninstall_HotA/</Path>
+                  <Path Filename="Warlords of the Wasteland">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Warlords of the Wasteland/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h3hota">/res/</Path>
+                  <Path Filename="..">/res/h3hota/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h2">/res/</Path>
+                  <Path Filename="..">/res/h2/</Path>
+                  <Path Filename="h3">/res/</Path>
+                  <Path Filename="Data">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Data/</Path>
+                  <Path Filename="Games">/res/h3/</Path>
+                  <Path Filename="..">/res/h3/Games/</Path>
+                  <Path Filename="..">/res/h3/</Path>
+                  <Path Filename="h3hota">/res/</Path>
+                  <Path Filename="..">/res/h3hota/</Path>
+                  <Path Filename="hota">/res/</Path>
+                  <Path Filename="games">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/games/</Path>
+                  <Path Filename="HotA_Data">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/HotA_Data/</Path>
+                  <Path Filename="MP3">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/MP3/</Path>
+                  <Path Filename="..">/res/hota/</Path>
+                  <Path Filename="hota">/res/</Path>
+                  <Path Filename="Data">/res/hota/</Path>
+                  <Path Filename="..">/res/hota/Data/</Path>
+                  <Path Filename="games">/res/hota/</Path>
+                  <Path Filename="Prisoner of Doom">/res/hota/games/</Path>
+                  <Path Filename="..">/res/hota/games/Prisoner of Doom/</Path>
+                  <Path Filename="..">/res/hota/games/</Path>
+                  <Path Filename="h3hota.exe">/res/hota/</Path>
+                  <Path Filename="hota">/res/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="books">/home/</Path>
+                  <Path Filename="..">/home/books/</Path>
+                  <Path Filename="..">/home/</Path>
+                  <Path Filename="var">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="src">/usr/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="doc">/usr/share/</Path>
+                  <Path Filename="picolisp-9999">/usr/share/doc/</Path>
+                  <Path Filename="html">/usr/share/doc/picolisp-9999/</Path>
+                  <Path Filename="ref.html">/usr/share/doc/picolisp-9999/html/</Path>
+                  <Path Filename="html">/usr/share/doc/picolisp-9999/</Path>
+                  <Path Filename="picolisp-9999">/usr/share/doc/</Path>
+                  <Path Filename="doc">/usr/share/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="Tlushim_122020_6247.PDF">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="1">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/1/</Path>
+                  <Path Filename="firefox">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/firefox/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="chromium">/cache/</Path>
+                  <Path Filename="..">/cache/chromium/</Path>
+                  <Path Filename="pelevin">/cache/</Path>
+                  <Path Filename="..">/cache/pelevin/</Path>
+                  <Path Filename="pelevin">/cache/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="Darude - Before The Storm - 2001">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/Darude - Before The Storm - 2001/</Path>
+                  <Path Filename="Darude - Before The Storm - 2001">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="..">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="Tom and Jerry">/down/</Path>
+                  <Path Filename="..">/down/Tom and Jerry/</Path>
+                  <Path Filename="silva">/down/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="..">/var/tmp/portage/</Path>
+                  <Path Filename="firefox">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/firefox/</Path>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="src">/usr/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="doc">/usr/share/</Path>
+                  <Path Filename="picolisp-9999">/usr/share/doc/</Path>
+                  <Path Filename="html">/usr/share/doc/picolisp-9999/</Path>
+                  <Path Filename="ref.html">/usr/share/doc/picolisp-9999/html/</Path>
+                  <Path Filename="html">/usr/share/doc/picolisp-9999/</Path>
+                  <Path Filename="picolisp-9999">/usr/share/doc/</Path>
+                  <Path Filename="doc">/usr/share/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="Tlushim_122020_6247.PDF">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="1">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/1/</Path>
+                  <Path Filename="firefox">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/firefox/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="cache">/</Path>
+                  <Path Filename="chromium">/cache/</Path>
+                  <Path Filename="..">/cache/chromium/</Path>
+                  <Path Filename="pelevin">/cache/</Path>
+                  <Path Filename="..">/cache/pelevin/</Path>
+                  <Path Filename="pelevin">/cache/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="Darude - Before The Storm - 2001">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/Darude - Before The Storm - 2001/</Path>
+                  <Path Filename="Darude - Before The Storm - 2001">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="..">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="Tom and Jerry">/down/</Path>
+                  <Path Filename="..">/down/Tom and Jerry/</Path>
+                  <Path Filename="silva">/down/</Path>
+                  <Path Filename="down">/</Path>
+                  <Path Filename="..">/var/tmp/portage/</Path>
+                  <Path Filename="firefox">/var/tmp/</Path>
+                  <Path Filename="..">/var/tmp/firefox/</Path>
+                  <Path Filename="">/var/tmp/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+      </Right>
+    </OpenedTabs>
+    <ActionOnDoubleClick>1</ActionOnDoubleClick>
+  </Tabs>
+  <Log Enabled="False" LogFileWithDateInName="False" Count="0">
+    <FileName>/var/home/root/.config/doublecmd/doublecmd.log</FileName>
+    <Options>511</Options>
+  </Log>
+  <History>
+    <SearchReplaceHistory Save="True"/>
+    <DirHistory Save="True"/>
+    <CmdLineHistory Save="True"/>
+    <FileMaskHistory Save="True"/>
+  </History>
+  <QuickSearch>
+    <MatchBeginning>True</MatchBeginning>
+    <MatchEnding>True</MatchEnding>
+    <Case>1</Case>
+    <Items>2</Items>
+  </QuickSearch>
+  <QuickFilter>
+    <AutoHide>True</AutoHide>
+    <SaveSessionModifications>False</SaveSessionModifications>
+  </QuickFilter>
+  <Miscellaneous>
+    <GridVertLine>True</GridVertLine>
+    <GridHorzLine>False</GridHorzLine>
+    <ShowWarningMessages>True</ShowWarningMessages>
+    <SpaceMovesDown>False</SpaceMovesDown>
+    <DirBrackets>False</DirBrackets>
+    <InplaceRename>False</InplaceRename>
+    <HotDirAddTargetOrNot>False</HotDirAddTargetOrNot>
+    <HotDirFullExpandOrNot>False</HotDirFullExpandOrNot>
+    <ShowPathInPopup>False</ShowPathInPopup>
+    <ShowOnlyValidEnv>True</ShowOnlyValidEnv>
+    <WhereToAddNewHotDir>2</WhereToAddNewHotDir>
+    <DblClickToParent>False</DblClickToParent>
+    <InplaceRenameButton>False</InplaceRenameButton>
+    <FilenameStyle>0</FilenameStyle>
+    <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+    <PathModifierElements>0</PathModifierElements>
+  </Miscellaneous>
+  <Thumbnails Save="False">
+    <Width>128</Width>
+    <Height>128</Height>
+  </Thumbnails>
+  <AutoRefresh>
+    <Options>3</Options>
+    <ExcludeDirs/>
+    <Mode>0</Mode>
+  </AutoRefresh>
+  <Icons>
+    <ShowMode>0</ShowMode>
+    <ShowOverlays>False</ShowOverlays>
+    <Size>16</Size>
+    <Exclude>False</Exclude>
+    <ExcludeDirs/>
+    <ShowInMenus Enabled="False">
+      <Size>16</Size>
+    </ShowInMenus>
+    <Theme>dctheme</Theme>
+    <DiskSize>16</DiskSize>
+    <DiskAlpha>50</DiskAlpha>
+    <CustomIcons>0</CustomIcons>
+    <PixelsPerInch>96</PixelsPerInch>
+    <ShowButtonGlyphs>0</ShowButtonGlyphs>
+    <ShowHiddenDimmed>False</ShowHiddenDimmed>
+    <ToolSize>24</ToolSize>
+  </Icons>
+  <IgnoreList Enabled="False">
+    <IgnoreListFile>/var/home/root/.config/doublecmd/ignorelist.txt</IgnoreListFile>
+  </IgnoreList>
+  <DirectoryHotList>
+    <HotDir Name="/etc/portage/patches/" Path="/etc/portage/patches"/>
+    <HotDir Name="/var/cache/youtube/" Path="/var/cache/youtube"/>
+    <HotDir Name="/var/db/repos/k/" Path="/var/db/repos/k"/>
+    <HotDir Name="/usr/local/binl/" Path="/usr/local/binl"/>
+    <HotDir Name="/usr/share/doc/picolisp-9999/html/" Path="/usr/share/doc/picolisp-9999/html"/>
+    <HotDir Name="/var/tmp/" Path="/var/tmp"/>
+    <HotDir Name="/var/tmp/portage/" Path="/var/tmp/portage"/>
+  </DirectoryHotList>
+  <Viewer>
+    <PreviewVisible>False</PreviewVisible>
+    <ImageStretch>False</ImageStretch>
+    <CopyMovePath1/>
+    <CopyMovePath2/>
+    <CopyMovePath3/>
+    <CopyMovePath4/>
+    <CopyMovePath5/>
+    <PaintMode>0</PaintMode>
+    <PaintWidth>5</PaintWidth>
+    <NumberOfColumns>1</NumberOfColumns>
+    <ViewerMode>1</ViewerMode>
+    <PaintColor>255</PaintColor>
+    <BackgroundColor>2105376</BackgroundColor>
+    <FontColor>12632256</FontColor>
+    <TextPosition>0</TextPosition>
+    <ImageStretchLargeOnly>False</ImageStretchLargeOnly>
+    <ImageCenter>True</ImageCenter>
+    <ImageExifRotate>True</ImageExifRotate>
+    <TabSpaces>8</TabSpaces>
+    <MaxTextWidth>1024</MaxTextWidth>
+    <PrintMargins>200|200|200|200</PrintMargins>
+    <ShowCaret>False</ShowCaret>
+    <LeftMargin>4</LeftMargin>
+    <ExtraLineSpan>0</ExtraLineSpan>
+  </Viewer>
+  <SyncDirs>
+    <Subdirs>True</Subdirs>
+    <ByContent>True</ByContent>
+    <IgnoreDate>True</IgnoreDate>
+    <FilterCopyRight>True</FilterCopyRight>
+    <FilterEqual>True</FilterEqual>
+    <FilterNotEqual>True</FilterNotEqual>
+    <FilterCopyLeft>True</FilterCopyLeft>
+    <FilterDuplicates>True</FilterDuplicates>
+    <FilterSingles>True</FilterSingles>
+    <FileMask>*</FileMask>
+    <Asymmetric Save="False">False</Asymmetric>
+    <Colors>
+      <Left>32768</Left>
+      <Right>16711680</Right>
+      <Unknown>255</Unknown>
+    </Colors>
+  </SyncDirs>
+  <Lua>
+    <PathToLibrary>liblua5.1.so.0</PathToLibrary>
+  </Lua>
+  <NameShortcutFile>shortcuts.scf</NameShortcutFile>
+  <LastUsedPacker>zip</LastUsedPacker>
+  <UseShellForFileOperations>False</UseShellForFileOperations>
+  <SearchTemplates/>
+  <ColumnsSets DefaultTitleHash="0">
+    <ColumnsSet UseFrameCursor="True">
+      <Name>Default</Name>
+      <CustomView>False</CustomView>
+      <FileSystem>&lt;General&gt;</FileSystem>
+      <PixelsPerInch>96</PixelsPerInch>
+      <CursorBorder Enabled="False">
+        <Color>-2147483635</Color>
+      </CursorBorder>
+      <Columns>
+        <Column>
+          <Title>Name</Title>
+          <FuncString>[DC().GETFILENAME{}]</FuncString>
+          <Width>508</Width>
+          <Align>0</Align>
+          <Font>
+            <Name>Cousine</Name>
+            <Size>11</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>12632256</TextColor>
+          <Background>2039583</Background>
+          <Background2>2039583</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>8388736</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+        <Column>
+          <Title>Size</Title>
+          <FuncString>[DC().GETFILESIZE{}]</FuncString>
+          <Width>0</Width>
+          <Align>1</Align>
+          <Font>
+            <Name>Cousine</Name>
+            <Size>11</Size>
+            <Style>0</Style>
+            <Quality>0</Quality>
+          </Font>
+          <TextColor>12632256</TextColor>
+          <Background>2039583</Background>
+          <Background2>2039583</Background2>
+          <MarkColor>255</MarkColor>
+          <CursorColor>8388736</CursorColor>
+          <CursorText>-2147483634</CursorText>
+          <InactiveCursorColor>-2147483645</InactiveCursorColor>
+          <InactiveMarkColor>255</InactiveMarkColor>
+          <UseInvertedSelection>False</UseInvertedSelection>
+          <UseInactiveSelColor>False</UseInactiveSelColor>
+          <Overcolor>True</Overcolor>
+        </Column>
+      </Columns>
+    </ColumnsSet>
+  </ColumnsSets>
+  <MainWindow>
+    <Position Save="True">
+      <Maximized>True</Maximized>
+      <Splitter>50</Splitter>
+      <Left>128</Left>
+      <Top>0</Top>
+      <Width>1543</Width>
+      <Height>806</Height>
+      <PixelsPerInch>96</PixelsPerInch>
+    </Position>
+  </MainWindow>
+  <MultiRenamePresets>
+    <LastPreset/>
+    <Presets/>
+  </MultiRenamePresets>
+  <Editor>
+    <EditWaitTime>2000</EditWaitTime>
+    <SynEditOptions>32811</SynEditOptions>
+    <SynEditTabWidth>3</SynEditTabWidth>
+    <SynEditRightEdge>80</SynEditRightEdge>
+  </Editor>
+  <InternalAssociations>
+    <OfferToAddNewFileType>False</OfferToAddNewFileType>
+    <LastCustomAction>Custom action</LastCustomAction>
+    <ExpandedContextMenu>False</ExpandedContextMenu>
+    <ExecuteViaShell>False</ExecuteViaShell>
+    <OpenSystemWithTerminalClose>False</OpenSystemWithTerminalClose>
+    <OpenSystemWithTerminalStayOpen>False</OpenSystemWithTerminalStayOpen>
+    <IncludeFileAssociation>False</IncludeFileAssociation>
+    <FilenameStyle>0</FilenameStyle>
+    <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
+    <PathModifierElements>0</PathModifierElements>
+  </InternalAssociations>
+  <FavoriteTabsOptions>
+    <FavoriteTabsUseRestoreExtraOptions>False</FavoriteTabsUseRestoreExtraOptions>
+    <WhereToAdd>1</WhereToAdd>
+    <Expand>True</Expand>
+    <GotoConfigAftSav>False</GotoConfigAftSav>
+    <GotoConfigAftReSav>False</GotoConfigAftReSav>
+    <DfltLeftGoTo>0</DfltLeftGoTo>
+    <DfltRightGoTo>1</DfltRightGoTo>
+    <DfltKeep>5</DfltKeep>
+    <DfltSaveDirHistory>False</DfltSaveDirHistory>
+    <FavTabsLastUniqueID>{FB2F8199-65C4-4572-AA3E-1D0EE11930C8}</FavTabsLastUniqueID>
+  </FavoriteTabsOptions>
+  <LastDoAnyCommand>cm_Refresh</LastDoAnyCommand>
+  <Description>
+    <CreateNewUnicode>True</CreateNewUnicode>
+    <DefaultEncoding>2</DefaultEncoding>
+    <CreateNewEncoding>3</CreateNewEncoding>
+  </Description>
+  <TreeViewMenu>
+    <UseTVMDirectoryHotlistFMC>False</UseTVMDirectoryHotlistFMC>
+    <UseTVMDirectoryHotlistFDC>False</UseTVMDirectoryHotlistFDC>
+    <UseTVMFavoriteTabsFMC>False</UseTVMFavoriteTabsFMC>
+    <UseTVMFavoriteTabsFDC>False</UseTVMFavoriteTabsFDC>
+    <UseTVMDirHistory>False</UseTVMDirHistory>
+    <UseTVMViewHistory>False</UseTVMViewHistory>
+    <UseTVMCommandLineHistory>False</UseTVMCommandLineHistory>
+    <TreeViewMenuShortcutExit>True</TreeViewMenuShortcutExit>
+    <TreeViewMenuSingleClickExit>True</TreeViewMenuSingleClickExit>
+    <TreeViewMenuDoubleClickExit>True</TreeViewMenuDoubleClickExit>
+    <Context00>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context00>
+    <Context01>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context01>
+    <Context02>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context02>
+    <Context03>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context03>
+    <Context04>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context04>
+    <Context05>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context05>
+    <Context06>
+      <CaseSensitive>False</CaseSensitive>
+      <IgnoreAccents>True</IgnoreAccents>
+      <ShowWholeBranchIfMatch>False</ShowWholeBranchIfMatch>
+    </Context06>
+    <TreeViewMenuUseKeyboardShortcut>True</TreeViewMenuUseKeyboardShortcut>
+    <BackgroundColor>-2147483617</BackgroundColor>
+    <ShortcutColor>255</ShortcutColor>
+    <NormalTextColor>-2147483640</NormalTextColor>
+    <SecondaryTextColor>-2147483642</SecondaryTextColor>
+    <FoundTextColor>-2147483635</FoundTextColor>
+    <UnselectableTextColor>-2147483631</UnselectableTextColor>
+    <CursorColor>-2147483635</CursorColor>
+    <ShortcutUnderCursor>-2147483634</ShortcutUnderCursor>
+    <NormalTextUnderCursor>-2147483634</NormalTextUnderCursor>
+    <SecondaryTextUnderCursor>-2147483628</SecondaryTextUnderCursor>
+    <FoundTextUnderCursor>65535</FoundTextUnderCursor>
+    <UnselectableUnderCursor>-2147483631</UnselectableUnderCursor>
+  </TreeViewMenu>
+  <HotKeySortOrder>0</HotKeySortOrder>
+  <UseEnterToCloseHotKeyEditor>True</UseEnterToCloseHotKeyEditor>
+  <MarkMaskCaseSensitive>False</MarkMaskCaseSensitive>
+  <MarkMaskIgnoreAccents>False</MarkMaskIgnoreAccents>
+  <MarkMaskFilterWindows>False</MarkMaskFilterWindows>
+  <MarkShowWantedAttribute>False</MarkShowWantedAttribute>
+  <MarkDefaultWantedAttribute/>
+  <MarkLastWantedAttribute/>
+  <Differ>
+    <IgnoreCase>False</IgnoreCase>
+    <KeepScrolling>True</KeepScrolling>
+    <PaintBackground>True</PaintBackground>
+    <LineDifferences>False</LineDifferences>
+    <IgnoreWhiteSpace>False</IgnoreWhiteSpace>
+    <Colors>
+      <Added>11206570</Added>
+      <Deleted>11184895</Deleted>
+      <Modified>16755370</Modified>
+      <Binary>
+        <Modified>255</Modified>
+      </Binary>
+    </Colors>
+  </Differ>
+</doublecmd>

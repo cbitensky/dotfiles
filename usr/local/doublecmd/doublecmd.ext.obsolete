@@ -1,0 +1,13 @@
+[ebuild]
+Name=ebuid
+Manifest={!SHELL} ebuild "%p" manifest
+Emerge={!SHELL} emerge -v "%p"
+
+[xml]
+Name=xml
+browser=chromium "%p"
+
+[torrent]
+Name=torrent
+aria={!SHELL} aria2c --evil "%p"
+

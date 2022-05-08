@@ -1,11 +1,22 @@
 #!/usr/bin/picolisp /usr/local/lib/shell.l
-(in "/usr/local/conf/ys.cf"
+(setq defres "1080")
+(setq last (envor "LAST" "5"))
+(in "/usr/local/cf/ys.cf"
 	(while (line)
-		(let chars (car (split (chop @) " "))
-			(unless (= (car chars) "#")
-				(queue 'ids (pack "https://www.youtube.com/playlist?list=" chars)) ) ) ) )
-(fexec "y"
-	"--match-filter" "!is_live" 
-	"--download-archive" "/var/lib/seen.txt"
-	"--playlist-end" "20"
-	ids)
+		(let trimmed-line (car (split (chop @) "#"))
+			(if trimmed-line
+				(let
+					(words (mapcar pack (split trimmed-line " "))
+					res (cadr words) )
+					(sys "RES" (or res defres))
+					(unless (fork) (prog
+							(fcall "y"
+								"--match-filter" "!is_live"
+								"--download-archive" "/var/lib/ys-seen.txt"
+								"--playlist-end" last
+								"--playlist-reverse"
+								(pack "https://www.youtube.com/channel/" (car words) "/videos")
+								(argv) )
+							(bye) ) ) ) ) ) ) )
+(wait NIL (not (kids)))
+(bye)

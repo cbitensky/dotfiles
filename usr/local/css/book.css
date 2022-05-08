@@ -1,0 +1,25 @@
+@import url("text.css");
+body { max-width: 40em }
+
+h1, h2, h3, h4, h5, h6 { margin-left: 2rem; margin-right: 2rem; text-align: center }
+iframe { max-height: 480px }
+img { max-height: 1024px }
+video { max-height: 30rem }
+
+header > p { text-align: center; text-indent: 0; opacity: .6 }
+
+.epigraph { margin-left: 40%; margin-right: 0 }
+.poem { display: table; margin: .8rem auto }
+.poem p { text-indent: 0 }
+.poem > .author { text-indent: 0 }
+.poem > h1, .poem > h2, .poem > h3, .poem > h4, .poem > h5, .poem > h6 { text-align: left }
+
+img[src*="h"], img[srcset*="h"] { max-width: 50%; max-height: 512px }
+img[src$="w.png"], img[src$="w.webp"] { background-color: white; padding: 5px }
+img[src$="b.png"], img[src$="b.webp"] { background-color: black; padding: 5px }
+
+/* table columns */
+.right1 td:first-child { text-align: right }
+
+/* code */
+.comm { font-style: italic; opacity: 0.6 }

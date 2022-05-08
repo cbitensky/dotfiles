@@ -1,0 +1,10 @@
+@import url("book.css");
+a.note { font-style: normal }
+section.notes > section p:first-child > sup:first-child { opacity: .6 }
+.annotation { margin-bottom: 1rem }
+blockquote .empty-line { height: .8rem }
+.stanza + .stanza { margin-top: .8rem }
+section.notes { border-top-style: solid }
+a.note > sup { font-size: 70.71% }
+th:first-child, td:first-child { padding-left:  0 }
+th:last-child , td:last-child  { padding-right: 0 }

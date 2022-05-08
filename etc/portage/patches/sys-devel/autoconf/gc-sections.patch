@@ -7,7 +7,7 @@ index a4fa5d6..8b1445e 100644
  ac_cpp='$CPP $CPPFLAGS'
  ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&AS_MESSAGE_LOG_FD'
 -ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&AS_MESSAGE_LOG_FD'
-+ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS -Wl,--no-gc-sections conftest.$ac_ext $LIBS >&AS_MESSAGE_LOG_FD'
++ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS -Wl[,]--no-gc-sections conftest.$ac_ext $LIBS >&AS_MESSAGE_LOG_FD'
  ac_compiler_gnu=$ac_cv_c_compiler_gnu
  ])
  

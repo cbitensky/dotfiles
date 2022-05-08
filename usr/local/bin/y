@@ -1,12 +1,20 @@
 #!/usr/bin/picolisp /usr/local/lib/shell.l
 (setq
-	res (envor "RES" "1080")
-	dir (envor "DIR" "/var/cache/youtube")
-	prg (envor "PRG" "youtube-dl") )
+	res (envor "RES" "2160")
+	dir (envor "DIR" "/var/spool/youtube")
+	prg (envor "PRG" "youtube-dl")
+	conn 16 )
 (fexec prg
 	"-i"
 	"--output" (pack dir "/%(upload_date)s-%(id)s-%(uploader)s-%(title).64s.%(ext)s")
-	"-f" (pack "bestvideo[height<=" res "]+bestaudio/best[height<=" res "]")
-	"--write-sub" "--write-auto-sub" "--embed-subs" "--sub-lang" "en,ru,uk"
+	"-f" (pack "((bestvideo[height<=" res "][vcodec\^=av01]/bestvideo[height<=" res "][vcodec=vp9]/bestvideo)+(bestaudio[acodec=opus]/bestaudio))/best[height<=" res "]")
+	"--write-sub" "--embed-subs" "--sub-lang" "en,he,ru,uk"
 	"--hls-use-mpegts"
+#	"--prefer-free-formats"
+#	"--sponsorblock-mark" "all"
+	"--embed-chapters"
+	"-N5"
+	"--merge-output-format" "mkv"
+#	"--external-downloader" "aria2c"
+#	"--external-downloader-args" (pack "-j " conn " -x " conn " -s " conn " -k 1M")
 	(argv) )

@@ -1,12 +1,13 @@
-diff --git a/programs/winemenubuilder/winemenubuilder.c b/programs/winemenubuilder/winemenubuilder.c
-index 0013b04..ebfb470 100644
---- a/programs/winemenubuilder/winemenubuilder.c
-+++ b/programs/winemenubuilder/winemenubuilder.c
-@@ -3625,6 +3625,7 @@ static BOOL init_xdg(void)
-  */
- int PASCAL wWinMain (HINSTANCE hInstance, HINSTANCE prev, LPWSTR cmdline, int show)
- {
-+    return 0;
-     static const WCHAR dash_aW[] = {'-','a',0};
-     static const WCHAR dash_rW[] = {'-','r',0};
-     static const WCHAR dash_tW[] = {'-','t',0};
+diff --git a/dlls/shell32/shelllink.c b/dlls/shell32/shelllink.c
+index 656357b..ea895fb 100644
+--- a/dlls/shell32/shelllink.c
++++ b/dlls/shell32/shelllink.c
+@@ -307,6 +307,8 @@ BOOL run_winemenubuilder( const WCHAR *args )
+     WCHAR app[MAX_PATH];
+     void *redir;
+ 
++    return TRUE;
++
+     GetSystemDirectoryW( app, MAX_PATH );
+     lstrcatW( app, L"\\winemenubuilder.exe" );
+ 

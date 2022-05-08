@@ -1,2 +1,2 @@
 #!/usr/bin/picolisp /usr/local/lib/shell.l
-(fexec "find" "." "-name" (pack "*" (argv) "*")))
+(fexec "find" "." "-xdev" "-name" (pack "*" (argv) "*")))

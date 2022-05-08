@@ -1,0 +1,170 @@
+@media not all and (max-width: 30rem) { :root { --margin: 1rem;  --text-align: justify; --text-indent: 2rem } }
+@media (max-width: 30rem)             { :root { --margin: .4rem; --text-align: unset;   --text-indent: 1rem } }
+@media print { :root { --margin: 0 } }
+
+:root {
+	--dimness: 0.2;
+	--half-margin: calc(var(--margin) / 2);
+}
+
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+	:root { --back: 0%;   --op: + }
+	
+	.text img[src*="t."] { filter: invert(calc(1 - var(--dimness))) }
+	.text img[src*="c."] { filter: invert(1) hue-rotate(180deg) }
+	.text img[src*="w."] { background: var(--color-fore) }
+}
+
+/*
+ 		padding: var(--half-margin);
+		margin-top:    calc(-1*var(--half-margin));
+		margin-bottom: calc(-1*var(--half-margin))
+*/
+
+@media (prefers-color-scheme: light) {
+	:root { --back: 100%; --op: - }
+	
+	.text img[src*="t."] { filter: invert(var(--dimness)) }
+	.text img[src*="b."] { background: var(--color-fore)  }
+}
+
+:root {
+	--font-upscale: 1.2;
+	--font-downscale: calc(1 / var(--font-upscale));
+	--fs-normal: 1rem;
+	
+	--fs-larger1:  calc(var(--fs-normal  ) * var(--font-upscale));
+	--fs-larger2:  calc(var(--fs-larger1 ) * var(--font-upscale));
+	--fs-larger3:  calc(var(--fs-larger2 ) * var(--font-upscale));
+	--fs-larger4:  calc(var(--fs-larger3 ) * var(--font-upscale));
+	--fs-larger5:  calc(var(--fs-larger4 ) * var(--font-upscale));
+	
+	--fs-smaller1: calc(var(--fs-normal  ) * var(--font-downscale));
+	--fs-smaller2: calc(var(--fs-smaller1) * var(--font-downscale));
+	
+	--hue-title:   calc( 4turn/12);
+	--hue-caption: calc( 2turn/12);
+	--hue-a:       calc( 8turn/12);
+	--hue-visited: calc(10turn/12);
+	--percent-aux: 50%;
+	--lum-fore: calc(var(--back) var(--op) (1 - var(--dimness)) * 100%);
+	--lum-aux: calc(var(--back) var(--op) (100% - var(--percent-aux)));
+	--saturation-aux: 25%;
+	--color-aux: hsl(0, 0%, var(--lum-aux));
+	
+	--color-title: hsl(var(--hue-title), 100%, calc(var(--back) var(--op) 75%));
+	--color-caption:     hsl(var(--hue-caption), 75%, var(--lum-fore));
+	--color-caption-aux: hsl(var(--hue-caption), var(--saturation-aux), var(--lum-aux));
+	
+	--color-back:   hsl(0, 0%, calc(var(--back) var(--op) 2/16*100%));
+	--color-sup:    hsl(0, 0%, calc(var(--back) var(--op) 4/16*100%));
+	--color-fore:   hsl(0, 0%, var(--lum-fore));
+	--color-bright: hsl(0, 0%, calc(var(--back) var(--op) 200%));
+}
+
+body { font-family: sans-serif; padding: 0 var(--margin); background-color: var(--color-back); color: var(--color-fore) }
+
+:lang(he) { word-spacing: .15em }
+:lang(ru), :lang(uk) { word-spacing: .2em; -webkit-hyphenate-limit-after: 3; -webkit-hyphenate-limit-before: 3 }
+:lang(ru) { -webkit-locale: "ru" }
+:lang(uk) { -webkit-locale: "uk" }
+
+ol:lang(ru), ul:lang(ru), p:lang(ru), li:lang(ru),
+ol:lang(uk), ul:lang(uk), p:lang(uk), li:lang(uk) { padding: 0; margin: 0 }
+:lang(ru) p, :lang(uk) p { hyphens: auto; text-align: var(--text-align); text-indent: var(--text-indent); -webkit-hyphens: auto }
+
+
+li:lang(ru),
+li:lang(uk) { list-style-type: none }
+
+li:lang(ru):before,
+li:lang(uk):before { content: "• " }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal;  font-size: inherit; margin: 0 }
+header { color: var(--color-title) }
+
+small { font-size: inherit }
+small, .aux { color: var(--color-aux) }
+
+sup, sub { font-size: var(--fs-smaller2) }
+sup { vertical-align: top; position: relative; top: -0.5em; }
+
+blockquote { margin: var(--margin) var(--text-indent); font-size: var(--fs-smaller1) }
+
+* { border-width: 1px; border-color: hsl(0, 0%, calc(var(--back) var(--op) 30%)) }
+
+a { text-decoration: none; color: hsl(var(--hue-a), 100%, var(--lum-fore)) }
+a:visited { color: hsl(var(--hue-visited), 100%, var(--lum-fore)) }
+a small, a .aux, small a, .aux a { color: hsl(var(--hue-a), var(--saturation-aux), var(--lum-aux)) }
+a:visited small, a:visited .aux, small a:visited, .aux a:visited { color: hsl(var(--hue-visited), var(--saturation-aux), var(--lum-aux)) }
+
+table { border-collapse: collapse; max-width: 100% }
+th { font-weight: normal; font-size: var(--fs-smaller1) }
+.tr { display: table-row }
+
+td > img:only-child { display: block }
+video, figure img { max-width: 100%; max-height: 100vh }
+figure > img { display: block; margin: 0 auto }
+figure { margin: calc(var(--margin)*1.5) auto }
+figcaption { font-size: var(--fs-smaller1); color: var(--color-caption); margin: var(--half-margin) var(--text-indent) 0 var(--text-indent) }
+figcaption { text-align: center; text-indent: 0 }
+figure > div { display: flex }
+figure > div img:not(:last-of-type) { margin-right: var(--half-margin) }
+
+.center { text-align: center }
+.right  { text-align: right  }
+
+/* Text */
+:root {
+	--body-width: 40em; 
+	--gutter: .5em;
+	--gutter-half: calc(var(--gutter)/2);
+	--title-page-skip: 2rem;
+}
+.text { max-width: var(--body-width); margin: var(--margin) auto; }
+
+/*.text p:lang(ru), li:lang(ru), dd:lang(ru),
+.text p:lang(uk), li:lang(uk), dd:lang(uk) { hyphens: auto; text-align: var(--text-align); text-indent: var(--text-indent);
+	-webkit-hyphens: auto }*/
+
+.text header { text-align: center; margin-left: var(--text-indent); margin-right: var(--text-indent) }
+.text > header { margin-bottom: calc(2 * var(--title-page-skip)); font-size: var(--fs-larger5) }
+.text > header *[class]:not(:first-child), .text header div:not(:first-child) { margin-top: var(--title-page-skip) }
+.text header .sub, .text .weak { font-size: var(--fs-normal) }
+.text .sup { background: var(--color-sup) }
+.text section header { margin-top: 2em; margin-bottom: 1em }
+.text .l2 { font-size: var(--fs-larger1) }
+.text .l3 { font-size: var(--fs-larger2) }
+.text .l4 { font-size: var(--fs-larger3) }
+.text .l5 { font-size: var(--fs-larger4) }
+.text .author, .text .date { color: var(--color-aux); font-size: var(--fs-normal) }
+.text .weak { color: var(--color-aux) }
+
+.text table { margin: var(--margin) auto; padding: 0 }
+.text table img { max-width: 100% }
+.text .empty-line { height: 1.8em }
+.text .sub { font-size: var(--fs-smaller1); margin-left: 0; margin-right: 0 }
+.text p, .text li { line-height: 135% }
+.text figure img { max-height: var(--body-width) }
+.text figure img[src*="h."] { max-width: calc(min(var(--body-width)/2, 100%)) }
+.text table:not([class]) td, .text table:not([class]) th { padding-left: var(--gutter-half); padding-right: var(--gutter-half) }
+.text table:not([class]) td:first-child, .text table:not([class]) th:first-child { padding-left: 0  }
+.text table:not([class]) td:last-child,  .text table:not([class]) th:last-child  { padding-right: 0 }
+.text tr:not(:first-of-type) td, .text tr:not(:first-of-type) th { padding-top: .2em }
+.text th { color: var(--color-caption) }
+.text th > small { color: var(--color-caption-aux) }
+.text .poem { display: table; margin: var(--margin) auto }
+.text .poem p { text-indent: 0 }
+.text .stanza + .stanza { margin-top: var(--margin) }
+.text .emphased p { color: var(--color-bright)  }
+
+
+/* hack: figure without image with figcaption after table: remove margin */
+.text table + figure > figcaption:only-child { margin-top: calc(-1*var(--margin)) }
+
+
+
+/* Information system */
+.kb table { background-color: hsl(0, 0%, calc(var(--back) var(--op) 3/16*100%)) }
+.kb td, .kb th, .lined td, .lined th { padding: .1em .25em; border-style: solid }
+.kb th { color: var(--color-aux) }

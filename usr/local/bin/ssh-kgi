@@ -1,0 +1,2 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(fexec "ssh-ec2" "3.140.91.114" (argv))

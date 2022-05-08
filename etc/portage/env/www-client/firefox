@@ -1,9 +1,24 @@
 post_src_install() {
-	rm -rf $D/usr/lib64/firefox/{browser/defaults,distribution} || die
-	clog Gentoo defatuls disabled
+	cd ${ED}/usr/$(get_libdir)/${PN}
+	rm -rf {browser/{defaults,chrome},distribution,firefox-bin,*.ini,defaults,fonts,removed-files,gmp-clearkey}
+	clog Supplementary files and dirs removed
+	
+	for f in browser/features/*; do
+		if [[ "$f" != *screenshot* ]]; then
+			rm "$f"
+		fi
+	done
+	clog Additional XPIs removed
+	cd -
+}
+
+post_pkg_preinst() {
+	rm -rf ${ED}/usr/$(get_libdir)/${PN}/libpulse*
+	clog libpulse symlinks removed
 }
 
 pre_src_prepare() {
+	echo AAA ED=${ED} MFH=${MOZILLA_FIVE_HOME}
 	local N=$(($NTHREADS/2))
 	sed -i \
 		-e "s/multiprocessing.cpu_count()/$N/" \
@@ -19,6 +34,12 @@ pre_src_prepare() {
 }
 
 post_src_prepare() {
+#		/function maybeSetAlternateFixedURI(info, fixupFlags) {/a return false;
+	sed -i '
+		/function checkAndFixPublicSuffix(info) {/a return info;
+		' docshell/base/URIFixup.jsm || die
+	clog URI Fixups disabled
+
 	sed -i -r 's/^(\s*\{\s*TEXT_XML,\s*")xml("\s*\},)/\0\n\1fb2\2/' \
 		$S/uriloader/exthandler/nsExternalHelperAppService.cpp || die
 	clog nsExternalHelperAppService.cpp: fb2 added
@@ -40,6 +61,33 @@ ac_add_options --disable-content-sandbox
 	sed -i -r 's/!importBookmarks/true/' "$S/browser/components/BrowserGlue.jsm" || die
 	clog default bookmarks removed
 
+	sed -i 's/if (alwaysAsk)/if (false)/' "$S/uriloader/exthandler/nsExternalHelperAppService.cpp" || die
+	sed -i 's/action == nsIMIMEInfo::useSystemDefault/false/' "$S/uriloader/exthandler/nsExternalHelperAppService.cpp" || die
+	clog Save file dialog disabled
+
+	sed -i 's/("MOZ_JXL", jxl)/("MOZ_JXL", True)/' "$S/toolkit/moz.configure" || die
+
+	sed -i '/this._mayAddCommandsItems(popup);/d' "$S/browser/components/places/content/browserPlacesViews.js" || die
+	
+	add_sed(){
+		SED+=$'\n/ id="'$1'"/,/\/>$/d'
+	}
+
+#	add_sed context-back
+#	add_sed context-forward
+#	add_sed context-reload
+#	add_sed context-stop
+#	add_sed context-bookmarkpage
+#	add_sed context-sep-navigation
+	add_sed context-sendimage
+	add_sed context-sendvideo
+	add_sed context-sendaudio
+	add_sed context-inspect-a11y
+
+	sed -i -r "$SED" $S/browser/base/content/browser-context.inc || die
+	clog Some context menu items removed
+	SED=
+
 	echo "\
 MOZ_COLLECTING_RUNNABLE_TELEMETRY=0
 MOZ_CRASHREPORTER=0
@@ -48,14 +96,15 @@ MOZ_GFX_CRASH_TELEMETRY=0
 MOZ_SERVICES_HEALTHREPORT=0
 MOZ_TELEMETRY_ON_BY_DEFAULT=0
 MOZ_TELEMETRY_REPORTING=0
+MOZ_JXL=1
 " >> $S/browser/confvars.sh || die
 	clog MOZ_* zeroed
 
 	cd "$S/browser/components/search/extensions"
 	for d in *; do
-	    if [[ $d != google* && $d != ddg* ]]; then
-	       rm -rf "$d"
-	    fi
+		if [[ $d != google* && $d != ddg* ]]; then
+			rm -rf "$d"
+		fi
 	done
 	cd -
 	clog search engines filtered
@@ -64,21 +113,36 @@ MOZ_TELEMETRY_REPORTING=0
 		SED+=$'\n/^- name: '${1//./\.}'$/,/^-/s/(^\s+value:\s*).*$/\1'$2/
 	}
 
+	# Nightly features
+	add_sed dom.webnotifications.requireinteraction.enabled true
+	add_sed layout.css.accent-color.enabled true
+	add_sed layout.css.size-adjust.enabled true
+	add_sed layout.css.font-size-adjust.basis.enabled true
+	add_sed mathml.scriptminsize_attribute.disabled true
+	add_sed mathml.scriptsizemultiplier_attribute.disabled false
+
 	add_sed browser.newtabpage.enabled false
 	add_sed browser.safebrowsing.malware.enabled false
 	add_sed browser.safebrowsing.phishing.enabled false
 	add_sed datareporting.healthreport.uploadEnabled false
+	add_sed dom.block_download_insecure false
+	add_sed dom.block_download_in_sandboxed_iframes false
+	add_sed dom.delay.block_external_protocol_in_iframes.enabled false
+	add_sed dom.dialog_element.enabled true
 	add_sed dom.forms.autocapitalize true
 	add_sed dom.forms.enterkeyhint true
+	add_sed dom.postMessage.sharedArrayBuffer.withCOOP_COEP true
 	add_sed dom.reporting.enabled false
 	add_sed dom.reporting.featurePolicy.enabled false
 	add_sed dom.security.https_first_pbm false
 	add_sed dom.security.unexpected_system_load_telemetry_enabled false
+	add_sed dom.select_events.textcontrols.enabled true
 	add_sed dom.select_events.textcontrols.selectstart.enabled true
 	add_sed dom.webcomponents.formAssociatedCustomElement.enabled true
 	add_sed dom.webgpu.enabled true
 	add_sed general.smoothScroll false
 	add_sed geo.enabled false
+	add_sed image.avif.enabled true
 	add_sed image.jxl.enabled true
 	add_sed javascript.options.property_error_message_fix true
 	add_sed layers.acceleration.force-enabled true
@@ -103,8 +167,10 @@ MOZ_TELEMETRY_REPORTING=0
 	add_sed privacy.trackingprotection.socialtracking.enabled false
 	add_sed view_source.tab_size 3
 	add_sed view_source.wrap_long_lines true
+#
 	add_sed webgl.force-enabled true
 	add_sed widget.content.allow-gtk-dark-theme true
+
 
 	sed -i -r "$SED" $S/modules/libpref/init/StaticPrefList.yaml || die
 	clog StaticPrefList.yaml settings set
@@ -122,8 +188,8 @@ MOZ_TELEMETRY_REPORTING=0
 	add_sed app.update.checkInstallTime false
 	add_sed app.update.checkInstallTime.days 9999
 	add_sed browser.aboutConfig.showWarning false
+	add_sed browser.altClickSave true
 	add_sed browser.bookmarks.max_backups 0
-	add_sed browser.chrome.toolbar_tips false
 	add_sed browser.chrome.toolbar_tips false
 	add_sed browser.compactmode.show true
 	add_sed browser.crashReports.unsubmittedCheck.enabled false
@@ -134,6 +200,8 @@ MOZ_TELEMETRY_REPORTING=0
 	add_sed browser.download.forbid_open_with true
 	add_sed browser.download.manager.addToRecentDocs false
 	add_sed browser.download.saveLinkAsFilenameTimeout 2500
+	add_sed browser.fixup.alternate.enabled false
+	add_sed browser.fixup.fallback-to-https false
 	add_sed browser.menu.showViewImageInfo true
 	add_sed browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons false
 	add_sed browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features false
@@ -210,11 +278,15 @@ MOZ_TELEMETRY_REPORTING=0
 	add_sed extensions.update.autoUpdateDefault false
 	add_sed extensions.webcompat-reporter.enabled false
 	add_sed findbar.highlightAll true
+	add_sed full-screen-api.warning.delay 2147483647
+	add_sed full-screen-api.warning.timeout 0
 	add_sed general.autoScroll false
 	add_sed identity.fxaccounts.toolbar.enabled false
 	add_sed intl.multilingual.downloadEnabled false
 	add_sed intl.multilingual.enabled false
+	add_sed keyword.enabled false
 	add_sed layout.spellcheckDefault 0
+#
 	add_sed media.throttle-factor 8
 	add_sed media.videocontrols.picture-in-picture.enabled false
 	add_sed media.videocontrols.picture-in-picture.video-toggle.enabled false
@@ -241,6 +313,7 @@ MOZ_TELEMETRY_REPORTING=0
 	add_sed services.sync.prefs.sync.general.smoothScroll false
 	add_sed signon.generation.enabled false
 	add_sed signon.management.page.breach-alerts.enabled false
+	add_sed signon.management.page.fileImport.enabled true
 	add_sed startup.homepage_override_url '""'
 	add_sed startup.homepage_welcome_url '""'
 	add_sed startup.homepage_welcome_url.additional '""'
@@ -270,7 +343,7 @@ MOZ_TELEMETRY_REPORTING=0
 
 	PREFFILES="$S/modules/libpref/init/all.js $S/browser/app/profile/firefox.js $S/browser/branding/*/pref/firefox-branding.js"
 	sed -i -r 's/,\s*sticky\);/\);/'"$SED" $PREFFILES || die
-	
+
 	add_pref() { PREF+='pref("'$1'", '$2$');\n'; }
 
 	add_pref app.update.langpack.enabled false
@@ -296,7 +369,7 @@ MOZ_TELEMETRY_REPORTING=0
 	clog browser.css appended
 
 	sed -i -r '/^\s*"spring",$|this\._updateForNew|"new-tab-button",|, 0, "spring"\);/d' "$S/browser/components/customizableui/CustomizableUI.jsm"
-	sed -i -r '/toolbarspring/d' "$S/browser/base/content/navigator-toolbox.inc.xhtml" 
+	sed -i -r '/toolbarspring/d' "$S/browser/base/content/navigator-toolbox.inc.xhtml"
 	clog springs removed
 
 }

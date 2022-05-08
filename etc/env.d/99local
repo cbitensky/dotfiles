@@ -3,3 +3,4 @@ EDITOR=emacs
 ENV=/etc/bb.rc
 PATH=/usr/local/bin
 LESS='-R -M -F -#8'
+#DRI_PRIME=1

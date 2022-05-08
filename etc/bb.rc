@@ -20,16 +20,20 @@ alias ll="/bin/ls -FA --color=auto --group-directories-first -l --time-style='+%
 alias diff='diff --color=auto -u --palette=rs=0:hd=97:ad=92:de=91:ln=96'
 alias git-commit='git commit -a --allow-empty-message -m ""'
 alias e='setsid $EDITOR'
+alias feh='feh --force-aliasing'
+alias A='ACCEPT_KEYWORDS=~amd64'
 
-alias /d='cd /var/cache/download'
+alias /w='cd /var/spool/web'
 alias /g='cd /var/db/repos/gentoo'
 alias /h='cd /home'
 alias /k='cd $GOPATH/src/github.com/kaspanet/kaspad'
+alias /kc='cd $GOPATH/src/github.com/cbytensky/kaspad'
 alias /kns='cd $GOPATH/src/github.com/someone235/katnip'
-alias /kn='cd $GOPATH/src/github.com/cbitensky/katnip'
+alias /kn='cd $GOPATH/src/github.com/cbytensky/katnip'
 alias /l='cd /usr/local'
 alias /p='cd /etc/portage'
 alias /t='cd /var/tmp'
+alias /y='cd /var/spool/youtube'
 
 alias git-g='git --git-dir=/usr/local/git/gentoo-overlay.git --work-tree=/var/db/repos/c'
 alias git-d='git --git-dir=/usr/local/git/dotfiles.git --work-tree=/'
@@ -86,11 +90,13 @@ branch() {
 }
 
 #BG='48;5;239'
-PSA='\[\e[1;5;100m\e[K'
+PSA='\[\e[1;100m\e[K'
 PSB='\e[97m\]'
 PS1=$PSA'\e[38;5;210m\]`lasterr`\[\e[93m\]`elapsed`\[\e[96m\]`branch` \['$PSB
 PS2=$PSA$PSB
 unset PSA PSB
 eval $(dircolors -b /etc/DIR_COLORS)
 export MANPAGER=manpager
-cd /
+export EDITOR='emacsclient -nc'
+export GOPATH=/daglabs/go
+export HOME=/var/home/root

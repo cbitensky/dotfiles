@@ -7,7 +7,7 @@ set $mod Mod4
 input * {
 	repeat_rate 40
 	repeat_delay 250
-	xkb_file '/etc/xkb.conf'
+	xkb_file '/usr/local/cf/xkb.cf'
 }
 
 default_border normal 0
@@ -18,14 +18,14 @@ floating_modifier $mod normal
 # Lshift 50
 # Rshift 62
 
-exec on-lid
+exec_always acpi-lid
 
 bindsym --to-code Caps_Lock input * xkb_switch_layout 0
 bindsym --to-code Shift+Caps_Lock input * xkb_switch_layout 1
 bindsym --to-code Control+Caps_Lock input * xkb_switch_layout 2
 
-bindsym $mod+Print        exec grim /var/src/grim/$(date +'grim-%Y%m%d-%H%M%S.png')
-bindsym $mod+Shift+Print  exec grim -g "$(slurp)" /var/src/grim/$(date +'grim-%Y%m%d-%H%M%S.png')
+bindsym $mod+Print        exec grim /var/spool/grim/$(date +'%Y%m%d%H%M%S.png')
+bindsym $mod+Shift+Print  exec grim -g "$(slurp)" /var/spool/grim/$(date +'%Y%m%d%H%M%S.png') && pngopt /var/spool/grim/$(date +'%Y%m%d%H%M%S.png')
 
 bindsym $mod+Return       exec dmenu_path | dmenu | xargs swaymsg exec
 
@@ -47,12 +47,11 @@ bindsym $mod+Alt+Left splith
 bindsym $mod+Alt+Up   splitv
 bindsym --to-code $mod+f fullscreen
 
-bindsym --to-code $mod+q           exec alacritty
+bindsym --to-code $mod+q           exec foot
 bindsym --to-code $mod+w           exec firefox
-bindsym --to-code $mod+e           exec doublecmd --no-splash
+bindsym --to-code $mod+e           exec emacsclient -nc /
 bindsym --to-code $mod+m           exec sylpheed
 bindsym --to-code $mod+d           exec stardict
-bindsym --to-code $mod+backslash   exec goland
 
 bindsym --to-code $mod+home        reload
 bindsym --to-code $mod+a           focus parent
@@ -99,14 +98,30 @@ bindsym $mod+Shift+space floating toggle
 #}
 #bindsym $mod+r mode "resize"
 
+set $bg #171717
+set $fg #eff1f5
+set $br #ffcc00
+set $ia #232425
+
+#client.focused          $br     $br     $fg     $bg       $br
+#client.focused_inactive $bg     $bg     $fg     $bg       $bg
+#client.unfocused        $bg     $bg     $fg     $bg       $bg
+#client.urgent          $br     $br     $fg     $bg       $br #currently not implemented
+#client.placeholder     $br     $br     $fg     $bg       $br #currently not implemented
+
+output * bg #000000 solid_color
+
 bar {
-    position top
+	position top
 
-    status_command while date +'%k:%M  %a %d' | tr -d \\' ; do sleep 1; done
+	status_command while date +'%k:%M  %a %d' | tr -d \\' ; do sleep 1; done
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+	colors {
+#		focused_workspace  #323232 #3c74b7 #ffffff
+#        active_workspace   #323232 #3c74b750 #cccccc 
+#        inactive_workspace #323232 #3c3c3c #7c7c7c
+		statusline #ffffff
+		background #000000
+		inactive_workspace #32323200 #32323200 #5c5c5c
+	}
 }

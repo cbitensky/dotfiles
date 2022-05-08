@@ -1,6 +1,6 @@
 post_src_install() {
 	local F=opt/google/chrome/google-chrome
 	sed -i \
-		's#exec -a "$0" "$HERE/chrome" "$@"#GDK_BACKEND=x11 exec -a "$0" "$HERE/chrome" --no-sandbox --user-data-dir=/cache/chromium --allow-file-access-from-files --enable-features=WebUIDarkMode "$@"#' $D$F || die
-	clog modified $F for GDK_BACKEND=x11, no-sandbox, /cache/chromium, allow-file-access-from-files
+		's#exec -a "$0" "$HERE/chrome" "$@"#GDK_BACKEND=x11 exec -a "$0" "$HERE/chrome" --no-sandbox --allow-file-access-from-files --enable-features=WebUIDarkMode "$@"#' $D/$F || die
+	clog modified $F for GDK_BACKEND=x11, no-sandbox, allow-file-access-from-files
 }

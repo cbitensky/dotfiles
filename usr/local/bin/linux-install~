@@ -1,6 +1,0 @@
-#!/usr/bin/picolisp /usr/local/lib/shell.l
-(cd "/usr/src/linux")
-(fcall "make")
-(cp "arch/x86/boot/bzImage" "/boot/efi/boot/bootx64.efi")
-(cp ".config" "/usr/local/conf/linux")
-(bye)

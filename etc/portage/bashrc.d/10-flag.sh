@@ -1,4 +1,6 @@
 #!/bin/bash
+# (C) Martin V\"ath <martin at mvath.de>
+# SPDX-License-Identifier: GPL-2.0-only
 
 FLAG_FILTER_C_CXX=(
 	'-fall-intrinsics'
@@ -146,6 +148,7 @@ FLAG_FILTER_NONGNU=(
 	'-fdevirtualize-at-ltrans'
 	'-fdevirtualize-speculatively'
 	'-fdirectives-only'
+	'-ffat-lto-objects'
 	'-fgcse*'
 	'-fgraphite*'
 	'-finline-functions'
@@ -163,6 +166,7 @@ FLAG_FILTER_NONGNU=(
 	'-fmodulo*'
 	'-fno-enforce-eh-specs'
 	'-fno-ident'
+	'-fno-ipa-cp-clone'
 	'-fno-plt' # causes various runtime segfaults for clang:6 compiled code
 	'-fno-semantic-interposition'
 	'-fnothrow-opt'
@@ -172,7 +176,6 @@ FLAG_FILTER_NONGNU=(
 	'-frerun-cse-after-loop'
 	'-fsched*'
 	'-fsection-anchors'
-	'-fstack-clash-protection'
 	'-ftree*'
 	'-funsafe-loop*'
 	'-fuse-linker-plugin'
@@ -183,7 +186,10 @@ FLAG_FILTER_NONGNU=(
 	'-mfunction-return*'
 	'-mindirect-branch*'
 	'-mvectorize*'
+	'-Waggressive-loop-optimizations'
+	'-Wclobbered'
 	'-Wl,-z,retpolineplt' # does not work, currently
+	'-Wreturn-local-addr'
 )
 
 FLAG_FILTER_GNU=(
@@ -193,7 +199,7 @@ FLAG_FILTER_GNU=(
 	'-flto-jobs=*'
 	'-fopenmp=*'
 	'-frewrite-includes'
-	'-fsanitize=cfi'
+	'-fsanitize=cfi*'
 	'-fsanitize=safe-stack'
 	'-mllvm'
 	'-mretpoline*'
@@ -201,10 +207,17 @@ FLAG_FILTER_GNU=(
 	'-Wl,-z,retpolineplt'
 )
 
+FLAG_FILTER_CLANG_LTO_DEP=(
+	'-fsanitize=cfi*'
+	'-fwhole-program-vtables'
+)
+
 FlagEval() {
 	case $- in
-		*f*) eval "$*" ;;
-		*)   set -f; eval "$*"; set +f ;;
+	*f*)	eval "$*";;
+	*)	set -f
+		eval "$*"
+		set +f;;
 	esac
 }
 
@@ -215,9 +228,10 @@ FlagNodupAdd() {
 	addvar=$1
 	shift
 	eval addres=\$$addvar
-	for addf; do
-		case " $addres $dups " in
-			*[[:space:]]"$addf"[[:space:]]*) continue;;
+	for addf
+	do	case " $addres $dups " in
+		*[[:space:]]"$addf"[[:space:]]*)
+			continue;;
 		esac
 		addres=$addres${addres:+\ }$addf
 	done
@@ -234,13 +248,13 @@ FlagSub() {
 	shift
 	subres=
 	eval sublist=\$$subvar
-	for subf in $sublist; do
-		for subpat; do
-			[ -n "${subpat:++}" ] || continue
+	for subf in $sublist
+	do	for subpat
+		do	[ -n "${subpat:++}" ] || continue
 			case $subf in
-				$subpat)
-					subf=
-					break;;
+			$subpat)
+				subf=
+				break;;
 			esac
 		done
 		[ -z "${subf:++}" ] || subres=$subres${subres:+\ }$subf
@@ -256,11 +270,11 @@ FlagReplace() {
 	reppat=$1
 	shift
 	repres=
-	for repcurr in $repf; do
-		case $repcurr in
-			$reppat)
-				$repfound && FlagAdd repres "$@"
-				continue;;
+	for repcurr in $repf
+	do	case $repcurr in
+		$reppat)
+			$repfound && FlagAdd repres "$@"
+			continue;;
 		esac
 		repres=$repres${repres:+\ }$repcurr
 	done
@@ -356,146 +370,158 @@ FlagSetAllFlags() {
 	OPTLDFLAGS=
 }
 
+FlagAthlon() {
+	FlagSubCFlags '-march=*'
+	FlagAddCFlags '-march=athlon-4'
+	command -v x86_64-pc-linux-gnu-gcc32 >/dev/null 2>&1 && \
+		export CC=x86_64-pc-linux-gnu-gcc32
+	command -v x86_64-pc-linux-gnu-g++32 >/dev/null 2>&1 && \
+		export CXX=x86_64-pc-linux-gnu-g++32
+}
+
 FlagExecute() {
 	local ex exy excurr
-	for excurr; do
-		case $excurr in
-			'#'*)
-				return;;
-			'!'*)
-				[ "$HOSTTYPE" = 'i686' ] || continue
-				ex=${excurr#?};;
-			'~'*)
-				[ "$HOSTTYPE" = 'x86_64' ] || continue
-				ex=${excurr#?};;
-			*)
-				ex=$excurr;;
+	for excurr
+	do	case $excurr in
+		'#'*)
+			return;;
+		'!'*)
+			[ "$HOSTTYPE" = 'i686' ] || continue
+			ex=${excurr#?};;
+		'~'*)
+			[ "$HOSTTYPE" = 'x86_64' ] || continue
+			ex=${excurr#?};;
+		*)
+			ex=$excurr;;
 		esac
 		case $ex in
-			/*/*)
-				ex=${ex%/}
-				ex=${ex#/}
-				FlagEval FlagReplaceAllFlags "${ex%%/*}" "${ex#*/}";;
-			'-'*)
-				FlagAddCFlags "$ex";;
-			'+flto*')
-				FlagSubAllFlags '-flto*' '-fuse-linker-plugin' '-emit-llvm';;
-			'+'*)
-				FlagSubAllFlags "-${ex#+}";;
-			'C*FLAGS-='*)
-				FlagEval FlagSubCFlags ${ex#*-=};;
-			'C*FLAGS+='*)
-				FlagEval FlagAddCFlags ${ex#*+=};;
-			'C*FLAGS='*)
-				FlagEval FlagSetCFlags "${ex#*=}";;
-			'C*FLAGS/=/'*/*)
-				ex=${ex%/}
-				ex=${ex#*/=/}
-				FlagEval FlagReplaceCFlags "${ex%%/*}" "${ex#*/}";;
-			'F*FLAGS-='*)
-				FlagEval FlagSubFFlags ${ex#*-=};;
-			'F*FLAGS+='*)
-				FlagEval FlagAddFFlags ${ex#*+=};;
-			'F*FLAGS='*)
-				FlagEval FlagSetFFlags "${ex#*=}";;
-			'F*FLAGS/=/'*/*)
-				ex=${ex%/}
-				ex=${ex#*/=/}
-				FlagEval FlagReplaceFFlags "${ex%%/*}" "${ex#*/}";;
-			'*FLAGS-='*)
-				FlagEval FlagSubAllFlags ${ex#*-=};;
-			'*FLAGS+='*)
-				FlagEval FlagAddAllFlags ${ex#*+=};;
-			'*FLAGS='*)
-				FlagEval FlagSetAllFlags "${ex#*=}";;
-			'*FLAGS/=/'*/*)
-				ex=${ex%/}
-				ex=${ex#*/=/}
-				FlagEval FlagReplaceAllFlags "${ex%%/*}" "${ex#*/}";;
-			'NOC*OPT='*|'NOC*='*)
-				FlagEval FlagSet NOCOPT "${ex#*=}"
-				NOCXXOPT=$NOCOPT
-				NOCPPOPT=$NOCOPT;;
-			'NO*OPT='*)
-				FlagEval FlagSet NOCOPT "${ex#*=}"
-				NOCXXOPT=$NOCOPT
-				NOCPPOPT=$NOCOPT
-				NOLDOPT=$NOCOPT;;
-			'NOLD*='*)
-				FlagEval FlagSet NOLDOPT "${ex#*=}"
-				NOLDADD=$NOLDOPT;;
-			'NO*'*)
-				FlagEval FlagSet NOCOPT "${ex#*=}"
-				NOCXXOPT=$NOCOPT
-				NOCPPOPT=$NOCOPT
-				NOLDOPT=$NOCOPT
-				NOLDADD=$NOCOPT
-				NOFFLAGS=$NOCOPT
-				NOFCFLAGS=$NOCOPT
-				NOF77FLAGS=$NOCOPT;;
-			'SAFE')
-				NOCOPT=1
-				NOCXXOPT=1
-				NOCPPOPT=1
-				NOLDOPT=1
-				MESONDEDUP=1
-				LDFLAGS=
-				CONFIG_SITE=
-				NOLAFILEREMOVE=1
-				unset CMAKE_MAKEFILE_GENERATOR;;
-			*' '*'='*)
-				FlagEval "$ex";;
-			*'/=/'*'/'*)
-				ex=${ex%/}
-				exy=${ex#*/=/}
-				FlagEval FlagReplace "${ex%%/=/*}" "${exy%%/*}" "${exy#*/}";;
-			*'-='*)
-				FlagEval FlagSub "${ex%%-=*}" ${ex#*-=};;
-			*'+='*)
-				FlagEval FlagAdd "${ex%%+=*}" ${ex#*+=};;
-			*'='*)
-				FlagEval FlagSet "${ex%%=*}" "${ex#*=}";;
-			*)
-				FlagEval "$ex";;
+		/*/*)
+			ex=${ex%/}
+			ex=${ex#/}
+			FlagEval FlagReplaceAllFlags "${ex%%/*}" "${ex#*/}";;
+		'-'*)
+			FlagAddCFlags "$ex";;
+		'+flto*')
+			FlagSubAllFlags '-flto*' '-fuse-linker-plugin' '-emit-llvm';;
+		'+'*)
+			FlagSubAllFlags "-${ex#+}";;
+		'C*FLAGS-='*)
+			FlagEval FlagSubCFlags ${ex#*-=};;
+		'C*FLAGS+='*)
+			FlagEval FlagAddCFlags ${ex#*+=};;
+		'C*FLAGS='*)
+			FlagEval FlagSetCFlags "${ex#*=}";;
+		'C*FLAGS/=/'*/*)
+			ex=${ex%/}
+			ex=${ex#*/=/}
+			FlagEval FlagReplaceCFlags "${ex%%/*}" "${ex#*/}";;
+		'F*FLAGS-='*)
+			FlagEval FlagSubFFlags ${ex#*-=};;
+		'F*FLAGS+='*)
+			FlagEval FlagAddFFlags ${ex#*+=};;
+		'F*FLAGS='*)
+			FlagEval FlagSetFFlags "${ex#*=}";;
+		'F*FLAGS/=/'*/*)
+			ex=${ex%/}
+			ex=${ex#*/=/}
+			FlagEval FlagReplaceFFlags "${ex%%/*}" "${ex#*/}";;
+		'*FLAGS-='*)
+			FlagEval FlagSubAllFlags ${ex#*-=};;
+		'*FLAGS+='*)
+			FlagEval FlagAddAllFlags ${ex#*+=};;
+		'*FLAGS='*)
+			FlagEval FlagSetAllFlags "${ex#*=}";;
+		'*FLAGS/=/'*/*)
+			ex=${ex%/}
+			ex=${ex#*/=/}
+			FlagEval FlagReplaceAllFlags "${ex%%/*}" "${ex#*/}";;
+		'ATHLON32')
+			FlagAthlon;;
+		'NOC*OPT='*|'NOC*='*)
+			FlagEval FlagSet NOCOPT "${ex#*=}"
+			NOCXXOPT=$NOCOPT
+			NOCPPOPT=$NOCOPT;;
+		'NO*OPT='*)
+			FlagEval FlagSet NOCOPT "${ex#*=}"
+			NOCXXOPT=$NOCOPT
+			NOCPPOPT=$NOCOPT
+			NOLDOPT=$NOCOPT;;
+		'NOLD*='*)
+			FlagEval FlagSet NOLDOPT "${ex#*=}"
+			NOLDADD=$NOLDOPT;;
+		'NO*'*)
+			FlagEval FlagSet NOCOPT "${ex#*=}"
+			NOCXXOPT=$NOCOPT
+			NOCPPOPT=$NOCOPT
+			NOLDOPT=$NOCOPT
+			NOLDADD=$NOCOPT
+			NOFFLAGS=$NOCOPT
+			NOFCFLAGS=$NOCOPT
+			NOF77FLAGS=$NOCOPT;;
+		'SAFE')
+			NOCOPT=1
+			NOCXXOPT=1
+			NOCPPOPT=1
+			NOLDOPT=1
+			MESONDEDUP=1
+			LDFLAGS=
+			CONFIG_SITE=
+			NOLAFILEREMOVE=1
+			unset CMAKE_MAKEFILE_GENERATOR;;
+		*' '*'='*)
+			FlagEval "$ex";;
+		*'/=/'*'/'*)
+			ex=${ex%/}
+			exy=${ex#*/=/}
+			FlagEval FlagReplace "${ex%%/=/*}" "${exy%%/*}" "${exy#*/}";;
+		*'-='*)
+			FlagEval FlagSub "${ex%%-=*}" ${ex#*-=};;
+		*'+='*)
+			FlagEval FlagAdd "${ex%%+=*}" ${ex#*+=};;
+		*'='*)
+			FlagEval FlagSet "${ex%%=*}" "${ex#*=}";;
+		*)
+			FlagEval "$ex";;
 		esac
 	done
 }
 
 FlagMask() {
-	if command -v masked-packages >/dev/null 2>&1; then
-		FlagMask() {
-			masked-packages -qm "$1" -- "$CATEGORY/$PF:${SLOT:-0}${PORTAGE_REPO_NAME:+::}${PORTAGE_REPO_NAME-}"
-		}
+	if command -v masked-packages >/dev/null 2>&1
+	then
+FlagMask() {
+	masked-packages -qm "$1" -- "$CATEGORY/$PF:${SLOT:-0}${PORTAGE_REPO_NAME:+::}${PORTAGE_REPO_NAME-}"
+}
 	else
-		FlagMask() {
-			local add=
-			case ${1%::*} in
-			*':'*)
-				add=:${SLOT:-0};;
-			esac
-			case $1 in
-			*'::'*)
-				add=$add::$PORTAGE_REPO_NAME;;
-			esac
-			case $1 in
-			'~'*)
-				case "~$CATEGORY/$PN-$PV$add" in
-				$1)
-					return;;
-				esac;;
-			'='*)
-				case "=$CATEGORY/$PF$add" in
-				$1)
-					return;;
-				esac;;
-			*)
-				case "$CATEGORY/$PN$add" in
-				$1)
-					return;;
-				esac;;
-			esac
-			return 1
-		}
+FlagMask() {
+	local add=
+	case ${1%::*} in
+	*':'*)
+		add=:${SLOT:-0};;
+	esac
+	case $1 in
+	*'::'*)
+		add=$add::$PORTAGE_REPO_NAME;;
+	esac
+	case $1 in
+	'~'*)
+		case "~$CATEGORY/$PN-$PV$add" in
+		$1)
+			return;;
+		esac;;
+	'='*)
+		case "=$CATEGORY/$PF$add" in
+		$1)
+			return;;
+		esac;;
+	*)
+		case "$CATEGORY/$PN$add" in
+		$1)
+			return;;
+		esac;;
+	esac
+	return 1
+}
 	fi
 	FlagMask "$@"
 }
@@ -503,15 +529,15 @@ FlagMask() {
 FlagParseLine() {
 	local scanp scanl scansaveifs
 	scanl=$2
-	while :; do
-		case $scanl in
-			[[:space:]]*)
-				scanl=${scanl#?}
-				continue;;
-			'#'*)
-				return;;
-			*[[:space:]]*)
-				break;;
+	while :
+	do	case $scanl in
+		[[:space:]]*)
+			scanl=${scanl#?}
+			continue;;
+		'#'*)
+			return;;
+		*[[:space:]]*)
+			break;;
 		esac
 		return
 	done
@@ -530,11 +556,11 @@ FlagScanFiles() {
 	local scanfile scanl oldifs scanifs
 	scanifs=$IFS
 	IFS=
-	for scanfile; do
-		[ -z "${scanfile:++}" ] && continue
+	for scanfile
+	do	[ -z "${scanfile:++}" ] && continue
 		test -r "$scanfile" || continue
-		while read -r scanl; do
-			FlagParseLine "$scanifs" "$scanl"
+		while read -r scanl
+		do	FlagParseLine "$scanifs" "$scanl"
 		done <"$scanfile"
 	done
 	IFS=$scanifs
@@ -543,31 +569,31 @@ FlagScanFiles() {
 FlagScanDir() {
 	local scantmp scanifs scanfile
 	scanifs=$IFS
-	if test -d "$1"; then
-		IFS='
+	if test -d "$1"
+	then	IFS='
 '
 		for scantmp in `find -L "$1" \
 		'(' '(' -name '.*' -o -name '*~' ')' -prune ')' -o \
-			-type f -print`; do
-			IFS=$scanifs
+			-type f -print`
+		do	IFS=$scanifs
 			FlagScanFiles "$scantmp"
 		done
-	else
-		FlagScanFiles "$1"
+	else	FlagScanFiles "$1"
 	fi
 	scanfile='FLAG_ADDLINES'
 	IFS='
 '
-	for scantmp in $FLAG_ADDLINES; do
-		FlagParseLine "$scanifs" "$scantmp"
+	for scantmp in $FLAG_ADDLINES
+	do	FlagParseLine "$scanifs" "$scantmp"
 	done
 	IFS=$scanifs
 }
 
 FlagSetUseNonGNU() {
+	has clang ${IUSE//+} && use clang && return 0
 	case $CC$CXX in
-		*clang*)
-			return 0;;
+	*clang*)
+		return 0;;
 	esac
 	return 1
 }
@@ -577,6 +603,12 @@ FlagSetNonGNU() {
 	FlagSubAllFlags "${FLAG_FILTER_NONGNU[@]}"
 	FlagReplaceAllFlags '-fstack-check*' '-fstack-check'
 	# FlagAddCFlags '-flto' '-emit-llvm'
+	case " $LDFLAGS $CFLAGS $CXXFLAGS" in
+	*[[:space:]]'-flto'*)
+		;;
+	*)
+		FlagSubAllFlags "${FLAG_FILTER_CLANG_LTO_DEP[@]}";;
+	esac
 }
 
 FlagSetGNU() {
@@ -593,16 +625,46 @@ FlagMesonDedup() {
 FlagSetFlags() {
 	local ld i
 	ld=
+	: ${PGO_PARENT:=/var/cache/pgo}
+	: ${PGO_DIR:=$PGO_PARENT/$CATEGORY:$P}
 	FlagScanDir "${PORTAGE_CONFIGROOT%/}/etc/portage/package.cflags"
 	[ -z "${USE_NONGNU++}" ] && FlagSetUseNonGNU && USE_NONGNU=1
-	if BashrcdTrue "${USE_NONGNU-}"; then
-		FlagSetNonGNU
-	else
-		FlagSetGNU
+	if BashrcdTrue "${USE_NONGNU-}"
+	then	FlagSetNonGNU
+	else	FlagSetGNU
 	fi
-	if [ -n "$FLAG_ADD" ]; then
-		BashrcdEcho "FLAG_ADD: $FLAG_ADD"
+	if [ -n "$FLAG_ADD" ]
+	then	BashrcdEcho "FLAG_ADD: $FLAG_ADD"
 		FlagEval FlagExecute "$FLAG_ADD"
+	fi
+	PGO_DIR=${PGO_DIR%/}
+	case ${PGO_DIR:-/} in
+	/)
+		error 'PGO_DIR must not be empty'
+		false;;
+	/*)
+		:;;
+	*)
+		error 'PGO_DIR must be an absolute path'
+		false;;
+	esac || {
+		die 'Bad PGO_DIR'
+		exit 2
+	}
+	use_pgo=false
+	if test -r "$PGO_DIR"
+	then	unset PGO
+		BashrcdTrue $NOPGO || use_pgo=:
+	fi
+	if BashrcdTrue $PGO
+	then	FlagAddCFlags "-fprofile-generate=$PGO_DIR" \
+			-fvpt -fprofile-arcs
+		FlagAdd LDFLAGS -fprofile-arcs
+		addpredict "$PGO_PARENT"
+	elif $use_pgo
+	then	FlagAddCFlags "-fprofile-use=$PGO_DIR" \
+			-fvpt -fbranch-probabilities -fprofile-correction
+	else	: ${KEEPPGO:=:}
 	fi
 	BashrcdTrue $NOLDOPT || FlagAdd LDFLAGS $OPTLDFLAGS
 	BashrcdTrue $NOCADD || BashrcdTrue $MESONDEDUP || \
@@ -640,8 +702,33 @@ FlagSetFlags() {
 	unset NOFILTER_FFLAGS NOFILTER_FCFLAGS NOFILTER_F77FLAGS
 }
 
+FlagInfoExport() {
+	local out
+	for out in FEATURES CFLAGS CXXFLAGS CPPFLAGS FFLAGS FCFLAGS F77FLAGS \
+		LDFLAGS MAKEOPTS EXTRA_ECONF EXTRA_EMAKE USE_NONGNU
+	do	eval "if [ -n \"\${$out:++}\" ]
+		then	export $out
+			BashrcdEcho \"$out='\$$out'\"
+		else	unset $out
+		fi"
+	done
+	if BashrcdTrue $PGO
+	then	BashrcdEcho "Create PGO into $PGO_DIR"
+	elif $use_pgo
+	then	BashrcdEcho "Using PGO from $PGO_DIR"
+	fi
+	out=`${CC:-/usr/bin/gcc} --version | head -n 1` || out=
+	BashrcdEcho "${out:-cannot determine gcc version}"
+	out=`${CXX:-/usr/bin/g++} --version | head -n 1` || out=
+	BashrcdEcho "${out:-cannot determine g++ version}"
+	out=`${LD:-/usr/bin/ld} --version | head -n 1` || out=
+	BashrcdEcho "${out:-cannot determine ld version}"
+	BashrcdEcho "`uname -a`"
+}
+
 FlagCompile() {
-	eerror "${PORTAGE_CONFIGROOT%/}/etc/portage/bashrc.d/*flag.sh strange order of EBUILD_PHASE:"
+	eerror \
+"${PORTAGE_CONFIGROOT%/}/etc/portage/bashrc.d/*flag.sh strange order of EBUILD_PHASE:"
 	die "compile or preinst before setup"
 	exit 2
 }
@@ -651,10 +738,43 @@ FlagPreinst() {
 }
 
 FlagSetup() {
-	FlagCompile() {
-		:
-	}
+FlagCompile() {
+:
+}
+	local use_pgo
 	FlagSetFlags
+	if BashrcdTrue $PGO
+	then
+FlagPreinst() {
+	test -d "$PGO_DIR" || mkdir -p -m +1777 -- "$PGO_DIR" || {
+		eerror "cannot create pgo directory $PGO_DIR"
+		die 'cannot create PGO_DIR'
+		exit 2
+	}
+	ewarn "$CATEGORY/$PN will write profile info to world-writable"
+	ewarn "$PGO_DIR"
+	ewarn 'Reemerge it soon for an optimized version and removal of that directory'
+}
+	elif BashrcdTrue $KEEPPGO
+	then
+FlagPreinst() {
+:
+}
+	else
+FlagPreinst() {
+	test -d "$PGO_DIR" || return 0
+	BashrcdLog "removing pgo directory $PGO_DIR"
+	rm -r -f -- "$PGO_DIR" || {
+		eerror "cannot remove pgo directory $PGO_DIR"
+		die 'cannot remove PGO_DIR'
+		exit 2
+	}
+	local g
+	g=${PGO_DIR%/*}
+	[ -z "$g" ] || rmdir -p -- "$g" >/dev/null 2>&1
+}
+	fi
+	FlagInfoExport
 }
 
 BashrcdPhase compile FlagCompile

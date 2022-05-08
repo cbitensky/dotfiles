@@ -1,0 +1,165 @@
+@-moz-document domain("google.com") {
+	footer, .logo, #botstuff, #footcnt, #search g-section-with-header, #tsf :is([role="button"], [type="submit"], svg), [aria-label="Go to Google Home"], [data-it="rq"] { display: none !important }
+	div[style="width:600px"] { width: unset !important }
+	.srp { --center-column-width: unset !important; --center-column-margin: 4em !important }
+	.g { width: unset !important }
+}
+
+@-moz-document domain("mail.google.com") {
+	img[src*="logo_gmail"], div[aria-label="Side panel"] + div { display: none !important }
+}
+
+@-moz-document domain("9gag.com") {
+	.overlay, .reply-button, .post-tag, .sticky-navbar, .icon, .board-system, .signup-list-banner, .post-more-divider, .drawer-container, .comment-signup-banner, .fixed-wrap-post-bar, .post-afterbar,
+	.avatar__container, .context-menu__button,
+	#sidebar, #top-nav,
+	.post-more-divider ~ * { display: none !important }
+	.post-afterbar-a, .post-section, .comment-item-header, .reply-button { opacity: .5 }
+}
+
+@-moz-document domain("translate.google.com") {
+	[role="banner"], [alt="Google Cloud logo"] { display: none !important }
+}
+
+@-moz-document domain("censor.net") {
+	footer,
+	.d-print-none, .news-list-item__img, .main-items-text__count, .main-items-text__count_comments, .news-list-item-tag-early, .block-title, .d-block, .section-photo-video,
+	.video-right, .wrapp-main, .news-tags, .news-tags-list, .news-comments-wrapp, .related-news, .block-title-line,
+	#w6, #homepage-page2-container,
+	body > div > header, [href*="censor.net/ua/aid"] { display: none !important }
+}
+
+@-moz-document domain("web.telegram.org") {
+	.Avatar, .SponsoredMessage, .Reactions > button { display: none !important }
+}
+
+@-moz-document domain("telegram.me") {
+	.tgme_right_column, .tgme_header { display: none !important }
+}
+
+@-moz-document domain("defence-line.org") {
+	aside, footer, .mh-header, .comments-wrap, .comment-respond, .post-nav-wrap { display: none !important }
+	.entry-meta { opacity: .5 }
+}
+
+@-moz-document domain("blog.tema.ru"), domain("varlamov.ru") {
+	footer, .blog__content_editors, .blog__content_youtube, .articleRelated, .tt-tags, .article__comments, .article__info, .dropdown, .blog__header, .blog__sections, .articleReactions, .menu, .articleInfo  { display: none !important }
+	.blog__articles_group_label { opacity: .5 }
+}
+
+@-moz-document domain("opennet.ru") {
+	input, textarea, #as1, #edit_link, #lenta_nav, #lenta_nav2, body > form, [src^="/avatar/"], aside ~ *, #as1 ~ *, .ttxt2 ~ .ttxt2 ~ *, form > center { display: none !important }
+	tr[bgcolor="#D9DAC6"] ~ *, h2 + span { opacity: .5 }
+}
+
+@-moz-document domain("safereactor.cc"), domain("joyreactor.cc") {
+	.mainheader, .similar_post, .additional_info, .logo-top, .h-useravatar, .blog_pic_result, .blog_results, .topbar_wr, .uhead_share, .avatar, .comment_link, .unregistered, #header, #navcontainer, #sidebar, #tagList, #footer, .comment > h3, div[style*="padding"], div[style*="margin-bottom"], a.flex-shrink-0 { display: none !important }
+	.post_content_expand, .comments_bottom, .uhead, .taglist, .ufoot_first, .pagination, #searchBar { opacity: .5 !important }
+	#page, #content, .article, .uhead { margin-bottom: 0 !important }
+	#container { background: none !important }
+	.article, #container, #pageinner { padding: 0 !important }
+	#page { width: 60em !important }
+	body { background: none !important }
+	.uhead { height: auto !important }
+	.postContainer { margin: 1.5em 0 !important }
+}
+
+@-moz-document domain("patreon.com") {
+	[aria-label="Site Footer"] { display: none !important }
+}
+
+@-moz-document domain("linkedin.com") {
+	.job-flavors__flavor, .js-similar-jobs-list, .post-apply-recommended-for-you-card, .job-flavors__flavor--school-recruit, .ivm-image-view-model, .flavor-profile-image, .jobs-company, .premium-accent-bar, .jobs-easy-apply-footer__info, .jpac-next-step-section, .live-video-hero-image, .ghost-company, .post-apply-recommend--two-pane, .org-life-feed-gallery__container, .jobs-offsite-apply-confirmation-banner, .jobs-unified-top-card__sticky-header, .search-explicit-feedback-in-content-detail, .global-footer, .job-card-container__action, .jobs-save-button, .app-boot-bg-skeleton, .artdeco-entity-lockup__image, .global-nav__branding, .global-footer-compact, .feed-follows-module, .scaffold-layout__aside, #SALARY, #msg-overlay, button.follow, [class*="feedback"], [class*="feed-shared-update"], [href*="/premium/"], [class*="discover"], [class*="-promo-"], [class*="-suggested-"], [class*="create-alert"], [class^="EntityPhoto"], .jpac-modal-header::before, .jpac-modal-header + div { display: none !important }
+	.jobs-poster { opacity: .5 }
+	.feed-identity-module__member-bg-image { visibility: hidden !important }
+	*, *::after { transition-duration: 1ms !important }
+	.job-card-container__footer-item.t-black--light { color: red !important; font-weight: bold !important }
+}
+
+@-moz-document domain("stackoverflow.com"), domain("serverfault.com"), domain("stackexchange.com"), domain("superuser.com") {
+	header, footer, .js-toast, .ps-sticky, .-flair, .post-taglist, .left-sidebar, .s-btn, .s-sidebarwidget, .js-feed-link, .js-consent-banner, .js-add-answer-component, .js-add-link, .js-post-menu, .bottom-notice, .-logo, #hot-network-questions, [class^="user-gravatar"] { display: none !important }
+	.s-notice, .post-signature, .comment-user, .post-tag, #sidebar, #answers-header, #question-header + .d-flex { opacity: .5 !important }
+	#content { width: unset !important; max-width: unset !important; border: unset !important }
+}
+
+@-moz-document domain("newsru.co.il") {
+	header, footer, nav, .theme-link, .news-caption, .index-news-image, .topic-list-icons, .right, #rand, 
+	div[style^="margin"], .info > span, article.text > table:last-child, [href*="NEWSruIsrael"], [href*="/rest/"], [href*="/sport"], .news_list_anons[href*="/rest/"] ~ div, .news_list_anons[href*="/sport/"] ~ div { display: none !important }
+	.main-menu, .topic-list-icons-time { opacity: .5 !important }
+	.news_list_anons { min-height: unset !important }
+	.images { float: right }
+	.main-news-body { border: none }
+	.central { width: 40em !important; margin: 0 auto !important }
+	.main-news-body { border: unset !important }
+	body { background: unset !important }
+}
+
+@-moz-document domain("livejournal.com") {
+	.user-icon, .lj-like, .bodynavblock, .ljcut-link-collapse, .comments-wrapper, .s-header, .s-loginform, .sidebar, .pageheaderblock, .print-logo, .pagefooterblock, .entry-rating, .entryMetadata, .entryLinkbar, .i-ljuser-profile, .bodyheaderblock, .commentUserinfo-usericon, .fullsize-image-fader { display: none !important }
+	body { padding: 0 !important }
+}
+
+@-moz-document domain("rutracker.org") {
+	.bottom_info, .thHead, .avatar, .joined, .posts, .rank_img, .signature, #logo, #nav-panel, #page_footer, #idx-sidebar2 { display: none !important }
+}
+
+@-moz-document domain("itc.ua") {
+	footer, aside, .intro, .menu-tags, .logo, .b-top, .itc-related-posts, #itc-comments, iframe[src*="itc.ua"] { display: none !important }
+	#header { opacity: .5 !important }
+}
+
+@-moz-document domain("youtube.com") {
+	ytd-rich-metadata-row-renderer, .super-title, .ytd-rich-grid-renderer, .ytp-show-cards-title, .ytp-chrome-top-buttons, .ytp-miniplayer-button, .ytp-autonav-toggle-button-container, .ytp-size-button, .ytd-comments-header-renderer, .ytp-cards-button, .html5-endscreen, .ytp-ce-element, ytd-guide-signin-promo-renderer, .ytp-next-button, .banner-visible-area, #logo, #sponsor-button, #author-thumbnail, #avatar, #subscribe-button, #hearted-thumbnail, #comment-teaser, #more, #less, #reply-button-end, #like-button, #voice-search-button, #dislike-button, #chips-wrapper, #footer, #related, ytd-comment-renderer #action-menu, yt-img-shadow[width="24"] { display: none !important }
+	ytd-comment-action-buttons-renderer, .less-button, .more-button, #menu-container, #header { opacity: .5 }
+	#masthead-container { display: static !important }
+	.ytd-expander { display: unset !important }
+}
+
+@-moz-document domain("linux.org.ru") {
+	footer, .tags, .fav-buttons, .hideon-phone, .entry-userpic, .userpic, #ft, #related-topics, #sitetitle, [src*="/adv/"], .infoblock:not(.mini-news) { display: none !important }
+	nav, .nav, .title, .msg-top-header, .sign, .reply, #hd { opacity: .5 }
+}
+
+@-moz-document domain("yad2.co.il") {
+	.gallery-popup-side, .new-splash-screen, .recommendation_ads, .mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right, .new_my_yad2, .logo-wrapper, .inner_aside_container, .my_alerts_search_bar_button, .accessibility_btn, .my_alerts_widget_item, .recommended_agencies, .yad1, .y2_footer, .category_header, .magazine_per_category, .externalLink, .footer_wrapper, .leading_element, .tools_elements, .desktop_header, .right_mega, .left_mega, .widget-floating, #INDbtnWrap { display: none !important }
+
+	.new_header { border: none !important }
+	* { box-shadow: none !important; transition: none !important }
+}
+
+@-moz-document domain("github.com") {
+	footer, .octicon-mark-github, [href="/marketplace"], [href="/explore"] { display: none !important }
+	.avatar { visibility: hidden !important }
+	body, .UnderlineNav-item { line-height: unset !important }
+	.dropdown-menu { opacity: 1 !important }
+	:root { --m: .3rem }
+	.Header { padding: var(--m) !important }
+	.btn { padding: calc(var(--m)/2) !important }
+	.pt-3, .py-2 { padding-top: var(--m) !important }
+	.pb-3, .py-2 { padding-bottom: var(--m) !important }
+	.Box-header, .Box-body, .Header-old { padding-top: calc(var(--m)*1.5) !important; padding-bottom: calc(var(--m)*1.5) !important }
+	.mt-3, .mt-4 { margin-top: var(--m) !important }
+	.mb-3 { margin-bottom: var(--m) !important }
+	.container-xl { max-width: 1600px !important }
+}
+
+@-moz-document domain("patreon.com") {
+	[aria-hidden] { display: none !important }
+}
+
+@-moz-document domain("medium.com") {
+	nav, footer, main ~ div, header img[width="48"]{ display: none !important }
+}
+
+@-moz-document domain("hangouts.google.com") {
+	#hangout-landing-chat + div, [title="Hangouts"] { display: none !important }
+	div[style*="background-image:url"] { background-image: unset !important }
+}
+
+@-moz-document domain("aws.amazon.com") {
+	.aws-signin-text-small, #logo_container, #f, #marketing_container, #nav-home-link { display: none !important }
+}
+
+@-moz-document domain("web.whatsapp.com") {
+	.emoji, [data-asset-intro-image-dark], [data-asset-intro-image-dark] + div, [style^="height: 4"][style*="px; width: 4"] > * { display: none !important }
+}

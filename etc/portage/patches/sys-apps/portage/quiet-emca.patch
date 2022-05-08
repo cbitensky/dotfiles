@@ -1,36 +1,37 @@
 diff --git a/lib/_emerge/actions.py b/lib/_emerge/actions.py
-index 552aa9f..6579d52 100644
+index 05a1152..b8d6bbe 100644
 --- a/lib/_emerge/actions.py
 +++ b/lib/_emerge/actions.py
-@@ -658,20 +658,8 @@ def action_depclean(settings, trees, ldpath_mtimes,
- 		msg.append("recommended to use a tool such as " + good("`revdep-rebuild`") + " (from\n")
- 		msg.append("app-portage/gentoolkit) in order to detect such breakage.\n")
- 		msg.append("\n")
--	msg.append("Always study the list of packages to be cleaned for any obvious\n")
--	msg.append("mistakes. Packages that are part of the world set will always\n")
--	msg.append("be kept.  They can be manually added to this set with\n")
--	msg.append(good("`emerge --noreplace <atom>`") + ".  Packages that are listed in\n")
--	msg.append("package.provided (see portage(5)) will be removed by\n")
--	msg.append("depclean, even if they are part of the world set.\n")
--	msg.append("\n")
--	msg.append("As a safety measure, depclean will not remove any packages\n")
--	msg.append("unless *all* required dependencies have been resolved.  As a\n")
--	msg.append("consequence of this, it often becomes necessary to run \n")
--	msg.append("%s" % good("`emerge --update --newuse --deep @world`")
--			+ " prior to depclean.\n")
--
--	if action == "depclean" and "--quiet" not in myopts and not myfiles:
-+
-+	if action == "depclean" and "--quiet" not in myopts and not myfiles and msg:
- 		portage.writemsg_stdout("\n")
- 		for x in msg:
- 			portage.writemsg_stdout(colorize("WARN", " * ") + x)
-@@ -820,7 +808,7 @@ def _calc_depclean(settings, trees, ldpath_mtimes,
- 	if action == "depclean":
- 		emergelog(xterm_titles, " >>> depclean")
+@@ -763,22 +763,8 @@ def action_depclean(
+         )
+         msg.append("app-portage/gentoolkit) in order to detect such breakage.\n")
+         msg.append("\n")
+-    msg.append("Always study the list of packages to be cleaned for any obvious\n")
+-    msg.append("mistakes. Packages that are part of the world set will always\n")
+-    msg.append("be kept.  They can be manually added to this set with\n")
+-    msg.append(good("`emerge --noreplace <atom>`") + ".  Packages that are listed in\n")
+-    msg.append("package.provided (see portage(5)) will be removed by\n")
+-    msg.append("depclean, even if they are part of the world set.\n")
+-    msg.append("\n")
+-    msg.append("As a safety measure, depclean will not remove any packages\n")
+-    msg.append("unless *all* required dependencies have been resolved.  As a\n")
+-    msg.append("consequence of this, it often becomes necessary to run \n")
+-    msg.append(
+-        "%s" % good("`emerge --update --newuse --deep @world`")
+-        + " prior to depclean.\n"
+-    )
  
--	writemsg_level("\nCalculating dependencies  ")
-+	writemsg_level("Calculating dependencies ")
- 	resolver_params = create_depgraph_params(myopts, "remove")
- 	resolver = depgraph(settings, trees, myopts, resolver_params, spinner)
- 	resolver._load_vdb()
+-    if action == "depclean" and "--quiet" not in myopts and not myfiles:
++    if action == "depclean" and "--quiet" not in myopts and not myfiles and msg:
+         portage.writemsg_stdout("\n")
+         for x in msg:
+             portage.writemsg_stdout(colorize("WARN", " * ") + x)
+@@ -947,7 +933,7 @@ def _calc_depclean(settings, trees, ldpath_mtimes, myopts, action, args_set, spi
+     if action == "depclean":
+         emergelog(xterm_titles, " >>> depclean")
+ 
+-    writemsg_level("\nCalculating dependencies  ")
++    writemsg_level("Calculating dependencies  ")
+     resolver_params = create_depgraph_params(myopts, "remove")
+     resolver = depgraph(settings, trees, myopts, resolver_params, spinner)
+     resolver._load_vdb()

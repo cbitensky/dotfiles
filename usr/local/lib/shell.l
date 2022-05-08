@@ -4,6 +4,9 @@
 (de envor (name defval) (let (val (sys name)) (if val val defval)))
 (de envorset (name defval) (unless (sys name) (sys name defval)))
 (de remext (filename) (pack (flip (cdr (member "." (flip (chop filename)))))))
+(de fileext (filename)
+	(let fnlf (flip (chop filename))
+		(pack (flip (head (dec (index "." fnlf)) fnlf))) ) )
 (de in-line (L) (in L (line T)))
 (de mkdir (dir) (native "@" "mkdir" NIL dir 493))
 (de setsid () (native "@" "setsid"))
@@ -19,7 +22,7 @@
 			(%@ "getentropy" NIL '(num (1 . B)) 1)
 			(T (< num upper) (% num maxexcl) ) ) ) )
 
-(de mkdirp (path)
+(de mkdirall (path)
 	(let (dirs (split (chop path) "/") path (pop 'dirs))
 		(mkdir (pack path))
 		(for dir dirs

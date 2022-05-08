@@ -1,6 +1,34 @@
+dev-lang/zig
+media-sound/renoise-demo
+dev-lang/go
+sys-config/ltoize
+dev-go/godef
+
+games-simulation/openttd
+games-misc/openmsx
+games-misc/opensfx
+games-misc/opengfx
+games-util/grfcodec
+games-util/nml
+games-util/catcodec
+
+www-apps/grafana-bin
+app-emacs/rust-mode
+www-client/luakit
+net-im/zoom
+
+gui-wm/sway **
+gui-libs/wlroots **
+app-text/scdoc **
+dev-libs/wayland-protocols
+dev-util/meson
+
+games-strategy/fheroes2 **
+media-sound/ocp **
+games-emulation/dosbox-staging
 dev-go/gopls
 app-emacs/go-mode
-media-libs/flif
+media-libs/flif **
 x11-terms/alacritty
 app-eselect/eselect-gradle
 dev-java/gradle-bin
@@ -17,5 +45,10 @@ media-gfx/psftools
 dev-util/goland
 dev-lisp/picolisp **
 x11-misc/gbdfed
+
+#rust
 dev-lang/rust
+sys-devel/llvm
+
+
 dev-util/github-cli

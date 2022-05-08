@@ -1,0 +1,4 @@
+#!/bin/sh
+[[ `cat /proc/acpi/button/lid/LID0/state` == *closed ]] && P=dis || P=en
+F=( /run/xdg/sway-ipc* )
+SWAYSOCK=${F[0]} /usr/bin/swaymsg output eDP-1 ${P}able

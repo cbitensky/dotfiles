@@ -1,0 +1,87 @@
+/*
+
+; --header: #80FF80; --link: #BFBFFF; --border: #555
+h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small, .sub { font-size: smaller; line-height: 180% }
+
+	body, small, .comm { color: rgba(var(--front), .8) }
+	th { color: rgba(var(--front), .5) }
+	a, a:visited, a strong, a small { color: var(--link) }
+	h1, h2, h3, h4, h5, h6, caption { color: var(--header) }
+	* { border-color: var(--border) }
+	td, th, .td { border-left-color: var(--border); border-right-color: var(--border) }
+	code, pre { background: #111; border-color: #111 }
+	.key { color: #9FFF9F }
+	strong { color: #EEE }
+	::-webkit-scrollbar-thumb { background: #4F4F4F }
+	th { background-color: rgba(var(--front), .09) }
+	td { background-color: rgba(var(--front), .03) }
+
+	.selected { background-color: #ff00ff47 }
+	.selected-inactive { background-color: #ff00ff17 }
+	.inactive { color: rgba(var(--front), .3) }
+	.red, .red * { background-color: #ffaaaa21 }
+	/ *.yellow { background-color: #ffff8822 }
+	.green { background-color: #44ff4433 }* /
+	.yellow td, .yellow { background-color: #454536 !important }
+	.green td, .green { background-color: #2f542f !important }
+	/ * code * /
+	.num       { color: cyan    }
+	.asm-reg   { color: #FF80FF }
+	.sym       { color: #FFFF40 }
+	.beg-end   { color: yellow }
+	.str       { color: #FF8080 }
+	.asm-dat   { color: #0000ff }
+	.asm-instr { color: #00C000 }
+
+body{ background-color: #EEE }
+body, small { color: #222 }
+a, a:visited{ color: #228 }
+h1, h2, h3, h4, h5, h6 { color: #008000 }
+* { border-color: #999 }
+pre { background: #EEE }
+code, pre { color: #030 }
+strong { color: #111 }
+img[src*="t"] { filter: none }
+img[src*="c"] { filter: none }
+img[src*="r"] { background: black; padding: 5px }
+::-webkit-scrollbar-thumb { background: #999 }
+
+section { margin: 1.5em 0 }
+
+h1, h2, h3, h4, h5, h6, th { font-weight: normal }
+h1 { margin: 3em 0 1em 0 }
+body > :first-child { margin-top: 0 }
+h1 > strong, h2 > strong, h3 > strong, h4 > strong, h5 > strong, h6 > strong { color: inherit }
+
+code { border: solid; border-radius: 3px }
+
+code, pre { word-spacing: normal; -moz-tab-size: 4; tab-size: 4 }
+
+pre { border: 1px solid; border-radius: 5px; padding: 2px; margin: 1em -2px}
+
+.td { display: table-cell }
+.tr { display: table-row }
+.table { display: table }
+
+table, .table { margin: 0 auto }
+td, th, .td { padding: .1rem .3rem; border-style: solid }
+caption { padding-bottom: .1rem }
+th { font-size: smaller }
+table + table { margin-top: 1ex }
+
+menu { list-style-type: none; padding: 0; margin: 0 }
+menu + menu { margin-top: 2em }
+menu > li { margin: .5em 0 }
+
+iframe { border: none }
+
+.left   { text-align: left   }
+.center { text-align: center }
+.right  { text-align: right  }
+
+::-webkit-scrollbar-track { background: inherit }
+::-webkit-scrollbar { width: 10px; height: 10px }
+::-webkit-scrollbar-button { width: 0px; height: 0px }
+::-webkit-scrollbar-thumb { border-radius: 2px }
+::-webkit-scrollbar-corner { background-color: inherit }
+*/

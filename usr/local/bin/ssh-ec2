@@ -1,0 +1,3 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(sys "TERM" "xterm-256color")
+(fexec "ssh" "-o" "ConnectTimeout=5" (pack "ec2-user@" (car (argv))) "-i" "/daglabs/katnip.pem" (cdr (argv)))

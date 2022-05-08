@@ -1,0 +1,11 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(setq filename (car (argv)))
+(setq name (remext filename))
+(setq pngname (pack name ".png"))
+(let ext (fileext filename)
+	(prinl ext)
+	(and (= ext "avif") (fcall "avifdec" filename pngname))
+	(and (= ext "flif") (fcall "flif" "-d" filename pngname)) )
+(fexec "cjxl" "-d" "0" "-e" "9"
+	pngname
+	(pack name ".jxl" ) )

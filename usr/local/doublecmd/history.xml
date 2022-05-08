@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/</Item>
+      <Item>/home/</Item>
+      <Item>/home/16tons/</Item>
+      <Item>/down/</Item>
+      <Item>/var/</Item>
+      <Item>/var/cache/</Item>
+      <Item>/home/books/</Item>
+      <Item>/res/</Item>
+      <Item>/res/h3/</Item>
+      <Item>/res/hota/</Item>
+      <Item>/res/hota/games/</Item>
+      <Item>/res/hota/games/Prisoner of Doom/</Item>
+      <Item>/res/h3/Games/</Item>
+      <Item>/res/h3/Data/</Item>
+      <Item>/res/hota/Data/</Item>
+      <Item>/res/h3/Mp3/</Item>
+      <Item>/res/h3/Mp3/1/</Item>
+      <Item>/res/hota/MP3/</Item>
+      <Item>/res/h3/HotA_Data/</Item>
+      <Item>/res/hota/HotA_Data/</Item>
+      <Item>/res/h3hota/</Item>
+      <Item>/res/h2/</Item>
+      <Item>/res/h3/Warlords of the Wasteland/</Item>
+      <Item>/res/h3/Uninstall_HotA/</Item>
+      <Item>/res/h3/random_maps/</Item>
+      <Item>/res/h3/maps/</Item>
+      <Item>/res/h3/HotA_RMGTemplates/</Item>
+      <Item>/res/h3/HotA_logs/</Item>
+      <Item>/res/h3/_HD3_Data/</Item>
+      <Item>/res/h3/Games_old/</Item>
+      <Item>/cache/</Item>
+      <Item>/var/cache/youtube/</Item>
+      <Item>/down/amelie/</Item>
+      <Item>/down/local/</Item>
+      <Item>/down/silva/</Item>
+      <Item>/down/Tom and Jerry/</Item>
+      <Item>/fe/</Item>
+      <Item>/fe/mega/</Item>
+      <Item>/var/tmp/</Item>
+      <Item>/fe/mega/games/</Item>
+      <Item>/workshop/</Item>
+      <Item>/workshop/show/</Item>
+      <Item>/workshop/shipilov/</Item>
+      <Item>/workshop/projects/</Item>
+      <Item>/var/mnt/home/rust/</Item>
+      <Item>/var/mnt/home/rust/variables/</Item>
+      <Item>/var/mnt/home/rust/temp_conv/</Item>
+      <Item>/var/mnt/home/rust/temp_conv/src/</Item>
+      <Item>/var/mnt/home/rust/loops/</Item>
+      <Item>/var/mnt/home/rust/hello_world/</Item>
+      <Item>/var/mnt/home/rust/guessing_game/</Item>
+    </Navigation>
+    <CommandLine>
+      <Item>yo</Item>
+      <Item>cleancache</Item>
+    </CommandLine>
+    <FileMask>
+      <Item>*</Item>
+      <Item>*git*</Item>
+      <Item>git</Item>
+      <Item>*vim*</Item>
+      <Item>*.h3c</Item>
+      <Item>utf2</Item>
+      <Item>lat1</Item>
+      <Item>resu</Item>
+      <Item>*32.*</Item>
+      <Item>32.</Item>
+      <Item>getrandom</Item>
+      <Item>getentropy</Item>
+      <Item>*.html</Item>
+      <Item>about:blank</Item>
+      <Item>*html</Item>
+      <Item>html</Item>
+      <Item>lm</Item>
+      <Item>labbx10</Item>
+      <Item>lh</Item>
+      <Item>cyrillic.map</Item>
+      <Item>*.cfg</Item>
+      <Item>updmap.cfg</Item>
+      <Item>*.cdf</Item>
+      <Item>rej</Item>
+      <Item>reg</Item>
+      <Item>orig</Item>
+      <Item>10-flag.sh</Item>
+      <Item>ccache</Item>
+      <Item>top</Item>
+      <Item>term</Item>
+      <Item>*.ebuild</Item>
+      <Item>ftdetect</Item>
+      <Item>*.fb2</Item>
+      <Item>*nvim*</Item>
+      <Item>*neovim</Item>
+      <Item>buil*.o</Item>
+      <Item>*.o</Item>
+      <Item>buil</Item>
+      <Item>.*</Item>
+      <Item>.*-</Item>
+      <Item>*.fb2*</Item>
+      <Item>wh</Item>
+      <Item>wh.</Item>
+      <Item>desc</Item>
+      <Item>paredit</Item>
+      <Item>css</Item>
+      <Item>adwai</Item>
+      <Item>mkv</Item>
+      <Item>youtube</Item>
+      <Item>*.tex</Item>
+    </FileMask>
+    <SearchText>
+      <Item Tag="0">Бобыл</Item>
+      <Item Tag="0">Бытен</Item>
+      <Item Tag="0">Трёхлит</Item>
+      <Item Tag="0">onexec</Item>
+      <Item Tag="0">cloexec</Item>
+      <Item Tag="0">_call</Item>
+      <Item Tag="0">Bytensky</Item>
+      <Item Tag="0">user.name</Item>
+      <Item Tag="0">win_draw_end</Item>
+      <Item Tag="0">vim</Item>
+      <Item Tag="0">bim</Item>
+      <Item Tag="0">geany</Item>
+      <Item Tag="0">empty subje</Item>
+      <Item Tag="0">Хроники Героев Глава </Item>
+      <Item Tag="0">I Воины </Item>
+      <Item Tag="0">h3c</Item>
+      <Item Tag="0">Warlords of the Wasteland</Item>
+      <Item Tag="0">main.h3c</Item>
+      <Item Tag="0">wasteland.h3c</Item>
+      <Item Tag="0">dup2</Item>
+      <Item Tag="0">val $At</Item>
+      <Item Tag="0">call</Item>
+      <Item Tag="0">$Term</Item>
+      <Item Tag="0">_exec</Item>
+      <Item Tag="0">exec</Item>
+      <Item Tag="0">$At</Item>
+      <Item Tag="0">Sig1</Item>
+      <Item Tag="0">Term</Item>
+      <Item Tag="0">*Term</Item>
+      <Item Tag="0">SIGTERM</Item>
+      <Item Tag="0">Оруэлл</Item>
+      <Item Tag="0">gSignal</Item>
+      <Item Tag="0">TStp</Item>
+      <Item Tag="0">*TStp</Item>
+      <Item Tag="0">u0_a114</Item>
+      <Item Tag="0">#!</Item>
+      <Item Tag="0">,"male"</Item>
+      <Item Tag="0">"Currently edited by</Item>
+      <Item Tag="0">Boolean input expected</Item>
+      <Item Tag="0">l10</Item>
+      <Item Tag="0">mkdir</Item>
+      <Item Tag="0">'pico (car (symbols)))</Item>
+      <Item Tag="0">(unless (== 'pico (car (symbols))) (name (car (symbols))))</Item>
+      <Item Tag="0">REUSEAD</Item>
+      <Item Tag="0">app/main.l</Item>
+      <Item Tag="0">app</Item>
+      <Item Tag="0">load</Item>
+      <Item Tag="0">test</Item>
+      <Item Tag="0">locale</Item>
+      <Item Tag="0">медлит</Item>
+    </SearchText>
+    <SearchTextPath/>
+    <ReplaceText>
+      <Item>\ellipse*</Item>
+      <Item>\1 </Item>
+      <Item>я </Item>
+    </ReplaceText>
+    <ReplaceTextPath/>
+    <CreateDirectories/>
+    <RenameNameMask/>
+    <RenameExtMask/>
+    <SearchDirectories>
+      <Item>/ready/fb2/</Item>
+      <Item>/usr/src/picolisp/</Item>
+      <Item>/etc/</Item>
+      <Item>/var/home/root/</Item>
+      <Item>/var/home/root/.config/</Item>
+      <Item>/local/</Item>
+      <Item>/var/tmp/portage/app-editors/neovim-0.4.4-r100/work/neovim-0.4.4/src/nvim/</Item>
+      <Item>/fe/archive/</Item>
+      <Item>/etc/portage/</Item>
+      <Item>/etc/portage/sets/</Item>
+      <Item>/var/tmp/portage/mail-client/sylpheed-3.7.0-r1/work/sylpheed-3.7.0/</Item>
+      <Item>/res/h3c/</Item>
+      <Item>/res/HC1 - Warlords of the Wasteland/</Item>
+      <Item>/var/tmp/portage/dev-lisp/picolisp-9999/work/pil21/src/</Item>
+      <Item>/var/tmp/portage/dev-lisp/picolisp-9999/work/pil21/</Item>
+      <Item>/var/tmp/portage/dev-lisp/picolisp-9999/work/pil21/lib/</Item>
+      <Item>/etc/portage/conf/</Item>
+      <Item>/workshop/pil/picoLisp/app/</Item>
+      <Item>/workshop/pil/picoLisp/</Item>
+      <Item>/var/tmp/portage/dev-lisp/picolisp-9999/work/pil21/test/</Item>
+      <Item>/workshop/pil/pil21/</Item>
+      <Item>/workshop/pil/patches/</Item>
+      <Item>/usr/src/picolisp-9999/</Item>
+      <Item>/var/tmp/portage/dev-lisp/picolisp-9999/work/picoLisp/src/</Item>
+      <Item>/usr/local/</Item>
+      <Item>/usr/local/binl/</Item>
+      <Item>/var/tmp/portage/dev-lisp/picolisp-9999/work/picoLisp/</Item>
+      <Item>/usr/share/picolisp/</Item>
+      <Item>/usr/src/linux/</Item>
+      <Item>/var/tmp/portage/sys-libs/glibc-2.32-r2/work/glibc-2.32/</Item>
+      <Item>/var/tmp/portage/net-libs/webkit-gtk-2.28.4/work/webkitgtk-2.28.4/Source/</Item>
+      <Item>/var/tmp/portage/net-libs/webkit-gtk-2.28.4/work/webkitgtk-2.28.4/Source/WebCore/</Item>
+      <Item>/var/tmp/portage/net-libs/webkit-gtk-2.28.4/work/webkitgtk-2.28.4/Tools/MiniBrowser/gtk/</Item>
+      <Item>/usr/share/picolisp/lib/</Item>
+      <Item>/etc/portage/package.use/</Item>
+      <Item>/etc/portage/package.accept_keywords/</Item>
+      <Item>/usr/share/texmf-dist/fonts/</Item>
+      <Item>/local/bin/</Item>
+      <Item>/usr/share/texmf-dist/</Item>
+      <Item>/etc/texmf/</Item>
+      <Item>/var/lib/texmf/</Item>
+      <Item>/var/tmp/portage/dev-util/geany-1.37.1/work/geany-1.37.1/</Item>
+      <Item>/etc/fonts/</Item>
+      <Item>/local/portage/bashrc.d/</Item>
+      <Item>/var/db/repos/lto-overlay/</Item>
+      <Item>/var/db/</Item>
+      <Item>/var/db/repos/</Item>
+      <Item>/var/db/repos/mv/</Item>
+      <Item>/var/db/repos/lto-overlay/sys-config/ltoize/</Item>
+      <Item>/local/portage/</Item>
+    </SearchDirectories>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>

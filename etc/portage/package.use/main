@@ -1,9 +1,36 @@
+# fheroes2
+media-libs/sdl2-mixer vorbis opus
+
+
+dev-python/django sqlite
+sys-libs/ncurses -minimal
+net-libs/nodejs npm ssl
+
+app-portage/portage-bashrc-mv -ccache -remove-la -title
+
+app-office/scribus -templates
+media-libs/libjxl -skcms -sjpeg -openexr gdk-pixbuf gimp tools
+app-arch/libarchive bzip2
+
+gui-apps/foot -themes
+app-emulation/wine* X -gecko -mono -realtime -run-exes -udev -udisks -unwind -xcomposite -vulkan -vulkan
+
+sys-libs/zlib minizip
+media-sound/ocp X alsa flac
+media-libs/libepoxy X
+media-gfx/graphviz -cairo svg
+media-libs/gd fontconfig truetype zlib
+
+sys-apps/systemd -gcrypt -pcre -resolvconf -sysv-utils -zstd
+sci-astronomy/stellarium deep-sky stars
 x11-terms/xterm truetype
 dev-util/ccache -static-c++
-app-editors/emacs alsa cairo gui harfbuzz jpeg json libxml2 png sound ssl svg xft xwidgets
-app-emacs/emacs-common gui
+app-editors/emacs alsa cairo gtk gui harfbuzz imagemagick jpeg json libxml2 png sound source ssl svg xft
+app-emacs/emacs-common gui X
+
 # cube vulkan ddfemo
 dev-util/vulkan-tools cube
+
 net-fs/nfs-utils -nfsidmap -tcpd -uuid
 net-nds/rpcbind -tcpd
 x11-libs/libva video_cards_intel
@@ -23,57 +50,35 @@ media-libs/opusfile -http
 
 media-libs/rubberband -programs
 
-media-video/rav1e -capi
-sys-config/ltoize override-flagomatic
-
 #libnl lib netlink
 dev-libs/libnl -debug
 
 #gstreamer
 media-libs/gstreamer -caps
 
-#www-client/links fbcon gpm jpeg ssl zlib
-
-#why ?
-app-text/poppler cxx
+www-client/links fbcon gpm jpeg ssl zlib
 
 app-misc/mc -slang
 
 net-ftp/vsftpd -tcpd
 
 media-plugins/alsa-plugins -usb_stream pulseaudio
-media-sound/pulseaudio -glib -tcpd
+media-sound/pulseaudio -glib -tcpd -webrtc-aec
 
 sys-apps/pciutils -udev
-
 dev-lang/ruby -rdoc ssl
-
 sys-apps/debianutils -installkernel
-
 app-crypt/gnupg -smartcard
-
 dev-vcs/git -pcre-jit -webdav
-
 app-shells/bash -net
-
-sys-apps/hwids -net
-
 sys-fs/squashfs-tools lz4 -xz
-
 sys-apps/iproute2 -iptables
-
 sys-libs/glibc -multiarch
-
 mail-mta/ssmtp -mta ssl
-
 sys-apps/busybox -static
-
 net-libs/gnutls -openssl
-
 net-misc/iputils -arping
-
-sys-apps/util-linux -cramfs -logger
-
+sys-apps/util-linux -cramfs -logger -su
 sys-fs/dosfstools -udev
 
 media-libs/freetype harfbuzz
@@ -84,16 +89,14 @@ dev-util/geany-plugins -* gtk3 ctags debugger enchant scope gtkspell
 
 app-office/abiword spell
 
-media-sound/alsa-utils -libsamplerate
-
 sys-fs/android-file-transfer-linux fuse
 
 #audacity
-#? dont compile without flac
-#media-sound/audacity alsa -flac -ladspa -lame -lv2 -vst
-#media-libs/portaudio alsa
-#x11-libs/pango X
-#x11-libs/wxGTK X
+# dont compile without flac
+media-sound/audacity alsa flac -ladspa -lame -lv2 -vst -vorbis
+media-libs/flac cxx
+media-libs/portaudio alsa
+x11-libs/wxGTK X
 
 
 #dhcp
@@ -106,18 +109,10 @@ media-libs/libsdl alsa sound joystick opengl
 #dosbox-staging
 media-libs/libsdl2 opengl X
 
-
 #doublecmd
 app-misc/doublecmd gtk
-
 dev-lang/fpc source
-
 dev-lang/lazarus -minimal
-
-#emacs
-app-editors/emacs X gtk
-
-app-emacs/emacs-common-gentoo X
 
 #fetchmail
 net-mail/fetchmail ssl
@@ -125,7 +120,7 @@ net-mail/fetchmail ssl
 #mpv
 # zlib for packed subtitles & png screenshots
 # openssl for youtube streams
-media-video/ffmpeg alsa bs2b encode dav1d -libdrm modplug rav1e rubberband vorbis vpx opengl openssl opus network v4l x264 zlib -gnutls
+media-video/ffmpeg -gnutls -libdrm alsa bs2b dav1d encode gpm modplug network opengl openssl opus rav1e rubberband sdl v4l vorbis vpx x264 zlib
 media-video/mpv alsa egl iconv libass -lua opengl rubberband zlib -xv
 # for rubberband
 dev-scheme/guile -deprecated regex
@@ -134,27 +129,24 @@ dev-scheme/guile -deprecated regex
 #firefox
 # pgo doesn’t compile
 media-sound/apulse sdk
-#media-libs/libepoxy X
 x11-libs/gtk+ X
 www-client/firefox* bindist eme-free hwaccel lto pulseaudio -screenshot -gmp-autoupdate -pgo -clang
+www-client/firefox-bin -pulseaudio
 sys-devel/llvm gold
 sys-devel/binutils cxx
 dev-db/sqlite secure-delete
 media-libs/libvpx postproc
 dev-lang/python ncurses sqlite
 media-libs/libpng apng
-media-video/rav1e capi
 
 #fontforge
 media-gfx/fontforge gtk -python -readline
-#x11-libs/cairo X
-#dev-cpp/cairomm X
 
 #freerdp
 net-misc/freerdp X
 
 #gcc
-sys-devel/gcc graphite lto -sanitize -vtv
+sys-devel/gcc graphite -sanitize -vtv
 
 #gentoolkit
 dev-lang/python xml ssl
@@ -163,14 +155,9 @@ dev-lang/python xml ssl
 media-libs/gegl cairo
 media-gfx/gimp jpeg png webp
 media-gfx/exiv2 -xmp -png
-app-text/poppler cairo
-
 
 #grep
 sys-apps/grep pcre
-
-#gtk3
-#media-libs/libepoxy X
 
 x11-libs/cairo glib svg opengl
 
@@ -189,18 +176,10 @@ sys-devel/clang -static-analyzer
 sys-devel/clang-runtime -compiler-rt
 
 
-#idea
-#sys-devel/clang xml
-
-
 #imagemagick
 #zlib for pdf export
 media-gfx/imagemagick X truetype djvu jpeg png tiff webp zlib
 
-
-#inkscape
-#dev-cpp/gtkmm X
-#x11-libs/gtk+ X
 
 #kmod
 sys-apps/kmod -tools
@@ -214,79 +193,56 @@ sys-devel/binutils plugins
 sys-devel/llvm -libffi
 
 #main
-sys-apps/hwids udev
-
-net-misc/aria2 bittorrent -gnutls -nettle -libxml2
-
+sys-apps/hwids udev -net
+net-misc/aria2 bittorrent ssl -gnutls -nettle -libxml2
 net-libs/libtorrent ssl
-
-media-sound/alsa-utils ncurses
-
+media-sound/alsa-utils ncurses -libsamplerate
 x11-libs/libdrm libkms video_cards_radeon video_cards_intel
-
 net-misc/curl ssl
-
 dev-vcs/git curl -gpg
-
 x11-libs/gtk+ cups
-
 net-misc/youtube-dl offensive
-
 app-text/ghostscript-gpl cups
-
-app-text/poppler lcms utils jpeg
-
+app-text/poppler cairo cxx lcms utils jpeg
 app-text/hunspell L10N: en he ru uk
-
-
-
 media-libs/libwebp png
-
-media-libs/imlib2 gif jpeg png tiff webp # feh
-
-
+media-libs/imlib2 X gif jpeg png shm tiff webp # feh
 media-libs/harfbuzz truetype -cairo
-
 app-portage/layman git
-
-
 x11-libs/libxcb xkb
 
 #misc
 www-client/dillo gif jpeg png ssl
-
 net-misc/freerdp client
-
 app-editors/textadept gtk
-
 sys-devel/gdb -python -server
-
 media-libs/openal alsa
-
 media-sound/mpg123 alsa
-
 dev-libs/libpcre2 pcre16
-
 sys-block/gparted fat ntfs
-
-#mpd
 media-sound/mpd -cue alsa -fifo flac opus -icu -id3tag
-
-#sys-apps/dbus X
-
-#mpg123
-media-sound/mpg123 -alsa
-
-#mpop
 net-mail/mpop ssl
-
-#net-tools
 sys-apps/net-tools -arp -hostname
-
-#openssh
-# Amazon EC2
-
-net-misc/openssh ssl
+net-misc/openssh ssl hpn
+net-im/pidgin gtk
+sys-apps/portage -rsync-verify
+dev-lisp/picolisp source ssl -l10n_en
+media-video/mkvtoolnix gui
+dev-libs/libsodium -minimal
+dev-scheme/racket X doc readline -futures -minimal -places -threads
+x11-terms/rxvt-unicode 256-color -mousewheel wcwidth
+dev-libs/libevent ssl
+dev-vcs/subversion -dso
+net-libs/glib-networking ssl
+app-crypt/gcr gtk
+mail-client/sylpheed ssl
+mail-client/yam ssl
+net-misc/wget ssl
+sys-apps/man-pages nls l10n_ru
+sys-kernel/*-sources symlink
+sys-process/procps ncurses
+games-fps/ut2004* opengl
+net-vpn/wireguard tools
 
 #openttd
 dev-python/pillow zlib
@@ -294,77 +250,28 @@ media-libs/libsdl2 alsa sound video gles2
 media-sound/timidity++ alsa
 games-simulation/openttd truetype zlib png icu lzma
 
-
-#picolisp
-dev-lisp/picolisp source ssl -l10n_en
-
-#pidgin
-net-im/pidgin gtk
-
-#portage
-sys-apps/portage -rsync-verify
-
-#pulseaudio
-media-sound/pulseaudio -webrtc-aec
-
 #qemu
 app-emulation/qemu gtk alsa snappy
-#media-libs/libsdl2 X
-
-
-#qt
-media-video/mkvtoolnix pch qt5
 
 # without X dont work mkvtoolnix-gui and doublecmd qt
-dev-qt/qtgui udev egl dbus X
-x11-libs/libxkbcommon X
-dev-qt/qtwidgets gtk
+dev-qt/qtgui udev egl eglfs dbus
+dev-qt/qtwidgets gtk dbus
 dev-qt/qtdeclarative -widgets
 dev-qt/qtmultimedia -widgets
 
-#qtox
-dev-libs/libsodium -minimal
+dev-lang/rust clippy doc miri nightly parallel rls rust-src rustfmt
 
-#racket
-dev-scheme/racket X doc readline -futures -minimal -places -threads
-
-#rust
-#rls installes rust-src
-
-dev-lang/rust clippy rls rustfmt nightly parallel-compiler miri wasm llvm_targets_WebAssembly
-sys-devel/llvm llvm_targets_WebAssembly
 sys-devel/clang xml # requires for lldb
-
-#rxvt
-x11-terms/rxvt-unicode 256-color -mousewheel wcwidth
 
 #sane
 media-gfx/sane-backends usb -zeroconf
 media-gfx/xsane png
 app-text/xmlto text
 
-
-#ssh
-net-misc/openssh hpn
-
-#st
-sys-libs/ncurses -minimal
-
 #stardict
 # xdxfparse for lingvo dictionaries
 app-text/stardict -gucharmap -wordnet  -wikiparse xdxfparse -powerwordparse
 dev-libs/libxml2 python
-
-#subversion
-dev-vcs/subversion -dso
-
-#surf
-net-libs/glib-networking ssl
-
-app-crypt/gcr gtk
-
-
-
 
 #sway
 gui-libs/wlroots X
@@ -373,29 +280,11 @@ media-libs/mesa X egl gles2 libglvnd vaapi vulkan
 media-libs/libepoxy egl
 media-libs/libglvnd X
 
-#sylpheed
-mail-client/sylpheed ssl
-mail-client/yam ssl
-
-#system
-net-misc/wget ssl
-
-sys-apps/man-pages nls l10n_ru
-
-sys-kernel/*-sources symlink
-
-sys-process/procps ncurses
-
-
 #tex
 app-text/texlive extra luatex png truetype L10N: ar el he ru uk
 media-libs/gd jpeg png
 app-text/mathtex png
 app-text/texlive-core xetex
-
-
-#tor
-dev-libs/libevent ssl
 
 
 #tox
@@ -404,13 +293,8 @@ media-video/ffmpeg v4l webp
 dev-qt/qtgui:5 png gif jpeg
 dev-libs/libpcre pcre16
 
-
 #unzip
 app-arch/unzip natspec
-
-#ut2004
-games-fps/ut2004* opengl
-
 
 #vim
 app-editors/gvim gtk
@@ -430,12 +314,6 @@ net-libs/glib-networking libproxy # for webkit-gtk & surf
 media-libs/gst-plugins-base alsa egl gles2 -opengl -pango -vorbis
 media-libs/gst-plugins-bad gles2 egl -opengl
 
-media-sound/mpg123 alsa
-
-
-#wireguard
-net-vpn/wireguard tools
-
 #wpa
 net-wireless/wpa_supplicant ap -fils -hs2-0 -mbo -mesh
 
@@ -444,9 +322,6 @@ media-libs/x264 -interlaced
 
 #xorg
 x11-base/xorg-server -minimal -udev -xorg
-
-#feh
-media-libs/imlib2 X shm
 
 #zathura
 app-text/zathura synctex -magic

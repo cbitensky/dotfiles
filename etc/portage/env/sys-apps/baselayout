@@ -1,5 +1,5 @@
-post_src_install() {
-	dir=$D/usr/share/$PN
+post_src_prepare() {
+	dir=$S/share.Linux
 	sed -i '
 		s@:/root:@:/var/home/root:@g
 		s@/bin/bash@/bin/bb@g
@@ -11,6 +11,6 @@ post_src_install() {
 	clog passwd users removed: halt operator shutdown uucp adm news bin lp
 	sed -i 's/^root:\*:/root::/' $dir/shadow
 	clog root password reseted
-	rm $dir/fstab
-	clog fstab removed
+#	rm $dir/fstab
+#	clog fstab removed
 }

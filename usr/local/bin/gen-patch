@@ -30,7 +30,7 @@
 	(bye 3) )
 
 (setq outdir (pack "/etc/portage/patches/" @cat "/" (reverse @pn)))
-(mkdirp outdir)
+(mkdirall outdir)
 
 
 

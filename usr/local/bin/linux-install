@@ -2,5 +2,5 @@
 (cd "/usr/src/linux")
 (fcall "make" "-j8")
 (cp "arch/x86/boot/bzImage" "/boot/efi/boot/bootx64.efi")
-(cp ".config" "/usr/local/conf/linux")
+(cp ".config" "/usr/local/cf/linux")
 (bye)

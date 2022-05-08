@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd DCVersion="0.9.8 beta">
+  <ExtensionAssociation>
+    <FileType>
+      <Name>ebuid</Name>
+      <IconFile/>
+      <ExtensionList>ebuild</ExtensionList>
+      <Actions>
+        <Action>
+          <Name>Manifest</Name>
+          <Command>{!SHELL}</Command>
+          <Params>ebuild "%p" manifest</Params>
+        </Action>
+        <Action>
+          <Name>Emerge</Name>
+          <Command>{!SHELL}</Command>
+          <Params>emerge -v "%p"</Params>
+        </Action>
+      </Actions>
+    </FileType>
+    <FileType>
+      <Name>xml</Name>
+      <IconFile/>
+      <ExtensionList>xml|fb2|html|xhtml</ExtensionList>
+      <Actions>
+        <Action>
+          <Name>Open</Name>
+          <Command>surf</Command>
+          <Params>file://"%p"</Params>
+        </Action>
+        <Action>
+          <Name>browser</Name>
+          <Command>surf</Command>
+          <Params>"%p"</Params>
+        </Action>
+      </Actions>
+    </FileType>
+    <FileType>
+      <Name>torrent</Name>
+      <IconFile/>
+      <ExtensionList>torrent</ExtensionList>
+      <Actions>
+        <Action>
+          <Name>Open</Name>
+          <Command>{!SHELL}</Command>
+          <Params>aria2c "%p"</Params>
+        </Action>
+      </Actions>
+    </FileType>
+    <FileType>
+      <Name>wine</Name>
+      <IconFile/>
+      <ExtensionList>exe</ExtensionList>
+      <Actions>
+        <Action>
+          <Name>Open</Name>
+          <Command>wine </Command>
+          <Params>%p</Params>
+        </Action>
+      </Actions>
+    </FileType>
+  </ExtensionAssociation>
+</doublecmd>

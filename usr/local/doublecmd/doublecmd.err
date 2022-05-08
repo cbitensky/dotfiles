@@ -1,0 +1,204 @@
+--------------- 25-01-2018, 19:23:28 ---------------
+| DC v0.8.1 beta Rev. 7950 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 31110
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000AA3FE8 line 2645, column 5 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A8E9E5 line 2141, column 13 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $000000000084D734 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $00000000007D4D8E line 1221, column 77 of uhotkeymanager.pas in /usr/share/doublecmd/doublecmd
+  $00000000005637CF line 5654, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000563ABA line 5785, column 7 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000005639FB line 5766, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000566B86 line 7132, column 38 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $000000000043091F in /usr/share/doublecmd/doublecmd
+  $0000000000562ED2 line 5384, column 28 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $000000000071289C line 112, column 36 of lclmessageglue.pas in /usr/share/doublecmd/doublecmd
+  $000000000063EDE1 line 3628, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $000000000063CA15 line 1962, column 43 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $000000000063BB1E line 2368, column 12 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $000000000064B89B line 877, column 77 of gtk2/gtk2callback.inc in /usr/share/doublecmd/doublecmd
+
+--------------- 25-02-2018, 08:57:42 ---------------
+| DC v0.8.1 beta Rev. 7950 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 789
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000A9EF7E line 925, column 20 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AA4230 line 2675, column 11 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A909C3 line 2577, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $000000000084D734 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A8C114 line 1677, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $00000000006F4D05 line 246, column 13 of include/customaction.inc in /usr/share/doublecmd/doublecmd
+  $0000000000498DDF in /usr/share/doublecmd/doublecmd
+  $00000000005B97E8 line 282, column 5 of include/menuitem.inc in /usr/share/doublecmd/doublecmd
+  $000000000043091F in /usr/share/doublecmd/doublecmd
+  $000000000063EDE1 line 3628, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $00000000007854D6 line 139, column 3 of gtk2/gtk2wsmenus.pp in /usr/share/doublecmd/doublecmd
+
+--------------- 26-02-2018, 12:14:24 ---------------
+| DC v0.8.1 beta Rev. 7950 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 3386
+Unhandled exception: ERangeError: Range check error
+  Stack trace:
+  $000000000084C0FE line 205, column 49 of dcunicodeutils.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AA6234 line 3363, column 26 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AA60C5 line 3413, column 26 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A9E0F1 line 687, column 5 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A89340 line 1085, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $000000000084D734 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A8C114 line 1677, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $00000000006F4D05 line 246, column 13 of include/customaction.inc in /usr/share/doublecmd/doublecmd
+  $0000000000498DDF in /usr/share/doublecmd/doublecmd
+  $00000000005B97E8 line 282, column 5 of include/menuitem.inc in /usr/share/doublecmd/doublecmd
+  $000000000043091F in /usr/share/doublecmd/doublecmd
+  $00007F8102C9FACF in /usr/lib64/libgobject-2.0.so.0
+
+--------------- 18-04-2018, 20:52:36 ---------------
+| DC v0.8.1 beta Rev. 7950 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 18116
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $00000000027ED740 in 
+  $00000000004D5C67 line 180, column 3 of include/customform.inc in /usr/share/doublecmd/doublecmd
+  $0000000000A85743 line 465, column 1 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $00000000004D1ED6 line 1850, column 3 of forms.pp in /usr/share/doublecmd/doublecmd
+
+--------------- 28-04-2018, 11:30:34 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 266
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000ABB5F1 line 127, column 36 of ufindbyrmr.pas in /usr/share/doublecmd/doublecmd
+  $0000000000862CA4 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $00000000007E949E line 1221, column 77 of uhotkeymanager.pas in /usr/share/doublecmd/doublecmd
+  $000000000057307F line 5666, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $000000000057336A line 5797, column 7 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000005732AB line 5778, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000576486 line 7152, column 38 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000430E1F in /usr/share/doublecmd/doublecmd
+  $000000000057278C line 5396, column 28 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000007385EC line 112, column 36 of lclmessageglue.pas in /usr/share/doublecmd/doublecmd
+  $0000000000639961 line 3702, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $0000000000637565 line 1962, column 43 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $00000000006365FE line 2375, column 12 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $000000000064654B line 919, column 77 of gtk2/gtk2callback.inc in /usr/share/doublecmd/doublecmd
+  $00007FA08C67AD43 in /usr/lib64/libgtk-x11-2.0.so.0
+
+--------------- 28-04-2018, 11:32:04 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 266
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000ABB5F1 line 127, column 36 of ufindbyrmr.pas in /usr/share/doublecmd/doublecmd
+  $0000000000862CA4 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $00000000007E949E line 1221, column 77 of uhotkeymanager.pas in /usr/share/doublecmd/doublecmd
+  $000000000057307F line 5666, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $000000000057336A line 5797, column 7 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000005732AB line 5778, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000576486 line 7152, column 38 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000430E1F in /usr/share/doublecmd/doublecmd
+  $000000000057278C line 5396, column 28 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000007385EC line 112, column 36 of lclmessageglue.pas in /usr/share/doublecmd/doublecmd
+  $0000000000639961 line 3702, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $0000000000637565 line 1962, column 43 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $00000000006365FE line 2375, column 12 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $000000000064654B line 919, column 77 of gtk2/gtk2callback.inc in /usr/share/doublecmd/doublecmd
+  $00007FA08C67AD43 in /usr/lib64/libgtk-x11-2.0.so.0
+
+--------------- 18-06-2018, 10:48:30 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.31 | PID 290
+Unhandled exception: ERangeError: Range check error
+  Stack trace:
+  $000000000086166E line 205, column 49 of dcunicodeutils.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AB5324 line 3385, column 26 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AB51B5 line 3435, column 26 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AAD0B1 line 690, column 5 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A98130 line 1085, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $0000000000862CA4 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $00000000007E949E line 1221, column 77 of uhotkeymanager.pas in /usr/share/doublecmd/doublecmd
+  $000000000057307F line 5666, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $000000000057336A line 5797, column 7 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000005732AB line 5778, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000576486 line 7152, column 38 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000430E1F in /usr/share/doublecmd/doublecmd
+  $000000000057278C line 5396, column 28 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000007385EC line 112, column 36 of lclmessageglue.pas in /usr/share/doublecmd/doublecmd
+  $0000000000639961 line 3702, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $0000000000637565 line 1962, column 43 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $00000000006365FE line 2375, column 12 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+
+--------------- 15-07-2018, 17:50:03 ---------------
+| DC v0.8.2 beta Rev. 8010 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.32 | PID 233
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000ABB5F1 line 127, column 36 of ufindbyrmr.pas in /usr/share/doublecmd/doublecmd
+  $0000000000862CA4 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $00000000007E949E line 1221, column 77 of uhotkeymanager.pas in /usr/share/doublecmd/doublecmd
+  $000000000057307F line 5666, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $000000000057336A line 5797, column 7 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000005732AB line 5778, column 14 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000576486 line 7152, column 38 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $0000000000430E1F in /usr/share/doublecmd/doublecmd
+  $000000000057278C line 5396, column 28 of include/wincontrol.inc in /usr/share/doublecmd/doublecmd
+  $00000000005D3A67 line 512, column 30 of include/customedit.inc in /usr/share/doublecmd/doublecmd
+  $00000000007385EC line 112, column 36 of lclmessageglue.pas in /usr/share/doublecmd/doublecmd
+  $0000000000639961 line 3702, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $0000000000637565 line 1962, column 43 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $00000000006365FE line 2375, column 12 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $000000000064654B line 919, column 77 of gtk2/gtk2callback.inc in /usr/share/doublecmd/doublecmd
+  $00007FE71E78AE84 in /usr/lib64/libgtk-x11-2.0.so.0
+
+--------------- 28-12-2018, 13:14:25 ---------------
+| DC v0.8.4 beta Rev. 8272 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.32 | PID 1678
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000AB0ADE line 952, column 20 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AB6000 line 2731, column 11 of viewercontrol.pas in /usr/share/doublecmd/doublecmd
+  $0000000000AA2213 line 2634, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $00000000008634A4 line 228, column 7 of uformcommands.pas in /usr/share/doublecmd/doublecmd
+  $0000000000A9D7E4 line 1724, column 3 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $000000000071C285 line 246, column 13 of include/customaction.inc in /usr/share/doublecmd/doublecmd
+  $0000000000498B1F in /usr/share/doublecmd/doublecmd
+  $00000000005C0688 line 280, column 5 of include/menuitem.inc in /usr/share/doublecmd/doublecmd
+  $0000000000430C3F in /usr/share/doublecmd/doublecmd
+  $0000000000639C61 line 3702, column 68 of gtk2/gtk2proc.inc in /usr/share/doublecmd/doublecmd
+  $00000000007AC336 line 139, column 3 of gtk2/gtk2wsmenus.pp in /usr/share/doublecmd/doublecmd
+
+--------------- 02-02-2019, 22:17:32 ---------------
+| DC v0.8.4 beta Rev. 8272 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.32 | PID 28615
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $000000000294ED80 in 
+  $00000000004D6397 line 184, column 3 of include/customform.inc in /usr/share/doublecmd/doublecmd
+  $0000000000A971C3 line 526, column 1 of fviewer.pas in /usr/share/doublecmd/doublecmd
+  $00000000004D1CF6 line 1905, column 3 of forms.pp in /usr/share/doublecmd/doublecmd
+
+--------------- 03-05-2020, 12:50:27 ---------------
+| DC v0.9.8 beta Rev. 9296 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.32 | PID 14436
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $0000000000A0ED68 line 874, column 17 of fmultirename.pas in /usr/lib64/doublecmd/doublecmd
+  $00000000005F2ABA line 55, column 3 of include/buttoncontrol.inc in /usr/lib64/doublecmd/doublecmd
+  $00000000005F3303 line 169, column 3 of include/buttons.inc in /usr/lib64/doublecmd/doublecmd
+  $00000000005F29A6 line 21, column 5 of include/buttoncontrol.inc in /usr/lib64/doublecmd/doublecmd
+  $000000000043238F in /usr/lib64/doublecmd/doublecmd
+  $00000000005878CD line 5419, column 28 of include/wincontrol.inc in /usr/lib64/doublecmd/doublecmd
+  $000000000075EC62 line 112, column 36 of lclmessageglue.pas in /usr/lib64/doublecmd/doublecmd
+  $0000000000771341 line 2461, column 34 of gtk2wsstdctrls.pp in /usr/lib64/doublecmd/doublecmd
+  $00007FDCA509223C in /usr/lib64/libgobject-2.0.so.0
+
+--------------- 19-06-2020, 20:42:40 ---------------
+| DC v0.9.8 beta Rev. 9296 -- x86_64-Linux-gtk2
+| "Gentoo" -- GTK 2.24.32 | PID 326
+Unhandled exception: EAccessViolation: Access violation
+  Stack trace:
+  $00007F27116F53AB in /usr/lib64/doublecmd/plugins/wcx/zip/zip.wcx
+  $00007F27117496EE in /usr/lib64/doublecmd/plugins/wcx/zip/zip.wcx
+
+
