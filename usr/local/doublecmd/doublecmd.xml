@@ -628,7 +628,7 @@
     <DragAndDropSaveUnicodeTextInUFT8>True</DragAndDropSaveUnicodeTextInUFT8>
     <OverwriteFolder>False</OverwriteFolder>
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
-    <ProgressKind>2</ProgressKind>
+    <ProgressKind>0</ProgressKind>
     <Confirmations>7</Confirmations>
     <Options>
       <Symlink>0</Symlink>
@@ -675,7 +675,7 @@
     <Position>0</Position>
     <OpenedTabs>
       <Left>
-        <ActiveTab>3</ActiveTab>
+        <ActiveTab>22</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -850,56 +850,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/res/h3/Mp3/</Path>
-                  <Path Filename="random_maps">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/random_maps/</Path>
-                  <Path Filename="Uninstall_HotA">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Uninstall_HotA/</Path>
-                  <Path Filename="Warlords of the Wasteland">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Warlords of the Wasteland/</Path>
-                  <Path Filename="..">/res/h3/</Path>
-                  <Path Filename="h3hota">/res/</Path>
-                  <Path Filename="..">/res/h3hota/</Path>
-                  <Path Filename="h3">/res/</Path>
-                  <Path Filename="..">/res/h3/</Path>
-                  <Path Filename="h2">/res/</Path>
-                  <Path Filename="..">/res/h2/</Path>
-                  <Path Filename="h3">/res/</Path>
-                  <Path Filename="Data">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Data/</Path>
-                  <Path Filename="Games">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Games/</Path>
-                  <Path Filename="..">/res/h3/</Path>
-                  <Path Filename="h3hota">/res/</Path>
-                  <Path Filename="..">/res/h3hota/</Path>
-                  <Path Filename="hota">/res/</Path>
-                  <Path Filename="games">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/games/</Path>
-                  <Path Filename="HotA_Data">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/HotA_Data/</Path>
-                  <Path Filename="MP3">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/MP3/</Path>
-                  <Path Filename="..">/res/hota/</Path>
-                  <Path Filename="hota">/res/</Path>
-                  <Path Filename="Data">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/Data/</Path>
-                  <Path Filename="..">/res/hota/</Path>
-                  <Path Filename="h3">/res/</Path>
-                  <Path Filename="Games">/res/h3/</Path>
-                  <Path Filename="Prisoner of Doom">/res/h3/Games/</Path>
-                  <Path Filename="Games">/res/h3/</Path>
-                  <Path Filename="h3">/res/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="cache">/var/</Path>
-                  <Path Filename="distfiles">/var/cache/</Path>
-                  <Path Filename="cache">/var/</Path>
-                  <Path Filename="down">/</Path>
-                  <Path Filename="">/down/</Path>
+                  <Path Filename="">/home/mkv/./</Path>
+                  <Path Filename="20181209-IK8TMJf3G6U-LLVM-2018 LLVM Developers’ Meeting - M. Braun “Register Allocation - .mkv">/var/spool/youtube/./</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
                   <Path Filename="home">/</Path>
-                  <Path Filename="16tons">/home/</Path>
-                  <Path Filename="..">/home/16tons/</Path>
-                  <Path Filename="16tons">/home/</Path>
-                  <Path Filename="home">/</Path>
+                  <Path Filename="dairycs">/home/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="portage">/etc/</Path>
+                  <Path Filename="conf">/etc/portage/</Path>
+                  <Path Filename="">/etc/portage/conf/</Path>
+                  <Path Filename="20181209-IK8TMJf3G6U-LLVM-2018 LLVM Developers’ Meeting - M. Braun “Register Allocation - .mkv">/var/spool/youtube/./</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="mpv">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mpv/</Path>
+                  <Path Filename="mod">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mod/</Path>
+                  <Path Filename="mail">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mail/</Path>
+                  <Path Filename="mod">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mod/</Path>
+                  <Path Filename="cups">/var/spool/</Path>
+                  <Path Filename="tmp">/var/spool/cups/</Path>
+                  <Path Filename="..">/var/spool/cups/tmp/</Path>
+                  <Path Filename="..">/var/spool/cups/</Path>
+                  <Path Filename="cups">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/./</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/home/mkv/./</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="animdat">/usr/local/s2/./data/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/animdat/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="music">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./music/</Path>
+                  <Path Filename="root">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./root/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/</Path>
+                  <Path Filename="s2">/usr/local/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="txt3">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt3/</Path>
+                  <Path Filename="txt2">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1442,6 +1442,356 @@
                   <Path Filename="local">/</Path>
                   <Path Filename="">/local/</Path>
                   <Path Filename="">/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="mod">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mod/</Path>
+                  <Path Filename="mail">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mail/</Path>
+                  <Path Filename="mod">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/mod/</Path>
+                  <Path Filename="cups">/var/spool/</Path>
+                  <Path Filename="tmp">/var/spool/cups/</Path>
+                  <Path Filename="..">/var/spool/cups/tmp/</Path>
+                  <Path Filename="..">/var/spool/cups/</Path>
+                  <Path Filename="cups">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/./</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/home/mkv/./</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="animdat">/usr/local/s2/./data/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/animdat/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="music">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./music/</Path>
+                  <Path Filename="root">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./root/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/</Path>
+                  <Path Filename="s2">/usr/local/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="txt3">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt3/</Path>
+                  <Path Filename="txt2">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="bobs">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/bobs/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/palette/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="cups">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/./</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/home/mkv/./</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="animdat">/usr/local/s2/./data/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/animdat/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="music">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./music/</Path>
+                  <Path Filename="root">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./root/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/</Path>
+                  <Path Filename="s2">/usr/local/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="txt3">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt3/</Path>
+                  <Path Filename="txt2">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="bobs">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/bobs/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/palette/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="save">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/save/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/video/</Path>
+                  <Path Filename="worlds">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/worlds/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="intro.smk">/usr/local/s2/video/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="">/usr/local/s2/video/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/home/mkv/./</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="animdat">/usr/local/s2/./data/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/animdat/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="music">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./music/</Path>
+                  <Path Filename="root">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./root/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/</Path>
+                  <Path Filename="s2">/usr/local/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="txt3">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt3/</Path>
+                  <Path Filename="txt2">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="bobs">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/bobs/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/palette/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="save">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/save/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/video/</Path>
+                  <Path Filename="worlds">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/worlds/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="intro.smk">/usr/local/s2/video/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="">/usr/local/s2/video/</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="DATA">/usr/local/s2/./</Path>
+                  <Path Filename="ANIMDAT">/usr/local/s2/./DATA/</Path>
+                  <Path Filename="..">/usr/local/s2/./DATA/ANIMDAT/</Path>
+                  <Path Filename="ANIMDAT">/usr/local/s2/./DATA/</Path>
+                  <Path Filename="DATA">/usr/local/s2/./</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="">/home/mkv/./</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="animdat">/usr/local/s2/./data/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/animdat/</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="music">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./music/</Path>
+                  <Path Filename="root">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./root/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/</Path>
+                  <Path Filename="s2">/usr/local/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="txt3">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt3/</Path>
+                  <Path Filename="txt2">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/txt2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="data">/usr/local/s2/</Path>
+                  <Path Filename="animdat">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/animdat/</Path>
+                  <Path Filename="bobs">/usr/local/s2/data/</Path>
+                  <Path Filename="..">/usr/local/s2/data/bobs/</Path>
+                  <Path Filename="..">/usr/local/s2/data/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/</Path>
+                  <Path Filename="gfx">/usr/local/s2/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="..">/usr/local/s2/gfx/palette/</Path>
+                  <Path Filename="palette">/usr/local/s2/gfx/</Path>
+                  <Path Filename="save">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/save/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/video/</Path>
+                  <Path Filename="worlds">/usr/local/s2/</Path>
+                  <Path Filename="..">/usr/local/s2/worlds/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="intro.smk">/usr/local/s2/video/</Path>
+                  <Path Filename="video">/usr/local/s2/</Path>
+                  <Path Filename="">/usr/local/s2/video/</Path>
+                  <Path Filename="data">/usr/local/s2/./</Path>
+                  <Path Filename="..">/usr/local/s2/./data/</Path>
+                  <Path Filename="DATA">/usr/local/s2/./</Path>
+                  <Path Filename="ANIMDAT">/usr/local/s2/./DATA/</Path>
+                  <Path Filename="..">/usr/local/s2/./DATA/ANIMDAT/</Path>
+                  <Path Filename="ANIMDAT">/usr/local/s2/./DATA/</Path>
+                  <Path Filename="..">/usr/local/s2/./</Path>
+                </Paths>
+              </Entry>
+            </History>
+            <ColumnsView>
+              <ColumnsSet>Default</ColumnsSet>
+            </ColumnsView>
+          </FileView>
+        </Tab>
+        <Tab>
+          <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>1</Direction>
+                <Function>11</Function>
+              </Sorting>
+            </Sortings>
+            <History>
+              <Entry Active="True">
+                <FileSource Type="FileSystem"/>
+                <Paths>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220530-BitMfA9l3bY-Sasha Sotnik-ОБРАТНЫЙ ОТСЧЁТ (фрагмент от 30.05.2022).mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220530-BitMfA9l3bY-Sasha Sotnik-ОБРАТНЫЙ ОТСЧЁТ (фрагмент от 30.05.2022).mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="..">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220531--dtT-Uhttwk-Ivan Yakovina-Путин и Медведев умоляют Запад снять санкции.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220531-IFxMxHFks3Y-Ivan Yakovina-Британская разведка и Гиркин назвали главную проблему армии Росс.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="">/var/spool/youtube/</Path>
+                  <Path Filename="..">/home/imperva/./</Path>
+                  <Path Filename="..">/home/imperva/</Path>
+                  <Path Filename="">/home/</Path>
+                  <Path Filename="20220601-8v9yi_w8WuA-Newsader-Уязвимость России - ВСУ освободили более 20 населенных пунктов в.mkv">/var/spool/youtube/./</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="..">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
+                  <Path Filename="ssabook-master">/var/spool/web/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220602-C0VRAmmy7VQ-Newsader-HIMARS уже у украинцев. Пара недель тренировок – и на фронт. Где.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="..">/var/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="..">/./</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/home/redozubov/./</Path>
+                  <Path Filename="..">/home/maskorot/./</Path>
+                  <Path Filename="..">/home/maskorot/</Path>
+                  <Path Filename="maskorot">/home/</Path>
+                  <Path Filename="..">/home/maskorot/</Path>
+                  <Path Filename="..">/home/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/./</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/./</Path>
+                  <Path Filename="Love Death and Robots s01e02 Three Robots.mkv">/var/spool/web/./Love, Death &amp; Robots/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2103,56 +2453,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/res/h3/maps/</Path>
-                  <Path Filename="Mp3">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Mp3/</Path>
-                  <Path Filename="Mp3">/res/h3/</Path>
-                  <Path Filename="1">/res/h3/Mp3/</Path>
-                  <Path Filename="..">/res/h3/Mp3/1/</Path>
-                  <Path Filename="..">/res/h3/Mp3/</Path>
-                  <Path Filename="random_maps">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/random_maps/</Path>
-                  <Path Filename="Uninstall_HotA">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Uninstall_HotA/</Path>
-                  <Path Filename="Warlords of the Wasteland">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Warlords of the Wasteland/</Path>
-                  <Path Filename="..">/res/h3/</Path>
-                  <Path Filename="h3hota">/res/</Path>
-                  <Path Filename="..">/res/h3hota/</Path>
-                  <Path Filename="h3">/res/</Path>
-                  <Path Filename="..">/res/h3/</Path>
-                  <Path Filename="h2">/res/</Path>
-                  <Path Filename="..">/res/h2/</Path>
-                  <Path Filename="h3">/res/</Path>
-                  <Path Filename="Data">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Data/</Path>
-                  <Path Filename="Games">/res/h3/</Path>
-                  <Path Filename="..">/res/h3/Games/</Path>
-                  <Path Filename="..">/res/h3/</Path>
-                  <Path Filename="h3hota">/res/</Path>
-                  <Path Filename="..">/res/h3hota/</Path>
-                  <Path Filename="hota">/res/</Path>
-                  <Path Filename="games">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/games/</Path>
-                  <Path Filename="HotA_Data">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/HotA_Data/</Path>
-                  <Path Filename="MP3">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/MP3/</Path>
-                  <Path Filename="..">/res/hota/</Path>
-                  <Path Filename="hota">/res/</Path>
-                  <Path Filename="Data">/res/hota/</Path>
-                  <Path Filename="..">/res/hota/Data/</Path>
-                  <Path Filename="games">/res/hota/</Path>
-                  <Path Filename="Prisoner of Doom">/res/hota/games/</Path>
-                  <Path Filename="..">/res/hota/games/Prisoner of Doom/</Path>
-                  <Path Filename="..">/res/hota/games/</Path>
-                  <Path Filename="h3hota.exe">/res/hota/</Path>
-                  <Path Filename="hota">/res/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="books">/home/</Path>
-                  <Path Filename="..">/home/books/</Path>
-                  <Path Filename="..">/home/</Path>
+                  <Path Filename="20220530-BitMfA9l3bY-Sasha Sotnik-ОБРАТНЫЙ ОТСЧЁТ (фрагмент от 30.05.2022).mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220530-BitMfA9l3bY-Sasha Sotnik-ОБРАТНЫЙ ОТСЧЁТ (фрагмент от 30.05.2022).mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="..">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220531--dtT-Uhttwk-Ivan Yakovina-Путин и Медведев умоляют Запад снять санкции.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220531-IFxMxHFks3Y-Ivan Yakovina-Британская разведка и Гиркин назвали главную проблему армии Росс.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="">/var/spool/youtube/</Path>
+                  <Path Filename="..">/home/imperva/./</Path>
+                  <Path Filename="..">/home/imperva/</Path>
+                  <Path Filename="">/home/</Path>
+                  <Path Filename="20220601-8v9yi_w8WuA-Newsader-Уязвимость России - ВСУ освободили более 20 населенных пунктов в.mkv">/var/spool/youtube/./</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="..">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
+                  <Path Filename="ssabook-master">/var/spool/web/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220602-C0VRAmmy7VQ-Newsader-HIMARS уже у украинцев. Пара недель тренировок – и на фронт. Где.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
                   <Path Filename="var">/</Path>
+                  <Path Filename="..">/var/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="..">/./</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/var/spool/youtube/./</Path>
+                  <Path Filename="">/home/redozubov/./</Path>
+                  <Path Filename="..">/home/maskorot/./</Path>
+                  <Path Filename="..">/home/maskorot/</Path>
+                  <Path Filename="maskorot">/home/</Path>
+                  <Path Filename="..">/home/maskorot/</Path>
+                  <Path Filename="..">/home/</Path>
+                  <Path Filename="">/</Path>
+                  <Path Filename="">/./</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/./</Path>
+                  <Path Filename="Love Death and Robots s01e18 The Secret War.mkv">/var/spool/web/./Love, Death &amp; Robots/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/./</Path>
+                  <Path Filename="Love Death and Robots S03 E09.mkv">/var/spool/web/./[RuDub] Love Death and Robots S03 [1080p]/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2504,8 +2854,28 @@
     </Position>
   </MainWindow>
   <MultiRenamePresets>
-    <LastPreset/>
-    <Presets/>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <Presets>
+      <Preset>
+        <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>1</FilenameStyle>
+        <ExtensionStyle>1</ExtensionStyle>
+        <Find/>
+        <Replace/>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File/>
+        </Log>
+      </Preset>
+    </Presets>
   </MultiRenamePresets>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>

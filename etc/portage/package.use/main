@@ -1,3 +1,5 @@
+app-arch/innoextract lzma
+
 # fheroes2
 media-libs/sdl2-mixer vorbis opus
 
@@ -275,7 +277,7 @@ dev-libs/libxml2 python
 
 #sway
 gui-libs/wlroots X
-gui-wm/sway -swaybg -swayidle -swaylock X
+gui-wm/sway -swayidle -swaylock X
 media-libs/mesa X egl gles2 libglvnd vaapi vulkan
 media-libs/libepoxy egl
 media-libs/libglvnd X
@@ -326,3 +328,4 @@ x11-base/xorg-server -minimal -udev -xorg
 #zathura
 app-text/zathura synctex -magic
 x11-libs/cairo X
+media-libs/leptonica zlib

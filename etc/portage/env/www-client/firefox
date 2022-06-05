@@ -1,24 +1,4 @@
-post_src_install() {
-	cd ${ED}/usr/$(get_libdir)/${PN}
-	rm -rf {browser/{defaults,chrome},distribution,firefox-bin,*.ini,defaults,fonts,removed-files,gmp-clearkey}
-	clog Supplementary files and dirs removed
-	
-	for f in browser/features/*; do
-		if [[ "$f" != *screenshot* ]]; then
-			rm "$f"
-		fi
-	done
-	clog Additional XPIs removed
-	cd -
-}
-
-post_pkg_preinst() {
-	rm -rf ${ED}/usr/$(get_libdir)/${PN}/libpulse*
-	clog libpulse symlinks removed
-}
-
 pre_src_prepare() {
-	echo AAA ED=${ED} MFH=${MOZILLA_FIVE_HOME}
 	local N=$(($NTHREADS/2))
 	sed -i \
 		-e "s/multiprocessing.cpu_count()/$N/" \
@@ -34,11 +14,10 @@ pre_src_prepare() {
 }
 
 post_src_prepare() {
-#		/function maybeSetAlternateFixedURI(info, fixupFlags) {/a return false;
-	sed -i '
-		/function checkAndFixPublicSuffix(info) {/a return info;
-		' docshell/base/URIFixup.jsm || die
-	clog URI Fixups disabled
+
+#		/function checkAndFixPublicSuffix(info) {/a return info;
+	sed -i 's/if (suffix == typo) {/if (false) {/' docshell/base/URIFixup.jsm || die
+	clog URI typo fixups disabled
 
 	sed -i -r 's/^(\s*\{\s*TEXT_XML,\s*")xml("\s*\},)/\0\n\1fb2\2/' \
 		$S/uriloader/exthandler/nsExternalHelperAppService.cpp || die
@@ -142,6 +121,11 @@ MOZ_JXL=1
 	add_sed dom.webgpu.enabled true
 	add_sed general.smoothScroll false
 	add_sed geo.enabled false
+
+# 20220604
+	add_sed gfx.webrender.all true
+	add_sed gfx.webrender.enabled true
+
 	add_sed image.avif.enabled true
 	add_sed image.jxl.enabled true
 	add_sed javascript.options.property_error_message_fix true
@@ -284,7 +268,10 @@ MOZ_JXL=1
 	add_sed identity.fxaccounts.toolbar.enabled false
 	add_sed intl.multilingual.downloadEnabled false
 	add_sed intl.multilingual.enabled false
-	add_sed keyword.enabled false
+
+# disables search in address bar
+#	add_sed keyword.enabled false
+
 	add_sed layout.spellcheckDefault 0
 #
 	add_sed media.throttle-factor 8
@@ -373,3 +360,23 @@ MOZ_JXL=1
 	clog springs removed
 
 }
+
+post_src_install() {
+	cd ${ED}/usr/$(get_libdir)/${PN}
+	rm -rf {browser/{defaults,chrome},distribution,firefox-bin,*.ini,defaults,fonts,removed-files,gmp-clearkey}
+	clog Supplementary files and dirs removed
+	
+	for f in browser/features/*; do
+		if [[ "$f" != *screenshot* ]]; then
+			rm "$f"
+		fi
+	done
+	clog Additional XPIs removed
+	cd -
+}
+
+post_pkg_preinst() {
+	rm -rf ${ED}/usr/$(get_libdir)/${PN}/libpulse*
+	clog libpulse symlinks removed
+}
+

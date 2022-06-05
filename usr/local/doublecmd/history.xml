@@ -2,57 +2,57 @@
 <doublecmd>
   <History>
     <Navigation>
+      <Item>/var/spool/web/./[RuDub] Love Death and Robots S03 [1080p]/</Item>
+      <Item>/var/spool/web/./</Item>
+      <Item>/var/spool/web/./Love, Death &amp; Robots/</Item>
+      <Item>/./</Item>
       <Item>/</Item>
+      <Item>/spool/</Item>
       <Item>/home/</Item>
-      <Item>/home/16tons/</Item>
-      <Item>/down/</Item>
+      <Item>/spool/israel/</Item>
+      <Item>/spool/israel/ulpan/</Item>
+      <Item>/spool/israel/ulpan/prolog/</Item>
+      <Item>/spool/israel/ulpan/pdf/</Item>
+      <Item>/spool/israel/ulpan/exam/</Item>
+      <Item>/spool/israel/tel-ran/</Item>
+      <Item>/spool/israel/tel-ran/telran/</Item>
+      <Item>/spool/israel/tel-ran/telran/game/</Item>
+      <Item>/spool/israel/tel-ran/telran/game/tasks/</Item>
+      <Item>/spool/israel/tel-ran/telran/game/model/</Item>
+      <Item>/spool/israel/tel-ran/telran/game/controller/</Item>
+      <Item>/spool/israel/stock/</Item>
+      <Item>/spool/israel/standby/</Item>
+      <Item>/spool/israel/photos/</Item>
+      <Item>/spool/israel/noam/</Item>
+      <Item>/spool/israel/hatikva/</Item>
+      <Item>/spool/israel/diploma/</Item>
+      <Item>/spool/israel/cv/</Item>
+      <Item>/spool/israel/cv/1/</Item>
+      <Item>/spool/israel/chernenko/</Item>
+      <Item>/spool/israel/bait-rishon/</Item>
+      <Item>/spool/israel/archive/</Item>
+      <Item>/spool/israel/archive/aliah/</Item>
       <Item>/var/</Item>
-      <Item>/var/cache/</Item>
-      <Item>/home/books/</Item>
-      <Item>/res/</Item>
-      <Item>/res/h3/</Item>
-      <Item>/res/hota/</Item>
-      <Item>/res/hota/games/</Item>
-      <Item>/res/hota/games/Prisoner of Doom/</Item>
-      <Item>/res/h3/Games/</Item>
-      <Item>/res/h3/Data/</Item>
-      <Item>/res/hota/Data/</Item>
-      <Item>/res/h3/Mp3/</Item>
-      <Item>/res/h3/Mp3/1/</Item>
-      <Item>/res/hota/MP3/</Item>
-      <Item>/res/h3/HotA_Data/</Item>
-      <Item>/res/hota/HotA_Data/</Item>
-      <Item>/res/h3hota/</Item>
-      <Item>/res/h2/</Item>
-      <Item>/res/h3/Warlords of the Wasteland/</Item>
-      <Item>/res/h3/Uninstall_HotA/</Item>
-      <Item>/res/h3/random_maps/</Item>
-      <Item>/res/h3/maps/</Item>
-      <Item>/res/h3/HotA_RMGTemplates/</Item>
-      <Item>/res/h3/HotA_logs/</Item>
-      <Item>/res/h3/_HD3_Data/</Item>
-      <Item>/res/h3/Games_old/</Item>
-      <Item>/cache/</Item>
-      <Item>/var/cache/youtube/</Item>
-      <Item>/down/amelie/</Item>
-      <Item>/down/local/</Item>
-      <Item>/down/silva/</Item>
-      <Item>/down/Tom and Jerry/</Item>
-      <Item>/fe/</Item>
-      <Item>/fe/mega/</Item>
-      <Item>/var/tmp/</Item>
-      <Item>/fe/mega/games/</Item>
-      <Item>/workshop/</Item>
-      <Item>/workshop/show/</Item>
-      <Item>/workshop/shipilov/</Item>
-      <Item>/workshop/projects/</Item>
-      <Item>/var/mnt/home/rust/</Item>
-      <Item>/var/mnt/home/rust/variables/</Item>
-      <Item>/var/mnt/home/rust/temp_conv/</Item>
-      <Item>/var/mnt/home/rust/temp_conv/src/</Item>
-      <Item>/var/mnt/home/rust/loops/</Item>
-      <Item>/var/mnt/home/rust/hello_world/</Item>
-      <Item>/var/mnt/home/rust/guessing_game/</Item>
+      <Item>/var/spool/</Item>
+      <Item>/var/spool/web/</Item>
+      <Item>/home/maskorot/</Item>
+      <Item>/home/maskorot/./</Item>
+      <Item>/home/redozubov/./</Item>
+      <Item>/var/spool/youtube/./</Item>
+      <Item>/home/redozubov/</Item>
+      <Item>/var/spool/youtube/</Item>
+      <Item>/home/solonin/</Item>
+      <Item>/home/mkv/</Item>
+      <Item>/home/spool/</Item>
+      <Item>/home/movies/</Item>
+      <Item>/home/movies/Суворов/</Item>
+      <Item>/home/movies/Суворов/Последний миф/</Item>
+      <Item>/home/movies/Суворов/2016/</Item>
+      <Item>/home/movies/Лазаревич. Червь 2/</Item>
+      <Item>/home/movies/Tex Avery/</Item>
+      <Item>/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Item>
+      <Item>/etc/</Item>
+      <Item>/home/imperva/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>
@@ -169,10 +169,19 @@
       <Item>я </Item>
     </ReplaceText>
     <ReplaceTextPath/>
-    <CreateDirectories/>
-    <RenameNameMask/>
-    <RenameExtMask/>
+    <CreateDirectories>
+      <Item>spool</Item>
+      <Item>museum</Item>
+    </CreateDirectories>
+    <RenameNameMask>
+      <Item>[N]</Item>
+    </RenameNameMask>
+    <RenameExtMask>
+      <Item>[E]</Item>
+    </RenameExtMask>
     <SearchDirectories>
+      <Item>/usr/local/s2/./</Item>
+      <Item>/usr/local/s2/</Item>
       <Item>/ready/fb2/</Item>
       <Item>/usr/src/picolisp/</Item>
       <Item>/etc/</Item>
@@ -221,8 +230,6 @@
       <Item>/var/db/</Item>
       <Item>/var/db/repos/</Item>
       <Item>/var/db/repos/mv/</Item>
-      <Item>/var/db/repos/lto-overlay/sys-config/ltoize/</Item>
-      <Item>/local/portage/</Item>
     </SearchDirectories>
     <SearchExcludeFiles/>
     <SearchExcludeDirectories/>

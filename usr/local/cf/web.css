@@ -1,3 +1,7 @@
+@-moz-document domain("wikipedia.org") {
+	.mw-footer, .catlinks, .mw-editsection, #p-logo, #contentSub { display: none !important }
+	.vector-menu-content-list, #right-navigation { opacity: .5 !important }
+}
 @-moz-document domain("google.com") {
 	footer, .logo, #botstuff, #footcnt, #search g-section-with-header, #tsf :is([role="button"], [type="submit"], svg), [aria-label="Go to Google Home"], [data-it="rq"] { display: none !important }
 	div[style="width:600px"] { width: unset !important }
@@ -77,14 +81,14 @@
 }
 
 @-moz-document domain("stackoverflow.com"), domain("serverfault.com"), domain("stackexchange.com"), domain("superuser.com") {
-	header, footer, .js-toast, .ps-sticky, .-flair, .post-taglist, .left-sidebar, .s-btn, .s-sidebarwidget, .js-feed-link, .js-consent-banner, .js-add-answer-component, .js-add-link, .js-post-menu, .bottom-notice, .-logo, #hot-network-questions, [class^="user-gravatar"] { display: none !important }
+	header, footer, .js-announcement-banner, .js-toast, .ps-sticky, .-flair, .post-taglist, .left-sidebar, .s-btn, .s-sidebarwidget, .js-feed-link, .js-consent-banner, .js-add-answer-component, .js-add-link, .js-post-menu, .bottom-notice, .-logo, #hot-network-questions, [class^="user-gravatar"] { display: none !important }
 	.s-notice, .post-signature, .comment-user, .post-tag, #sidebar, #answers-header, #question-header + .d-flex { opacity: .5 !important }
 	#content { width: unset !important; max-width: unset !important; border: unset !important }
 }
 
 @-moz-document domain("newsru.co.il") {
-	header, footer, nav, .theme-link, .news-caption, .index-news-image, .topic-list-icons, .right, #rand, 
-	div[style^="margin"], .info > span, article.text > table:last-child, [href*="NEWSruIsrael"], [href*="/rest/"], [href*="/sport"], .news_list_anons[href*="/rest/"] ~ div, .news_list_anons[href*="/sport/"] ~ div { display: none !important }
+	header, footer, nav, .adv, .theme-link, .news-caption, .index-news-image, .topic-list-icons, .right, #rand, 
+	div[style^="margin"], .info > span, article.text > table:last-child, [href*="NEWSruIsrael"], [href*="/rest/"], [href*="/sport"], .news_list_anons[href*="/rest/"] ~ div, .news_list_anons[href*="/sport/"] ~ div, .text + .text { display: none !important }
 	.main-menu, .topic-list-icons-time { opacity: .5 !important }
 	.news_list_anons { min-height: unset !important }
 	.images { float: right }
@@ -100,11 +104,12 @@
 }
 
 @-moz-document domain("rutracker.org") {
-	.bottom_info, .thHead, .avatar, .joined, .posts, .rank_img, .signature, #logo, #nav-panel, #page_footer, #idx-sidebar2 { display: none !important }
+	.bottom_info, .thHead, .t-post-buttons, .flag, .avatar, .joined, .posts, .rank_img, .signature, #logo, #nav-panel, #page_footer, #idx-sidebar2, #thx-block, .dl-link > img, #pagination ~ table { display: none !important }
+	.poster_btn, .post_head, .q-wrap { opacity: .5 }
 }
 
 @-moz-document domain("itc.ua") {
-	footer, aside, .intro, .menu-tags, .logo, .b-top, .itc-related-posts, #itc-comments, iframe[src*="itc.ua"] { display: none !important }
+	footer, aside, .last-news-new, .intro, .menu-tags, .logo, .b-top, .itc-related-posts, #itc-comments, iframe[src*="itc.ua"] { display: none !important }
 	#header { opacity: .5 !important }
 }
 

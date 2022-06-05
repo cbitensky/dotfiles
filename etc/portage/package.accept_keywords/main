@@ -1,3 +1,4 @@
+games-strategy/s25rttr
 dev-lang/zig
 media-sound/renoise-demo
 dev-lang/go
@@ -49,6 +50,7 @@ x11-misc/gbdfed
 #rust
 dev-lang/rust
 sys-devel/llvm
+sys-devel/llvmgold
 
 
 dev-util/github-cli

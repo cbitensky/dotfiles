@@ -100,3 +100,4 @@ export MANPAGER=manpager
 export EDITOR='emacsclient -nc'
 export GOPATH=/daglabs/go
 export HOME=/var/home/root
+export LESS='-R -M -F -#8'

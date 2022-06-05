@@ -94,6 +94,7 @@ STICKY                1;97;44
 .am        32
 .bdf       32
 .build     32
+.cf        32
 .conf      32
 .css       32
 .csv       32
@@ -123,6 +124,7 @@ STICKY                1;97;44
 .mk        32
 .mount     32
 .nfo       32
+.org       32
 .patch     32
 .path      32
 .pc        32
