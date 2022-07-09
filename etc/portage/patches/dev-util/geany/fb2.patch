@@ -1,5 +1,5 @@
 diff --git a/data/Makefile.am b/data/Makefile.am
-index b8501b8..22d87dd 100644
+index d50818e..139ee48 100644
 --- a/data/Makefile.am
 +++ b/data/Makefile.am
 @@ -30,6 +30,7 @@ filetypes_dist = \
@@ -11,18 +11,10 @@ index b8501b8..22d87dd 100644
  	filedefs/filetypes.forth \
  	filedefs/filetypes.fortran \
 diff --git a/data/Makefile.in b/data/Makefile.in
-index 938a4e3..1f6dc1d 100644
+index 7b95f87..d8d2ddc 100644
 --- a/data/Makefile.in
 +++ b/data/Makefile.in
-@@ -155,6 +155,7 @@ am__nobase_dist_pkgdata_DATA_DIST = colorschemes/alt.conf \
- 	filedefs/filetypes.CUDA.conf filedefs/filetypes.Cython.conf \
- 	filedefs/filetypes.d filedefs/filetypes.diff \
- 	filedefs/filetypes.docbook filedefs/filetypes.erlang \
-+	filedefs/filetypes.fb2 \
- 	filedefs/filetypes.f77 filedefs/filetypes.ferite \
- 	filedefs/filetypes.forth filedefs/filetypes.fortran \
- 	filedefs/filetypes.freebasic filedefs/filetypes.Genie.conf \
-@@ -438,6 +439,7 @@ filetypes_dist = \
+@@ -383,6 +383,7 @@ filetypes_dist = \
  	filedefs/filetypes.docbook \
  	filedefs/filetypes.erlang \
  	filedefs/filetypes.f77 \
@@ -76,7 +68,7 @@ index 0000000..591ed9c
 +FT_00_CM=fb2-lint "%f"
 +FT_00_WD=
 diff --git a/data/filetype_extensions.conf b/data/filetype_extensions.conf
-index 09d57dd..5619fa0 100644
+index 6a9cf91..707608e 100644
 --- a/data/filetype_extensions.conf
 +++ b/data/filetype_extensions.conf
 @@ -28,6 +28,7 @@ Diff=*.diff;*.patch;*.rej;
@@ -88,18 +80,18 @@ index 09d57dd..5619fa0 100644
  Forth=*.fs;*.fth;
  Fortran=*.f90;*.f95;*.f03;*.f08;*.F90;*.F95;*.F03;*.F08;
 diff --git a/src/filetypes.c b/src/filetypes.c
-index 3d2a1e3..b5f1cfc 100644
+index beecc39..d7c7daf 100644
 --- a/src/filetypes.c
 +++ b/src/filetypes.c
-@@ -187,6 +187,7 @@ static void init_builtin_filetypes(void)
- 	FT_INIT( GO,         GO,           "Go",               NULL,                      SOURCE_FILE, COMPILED );
+@@ -188,6 +188,7 @@ static void init_builtin_filetypes(void)
  	FT_INIT( ZEPHIR,     ZEPHIR,       "Zephir",           NULL,                      SOURCE_FILE, COMPILED );
  	FT_INIT( SMALLTALK,  NONE,         "Smalltalk",        NULL,                      SOURCE_FILE, SCRIPT   );
-+	FT_INIT( FB2,        NONE,         "FB2",              "FictionBook",             DOCUMENT,    MARKUP   );
+ 	FT_INIT( JULIA,      JULIA,        "Julia",            NULL,                      SOURCE_FILE, SCRIPT   );
++	FT_INIT( FB2,        NONE,         "FB2",              NULL,                      DOCUMENT,    MARKUP   );
  }
  
  
-@@ -651,7 +652,7 @@ static GeanyFiletype *find_shebang(const gchar *utf8_filename, const gchar *line
+@@ -657,7 +658,7 @@ static GeanyFiletype *find_shebang(const gchar *utf8_filename, const gchar *line
  		/* HTML and DocBook files might also start with <?xml, so detect them based on filename
  		 * extension and use the detected filetype, else assume XML */
  		if (! shebang_find_and_match_filetype(utf8_filename,
@@ -109,19 +101,19 @@ index 3d2a1e3..b5f1cfc 100644
  				GEANY_FILETYPES_PERL, GEANY_FILETYPES_PHP, GEANY_FILETYPES_PYTHON, -1))
  		{
 diff --git a/src/filetypes.h b/src/filetypes.h
-index d7cfbd9..3d829de 100644
+index 43fbeb5..fe9403d 100644
 --- a/src/filetypes.h
 +++ b/src/filetypes.h
-@@ -107,6 +107,7 @@ typedef enum
- 	GEANY_FILETYPES_ZEPHIR,
+@@ -108,6 +108,7 @@ typedef enum
  	GEANY_FILETYPES_BIBTEX,
  	GEANY_FILETYPES_SMALLTALK,
+ 	GEANY_FILETYPES_JULIA,
 +	GEANY_FILETYPES_FB2,
  	/* ^ append items here */
  	GEANY_MAX_BUILT_IN_FILETYPES	/* Don't use this, use filetypes_array->len instead */
  }
 diff --git a/src/highlighting.c b/src/highlighting.c
-index 938e543..e4b3269 100644
+index 65f49fb..52e19f8 100644
 --- a/src/highlighting.c
 +++ b/src/highlighting.c
 @@ -1017,6 +1017,7 @@ void highlighting_init_styles(guint filetype_idx, GKeyFile *config, GKeyFile *co
@@ -132,7 +124,7 @@ index 938e543..e4b3269 100644
  		init_styleset_case(FORTH);
  		init_styleset_case(FORTRAN);
  		init_styleset_case(GO);
-@@ -1106,6 +1107,7 @@ void highlighting_set_styles(ScintillaObject *sci, GeanyFiletype *ft)
+@@ -1107,6 +1108,7 @@ void highlighting_set_styles(ScintillaObject *sci, GeanyFiletype *ft)
  		styleset_case(DOCBOOK);
  		styleset_case(FERITE);
  		styleset_case(F77);
@@ -141,7 +133,7 @@ index 938e543..e4b3269 100644
  		styleset_case(FORTRAN);
  		styleset_case(GO);
 diff --git a/src/highlightingmappings.h b/src/highlightingmappings.h
-index d62b7e2..9a00da3 100644
+index 939808f..8ad654d 100644
 --- a/src/highlightingmappings.h
 +++ b/src/highlightingmappings.h
 @@ -606,6 +606,13 @@ static const HLKeyword highlighting_keywords_F77[] =

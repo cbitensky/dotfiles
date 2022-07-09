@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's|std::string dataPath = System::GetDataDirectory( "fheroes2" );|std::string dataPath = "/usr/local/h2";|' src/fheroes2/system/settings.cpp || die
+	clog dataPath → /usr/local/h2
+}

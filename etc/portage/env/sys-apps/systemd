@@ -1,0 +1,4 @@
+post_src_install() {
+	dosym "/lib/systemd/systemd" "/sbin/init" || die
+	clog /sbin/init → /lib/systemd/systemd
+}

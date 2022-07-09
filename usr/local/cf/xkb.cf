@@ -396,23 +396,23 @@ xkb_compatibility "k" {
     interpret Any+AnyOf(all) {
         action= SetMods(modifiers=modMapMods,clearLocks);
     };
-    indicator "Caps Lock" {
-        !allowExplicit;
-        whichModState= locked;
-        modifiers= Lock;
-    };
-    indicator "Num Lock" {
-        !allowExplicit;
-        whichModState= locked;
-    };
-    indicator "Scroll Lock" {
-        whichModState= locked;
-        modifiers= ScrollLock;
-    };
-    indicator "Group 2" {
-        !allowExplicit;
-        groups= 0xfe;
-    };
+//    indicator "Caps Lock" {
+//        !allowExplicit;
+//        whichModState= locked;
+//        modifiers= Lock;
+//    };
+//    indicator "Num Lock" {
+//        !allowExplicit;
+//        whichModState= locked;
+//    };
+//    indicator "Scroll Lock" {
+//        whichModState= locked;
+//        modifiers= ScrollLock;
+//    };
+//    indicator "Group 2" {
+//        !allowExplicit;
+//        groups= 0xfe;
+//    };
 };
 
 xkb_symbols "k" {

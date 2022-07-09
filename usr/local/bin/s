@@ -1,2 +1,2 @@
 #!/usr/bin/picolisp /usr/local/lib/shell.l
-(fexec "grep" "-iR" (argv) ".")
+(fexec "grep" "-iRs" (argv) ".")

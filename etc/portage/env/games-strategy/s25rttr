@@ -1,0 +1,10 @@
+post_src_prepare() {
+	sed -i '
+		s|${RTTR_DATADIR}/S2|/usr/local/s2|
+		/RTTR_S2_PLACEHOLDER_PATH/d
+	' CMakeLists.txt || die
+	clog GAMEDIR → /usr/local/s2
+	sed -i 's/throw std::runtime_error("Could not get username");/name = "root";/' external/libutil/libs/common/src/System_Other.cpp || die
+	sed -i 's/SDL_Init(SDL_INIT_EVERYTHING)/SDL_Init(SDL_INIT_EVERYTHING ^ (SDL_INIT_HAPTIC | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER))/' external/s25edit/CGame.cpp || die
+	clog default username = root
+}

@@ -1,4 +1,10 @@
+games-fps/xonotic alsa ode
+dev-games/ode double-precision
+media-video/pipewire pipewire-alsa
+
+# innoextract
 app-arch/innoextract lzma
+dev-libs/boost bzip2 zlib
 
 # fheroes2
 media-libs/sdl2-mixer vorbis opus
@@ -15,7 +21,7 @@ media-libs/libjxl -skcms -sjpeg -openexr gdk-pixbuf gimp tools
 app-arch/libarchive bzip2
 
 gui-apps/foot -themes
-app-emulation/wine* X -gecko -mono -realtime -run-exes -udev -udisks -unwind -xcomposite -vulkan -vulkan
+app-emulation/wine* -gecko -mono -realtime -run-exes -udev -udisks -unwind -xcomposite
 
 sys-libs/zlib minizip
 media-sound/ocp X alsa flac
@@ -309,7 +315,7 @@ dev-lua/luv luajit
 dev-lua/mpack luajit
 
 #webkit-gtk
-net-libs/webkit-gtk egl gles2-only gstreamer -opengl spell webgl
+net-libs/webkit-gtk avif egl gles2-only gstreamer spell webgl -jumbo-build
 media-libs/harfbuzz icu
 #glib graphite 
 net-libs/glib-networking libproxy # for webkit-gtk & surf

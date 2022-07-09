@@ -1,6 +1,7 @@
 (de flat @ (fish '((x) (and (atom x) (<> NIL x))) (rest)))
 (de fexec @ (apply exec (flat (rest))))
 (de fcall @ (apply call (flat (rest))))
+(de fcallsure @ (or (fcall (rest)) (bye 1)))
 (de envor (name defval) (let (val (sys name)) (if val val defval)))
 (de envorset (name defval) (unless (sys name) (sys name defval)))
 (de remext (filename) (pack (flip (cdr (member "." (flip (chop filename)))))))

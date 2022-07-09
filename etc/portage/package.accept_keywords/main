@@ -1,3 +1,5 @@
+games-fps/xonotic
+app-emulation/wine-wayland **
 games-strategy/s25rttr
 dev-lang/zig
 media-sound/renoise-demo

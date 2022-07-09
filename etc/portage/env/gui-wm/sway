@@ -1,0 +1,6 @@
+post_src_prepare() {
+	sed -i -r '/I3SOCK/d' sway/ipc-server.c || die
+	clog "I3SOCK removed"
+	sed -i 's/(!drop_permissions())/(0)/' sway/main.c || die
+	clog "drop_permissions() disabled"
+}

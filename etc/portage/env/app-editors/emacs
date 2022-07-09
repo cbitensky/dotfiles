@@ -1,0 +1,9 @@
+post_src_prepare() {
+	sed -i 's/(inhibit-startup-screen inhibit-startup-screen)//' lisp/startup.el || die
+	clog disabling inhibit-startup-screen disabled
+	sed -i '/^Type=/a EnvironmentFile=/etc/xdg.env' etc/emacs.service || die
+}
+
+post_src_install() {
+	dosym "../user/${EMACS_SUFFIX}.service" "/usr/lib/systemd/system/${EMACS_SUFFIX}.service"
+}

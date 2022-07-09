@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's/if (!funding)/if (true)/' deps/npm/lib/utils/reify-output.js || die
+	clog Funding message removed
+}

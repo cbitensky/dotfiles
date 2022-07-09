@@ -1,0 +1,9 @@
+post_src_prepare() {
+	echo !!! $PWD
+	sed -i -r '
+		s/_Nex_ExtResponseSystem_UpdateTo != ""/0/
+		s/Update to/AAAAAAAAAAAA/
+		/updateCheck\(\);/d
+	' source/qcsrc/menu/xonotic/util.qc || die
+	clog "Annoying window removed"
+}

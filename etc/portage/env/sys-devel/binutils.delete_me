@@ -1,0 +1,4 @@
+post_src_prepare() {
+	sed -i 's/if (elf_stack_flags (abfd))/if (0)/' bfd/elf.c || die
+	clog "PT_GNU_STACK disabled"
+}

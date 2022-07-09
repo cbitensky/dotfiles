@@ -1,2 +1,0 @@
-#!/usr/bin/picolisp /usr/local/lib/shell.l
-(fexec "ls" "-FA" "--color=auto" "--group-directories-first" "-l" "--time-style=+%F %T" (argv))

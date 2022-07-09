@@ -1,4 +1,12 @@
 post_src_prepare() {
 	sed -i 's#{"text/xml", "xml"},#{"text/xml", "xml,fb2"},#' net/base/mime_util.cc || die
 	clog FB2 added
+
+	sed -i 's/base::CommandLine::ForCurrentProcess()->HasSwitch(flag)/0/' chrome/browser/ui/startup/bad_flags_prompt.cc || die
+	clog Bad flags warning removed
+}
+
+post_src_install() {
+	sed -i '/CHROMIUM_FLAGS/c CHROMIUM_FLAGS="--no-sandbox"' $D/etc/chromium/default || die
+	clog Added flag: --no-sandbox
 }

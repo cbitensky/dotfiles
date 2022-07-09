@@ -1,13 +1,13 @@
 RESET                 0
 DIR                   1;97
-LINK                  1;38;5;244         #target
+LINK                  90;38;5;247         #target
 EXEC                  1;93
 MULTIHARDLINK         00
 FIFO                  45;48;5;53;45
-SOCK                  1;38;5;253;45;48;5;53
+SOCK                  38;5;253;45;48;5;53
 DOOR                  91;45
-BLK                   1;100;38;5;253
-CHR                   100;37
+BLK                   100;38;5;254;1
+CHR                   100;38;5;254
 ORPHAN                1;90;41;38;5;244;48;5;88
 MISSING               0
 SETUID                1;93;43
@@ -84,13 +84,18 @@ STICKY                1;97;44
 *Rakefile  32
 
 *AUTHORS   32
+*CHANGES   32
 *COPYING   32
+*INSTALL   32
 *LICENSE   32
+*MANIFEST  32
 *NEWS      32
+*NOTES     32
 *README    32
 *THANKS    32
 *TODO      32
 
+.ac        32
 .am        32
 .bdf       32
 .build     32
@@ -159,7 +164,7 @@ STICKY                1;97;44
 .swp       31;38;5;196
 .orig      31;38;5;196
 *~         31;38;5;196
-*\#      31;38;5;196
+*\#        31;38;5;196
 
 .aria2     31;38;5;131
 .aux       31;38;5;131
@@ -167,6 +172,7 @@ STICKY                1;97;44
 .lock      31;38;5;131
 .log       31;38;5;131
 .out       31;38;5;131
+.pid       31;38;5;131
 .uuid      31;38;5;131
 
 .avif      95
@@ -236,10 +242,3 @@ STICKY                1;97;44
 .psfu      96
 .torrent   96
 .ttf       96
-
-TERM linux
-FIFO                  45
-SOCK                  1;45
-LINK                  1;90
-ORPHAN                1;90;41
-

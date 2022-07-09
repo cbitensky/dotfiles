@@ -52,12 +52,12 @@
 }
 
 @-moz-document domain("opennet.ru") {
-	input, textarea, #as1, #edit_link, #lenta_nav, #lenta_nav2, body > form, [src^="/avatar/"], aside ~ *, #as1 ~ *, .ttxt2 ~ .ttxt2 ~ *, form > center { display: none !important }
+	input, textarea, #as1, #edit_link, #lenta_nav, #lenta_nav2, body > form[method="get"], [src^="/avatar/"], aside ~ *, #as1 ~ *, .ttxt2 ~ .ttxt2 ~ *, form > center { display: none !important }
 	tr[bgcolor="#D9DAC6"] ~ *, h2 + span { opacity: .5 }
 }
 
 @-moz-document domain("safereactor.cc"), domain("joyreactor.cc") {
-	.mainheader, .similar_post, .additional_info, .logo-top, .h-useravatar, .blog_pic_result, .blog_results, .topbar_wr, .uhead_share, .avatar, .comment_link, .unregistered, #header, #navcontainer, #sidebar, #tagList, #footer, .comment > h3, div[style*="padding"], div[style*="margin-bottom"], a.flex-shrink-0 { display: none !important }
+	.sidebar, .mainheader, .similar_post, .additional_info, .logo-top, .h-useravatar, .blog_pic_result, .blog_results, .topbar_wr, .uhead_share, .avatar, .comment_link, .unregistered, #header, #navcontainer, #bg, #sidebar, #tagList, #footer, .comment > h3, div[style*="padding"], div[style*="margin-bottom"], a.flex-shrink-0, [aria-label="homepage"] { display: none !important }
 	.post_content_expand, .comments_bottom, .uhead, .taglist, .ufoot_first, .pagination, #searchBar { opacity: .5 !important }
 	#page, #content, .article, .uhead { margin-bottom: 0 !important }
 	#container { background: none !important }
@@ -73,15 +73,15 @@
 }
 
 @-moz-document domain("linkedin.com") {
-	.job-flavors__flavor, .js-similar-jobs-list, .post-apply-recommended-for-you-card, .job-flavors__flavor--school-recruit, .ivm-image-view-model, .flavor-profile-image, .jobs-company, .premium-accent-bar, .jobs-easy-apply-footer__info, .jpac-next-step-section, .live-video-hero-image, .ghost-company, .post-apply-recommend--two-pane, .org-life-feed-gallery__container, .jobs-offsite-apply-confirmation-banner, .jobs-unified-top-card__sticky-header, .search-explicit-feedback-in-content-detail, .global-footer, .job-card-container__action, .jobs-save-button, .app-boot-bg-skeleton, .artdeco-entity-lockup__image, .global-nav__branding, .global-footer-compact, .feed-follows-module, .scaffold-layout__aside, #SALARY, #msg-overlay, button.follow, [class*="feedback"], [class*="feed-shared-update"], [href*="/premium/"], [class*="discover"], [class*="-promo-"], [class*="-suggested-"], [class*="create-alert"], [class^="EntityPhoto"], .jpac-modal-header::before, .jpac-modal-header + div { display: none !important }
+	.job-flavors__flavor, .js-similar-jobs-list, .post-apply-recommended-for-you-card, .job-flavors__flavor--school-recruit, .ivm-image-view-model, .flavor-profile-image, .jobs-company, .premium-accent-bar, .jobs-easy-apply-footer__info, .jpac-next-step-section, .live-video-hero-image, .ghost-company, .post-apply-recommend--two-pane, .org-life-feed-gallery__container, .jobs-offsite-apply-confirmation-banner, .jobs-unified-top-card__sticky-header, .search-explicit-feedback-in-content-detail, .global-footer, .job-card-container__action, .jobs-save-button, .app-boot-bg-skeleton, .artdeco-entity-lockup__image, .global-nav__branding, .global-footer-compact, .feed-follows-module, .scaffold-layout__aside, #SALARY, #msg-overlay, [class*="feedback"], [class*="feed-shared-update"], [href*="/premium/"], [class*="discover"], [class*="-promo-"], [class*="-suggested-"], [class*="create-alert"], [class^="EntityPhoto"], .jpac-modal-header::before, .jpac-modal-header + div { display: none !important }
 	.jobs-poster { opacity: .5 }
 	.feed-identity-module__member-bg-image { visibility: hidden !important }
 	*, *::after { transition-duration: 1ms !important }
 	.job-card-container__footer-item.t-black--light { color: red !important; font-weight: bold !important }
 }
 
-@-moz-document domain("stackoverflow.com"), domain("serverfault.com"), domain("stackexchange.com"), domain("superuser.com") {
-	header, footer, .js-announcement-banner, .js-toast, .ps-sticky, .-flair, .post-taglist, .left-sidebar, .s-btn, .s-sidebarwidget, .js-feed-link, .js-consent-banner, .js-add-answer-component, .js-add-link, .js-post-menu, .bottom-notice, .-logo, #hot-network-questions, [class^="user-gravatar"] { display: none !important }
+@-moz-document domain("stackoverflow.com"), domain("serverfault.com"), domain("stackexchange.com"), domain("superuser.com"), domain("askubuntu.com") {
+	header, footer, .js-announcement-banner, .js-toast, .ps-sticky, .-flair, .post-taglist, .left-sidebar, .s-btn, .s-sidebarwidget, .js-feed-link, .js-consent-banner, .js-add-answer-component, .js-add-link, .js-post-menu, .bottom-notice, .-logo, #hot-network-questions, [class^="user-gravatar"], [class*="popover"] { display: none !important }
 	.s-notice, .post-signature, .comment-user, .post-tag, #sidebar, #answers-header, #question-header + .d-flex { opacity: .5 !important }
 	#content { width: unset !important; max-width: unset !important; border: unset !important }
 }

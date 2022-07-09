@@ -2,15 +2,12 @@ post_src_prepare() {
 	dir=$S/share.Linux
 	sed -i '
 		s@:/root:@:/var/home/root:@g
-		s@/bin/bash@/bin/bb@g
 		' $dir/passwd
-	clog root shell changed to bb
+	clog /root → /var/home/root
 	sed -i '
 		/^\(halt\|operator\|shutdown\|uucp\|adm\|news\|^bin\|lp\):/d
 		' $dir/{passwd,shadow}
 	clog passwd users removed: halt operator shutdown uucp adm news bin lp
 	sed -i 's/^root:\*:/root::/' $dir/shadow
 	clog root password reseted
-#	rm $dir/fstab
-#	clog fstab removed
 }

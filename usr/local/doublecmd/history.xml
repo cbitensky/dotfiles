@@ -2,57 +2,57 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item>/var/spool/web/./[RuDub] Love Death and Robots S03 [1080p]/</Item>
-      <Item>/var/spool/web/./</Item>
-      <Item>/var/spool/web/./Love, Death &amp; Robots/</Item>
-      <Item>/./</Item>
-      <Item>/</Item>
-      <Item>/spool/</Item>
+      <Item>/home/daglabs/</Item>
       <Item>/home/</Item>
-      <Item>/spool/israel/</Item>
-      <Item>/spool/israel/ulpan/</Item>
-      <Item>/spool/israel/ulpan/prolog/</Item>
-      <Item>/spool/israel/ulpan/pdf/</Item>
-      <Item>/spool/israel/ulpan/exam/</Item>
-      <Item>/spool/israel/tel-ran/</Item>
-      <Item>/spool/israel/tel-ran/telran/</Item>
-      <Item>/spool/israel/tel-ran/telran/game/</Item>
-      <Item>/spool/israel/tel-ran/telran/game/tasks/</Item>
-      <Item>/spool/israel/tel-ran/telran/game/model/</Item>
-      <Item>/spool/israel/tel-ran/telran/game/controller/</Item>
-      <Item>/spool/israel/stock/</Item>
-      <Item>/spool/israel/standby/</Item>
-      <Item>/spool/israel/photos/</Item>
-      <Item>/spool/israel/noam/</Item>
-      <Item>/spool/israel/hatikva/</Item>
-      <Item>/spool/israel/diploma/</Item>
-      <Item>/spool/israel/cv/</Item>
-      <Item>/spool/israel/cv/1/</Item>
-      <Item>/spool/israel/chernenko/</Item>
-      <Item>/spool/israel/bait-rishon/</Item>
-      <Item>/spool/israel/archive/</Item>
-      <Item>/spool/israel/archive/aliah/</Item>
-      <Item>/var/</Item>
-      <Item>/var/spool/</Item>
+      <Item>/</Item>
       <Item>/var/spool/web/</Item>
-      <Item>/home/maskorot/</Item>
-      <Item>/home/maskorot/./</Item>
-      <Item>/home/redozubov/./</Item>
-      <Item>/var/spool/youtube/./</Item>
-      <Item>/home/redozubov/</Item>
-      <Item>/var/spool/youtube/</Item>
-      <Item>/home/solonin/</Item>
-      <Item>/home/mkv/</Item>
-      <Item>/home/spool/</Item>
-      <Item>/home/movies/</Item>
-      <Item>/home/movies/Суворов/</Item>
-      <Item>/home/movies/Суворов/Последний миф/</Item>
-      <Item>/home/movies/Суворов/2016/</Item>
-      <Item>/home/movies/Лазаревич. Червь 2/</Item>
-      <Item>/home/movies/Tex Avery/</Item>
+      <Item>/home/amazon/</Item>
+      <Item>/home/shipilov/</Item>
       <Item>/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Item>
-      <Item>/etc/</Item>
-      <Item>/home/imperva/</Item>
+      <Item>/var/spool/web/Love, Death &amp; Robots/</Item>
+      <Item>/home/sessions/</Item>
+      <Item>/var/spool/</Item>
+      <Item>/var/</Item>
+      <Item>/bin/</Item>
+      <Item>/var/spool/youtube/</Item>
+      <Item>/var/spool/youtube/./</Item>
+      <Item>/home/amazon/./</Item>
+      <Item>/home/amazon/./redis/</Item>
+      <Item>/daglabs/go/src/github.com/kaspanet/</Item>
+      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/</Item>
+      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/domain/</Item>
+      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/</Item>
+      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/processes/</Item>
+      <Item>/daglabs/go/src/github.com/</Item>
+      <Item>/daglabs/go/src/</Item>
+      <Item>/daglabs/go/</Item>
+      <Item>/daglabs/</Item>
+      <Item>/var/spool/web/./Love, Death &amp; Robots/</Item>
+      <Item>/var/spool/web/./</Item>
+      <Item>/var/spool/web/Megazone 23/</Item>
+      <Item>/home/mkv/</Item>
+      <Item>/home/solonin/</Item>
+      <Item>/spool/photos sorted/Константин Документы/</Item>
+      <Item>/spool/photos sorted/</Item>
+      <Item>/spool/</Item>
+      <Item>/./</Item>
+      <Item>/home/redozubov/</Item>
+      <Item>/var/spool/web/ENMARCHENOIRE - pornhub.com/</Item>
+      <Item>/var/spool/grim/./</Item>
+      <Item>/tmp/Downloads/./</Item>
+      <Item>/home/redozubov/2009-brain-for-rent/</Item>
+      <Item>/home/images/</Item>
+      <Item>/home/spool/</Item>
+      <Item>/spool/israel/</Item>
+      <Item>/spool/israel/photos/</Item>
+      <Item>/usr/local/bin/</Item>
+      <Item>/usr/local/</Item>
+      <Item>/usr/local/bin/./</Item>
+      <Item>/spool/archive/</Item>
+      <Item>/spool/archive/portage/</Item>
+      <Item>/spool/archive/portage/patches/</Item>
+      <Item>/spool/archive/portage/env/</Item>
+      <Item>/spool/archive/portage/env/www-client/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>
