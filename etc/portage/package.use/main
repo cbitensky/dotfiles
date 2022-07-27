@@ -1,3 +1,5 @@
+dev-db/redis ssl
+
 games-fps/xonotic alsa ode
 dev-games/ode double-precision
 media-video/pipewire pipewire-alsa
@@ -161,7 +163,7 @@ dev-lang/python xml ssl
 
 #gimp
 media-libs/gegl cairo
-media-gfx/gimp jpeg png webp
+media-gfx/gimp jpeg jpegxl png webp
 media-gfx/exiv2 -xmp -png
 
 #grep
@@ -267,7 +269,8 @@ dev-qt/qtwidgets gtk dbus
 dev-qt/qtdeclarative -widgets
 dev-qt/qtmultimedia -widgets
 
-dev-lang/rust clippy doc miri nightly parallel rls rust-src rustfmt
+dev-lang/rust clippy doc nightly rls rust-src rustfmt
+sys-devel/gdb python source-highlight
 
 sys-devel/clang xml # requires for lldb
 
@@ -283,7 +286,7 @@ dev-libs/libxml2 python
 
 #sway
 gui-libs/wlroots X
-gui-wm/sway -swayidle -swaylock X
+gui-wm/sway -swayidle -swaylock grimshot X
 media-libs/mesa X egl gles2 libglvnd vaapi vulkan
 media-libs/libepoxy egl
 media-libs/libglvnd X
@@ -315,7 +318,7 @@ dev-lua/luv luajit
 dev-lua/mpack luajit
 
 #webkit-gtk
-net-libs/webkit-gtk avif egl gles2-only gstreamer spell webgl -jumbo-build
+net-libs/webkit-gtk avif egl gles2-only gstreamer spell webgl
 media-libs/harfbuzz icu
 #glib graphite 
 net-libs/glib-networking libproxy # for webkit-gtk & surf

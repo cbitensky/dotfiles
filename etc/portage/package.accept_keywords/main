@@ -1,3 +1,10 @@
+dev-db/redis
+
+dev-lang/ruby
+dev-ruby/*
+virtual/ruby*
+app-eselect/eselect-ruby
+
 games-fps/xonotic
 app-emulation/wine-wayland **
 games-strategy/s25rttr
@@ -24,6 +31,8 @@ gui-wm/sway **
 gui-libs/wlroots **
 app-text/scdoc **
 dev-libs/wayland-protocols
+dev-libs/wayland
+dev-util/wayland-scanner
 dev-util/meson
 
 games-strategy/fheroes2 **
@@ -51,8 +60,8 @@ x11-misc/gbdfed
 
 #rust
 dev-lang/rust
-sys-devel/llvm
-sys-devel/llvmgold
+#sys-devel/llvm
+#sys-devel/llvmgold
 
 
 dev-util/github-cli

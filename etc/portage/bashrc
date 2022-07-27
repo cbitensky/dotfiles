@@ -1,5 +1,6 @@
 #!/bin/bash
-clog() { elog c: $@; }
+clog() { elog c: "$@"; }
+cwrn() { ewarn c: "$@"; }
 
 if [ "$EBUILD_PHASE" == "compile" -a "$EAPI" == "5" ]; then
 	if ! type epatch_user > /dev/null 2>&1; then

@@ -1,3 +1,8 @@
+@-moz-document domain("e-services.clalit.co.il") {
+	.LeftBarControls, .separator, .loader, .top_menu_upper_gradient, .top_menu_logo_container, .clalit_logo_link, .footer_wrapper, .service-phone, .loginChannelWrapper, .LoginBottomWrapper, #cover-flow, #cover-index, #loginMiddleContainer, #logo-case, [id$="anner"] { display: none !important }
+	.main_menu { margin-top: 5em !important }
+}
+
 @-moz-document domain("wikipedia.org") {
 	.mw-footer, .catlinks, .mw-editsection, #p-logo, #contentSub { display: none !important }
 	.vector-menu-content-list, #right-navigation { opacity: .5 !important }
@@ -109,7 +114,7 @@
 }
 
 @-moz-document domain("itc.ua") {
-	footer, aside, .last-news-new, .intro, .menu-tags, .logo, .b-top, .itc-related-posts, #itc-comments, iframe[src*="itc.ua"] { display: none !important }
+	footer, aside, .course-widget, .last-news-new, .intro, .menu-tags, .logo, .b-top, .itc-related-posts, #itc-comments, iframe[src*="itc.ua"] { display: none !important }
 	#header { opacity: .5 !important }
 }
 
