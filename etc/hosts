@@ -1,0 +1,10 @@
+127.0.0.1	constantine.local constantine localhost
+::1	constantine.local constantine localhost
+
+0.0.0.0 coub.com
+0.0.0.0 vp.rambler.ru rcmjs.rambler.ru
+0.0.0.0 music.yandex.ru http-check-headers.yandex.ru
+0.0.0.0 vk.com
+0.0.0.0 rmb.ops.beeline.ru
+0.0.0.0 livejournal.naydex.net
+0.0.0.0 www.geeksforgeeks.org

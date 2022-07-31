@@ -1,0 +1,3 @@
+dev-db/mongodb -tools
+dev-libs/boost nls
+dev-libs/libpcre cxx

@@ -1,0 +1,1 @@
+net-libs/nodejs -lto # temporary switch off for gcc-11

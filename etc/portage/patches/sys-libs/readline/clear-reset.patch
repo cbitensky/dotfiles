@@ -1,0 +1,12 @@
+diff --git a/display.c b/display.c
+index f5d3294..1217c3c 100644
+--- a/display.c
++++ b/display.c
+@@ -3188,6 +3188,7 @@ _rl_clear_screen (int clrscr)
+ #else
+   if (_rl_term_clrpag)
+     {
++      tputs ("\033[0m", 1, _rl_output_character_function);
+       tputs (_rl_term_clrpag, 1, _rl_output_character_function);
+       if (clrscr && _rl_term_clrscroll)
+ 	tputs (_rl_term_clrscroll, 1, _rl_output_character_function);

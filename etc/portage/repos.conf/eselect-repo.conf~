@@ -1,0 +1,28 @@
+# created by eselect-repo
+
+[slyfox]
+location = /var/db/repos/slyfox
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/slyfox.git
+
+
+[lto-overlay]
+location = /var/db/repos/lto-overlay
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/lto-overlay.git
+
+
+[mv]
+location = /var/db/repos/mv
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/mv.git
+
+[lanodanOverlay]
+location = /var/db/repos/lanodanOverlay
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/lanodanOverlay.git
+
+[guru]
+location = /var/db/repos/guru
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/guru.git

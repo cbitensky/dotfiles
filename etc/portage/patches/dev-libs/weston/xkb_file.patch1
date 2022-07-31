@@ -1,0 +1,53 @@
+diff --git a/compositor/main.c b/compositor/main.c
+index f8a60e9..fccc741 100644
+--- a/compositor/main.c
++++ b/compositor/main.c
+@@ -888,6 +888,8 @@ weston_compositor_init_config(struct weston_compositor *ec,
+ 	int vt_switching;
+ 
+ 	s = weston_config_get_section(config, "keyboard", NULL, NULL);
++	weston_config_section_get_string(s, "keymap_file",
++					 (char **) &ec->xkb_file, NULL);
+ 	weston_config_section_get_string(s, "keymap_rules",
+ 					 (char **) &xkb_names.rules, NULL);
+ 	weston_config_section_get_string(s, "keymap_model",
+diff --git a/libweston/compositor.h b/libweston/compositor.h
+index 769203a..9359b00 100644
+--- a/libweston/compositor.h
++++ b/libweston/compositor.h
+@@ -921,6 +921,7 @@ struct weston_compositor {
+ 	uint32_t output_id_pool;
+ 
+ 	struct xkb_rule_names xkb_names;
++	char *xkb_file;
+ 	struct xkb_context *xkb_context;
+ 	struct weston_xkb_info *xkb_info;
+ 
+diff --git a/libweston/input.c b/libweston/input.c
+index 81a94a9..0e93a54 100644
+--- a/libweston/input.c
++++ b/libweston/input.c
+@@ -2778,13 +2778,20 @@ static int
+ weston_compositor_build_global_keymap(struct weston_compositor *ec)
+ {
+ 	struct xkb_keymap *keymap;
++	FILE *file;
+ 
+ 	if (ec->xkb_info != NULL)
+ 		return 0;
+ 
+-	keymap = xkb_keymap_new_from_names(ec->xkb_context,
+-					   &ec->xkb_names,
+-					   0);
++	if (ec->xkb_file != NULL) {
++		file = fopen(ec->xkb_file, "r");
++		keymap = xkb_keymap_new_from_file(ec->xkb_context, file, XKB_KEYMAP_FORMAT_TEXT_V1, 0);
++		fclose(file);
++	} else {
++		keymap = xkb_keymap_new_from_names(ec->xkb_context,
++							&ec->xkb_names,
++							0);
++	}
+ 	if (keymap == NULL) {
+ 		weston_log("failed to compile global XKB keymap\n");
+ 		weston_log("  tried rules %s, model %s, layout %s, variant %s, "

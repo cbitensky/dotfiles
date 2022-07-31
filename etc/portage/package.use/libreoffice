@@ -1,0 +1,5 @@
+app-office/libreoffice -mariadb
+app-crypt/gpgme cxx
+dev-libs/xmlsec nss
+sys-apps/dbus X
+dev-libs/boost zlib

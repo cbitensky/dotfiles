@@ -1,0 +1,17 @@
+app-text/zathura
+dev-libs/girara
+
+media-plugins/imlib2-jxl
+media-libs/libjxl
+media-libs/lcms
+x11-misc/shared-mime-info
+
+gui-apps/foot
+media-libs/fcft
+dev-libs/tllist
+#sys-libs/ncurses
+
+app-emulation/wine*
+
+dev-libs/amdgpu-pro-opencl
+

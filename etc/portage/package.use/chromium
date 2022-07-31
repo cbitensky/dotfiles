@@ -1,0 +1,7 @@
+# chromium requires libpng without apng which is used by firefox
+www-client/chromium -js-type-check -hangouts -system-png -suid -official cups libcxx
+#media-libs/libpng -apng
+dev-libs/libxml2 icu
+sys-libs/zlib minizip
+x11-libs/libva X
+net-libs/nodejs inspector

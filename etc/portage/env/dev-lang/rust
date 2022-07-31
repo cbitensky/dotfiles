@@ -1,0 +1,46 @@
+post_src_prepare() {
+	sed -i -r '
+		/b"\\$/,/^"$/s/    /	/g
+	' src/tools/cargo/src/cargo/ops/cargo_new.rs || die
+	clog Hardtabs in helloworld main.rs
+}
+
+symlinks() {
+	f=".config/rustfmt/rustfmt.toml .cargo/config.toml"
+	s="/var/home/root"
+	d="/usr/local/rust"
+	for l in $f; do
+		sf="$s/$l"
+		df=`basename "$l"`
+		df="$d/$df"
+		"$1"
+	done
+}
+
+symlinks_postinst() {
+	if [ -e "$sf" -o -L "$sf" ]; then
+		mv "$sf" "$sf.bak" || die
+		cwrn renamed to .bak: "$sf"
+	fi
+	sd=`dirname "$sf"`
+	mkdir -p "$sd"
+	ln -s "$df" "$sd" || die
+	clog Symlink: "$df" ← "$sd/"
+}
+
+symlinks_postrm() {
+	if [ -L "$sf" ]; then
+		rm "$sf" && clog Removed: "$sf"
+	elif [ -e "$sf" ]; then
+		mv "$sf" "$sf.bak" || die
+		cwrn renamed to .bak: "$sf"
+	fi
+}
+
+pkg_postinst() {
+	symlinks symlinks_postinst
+}
+
+pkg_postrm() {
+	symlinks symlinks_postrm
+}

@@ -1,0 +1,165 @@
+shopt -s checkwinsize no_empty_cmd_completion histappend autocd
+
+HOME=/var/home/root
+PROMPT_COMMAND='prompt_command'
+PREEXEC_COMMAND='preexec_command'
+PS_BG="\[\e[1;100m\e[K\]"
+PS_FG="\[\e[97m\]"
+PS_DIR="\[\e[1;92m\]"
+PS_DV=(100 60 60 24)
+PS_DN=(. : : :)
+PS2=$PS_BG$PS_FG
+PS0="\[\e[0m\e[K\]"
+
+prompt_command() {
+	local E=$? TIME ERR WD1=$PWD WD2 BRANCH
+	if [ -n "$PS1_START" ]; then
+		[ $E -ne 0 ] && ERR="\[\e[38;5;210m\]$E "
+		local DELAY=$(((${EPOCHREALTIME/./} - PS1_START)/10000))
+		if [ $DELAY -ne 0 ]; then
+			local I=0 V
+			for (( I=0; I<${#PS_DV[@]}; I++ )); do
+				[ $DELAY -eq 0 ] && break
+				V=${PS_DV[$I]}
+				TIME=${PS_DN[$I]}`printf %02d $((DELAY % V))`$TIME
+				DELAY=$((DELAY / V))
+			done
+			if [ ${#TIME} -gt 4 ]; then
+				TIME=${TIME:1}
+				TIME=${TIME#0}
+				[ $DELAY -eq 0 ] && DELAY=
+			fi
+			TIME=${TIME%0}
+			TIME=${TIME%0}
+			TIME="\[\e[22;93m\]$DELAY${TIME%\.} "
+		fi
+	fi
+	if BRANCH=`git branch --show-current 2>/dev/null`; then
+		BRANCH="\[\e[22;96m\]:${BRANCH:-`git rev-parse --abbrev-ref HEAD`}"
+		WD1=`git rev-parse --show-toplevel`
+		WD2=${PWD#$WD1}
+	fi
+	PS1="${PS_BG}${ERR}${TIME}${PS_DIR}${WD1}${BRANCH}${PS_DIR}${WD2}${PS_FG} "
+	history -a
+	PS1_START=
+}
+
+preexec_command() {
+	PS1_START=${EPOCHREALTIME/./}
+}
+
+EDITOR="emacsclient -nc"
+
+alias e="$EDITOR"
+alias rm="rm -rf"
+alias cp="cp -R"
+alias du="du -sbx --block-size=\'1"
+alias diff="diff --color=auto -u --palette=rs=0:hd=97:ad=92:de=91:ln=96"
+alias less="less --use-color -rf"
+alias git-commit="git commit -a --allow-empty-message -m ''"
+
+
+alias ...="../.."
+alias ....="../../.."
+alias .....="../../../.."
+alias ......="../../../../.."
+
+alias em="emerge"
+alias em-v="em -1v -k n"
+
+alias e-ak="e /etc/portage/package.accept_keywords/main"
+alias e-pu="e /etc/portage/package.use/main"
+alias e-b="e /etc/bash/bashrc"
+alias e-w="e /usr/local/cf/web.css"
+
+alias git-g="git --git-dir=/usr/local/git/gentoo-overlay.git --work-tree=/var/db/repos/c"
+alias git-d="git --git-dir=/usr/local/git/dotfiles.git --work-tree=/"
+
+
+
+lwd() {
+	[ -f /tmp/lwd ] && cd `cat /tmp/lwd`
+}
+
+ll-s() {
+	ll "$@" | sort -n -k 5
+}
+
+c() {
+	local A="$@"
+	A=${A//[   ​  =≈]/}
+	A=${A//[⋅×]/*}
+	A=${A//[−⁻]/-}
+	A=${A//÷/\/}
+	bc -l <<<"$A" | sed '/\./ s/\.\{0,1\}0\{1,\}$//'
+}
+
+cd() {
+	[ "$1" == "--" ] && shift
+	local D="$1"
+	[ $# -eq 2 ] && D="${PWD/$1/$2}"
+	builtin cd "$D"
+}
+
+pdf-dec() {
+	F="$2"
+	mutool clean -p "$1" -D "$2" "${F%.*}.dec.${F##*.}"
+}
+
+a-s() {
+	A="Enabled"
+	[ "$1" == "" ] || A="Disabled"
+	amixer sset "Auto-Mute Mode" $A
+}
+
+# Set colorful PS1 only on colorful terminals.
+# dircolors --print-database uses its own built-in database
+# instead of using /etc/DIR_COLORS.  Try to use the external file
+# first to take advantage of user additions.
+# We run dircolors directly due to its changes in file syntax and
+# terminal name patching.
+use_color=false
+if type -P dircolors >/dev/null ; then
+	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+	LS_COLORS=
+	if [[ -f ~/.dir_colors ]] ; then
+		eval "$(dircolors -b ~/.dir_colors)"
+	elif [[ -f /etc/DIR_COLORS ]] ; then
+		eval "$(dircolors -b /etc/DIR_COLORS)"
+	else
+		eval "$(dircolors -b)"
+	fi
+	# Note: We always evaluate the LS_COLORS setting even when it's the
+	# default.  If it isn't set, then `ls` will only colorize by default
+	# based on file attributes and ignore extensions (even the compiled
+	# in defaults of dircolors). #583814
+	if [[ -n ${LS_COLORS:+set} ]] ; then
+		use_color=true
+	else
+		# Delete it if it's empty as it's useless in that case.
+		unset LS_COLORS
+	fi
+else
+	# Some systems (e.g. BSD & embedded) don't typically come with
+	# dircolors so we need to hardcode some terminals in here.
+	case ${TERM} in
+	[aEkx]term*|rxvt*|gnome*|konsole*|screen|tmux|cons25|*color) use_color=true;;
+	esac
+fi
+
+if ${use_color} ; then
+#	if [[ ${EUID} == 0 ]] ; then
+#		PS1+='\[\033[01;31m\]\h\[\033[01;34m\] \w \$\[\033[00m\] '
+#	else
+#		PS1+='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+#	fi
+
+	alias ls='ls --color=auto'
+	alias grep='grep --colour=auto'
+	alias egrep='grep -E --colour=auto'
+	alias fgrep='grep -F --colour=auto'
+else
+	# show root@ when we don't have colors
+	PS1+='\u@\h \w \$ '
+fi
+

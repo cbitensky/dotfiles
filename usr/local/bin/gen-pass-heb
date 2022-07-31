@@ -1,0 +1,7 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(do (format (envor "L" "15"))
+	(setq num (secrand 27))
+	(push 'chars (char (+ 1488 num))) )
+(setq string (pack chars))
+(prinl string) 
+(fexec "wl-copy" string)

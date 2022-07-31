@@ -1,0 +1,17 @@
+diff --git a/lisp/files.el b/lisp/files.el
+index 5fa38e4..9270e02 100644
+--- a/lisp/files.el
++++ b/lisp/files.el
+@@ -7699,12 +7699,6 @@ if any returns nil.  If `confirm-kill-emacs' is non-nil, calls it."
+   (save-some-buffers arg t)
+   (let ((confirm confirm-kill-emacs))
+     (and
+-     (or (not (memq t (mapcar (lambda (buf)
+-                                (and (buffer-file-name buf)
+-                                     (buffer-modified-p buf)))
+-                              (buffer-list))))
+-         (progn (setq confirm nil)
+-                (yes-or-no-p "Modified buffers exist; exit anyway? ")))
+      (or (not (fboundp 'process-list))
+          ;; process-list is not defined on MSDOS.
+          (not confirm-kill-processes)

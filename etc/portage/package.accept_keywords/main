@@ -48,7 +48,6 @@ net-libs/nodejs
 dev-db/mongodb
 media-gfx/pngout
 app-vim/vim-toml
-dev-util/rust-analyzer
 app-editors/neovim
 app-misc/doublecmd
 x11-terms/wayst
@@ -60,6 +59,8 @@ x11-misc/gbdfed
 
 #rust
 dev-lang/rust
+dev-util/rust-analyzer
+virtual/rust
 #sys-devel/llvm
 #sys-devel/llvmgold
 

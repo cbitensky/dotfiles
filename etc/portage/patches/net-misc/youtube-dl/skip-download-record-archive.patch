@@ -1,0 +1,15 @@
+diff --git a/youtube_dl/YoutubeDL.py b/youtube_dl/YoutubeDL.py
+index fe30758..06ff769 100755
+--- a/youtube_dl/YoutubeDL.py
++++ b/youtube_dl/YoutubeDL.py
+@@ -1904,7 +1904,9 @@ class YoutubeDL(object):
+ 
+         self._write_thumbnails(info_dict, filename)
+ 
+-        if not self.params.get('skip_download', False):
++        if self.params.get('skip_download', False):
++            self.record_download_archive(info_dict)
++        else:
+             try:
+                 def dl(name, info):
+                     fd = get_suitable_downloader(info, self.params)(self, self.params)

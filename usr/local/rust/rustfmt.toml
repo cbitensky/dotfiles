@@ -1,0 +1,30 @@
+edition = "2021"
+version = "Two"
+max_width = 120
+use_small_heuristics = "Max"
+short_array_element_width_threshold = 60
+struct_field_align_threshold = 60
+enum_discrim_align_threshold = 60
+tab_spaces=3
+condense_wildcard_suffixes = true
+force_explicit_abi = false
+format_code_in_doc_comments = true
+hard_tabs = true
+normalize_comments = true
+reorder_impl_items = true
+use_try_shorthand = true
+wrap_comments = true
+format_strings = true
+hex_literal_case = "Upper"
+imports_granularity = "One"
+newline_style = "Unix"
+# Unstable
+comment_width = 120
+unstable_features = true
+#unknown
+#doc_comment_code_block_width = 120
+normalize_doc_attributes = true
+format_macro_matchers = true
+overflow_delimited_expr = true
+group_imports = "StdExternalCrate"
+# color = "Auto"

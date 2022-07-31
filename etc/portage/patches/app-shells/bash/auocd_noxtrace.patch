@@ -1,0 +1,12 @@
+diff --git a/execute_cmd.c b/execute_cmd.c
+index 425679a..2e0f8c0 100644
+--- a/execute_cmd.c
++++ b/execute_cmd.c
+@@ -4654,7 +4654,6 @@ run_builtin:
+     {
+       words = make_word_list (make_word ("--"), words);
+       words = make_word_list (make_word ("cd"), words);
+-      xtrace_print_word_list (words, 0);
+       func = find_function ("cd");
+       goto run_builtin;
+     }

@@ -270,6 +270,7 @@ dev-qt/qtdeclarative -widgets
 dev-qt/qtmultimedia -widgets
 
 dev-lang/rust clippy doc nightly rls rust-src rustfmt
+virtual/rust rustfmt
 sys-devel/gdb python source-highlight
 
 sys-devel/clang xml # requires for lldb

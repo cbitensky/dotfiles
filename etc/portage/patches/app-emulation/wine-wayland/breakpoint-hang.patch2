@@ -1,0 +1,16 @@
+diff --git a/dlls/user32/painting.c b/dlls/user32/painting.c
+index 2f42b24..6578a53 100644
+--- a/dlls/user32/painting.c
++++ b/dlls/user32/painting.c
+@@ -817,7 +817,10 @@ static void update_now( HWND hwnd, UINT rdw_flags )
+         if (!get_update_flags( hwnd, &child, &flags )) break;
+         if (!flags) break;  /* nothing more to do */
+ 
+-        SendMessageW( child, WM_PAINT, 0, 0 );
++        if (is_desktop_window(hwnd))
++            PostMessageW( child, WM_PAINT, 0, 0 );
++        else
++            SendMessageW( child, WM_PAINT, 0, 0 );
+         if (rdw_flags & RDW_NOCHILDREN) break;
+     }
+ }

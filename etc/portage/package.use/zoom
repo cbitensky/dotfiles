@@ -1,0 +1,6 @@
+x11-libs/libxkbcommon X
+
+net-im/zoom -bundled-qt
+dev-qt/qtdeclarative widgets
+dev-qt/qtgui X
+dev-qt/qtnetwork ssl

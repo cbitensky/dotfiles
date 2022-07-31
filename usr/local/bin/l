@@ -1,0 +1,3 @@
+#!/usr/bin/picolisp /usr/local/lib/shell.l
+(sys "BLOCK_SIZE" "'1")
+(fexec "ls" "-FA" "--color=auto" "--group-directories-first" "-l" "--time-style=+%F %T" (argv))
