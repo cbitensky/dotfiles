@@ -8,6 +8,7 @@ After=seatd.service systemd-tmpfiles-setup.service
 Type=exec
 EnvironmentFile=/etc/xdg.env
 EnvironmentFile=/etc/home.env
+EnvironmentFile=/etc/locale.conf
 ExecStart=/usr/bin/sway
 #StandardInput=tty
 #StandardOutput=tty

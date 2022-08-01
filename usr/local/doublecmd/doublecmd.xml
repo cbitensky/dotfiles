@@ -1735,63 +1735,63 @@
             <Sortings>
               <Sorting>
                 <Direction>1</Direction>
-                <Function>11</Function>
+                <Function>2</Function>
               </Sorting>
             </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="..">/tmp/Downloads/./</Path>
-                  <Path Filename="">/tmp/</Path>
-                  <Path Filename="">/var/spool/grim/./</Path>
-                  <Path Filename="..">/./</Path>
+                  <Path Filename="texlive-fontsextra">/var/cache/binpkgs/dev-texlive/</Path>
+                  <Path Filename="sci-astronomy">/var/cache/binpkgs/</Path>
+                  <Path Filename="stellarium">/var/cache/binpkgs/sci-astronomy/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/sci-astronomy/stellarium/</Path>
+                  <Path Filename="stellarium">/var/cache/binpkgs/sci-astronomy/</Path>
+                  <Path Filename="sys-kernel">/var/cache/binpkgs/</Path>
+                  <Path Filename="linux-firmware">/var/cache/binpkgs/sys-kernel/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/linux-firmware/</Path>
+                  <Path Filename="linux-headers">/var/cache/binpkgs/sys-kernel/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/linux-headers/</Path>
+                  <Path Filename="gentoo-sources">/var/cache/binpkgs/sys-kernel/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/gentoo-sources/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/</Path>
+                  <Path Filename="www-client">/var/cache/binpkgs/</Path>
+                  <Path Filename="chromium">/var/cache/binpkgs/www-client/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/www-client/chromium/</Path>
+                  <Path Filename="firefox">/var/cache/binpkgs/www-client/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/www-client/firefox/</Path>
+                  <Path Filename="w3m">/var/cache/binpkgs/www-client/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/www-client/w3m/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/www-client/</Path>
+                  <Path Filename="x11-libs">/var/cache/binpkgs/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/x11-libs/</Path>
+                  <Path Filename="x11-libs">/var/cache/binpkgs/</Path>
+                  <Path Filename="..">/var/cache/</Path>
+                  <Path Filename="..">/var/</Path>
+                  <Path Filename="lib">/</Path>
+                  <Path Filename="..">/lib/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="archive">/home/</Path>
+                  <Path Filename="20220530-bloxroute">/home/archive/</Path>
+                  <Path Filename="..">/home/archive/20220530-bloxroute/</Path>
+                  <Path Filename="20220530-bloxroute">/home/archive/</Path>
+                  <Path Filename="archive">/home/</Path>
                   <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="ENMARCHENOIRE - pornhub.com">/var/spool/web/</Path>
-                  <Path Filename="029 Fireworks in Paris by Night_ENMARCHENOIRE_1080p.mp4">/var/spool/web/ENMARCHENOIRE - pornhub.com/</Path>
-                  <Path Filename="">/var/spool/web/</Path>
-                  <Path Filename="..">/var/spool/youtube/./</Path>
-                  <Path Filename="..">/var/spool/youtube/</Path>
-                  <Path Filename="">/var/spool/</Path>
-                  <Path Filename="..">/./</Path>
-                  <Path Filename="">/</Path>
-                  <Path Filename="20220621-_47vyP35pDI-Mark Solonin-От V-2 до 'Калибра'. Как ракеты попадают в цель. Техникум Марка .mkv">/var/spool/youtube/./</Path>
-                  <Path Filename="">/var/spool/youtube/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/./</Path>
-                  <Path Filename="">/var/spool/web/./Love, Death &amp; Robots/</Path>
-                  <Path Filename="redis">/home/amazon/./</Path>
-                  <Path Filename="..">/home/amazon/./redis/</Path>
-                  <Path Filename="redis">/home/amazon/./</Path>
-                  <Path Filename="..">/home/amazon/./redis/</Path>
-                  <Path Filename="redis">/home/amazon/./</Path>
-                  <Path Filename="..">/home/amazon/</Path>
-                  <Path Filename="amazon">/home/</Path>
-                  <Path Filename="">/</Path>
-                  <Path Filename="..">/var/spool/youtube/./</Path>
-                  <Path Filename="..">/var/spool/youtube/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="bin">/</Path>
-                  <Path Filename="awk">/bin/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="WhatsApp Audio 2022-06-26 at 9.05.26 PM.m4a">/var/spool/web/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="WhatsApp Audio 2022-06-26 at 9.05.26 PM.m4a">/var/spool/web/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="..">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots s01e14 Zima Blue.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="..">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="..">/var/spool/web/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="binpkgs">/var/cache/</Path>
+                  <Path Filename="net-im">/var/cache/binpkgs/</Path>
+                  <Path Filename="teams">/var/cache/binpkgs/net-im/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/net-im/teams/</Path>
+                  <Path Filename="zoom">/var/cache/binpkgs/net-im/</Path>
+                  <Path Filename="..">/var/cache/binpkgs/net-im/zoom/</Path>
+                  <Path Filename="zoom">/var/cache/binpkgs/net-im/</Path>
+                  <Path Filename="net-im">/var/cache/binpkgs/</Path>
+                  <Path Filename="binpkgs">/var/cache/</Path>
+                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="portage">/etc/</Path>
+                  <Path Filename="package.use">/etc/portage/</Path>
+                  <Path Filename="temp">/etc/portage/package.use/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2453,19 +2453,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="solonin">/home/</Path>
-                  <Path Filename="..">/home/solonin/</Path>
-                  <Path Filename="mkv">/home/</Path>
-                  <Path Filename="20210125-90Oc9Xl5Aps-The Wellermen-The Wellermen - Wellerman (Official TikTok Version).mkv">/home/mkv/</Path>
-                  <Path Filename="mkv">/home/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="Megazone 23">/var/spool/web/</Path>
-                  <Path Filename="Megazone 23 [BD 1080p] [OnDeed] [27A82C5D].mkv">/var/spool/web/Megazone 23/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
                   <Path Filename="..">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
                   <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
                   <Path Filename="Love Death and Robots s01e14 Zima Blue.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
@@ -2503,6 +2490,19 @@
                   <Path Filename="home">/</Path>
                   <Path Filename="daglabs">/home/</Path>
                   <Path Filename="..">/home/daglabs/</Path>
+                  <Path Filename="daglabs">/home/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="acpi">/etc/</Path>
+                  <Path Filename="actions">/etc/acpi/</Path>
+                  <Path Filename="..">/etc/acpi/actions/</Path>
+                  <Path Filename="events">/etc/acpi/</Path>
+                  <Path Filename="..">/etc/acpi/events/</Path>
+                  <Path Filename="actions">/etc/acpi/</Path>
+                  <Path Filename="..">/etc/acpi/actions/</Path>
+                  <Path Filename="..">/etc/acpi/</Path>
+                  <Path Filename="bash">/etc/</Path>
+                  <Path Filename="bashrc.d">/etc/bash/</Path>
+                  <Path Filename="bash">/etc/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2860,10 +2860,10 @@
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
         <Filename>[N]</Filename>
         <Extension>[E]</Extension>
-        <FilenameStyle>1</FilenameStyle>
-        <ExtensionStyle>1</ExtensionStyle>
-        <Find/>
-        <Replace/>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>2</ExtensionStyle>
+        <Find>-0</Find>
+        <Replace>-</Replace>
         <RegExp>False</RegExp>
         <UseSubs>False</UseSubs>
         <Counter>1</Counter>

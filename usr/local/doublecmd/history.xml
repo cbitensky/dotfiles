@@ -2,57 +2,57 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item>/home/daglabs/</Item>
-      <Item>/home/</Item>
+      <Item>/etc/portage/package.use/</Item>
+      <Item>/etc/portage/</Item>
+      <Item>/etc/</Item>
       <Item>/</Item>
-      <Item>/var/spool/web/</Item>
-      <Item>/home/amazon/</Item>
-      <Item>/home/shipilov/</Item>
-      <Item>/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Item>
-      <Item>/var/spool/web/Love, Death &amp; Robots/</Item>
-      <Item>/home/sessions/</Item>
-      <Item>/var/spool/</Item>
       <Item>/var/</Item>
-      <Item>/bin/</Item>
-      <Item>/var/spool/youtube/</Item>
-      <Item>/var/spool/youtube/./</Item>
-      <Item>/home/amazon/./</Item>
-      <Item>/home/amazon/./redis/</Item>
-      <Item>/daglabs/go/src/github.com/kaspanet/</Item>
-      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/</Item>
-      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/domain/</Item>
-      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/</Item>
-      <Item>/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/processes/</Item>
-      <Item>/daglabs/go/src/github.com/</Item>
-      <Item>/daglabs/go/src/</Item>
-      <Item>/daglabs/go/</Item>
-      <Item>/daglabs/</Item>
-      <Item>/var/spool/web/./Love, Death &amp; Robots/</Item>
-      <Item>/var/spool/web/./</Item>
-      <Item>/var/spool/web/Megazone 23/</Item>
-      <Item>/home/mkv/</Item>
-      <Item>/home/solonin/</Item>
-      <Item>/spool/photos sorted/Константин Документы/</Item>
-      <Item>/spool/photos sorted/</Item>
-      <Item>/spool/</Item>
-      <Item>/./</Item>
+      <Item>/var/cache/</Item>
+      <Item>/var/cache/binpkgs/</Item>
+      <Item>/var/cache/binpkgs/net-im/</Item>
+      <Item>/var/cache/binpkgs/net-im/zoom/</Item>
+      <Item>/var/cache/binpkgs/net-im/teams/</Item>
+      <Item>/home/</Item>
+      <Item>/home/archive/</Item>
+      <Item>/home/archive/20220530-bloxroute/</Item>
+      <Item>/lib/</Item>
+      <Item>/etc/bash/</Item>
+      <Item>/etc/acpi/</Item>
+      <Item>/etc/acpi/actions/</Item>
+      <Item>/etc/acpi/events/</Item>
+      <Item>/var/cache/binpkgs/x11-libs/</Item>
+      <Item>/var/cache/binpkgs/www-client/</Item>
+      <Item>/var/cache/binpkgs/www-client/w3m/</Item>
+      <Item>/var/cache/binpkgs/www-client/firefox/</Item>
+      <Item>/var/cache/binpkgs/www-client/chromium/</Item>
+      <Item>/var/cache/binpkgs/sys-kernel/</Item>
+      <Item>/var/cache/binpkgs/sys-kernel/gentoo-sources/</Item>
+      <Item>/var/cache/binpkgs/sys-kernel/linux-headers/</Item>
+      <Item>/var/cache/binpkgs/sys-kernel/linux-firmware/</Item>
+      <Item>/var/cache/binpkgs/sci-astronomy/</Item>
+      <Item>/var/cache/binpkgs/sci-astronomy/stellarium/</Item>
+      <Item>/var/cache/binpkgs/dev-texlive/</Item>
+      <Item>/var/cache/binpkgs/dev-texlive/texlive-fontsextra/</Item>
+      <Item>/var/cache/binpkgs/dev-tex/</Item>
+      <Item>/var/cache/binpkgs/games-fps/</Item>
+      <Item>/var/cache/binpkgs/games-fps/xonotic/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/zig/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/ruby/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/python/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/fpc/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/go/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/rust-bin/</Item>
+      <Item>/var/cache/binpkgs/dev-lang/rust/</Item>
+      <Item>/var/cache/distfiles/</Item>
+      <Item>/var/cache/ccache/</Item>
       <Item>/home/redozubov/</Item>
-      <Item>/var/spool/web/ENMARCHENOIRE - pornhub.com/</Item>
-      <Item>/var/spool/grim/./</Item>
-      <Item>/tmp/Downloads/./</Item>
-      <Item>/home/redozubov/2009-brain-for-rent/</Item>
-      <Item>/home/images/</Item>
-      <Item>/home/spool/</Item>
-      <Item>/spool/israel/</Item>
-      <Item>/spool/israel/photos/</Item>
-      <Item>/usr/local/bin/</Item>
-      <Item>/usr/local/</Item>
-      <Item>/usr/local/bin/./</Item>
-      <Item>/spool/archive/</Item>
-      <Item>/spool/archive/portage/</Item>
-      <Item>/spool/archive/portage/patches/</Item>
-      <Item>/spool/archive/portage/env/</Item>
-      <Item>/spool/archive/portage/env/www-client/</Item>
+      <Item>/home/movies/</Item>
+      <Item>/home/maskorot/</Item>
+      <Item>/home/maskorot/./</Item>
+      <Item>/var/spool/web/./</Item>
+      <Item>/home/daglabs/</Item>
+      <Item>/var/spool/web/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>
@@ -175,6 +175,7 @@
     </CreateDirectories>
     <RenameNameMask>
       <Item>[N]</Item>
+      <Item>20220728-kali-0[C]</Item>
     </RenameNameMask>
     <RenameExtMask>
       <Item>[E]</Item>
