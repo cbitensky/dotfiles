@@ -2,6 +2,7 @@
 <doublecmd>
   <History>
     <Navigation>
+      <Item>/usr/src/linux/</Item>
       <Item>/etc/portage/package.use/</Item>
       <Item>/etc/portage/</Item>
       <Item>/etc/</Item>
@@ -52,7 +53,6 @@
       <Item>/home/maskorot/./</Item>
       <Item>/var/spool/web/./</Item>
       <Item>/home/daglabs/</Item>
-      <Item>/var/spool/web/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>

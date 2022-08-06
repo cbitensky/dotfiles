@@ -1742,7 +1742,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="texlive-fontsextra">/var/cache/binpkgs/dev-texlive/</Path>
                   <Path Filename="sci-astronomy">/var/cache/binpkgs/</Path>
                   <Path Filename="stellarium">/var/cache/binpkgs/sci-astronomy/</Path>
                   <Path Filename="..">/var/cache/binpkgs/sci-astronomy/stellarium/</Path>
@@ -1791,7 +1790,8 @@
                   <Path Filename="etc">/</Path>
                   <Path Filename="portage">/etc/</Path>
                   <Path Filename="package.use">/etc/portage/</Path>
-                  <Path Filename="temp">/etc/portage/package.use/</Path>
+                  <Path Filename="">/etc/portage/package.use/</Path>
+                  <Path Filename="..">/usr/src/linux/</Path>
                 </Paths>
               </Entry>
             </History>

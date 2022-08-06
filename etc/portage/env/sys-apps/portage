@@ -1,0 +1,4 @@
+post_src_prepare () {
+	sed -i 's/xterm|/foot|\0/' "${S}/lib/portage/output.py" || die
+	clog foot term added
+}

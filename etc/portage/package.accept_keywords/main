@@ -1,3 +1,5 @@
+x11-terms/st **
+x11-terms/st-terminfo **
 dev-db/redis
 
 dev-lang/ruby

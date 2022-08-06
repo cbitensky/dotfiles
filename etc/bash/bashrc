@@ -1,5 +1,7 @@
 shopt -s checkwinsize no_empty_cmd_completion histappend autocd
-
+HISTCONTROL=ignoredups:erasedups
+HISTSIZE=-1
+HISTFILESIZE=$HISTSIZE
 HOME=/var/home/root
 PROMPT_COMMAND='prompt_command'
 PREEXEC_COMMAND='preexec_command'
@@ -36,15 +38,24 @@ prompt_command() {
 	fi
 	if BRANCH=`git branch --show-current 2>/dev/null`; then
 		BRANCH="\[\e[22;96m\]:${BRANCH:-`git rev-parse --abbrev-ref HEAD`}"
-		WD1=`git rev-parse --show-toplevel`
-		WD2=${PWD#$WD1}
+		WD1F=`git rev-parse --show-toplevel 2>/dev/null`
+		WD1="$PWD"
+		while [[ `realpath "$WD1"` != "$WD1F" ]]; do
+			WD2=`basename "$WD1"`/"$WD2"
+			WD1=`dirname "$WD1"`
+		done
+		WD2="${WD2:+/${WD2%/}}"
+		WD1=${PWD%$WD2}
 	fi
 	PS1="${PS_BG}${ERR}${TIME}${PS_DIR}${WD1}${BRANCH}${PS_DIR}${WD2}${PS_FG} "
-	history -a
 	PS1_START=
+	echo -ne "\e]2;${WD1}${WD2}\b"
+	history -c
+	history -r
 }
 
 preexec_command() {
+	history -a
 	PS1_START=${EPOCHREALTIME/./}
 }
 
@@ -66,6 +77,8 @@ alias ......="../../../../.."
 
 alias em="emerge"
 alias em-v="em -1v -k n"
+alias sc="systemctl"
+alias jc="journalctl"
 
 alias e-ak="e /etc/portage/package.accept_keywords/main"
 alias e-pu="e /etc/portage/package.use/main"
@@ -99,6 +112,11 @@ cd() {
 	local D="$1"
 	[ $# -eq 2 ] && D="${PWD/$1/$2}"
 	builtin cd "$D"
+}
+
+mcd() {
+	mkdir -p "$@"
+	builtin cd "${@: -1}"
 }
 
 pdf-dec() {

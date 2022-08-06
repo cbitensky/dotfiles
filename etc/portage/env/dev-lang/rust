@@ -1,6 +1,7 @@
 post_src_prepare() {
 	sed -i -r '
 		/b"\\$/,/^"$/s/    /	/g
+		/# See more keys and their definitions at https:/,+1d
 	' src/tools/cargo/src/cargo/ops/cargo_new.rs || die
 	clog Hardtabs in helloworld main.rs
 }
