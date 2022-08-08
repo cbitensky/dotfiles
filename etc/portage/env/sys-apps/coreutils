@@ -1,0 +1,4 @@
+post_src_prepare () {
+	sed -i 's/\(if (\)format == long_format || \(print_block_size)\)/\1\2/' src/ls.c || die
+	clog ls -l don’t prints totals
+}

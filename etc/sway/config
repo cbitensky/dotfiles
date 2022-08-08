@@ -49,7 +49,7 @@ bindsym --to-code $mod+f fullscreen
 
 bindsym --to-code $mod+q           exec foot
 bindsym --to-code $mod+w           exec firefox
-bindsym --to-code $mod+e           exec emacsclient -nc /
+bindsym --to-code $mod+e           exec doublecmd
 bindsym --to-code $mod+m           exec sylpheed
 bindsym --to-code $mod+d           exec stardict
 

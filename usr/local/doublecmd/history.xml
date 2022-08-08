@@ -2,22 +2,47 @@
 <doublecmd>
   <History>
     <Navigation>
+      <Item>/var/home/root/</Item>
+      <Item>/var/home/</Item>
+      <Item>/var/</Item>
+      <Item>/</Item>
+      <Item>/usr/</Item>
+      <Item>/usr/share/</Item>
+      <Item>/usr/share/themes/</Item>
+      <Item>/usr/share/themes/Adwaita-dark/</Item>
+      <Item>/usr/share/themes/Adwaita-dark/gtk-2.0/</Item>
+      <Item>/home/</Item>
+      <Item>/etc/gtk-2.0/</Item>
+      <Item>/etc/</Item>
+      <Item>/var/spool/</Item>
+      <Item>/home/redozubov/</Item>
+      <Item>/var/spool/web/Love, Death &amp; Robots/</Item>
+      <Item>/var/spool/web/</Item>
+      <Item>/var/spool/youtube/</Item>
+      <Item>/var/home/root/.config/</Item>
+      <Item>/var/home/root/.config/gtk-2.0/</Item>
+      <Item>/var/home/root/Downloads/</Item>
+      <Item>/var/home/root/go/</Item>
+      <Item>/var/home/root/go/pkg/</Item>
+      <Item>/var/home/root/go/pkg/mod/</Item>
+      <Item>/var/home/root.config/</Item>
+      <Item>/var/home/root.config/rustfmt/</Item>
+      <Item>/var/home/root.config/rustfmt/Rustfmt.toml.bak/</Item>
+      <Item>/var/home/root.cargo/</Item>
+      <Item>/etc/bash/</Item>
+      <Item>/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Item>
+      <Item>/usr/src/</Item>
       <Item>/usr/src/linux/</Item>
       <Item>/etc/portage/package.use/</Item>
       <Item>/etc/portage/</Item>
-      <Item>/etc/</Item>
-      <Item>/</Item>
-      <Item>/var/</Item>
       <Item>/var/cache/</Item>
       <Item>/var/cache/binpkgs/</Item>
       <Item>/var/cache/binpkgs/net-im/</Item>
       <Item>/var/cache/binpkgs/net-im/zoom/</Item>
       <Item>/var/cache/binpkgs/net-im/teams/</Item>
-      <Item>/home/</Item>
       <Item>/home/archive/</Item>
       <Item>/home/archive/20220530-bloxroute/</Item>
       <Item>/lib/</Item>
-      <Item>/etc/bash/</Item>
       <Item>/etc/acpi/</Item>
       <Item>/etc/acpi/actions/</Item>
       <Item>/etc/acpi/events/</Item>
@@ -27,32 +52,6 @@
       <Item>/var/cache/binpkgs/www-client/firefox/</Item>
       <Item>/var/cache/binpkgs/www-client/chromium/</Item>
       <Item>/var/cache/binpkgs/sys-kernel/</Item>
-      <Item>/var/cache/binpkgs/sys-kernel/gentoo-sources/</Item>
-      <Item>/var/cache/binpkgs/sys-kernel/linux-headers/</Item>
-      <Item>/var/cache/binpkgs/sys-kernel/linux-firmware/</Item>
-      <Item>/var/cache/binpkgs/sci-astronomy/</Item>
-      <Item>/var/cache/binpkgs/sci-astronomy/stellarium/</Item>
-      <Item>/var/cache/binpkgs/dev-texlive/</Item>
-      <Item>/var/cache/binpkgs/dev-texlive/texlive-fontsextra/</Item>
-      <Item>/var/cache/binpkgs/dev-tex/</Item>
-      <Item>/var/cache/binpkgs/games-fps/</Item>
-      <Item>/var/cache/binpkgs/games-fps/xonotic/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/zig/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/ruby/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/python/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/fpc/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/go/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/rust-bin/</Item>
-      <Item>/var/cache/binpkgs/dev-lang/rust/</Item>
-      <Item>/var/cache/distfiles/</Item>
-      <Item>/var/cache/ccache/</Item>
-      <Item>/home/redozubov/</Item>
-      <Item>/home/movies/</Item>
-      <Item>/home/maskorot/</Item>
-      <Item>/home/maskorot/./</Item>
-      <Item>/var/spool/web/./</Item>
-      <Item>/home/daglabs/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>

@@ -433,7 +433,7 @@
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Viewer>
     <Editor Enabled="True">
-      <Path>e</Path>
+      <Path>geany</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
@@ -1735,63 +1735,63 @@
             <Sortings>
               <Sorting>
                 <Direction>1</Direction>
-                <Function>2</Function>
+                <Function>11</Function>
               </Sorting>
             </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="sci-astronomy">/var/cache/binpkgs/</Path>
-                  <Path Filename="stellarium">/var/cache/binpkgs/sci-astronomy/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/sci-astronomy/stellarium/</Path>
-                  <Path Filename="stellarium">/var/cache/binpkgs/sci-astronomy/</Path>
-                  <Path Filename="sys-kernel">/var/cache/binpkgs/</Path>
-                  <Path Filename="linux-firmware">/var/cache/binpkgs/sys-kernel/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/linux-firmware/</Path>
-                  <Path Filename="linux-headers">/var/cache/binpkgs/sys-kernel/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/linux-headers/</Path>
-                  <Path Filename="gentoo-sources">/var/cache/binpkgs/sys-kernel/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/gentoo-sources/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/sys-kernel/</Path>
-                  <Path Filename="www-client">/var/cache/binpkgs/</Path>
-                  <Path Filename="chromium">/var/cache/binpkgs/www-client/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/www-client/chromium/</Path>
-                  <Path Filename="firefox">/var/cache/binpkgs/www-client/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/www-client/firefox/</Path>
-                  <Path Filename="w3m">/var/cache/binpkgs/www-client/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/www-client/w3m/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/www-client/</Path>
-                  <Path Filename="x11-libs">/var/cache/binpkgs/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/x11-libs/</Path>
-                  <Path Filename="x11-libs">/var/cache/binpkgs/</Path>
-                  <Path Filename="..">/var/cache/</Path>
-                  <Path Filename="..">/var/</Path>
-                  <Path Filename="lib">/</Path>
-                  <Path Filename="..">/lib/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="archive">/home/</Path>
-                  <Path Filename="20220530-bloxroute">/home/archive/</Path>
-                  <Path Filename="..">/home/archive/20220530-bloxroute/</Path>
-                  <Path Filename="20220530-bloxroute">/home/archive/</Path>
-                  <Path Filename="archive">/home/</Path>
+                  <Path Filename="bashrc.d">/etc/bash/</Path>
+                  <Path Filename="bash">/etc/</Path>
                   <Path Filename="var">/</Path>
-                  <Path Filename="cache">/var/</Path>
-                  <Path Filename="binpkgs">/var/cache/</Path>
-                  <Path Filename="net-im">/var/cache/binpkgs/</Path>
-                  <Path Filename="teams">/var/cache/binpkgs/net-im/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/net-im/teams/</Path>
-                  <Path Filename="zoom">/var/cache/binpkgs/net-im/</Path>
-                  <Path Filename="..">/var/cache/binpkgs/net-im/zoom/</Path>
-                  <Path Filename="zoom">/var/cache/binpkgs/net-im/</Path>
-                  <Path Filename="net-im">/var/cache/binpkgs/</Path>
-                  <Path Filename="binpkgs">/var/cache/</Path>
-                  <Path Filename="cache">/var/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
+                  <Path Filename="..">/var/spool/web/Love, Death &amp; Robots/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="Love Death and Robots S03 E03.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
+                  <Path Filename="Love Death and Robots s01e03 The Witness.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="Love Death and Robots S03 E02.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
                   <Path Filename="etc">/</Path>
-                  <Path Filename="portage">/etc/</Path>
-                  <Path Filename="package.use">/etc/portage/</Path>
-                  <Path Filename="">/etc/portage/package.use/</Path>
-                  <Path Filename="..">/usr/src/linux/</Path>
+                  <Path Filename="gtk-2.0">/etc/</Path>
+                  <Path Filename="gtkrc">/etc/gtk-2.0/</Path>
+                  <Path Filename="gtk-2.0">/etc/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220808 ЛСР 105. «Глотатель душ». Дракула уже постучал в вашу дверь….mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="redozubov">/home/</Path>
+                  <Path Filename="20220808 ЛСР 105. Глотатель душ. Дракула уже постучал в вашу дверь….mkv">/home/redozubov/</Path>
+                  <Path Filename="redozubov">/home/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="themes">/usr/share/</Path>
+                  <Path Filename="Adwaita-dark">/usr/share/themes/</Path>
+                  <Path Filename="gtk-2.0">/usr/share/themes/Adwaita-dark/</Path>
+                  <Path Filename="main.rc">/usr/share/themes/Adwaita-dark/gtk-2.0/</Path>
+                  <Path Filename="gtk-2.0">/usr/share/themes/Adwaita-dark/</Path>
+                  <Path Filename="Adwaita-dark">/usr/share/themes/</Path>
+                  <Path Filename="themes">/usr/share/</Path>
+                  <Path Filename="share">/usr/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="home">/var/</Path>
+                  <Path Filename="root">/var/home/</Path>
+                  <Path Filename=".gnupg">/var/home/root/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2453,39 +2453,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots s01e14 Zima Blue.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="cv">/home/</Path>
-                  <Path Filename="daglabs">/</Path>
-                  <Path Filename="..">/daglabs/</Path>
-                  <Path Filename="daglabs">/</Path>
-                  <Path Filename="go">/daglabs/</Path>
-                  <Path Filename="src">/daglabs/go/</Path>
-                  <Path Filename="github.com">/daglabs/go/src/</Path>
-                  <Path Filename="kaspanet">/daglabs/go/src/github.com/</Path>
-                  <Path Filename="kaspad">/daglabs/go/src/github.com/kaspanet/</Path>
-                  <Path Filename="..">/daglabs/go/src/github.com/kaspanet/kaspad/</Path>
-                  <Path Filename="kaspad">/daglabs/go/src/github.com/kaspanet/</Path>
-                  <Path Filename="domain">/daglabs/go/src/github.com/kaspanet/kaspad/</Path>
-                  <Path Filename="consensus">/daglabs/go/src/github.com/kaspanet/kaspad/domain/</Path>
-                  <Path Filename="processes">/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/</Path>
-                  <Path Filename="..">/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/processes/</Path>
-                  <Path Filename="processes">/daglabs/go/src/github.com/kaspanet/kaspad/domain/consensus/</Path>
-                  <Path Filename="consensus">/daglabs/go/src/github.com/kaspanet/kaspad/domain/</Path>
-                  <Path Filename="domain">/daglabs/go/src/github.com/kaspanet/kaspad/</Path>
-                  <Path Filename="kaspad">/daglabs/go/src/github.com/kaspanet/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="sessions">/home/</Path>
-                  <Path Filename="20220111.m4a">/home/sessions/</Path>
-                  <Path Filename="shipilov">/home/</Path>
-                  <Path Filename="..">/home/shipilov/</Path>
-                  <Path Filename="amazon">/home/</Path>
-                  <Path Filename="d1-faq.pdf">/home/amazon/</Path>
                   <Path Filename="amazon">/home/</Path>
                   <Path Filename="home">/</Path>
                   <Path Filename="daglabs">/home/</Path>
@@ -2503,6 +2470,39 @@
                   <Path Filename="bash">/etc/</Path>
                   <Path Filename="bashrc.d">/etc/bash/</Path>
                   <Path Filename="bash">/etc/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
+                  <Path Filename="..">/var/spool/web/Love, Death &amp; Robots/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="Love Death and Robots S03 E03.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
+                  <Path Filename="Love Death and Robots s01e03 The Witness.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="Love Death and Robots S03 E02.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
+                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="gtk-2.0">/etc/</Path>
+                  <Path Filename="gtkrc">/etc/gtk-2.0/</Path>
+                  <Path Filename="gtk-2.0">/etc/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="gtk-2.0">/etc/</Path>
+                  <Path Filename="gtkrc">/etc/gtk-2.0/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2796,22 +2796,22 @@
         <Column>
           <Title>Name</Title>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>508</Width>
+          <Width>750</Width>
           <Align>0</Align>
           <Font>
-            <Name>Cousine</Name>
-            <Size>11</Size>
+            <Name>cnxt</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <TextColor>12632256</TextColor>
           <Background>2039583</Background>
           <Background2>2039583</Background2>
-          <MarkColor>255</MarkColor>
+          <MarkColor>2039807</MarkColor>
           <CursorColor>8388736</CursorColor>
           <CursorText>-2147483634</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>255</InactiveMarkColor>
+          <InactiveMarkColor>2039807</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -2822,19 +2822,19 @@
           <Width>0</Width>
           <Align>1</Align>
           <Font>
-            <Name>Cousine</Name>
-            <Size>11</Size>
+            <Name>cnxt</Name>
+            <Size>14</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <TextColor>12632256</TextColor>
           <Background>2039583</Background>
           <Background2>2039583</Background2>
-          <MarkColor>255</MarkColor>
+          <MarkColor>2039807</MarkColor>
           <CursorColor>8388736</CursorColor>
           <CursorText>-2147483634</CursorText>
           <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>255</InactiveMarkColor>
+          <InactiveMarkColor>2039807</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>

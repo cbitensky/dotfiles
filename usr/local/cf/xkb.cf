@@ -1,5 +1,5 @@
 xkb_keymap {
-xkb_keycodes "k" {
+xkb_keycodes "c" {
     minimum = 8;
     maximum = 255;
      <ESC> = 9;
@@ -139,7 +139,7 @@ xkb_keycodes "k" {
     virtual indicator 4 = "Group 2";
 };
 
-xkb_types "k" {
+xkb_types "c" {
 
     virtual_modifiers Alt,LevelThree,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super,Hyper;
 
@@ -258,7 +258,7 @@ xkb_types "k" {
 };
 
 
-xkb_compatibility "k" {
+xkb_compatibility "c" {
 
     virtual_modifiers Alt,LevelThree,LAlt,RAlt,RControl,LControl,ScrollLock,LevelFive,AltGr,Meta,Super;
 
@@ -415,7 +415,7 @@ xkb_compatibility "k" {
 //    };
 };
 
-xkb_symbols "k" {
+xkb_symbols "c" {
 
 name[group1]="Latin";
 name[group2]="Cyrillic";

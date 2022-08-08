@@ -11,6 +11,8 @@ dev-libs/boost bzip2 zlib
 # fheroes2
 media-libs/sdl2-mixer vorbis opus
 
+# s25rttr
+dev-libs/boost nls
 
 dev-python/django sqlite
 sys-libs/ncurses -minimal
@@ -68,7 +70,7 @@ media-libs/gstreamer -caps
 
 www-client/links fbcon gpm jpeg ssl zlib
 
-app-misc/mc -slang
+app-misc/mc -slang sftp
 
 net-ftp/vsftpd -tcpd
 

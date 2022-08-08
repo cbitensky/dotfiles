@@ -49,17 +49,22 @@ prompt_command() {
 	fi
 	PS1="${PS_BG}${ERR}${TIME}${PS_DIR}${WD1}${BRANCH}${PS_DIR}${WD2}${PS_FG} "
 	PS1_START=
-	echo -ne "\e]2;${WD1}${WD2}\b"
-	history -c
-	history -r
+	window_title "$PWD"
+#	history -c
+#	history -r
+}
+
+window_title() {
+	echo -ne "\e]2;$@\07"
 }
 
 preexec_command() {
+	window_title "${CMD[@]}"
 	history -a
 	PS1_START=${EPOCHREALTIME/./}
 }
 
-EDITOR="emacsclient -nc"
+EDITOR="geany"
 
 alias e="$EDITOR"
 alias rm="rm -rf"
@@ -105,13 +110,6 @@ c() {
 	A=${A//[−⁻]/-}
 	A=${A//÷/\/}
 	bc -l <<<"$A" | sed '/\./ s/\.\{0,1\}0\{1,\}$//'
-}
-
-cd() {
-	[ "$1" == "--" ] && shift
-	local D="$1"
-	[ $# -eq 2 ] && D="${PWD/$1/$2}"
-	builtin cd "$D"
 }
 
 mcd() {
