@@ -7,58 +7,100 @@
   <Colors>
     <FileFilters>
       <Filter>
-        <Name>Executables</Name>
-        <FileMasks>*</FileMasks>
-        <Color>11206655</Color>
-        <Attributes>-*x*</Attributes>
-      </Filter>
-      <Filter>
         <Name>Directories</Name>
         <FileMasks>*</FileMasks>
         <Color>16777215</Color>
         <Attributes>d*</Attributes>
       </Filter>
       <Filter>
-        <Name>Text</Name>
-        <FileMasks>*.am;*.asm;*.bdf;*.c;*.cc;*.coffee;*.conf;*.cpp;*.css;*.csv;*.cxx;*.diff;*.docbook;*.ebuild;*.eclass;*.el;*.env;*.erb;*.example;*.fb2;*.gitignore;*.go;*.h;*.hpp;*.htm;*.html;*.in;*.inc;*.ini;*.java;*.js;*.json;*.l;*.la;*.ll;*.log;*.lua;*.luadoc;*.m4;*.md;*.mht;*.mk;*.mount;*.nfo;*.pas;*.patch;*.path;*.pc;*.php;*.ps;*.py;*.rb;*.rc;*.rdoc;*.rs;*.s;*.scss;*.service;*.sh;*.socket;*.sql;*.srt;*.sty;*.svg;*.target;*.tex;*.texi;*.timer;*.toml;*.txt;*.vim;*.xbel;*.xhtml;*.xml;*.xsd;*.xsl;*.yml;Cargo.lock;Makefile</FileMasks>
-        <Color>49152</Color>
-        <Attributes>-*</Attributes>
+        <Name>Executables</Name>
+        <FileMasks>*</FileMasks>
+        <Color>11206655</Color>
+        <Attributes>-*x*</Attributes>
       </Filter>
       <Filter>
         <Name>Packed</Name>
-        <FileMasks>*.7z;*.bz2;*.cab;*.cpio;*.deb;*.gem;*.gz;*.epub;*.iso;*.jar;*.lzma;*.rar;*.rpm;*.tar;*.tbz2;*.tgz;*.tlz;*.txz;*.xpak;*.xz;*.Z;*.zip</FileMasks>
-        <Color>8355839</Color>
+        <FileMasks>*.7z;*.bz2;*.cab;*.crate;*.cpio;*.deb;*.gem;*.gz;*.iso;*.jar;*.lzma;*.rar;*.rpm;*.tar;*.tbz2;*.tgz;*.tlz;*.txz;*.xpak;*.xz;*.Z;*.zip</FileMasks>
+        <Color>5592575</Color>
         <Attributes>-*</Attributes>
       </Filter>
       <Filter>
+        <Name>Packed Markup</Name>
+        <FileMasks>*.docx;*.epub;*.odt;*.xlsx</FileMasks>
+        <Color>5592575</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
+        <Name>Source</Name>
+        <FileMasks>*.asm;*.c;*.cc;*.cpp;*.cxx;*.eclass;*.el;*.go;*.java;*.js;*.l;*.ll;*.lua;*.m4;*.mjs;*.pas;*.php;*.ps;*.ps1;*.py;*.rb;*.rs;*.s;*.sh;*.tex;*.ts;*.vim;*.xsl</FileMasks>
+        <Color>5635925</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
+        <Name>Text</Name>
+        <FileMasks>*.ac;*.am;*.bdf;*.build;*.cf;*.conf;*.css;*.csv;*.diff;*.docbook;*.ebuild;*.eml;*.env;*.erb;*.example;*.fb2;*.gitignore;*.h;*.hpp;*.htm;*.html;*.in;*.inc;*.ini;*.json;*.la;*.ld;*.log;*.luadoc;*.md;*.mht;*.mk;*.mount;*.nfo;*.org;*.patch;*.path;*.pc;*.pem;*.rc;*.rdf;*.rdoc;*.scd;*.scss;*.service;*.socket;*.sql;*.srt;*.sty;*.svg;*.target;*.texi;*.timer;*.toml;*.tsx;*.txt;*.xbel;*.xhtml;*.xml;*.xsd;*.yaml;*.yml;</FileMasks>
+        <Color>43520</Color>
+        <Attributes>-*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Text full</Name>
+        <FileMasks>*config;*ignore;*mask;*rc;go.mod;ChangeLog;Makefile;Rakefile;AUTHORS;BUGS;CHANGES;COPYING;DIR_COLORS;INSTALL;LICENSE;MANIFEST;NEWS;NOTES;README;THANKS;TODO;</FileMasks>
+        <Color>43520</Color>
+        <Attributes/>
+      </Filter>
+      <Filter>
         <Name>Images</Name>
-        <FileMasks>*.avif;*.bmp;*.djvu;*.gif;*.flif;*.ico;*.jpeg;*.jpg;*.pbm;*.ppm;*.png;*.tif;*.tiff;*.webp;*.xcf;*.xpm</FileMasks>
-        <Color>16711935</Color>
+        <FileMasks>*.avif;*.bmp;*.flif;*.gif;*.ico;*.jpeg;*.jpg;*.jxl;*.pbm;*.ppm;*.png;*.tif;*.tiff;*.webp;*.xcf;*.xpm</FileMasks>
+        <Color>16733695</Color>
+        <Attributes>-*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Audio</Name>
+        <FileMasks>*.ac3;*.dts;*.flac;*.m4a;*.mka;*.mp3;*.opus;*.ogg;*.wav</FileMasks>
+        <Color>14090455</Color>
         <Attributes>-*</Attributes>
       </Filter>
       <Filter>
         <Name>Video</Name>
-        <FileMasks>*.3gp;*.avi;*.flv;*.m2p;*.m2ts;*.m4b;*.m4v;*.mkv;*.mov;*.mp4;*.mpg;*.ogv;*.rm;*.smk;*.ts;*.VOB;*.webm;*.wmv</FileMasks>
-        <Color>16744447</Color>
+        <FileMasks>*.3gp;*.avi;*.flv;*.m2p;*.m2ts;*.m4b;*.m4v;*.mkv;*.mov;*.mp4;*.mpg;*.ogv;*.rm;*.smk;*.VOB;*.webm;*.wmv</FileMasks>
+        <Color>16733695</Color>
         <Attributes>-*</Attributes>
       </Filter>
       <Filter>
-        <Name>Binary</Name>
-        <FileMasks>*.a;*.bc;*.bin;*.class;*.pcf;*.pdf;*.psfu;*.so;*.torrent</FileMasks>
-        <Color>32727</Color>
+        <Name>Structured Documents</Name>
+        <FileMasks>*.djvu;*.dvi;*.odt;*.pdf</FileMasks>
+        <Color>16756480</Color>
+        <Attributes>*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>NT Documents</Name>
+        <FileMasks>*.doc;*.rtf;*.xls</FileMasks>
+        <Color>16733525</Color>
+        <Attributes>*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Binary Code</Name>
+        <FileMasks>*.a;*.bc;*.bin;*.class;*.o;*.so</FileMasks>
+        <Color>43690</Color>
         <Attributes/>
       </Filter>
       <Filter>
-        <Name>Audio</Name>
-        <FileMasks>*.flac;*.m4a;*.mka;*.mp3;*.opus;*.ogg;*.wav</FileMasks>
-        <Color>12531647</Color>
-        <Attributes/>
+        <Name>Binary</Name>
+        <FileMasks>*.otf;*.otb;*.pcf;*.psfu;*.torrent;*.ttf</FileMasks>
+        <Color>16777045</Color>
+        <Attributes>*</Attributes>
+      </Filter>
+      <Filter>
+        <Name>Temporary</Name>
+        <FileMasks>*.aria2;*.aux;*.dist_0000;*.lock;*.log;*.out;*.pid;*.uuid</FileMasks>
+        <Color>6250415</Color>
+        <Attributes>*</Attributes>
       </Filter>
       <Filter>
         <Name>To delete</Name>
-        <FileMasks>*.bak;*.keep;*.lock;*.old;*.orig;* .swp</FileMasks>
-        <Color>2039680</Color>
-        <Attributes/>
+        <FileMasks>*.bak;.keep;*.old;*.orig;*.swp;*~;*#</FileMasks>
+        <Color>255</Color>
+        <Attributes>*</Attributes>
       </Filter>
     </FileFilters>
     <Foreground>12632256</Foreground>
@@ -1742,56 +1784,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="bashrc.d">/etc/bash/</Path>
-                  <Path Filename="bash">/etc/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="..">/var/spool/youtube/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="..">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots S03 E03.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots s01e03 The Witness.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots S03 E02.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="Светлана">/spool/photos sorted/</Path>
+                  <Path Filename="201502">/spool/photos sorted/Светлана/</Path>
+                  <Path Filename="..">/spool/photos sorted/Светлана/201502/</Path>
+                  <Path Filename="..">/spool/photos sorted/Светлана/</Path>
+                  <Path Filename="Полина">/spool/photos sorted/</Path>
+                  <Path Filename="..">/spool/photos sorted/Полина/</Path>
+                  <Path Filename="Ломоносова">/spool/photos sorted/</Path>
+                  <Path Filename="..">/spool/photos sorted/Ломоносова/</Path>
+                  <Path Filename="Константин">/spool/photos sorted/</Path>
+                  <Path Filename="Правец 8">/spool/photos sorted/Константин/</Path>
+                  <Path Filename="..">/spool/photos sorted/Константин/Правец 8/</Path>
+                  <Path Filename="..">/spool/photos sorted/Константин/</Path>
+                  <Path Filename="Иван">/spool/photos sorted/</Path>
+                  <Path Filename="..">/spool/photos sorted/Иван/</Path>
+                  <Path Filename="Дом">/spool/photos sorted/</Path>
+                  <Path Filename="..">/spool/photos sorted/Дом/</Path>
+                  <Path Filename="Вдовины">/spool/photos sorted/</Path>
+                  <Path Filename="..">/spool/photos sorted/Вдовины/</Path>
+                  <Path Filename="..">/spool/photos sorted/</Path>
+                  <Path Filename="photos">/spool/</Path>
+                  <Path Filename="new">/spool/photos/</Path>
+                  <Path Filename="IMG_2078.JPG">/spool/photos/new/</Path>
+                  <Path Filename="photoarchive">/spool/photos/</Path>
+                  <Path Filename="z">/spool/photos/photoarchive/</Path>
+                  <Path Filename="..">/spool/photos/photoarchive/z/</Path>
+                  <Path Filename="Цветные">/spool/photos/photoarchive/</Path>
+                  <Path Filename="..">/spool/photos/photoarchive/Цветные/</Path>
+                  <Path Filename="..">/spool/photos/photoarchive/</Path>
+                  <Path Filename="Отдать маме">/spool/photos/</Path>
+                  <Path Filename="..">/spool/photos/Отдать маме/</Path>
+                  <Path Filename="Ольга">/spool/photos/</Path>
+                  <Path Filename="..">/spool/photos/Ольга/</Path>
+                  <Path Filename="Непонятно">/spool/photos/</Path>
+                  <Path Filename="..">/spool/photos/Непонятно/</Path>
+                  <Path Filename="Неизвестные">/spool/photos/</Path>
+                  <Path Filename="..">/spool/photos/Неизвестные/</Path>
+                  <Path Filename="Неизвестные">/spool/photos/</Path>
+                  <Path Filename="0583 Павел Максимович после рубки дров просит сигарету. Аня.png">/spool/photos/Неизвестные/</Path>
+                  <Path Filename="Неизвестные">/spool/photos/</Path>
+                  <Path Filename="0818 ПОН БКЭ.png">/spool/photos/Неизвестные/</Path>
+                  <Path Filename="Неизвестные">/spool/photos/</Path>
+                  <Path Filename="photos">/spool/</Path>
                   <Path Filename="etc">/</Path>
-                  <Path Filename="gtk-2.0">/etc/</Path>
-                  <Path Filename="gtkrc">/etc/gtk-2.0/</Path>
-                  <Path Filename="gtk-2.0">/etc/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="20220808 ЛСР 105. «Глотатель душ». Дракула уже постучал в вашу дверь….mkv">/var/spool/youtube/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="udev">/etc/</Path>
+                  <Path Filename="etc">/</Path>
+                  <Path Filename="dispatch-conf.conf">/etc/</Path>
                   <Path Filename="home">/</Path>
-                  <Path Filename="redozubov">/home/</Path>
-                  <Path Filename="20220808 ЛСР 105. Глотатель душ. Дракула уже постучал в вашу дверь….mkv">/home/redozubov/</Path>
-                  <Path Filename="redozubov">/home/</Path>
-                  <Path Filename="usr">/</Path>
-                  <Path Filename="share">/usr/</Path>
-                  <Path Filename="themes">/usr/share/</Path>
-                  <Path Filename="Adwaita-dark">/usr/share/themes/</Path>
-                  <Path Filename="gtk-2.0">/usr/share/themes/Adwaita-dark/</Path>
-                  <Path Filename="main.rc">/usr/share/themes/Adwaita-dark/gtk-2.0/</Path>
-                  <Path Filename="gtk-2.0">/usr/share/themes/Adwaita-dark/</Path>
-                  <Path Filename="Adwaita-dark">/usr/share/themes/</Path>
-                  <Path Filename="themes">/usr/share/</Path>
-                  <Path Filename="share">/usr/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="home">/var/</Path>
-                  <Path Filename="root">/var/home/</Path>
-                  <Path Filename=".gnupg">/var/home/root/</Path>
+                  <Path Filename="rust">/home/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="..">/home/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -1802,7 +1844,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>16</ActiveTab>
+        <ActiveTab>17</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <Sortings>
@@ -2453,56 +2495,56 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="amazon">/home/</Path>
+                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="lib">/</Path>
+                  <Path Filename="..">/lib/</Path>
                   <Path Filename="home">/</Path>
-                  <Path Filename="daglabs">/home/</Path>
-                  <Path Filename="..">/home/daglabs/</Path>
-                  <Path Filename="daglabs">/home/</Path>
+                  <Path Filename="movies">/home/</Path>
+                  <Path Filename="Лазаревич. Червь 2">/home/movies/</Path>
+                  <Path Filename="08 Носитель не виноват.mkv">/home/movies/Лазаревич. Червь 2/</Path>
+                  <Path Filename="Лазаревич. Червь 2">/home/movies/</Path>
+                  <Path Filename="..">/home/movies/Лазаревич. Червь 2/</Path>
+                  <Path Filename="South Park. Kyle’s Mom’s a Bitch.mkv">/home/movies/</Path>
+                  <Path Filename="movies">/home/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="CodeCharts.pdf">/home/</Path>
                   <Path Filename="etc">/</Path>
-                  <Path Filename="acpi">/etc/</Path>
-                  <Path Filename="actions">/etc/acpi/</Path>
-                  <Path Filename="..">/etc/acpi/actions/</Path>
-                  <Path Filename="events">/etc/acpi/</Path>
-                  <Path Filename="..">/etc/acpi/events/</Path>
-                  <Path Filename="actions">/etc/acpi/</Path>
-                  <Path Filename="..">/etc/acpi/actions/</Path>
-                  <Path Filename="..">/etc/acpi/</Path>
-                  <Path Filename="bash">/etc/</Path>
-                  <Path Filename="bashrc.d">/etc/bash/</Path>
-                  <Path Filename="bash">/etc/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="..">/var/spool/youtube/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="..">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots S03 E03.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="Love, Death &amp; Robots">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots s01e03 The Witness.mkv">/var/spool/web/Love, Death &amp; Robots/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="Love Death and Robots S03 E02.mkv">/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Path>
-                  <Path Filename="[RuDub] Love Death and Robots S03 [1080p]">/var/spool/web/</Path>
-                  <Path Filename="web">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="..">/etc/</Path>
                   <Path Filename="etc">/</Path>
-                  <Path Filename="gtk-2.0">/etc/</Path>
-                  <Path Filename="gtkrc">/etc/gtk-2.0/</Path>
-                  <Path Filename="gtk-2.0">/etc/</Path>
+                  <Path Filename="X11">/etc/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="local">/usr/</Path>
+                  <Path Filename="bin">/usr/local/</Path>
+                  <Path Filename="..">/usr/local/bin/</Path>
+                  <Path Filename="cf">/usr/local/</Path>
+                  <Path Filename="xkb.cf">/usr/local/cf/</Path>
+                  <Path Filename="cf">/usr/local/</Path>
+                  <Path Filename="local">/usr/</Path>
                   <Path Filename="var">/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="..">/var/spool/youtube/</Path>
-                  <Path Filename="youtube">/var/spool/</Path>
-                  <Path Filename="spool">/var/</Path>
-                  <Path Filename="etc">/</Path>
-                  <Path Filename="gtk-2.0">/etc/</Path>
-                  <Path Filename="gtkrc">/etc/gtk-2.0/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="dev-lang">/var/tmp/portage/</Path>
+                  <Path Filename="rust-1.62.1">/var/tmp/portage/dev-lang/</Path>
+                  <Path Filename="work">/var/tmp/portage/dev-lang/rust-1.62.1/</Path>
+                  <Path Filename="rustc-1.62.1-src">/var/tmp/portage/dev-lang/rust-1.62.1/work/</Path>
+                  <Path Filename="src">/var/tmp/portage/dev-lang/rust-1.62.1/work/rustc-1.62.1-src/</Path>
+                  <Path Filename="..">/var/tmp/portage/dev-lang/rust-1.62.1/work/rustc-1.62.1-src/src/</Path>
+                  <Path Filename="src">/var/tmp/portage/dev-lang/rust-1.62.1/work/rustc-1.62.1-src/</Path>
+                  <Path Filename="rustc-1.62.1-src">/var/tmp/portage/dev-lang/rust-1.62.1/work/</Path>
+                  <Path Filename="work">/var/tmp/portage/dev-lang/rust-1.62.1/</Path>
+                  <Path Filename="rust-1.62.1">/var/tmp/portage/dev-lang/</Path>
+                  <Path Filename="dev-lang">/var/tmp/portage/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="local">/usr/</Path>
+                  <Path Filename="geany">/usr/local/</Path>
+                  <Path Filename="colorschemes">/usr/local/geany/</Path>
+                  <Path Filename="..">/usr/local/geany/colorschemes/</Path>
+                  <Path Filename="colorschemes">/usr/local/geany/</Path>
+                  <Path Filename="c.conf">/usr/local/geany/colorschemes/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2523,47 +2565,6 @@
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="src">/usr/</Path>
-                  <Path Filename="usr">/</Path>
-                  <Path Filename="share">/usr/</Path>
-                  <Path Filename="doc">/usr/share/</Path>
-                  <Path Filename="picolisp-9999">/usr/share/doc/</Path>
-                  <Path Filename="html">/usr/share/doc/picolisp-9999/</Path>
-                  <Path Filename="ref.html">/usr/share/doc/picolisp-9999/html/</Path>
-                  <Path Filename="html">/usr/share/doc/picolisp-9999/</Path>
-                  <Path Filename="picolisp-9999">/usr/share/doc/</Path>
-                  <Path Filename="doc">/usr/share/</Path>
-                  <Path Filename="share">/usr/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="Tlushim_122020_6247.PDF">/var/tmp/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="1">/var/tmp/</Path>
-                  <Path Filename="..">/var/tmp/1/</Path>
-                  <Path Filename="firefox">/var/tmp/</Path>
-                  <Path Filename="..">/var/tmp/firefox/</Path>
-                  <Path Filename="portage">/var/tmp/</Path>
-                  <Path Filename="..">/var/tmp/portage/</Path>
-                  <Path Filename="portage">/var/tmp/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="cache">/</Path>
-                  <Path Filename="chromium">/cache/</Path>
-                  <Path Filename="..">/cache/chromium/</Path>
-                  <Path Filename="pelevin">/cache/</Path>
-                  <Path Filename="..">/cache/pelevin/</Path>
-                  <Path Filename="pelevin">/cache/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="Darude - Before The Storm - 2001">/var/tmp/</Path>
-                  <Path Filename="..">/var/tmp/Darude - Before The Storm - 2001/</Path>
-                  <Path Filename="Darude - Before The Storm - 2001">/var/tmp/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="var">/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="..">/var/tmp/</Path>
-                  <Path Filename="tmp">/var/</Path>
                   <Path Filename="down">/</Path>
                   <Path Filename="Tom and Jerry">/down/</Path>
                   <Path Filename="..">/down/Tom and Jerry/</Path>
@@ -2572,7 +2573,48 @@
                   <Path Filename="..">/var/tmp/portage/</Path>
                   <Path Filename="firefox">/var/tmp/</Path>
                   <Path Filename="..">/var/tmp/firefox/</Path>
-                  <Path Filename="">/var/tmp/</Path>
+                  <Path Filename="portage">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="local">/usr/</Path>
+                  <Path Filename="geany">/usr/local/</Path>
+                  <Path Filename="colorschemes">/usr/local/geany/</Path>
+                  <Path Filename="c.conf">/usr/local/geany/colorschemes/</Path>
+                  <Path Filename="colorschemes">/usr/local/geany/</Path>
+                  <Path Filename="doublecmd">/usr/local/</Path>
+                  <Path Filename="doublecmd.xml">/usr/local/doublecmd/</Path>
+                  <Path Filename="doublecmd">/usr/local/</Path>
+                  <Path Filename="doublecmd.err">/usr/local/doublecmd/</Path>
+                  <Path Filename="doublecmd">/usr/local/</Path>
+                  <Path Filename="..">/usr/local/doublecmd/</Path>
+                  <Path Filename="doublecmd">/usr/local/</Path>
+                  <Path Filename="..">/usr/local/doublecmd/</Path>
+                  <Path Filename="doublecmd">/usr/local/</Path>
+                  <Path Filename="..">/usr/local/doublecmd/</Path>
+                  <Path Filename="doublecmd">/usr/local/</Path>
+                  <Path Filename="local">/usr/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="amazon">/home/</Path>
+                  <Path Filename="redis">/home/amazon/</Path>
+                  <Path Filename="MANIFESTO">/home/amazon/redis/</Path>
+                  <Path Filename="redis">/home/amazon/</Path>
+                  <Path Filename="src">/home/amazon/redis/</Path>
+                  <Path Filename="zmalloc.o">/home/amazon/redis/src/</Path>
+                  <Path Filename="src">/home/amazon/redis/</Path>
+                  <Path Filename="redis">/home/amazon/</Path>
+                  <Path Filename="amazon">/home/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="photos">/var/tmp/</Path>
+                  <Path Filename="Школа">/var/tmp/photos/</Path>
+                  <Path Filename="..">/var/tmp/photos/Школа/</Path>
+                  <Path Filename="Институт">/var/tmp/photos/</Path>
+                  <Path Filename="..">/var/tmp/photos/Институт/</Path>
+                  <Path Filename="Институт">/var/tmp/photos/</Path>
+                  <Path Filename="..">/var/tmp/photos/Институт/</Path>
+                  <Path Filename="Школа">/var/tmp/photos/</Path>
+                  <Path Filename="..">/var/tmp/photos/Школа/</Path>
+                  <Path Filename="Школа">/var/tmp/photos/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2724,13 +2766,7 @@
     <IgnoreListFile>/var/home/root/.config/doublecmd/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="/etc/portage/patches/" Path="/etc/portage/patches"/>
-    <HotDir Name="/var/cache/youtube/" Path="/var/cache/youtube"/>
-    <HotDir Name="/var/db/repos/k/" Path="/var/db/repos/k"/>
-    <HotDir Name="/usr/local/binl/" Path="/usr/local/binl"/>
-    <HotDir Name="/usr/share/doc/picolisp-9999/html/" Path="/usr/share/doc/picolisp-9999/html"/>
-    <HotDir Name="/var/tmp/" Path="/var/tmp"/>
-    <HotDir Name="/var/tmp/portage/" Path="/var/tmp/portage"/>
+    <HotDir Name="youtube" Path="/var/spool/youtube"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>

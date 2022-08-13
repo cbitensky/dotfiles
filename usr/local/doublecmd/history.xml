@@ -2,56 +2,57 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item>/var/home/root/</Item>
-      <Item>/var/home/</Item>
+      <Item>/var/tmp/</Item>
       <Item>/var/</Item>
       <Item>/</Item>
       <Item>/usr/</Item>
-      <Item>/usr/share/</Item>
-      <Item>/usr/share/themes/</Item>
-      <Item>/usr/share/themes/Adwaita-dark/</Item>
-      <Item>/usr/share/themes/Adwaita-dark/gtk-2.0/</Item>
+      <Item>/usr/local/</Item>
+      <Item>/usr/local/doublecmd/</Item>
+      <Item>/home/maskorot/</Item>
       <Item>/home/</Item>
-      <Item>/etc/gtk-2.0/</Item>
       <Item>/etc/</Item>
-      <Item>/var/spool/</Item>
-      <Item>/home/redozubov/</Item>
-      <Item>/var/spool/web/Love, Death &amp; Robots/</Item>
-      <Item>/var/spool/web/</Item>
-      <Item>/var/spool/youtube/</Item>
-      <Item>/var/home/root/.config/</Item>
-      <Item>/var/home/root/.config/gtk-2.0/</Item>
-      <Item>/var/home/root/Downloads/</Item>
-      <Item>/var/home/root/go/</Item>
-      <Item>/var/home/root/go/pkg/</Item>
-      <Item>/var/home/root/go/pkg/mod/</Item>
-      <Item>/var/home/root.config/</Item>
-      <Item>/var/home/root.config/rustfmt/</Item>
-      <Item>/var/home/root.config/rustfmt/Rustfmt.toml.bak/</Item>
-      <Item>/var/home/root.cargo/</Item>
-      <Item>/etc/bash/</Item>
-      <Item>/var/spool/web/[RuDub] Love Death and Robots S03 [1080p]/</Item>
-      <Item>/usr/src/</Item>
-      <Item>/usr/src/linux/</Item>
-      <Item>/etc/portage/package.use/</Item>
-      <Item>/etc/portage/</Item>
-      <Item>/var/cache/</Item>
-      <Item>/var/cache/binpkgs/</Item>
-      <Item>/var/cache/binpkgs/net-im/</Item>
-      <Item>/var/cache/binpkgs/net-im/zoom/</Item>
-      <Item>/var/cache/binpkgs/net-im/teams/</Item>
-      <Item>/home/archive/</Item>
-      <Item>/home/archive/20220530-bloxroute/</Item>
-      <Item>/lib/</Item>
-      <Item>/etc/acpi/</Item>
-      <Item>/etc/acpi/actions/</Item>
-      <Item>/etc/acpi/events/</Item>
-      <Item>/var/cache/binpkgs/x11-libs/</Item>
-      <Item>/var/cache/binpkgs/www-client/</Item>
-      <Item>/var/cache/binpkgs/www-client/w3m/</Item>
-      <Item>/var/cache/binpkgs/www-client/firefox/</Item>
-      <Item>/var/cache/binpkgs/www-client/chromium/</Item>
-      <Item>/var/cache/binpkgs/sys-kernel/</Item>
+      <Item>/spool/</Item>
+      <Item>/spool/photos/</Item>
+      <Item>/spool/photos/Неизвестные/</Item>
+      <Item>/spool/photos/Непонятно/</Item>
+      <Item>/spool/photos/Ольга/</Item>
+      <Item>/spool/photos/Отдать маме/</Item>
+      <Item>/spool/photos/photoarchive/</Item>
+      <Item>/spool/photos/photoarchive/Цветные/</Item>
+      <Item>/spool/photos/photoarchive/z/</Item>
+      <Item>/spool/photos/new/</Item>
+      <Item>/spool/photos sorted/</Item>
+      <Item>/spool/photos sorted/Вдовины/</Item>
+      <Item>/spool/photos sorted/Дом/</Item>
+      <Item>/spool/photos sorted/Иван/</Item>
+      <Item>/spool/photos sorted/Константин/</Item>
+      <Item>/spool/photos sorted/Константин/Правец 8/</Item>
+      <Item>/spool/photos sorted/Ломоносова/</Item>
+      <Item>/spool/photos sorted/Полина/</Item>
+      <Item>/spool/photos sorted/Светлана/</Item>
+      <Item>/spool/photos sorted/Светлана/201502/</Item>
+      <Item>/spool/photos sorted/Фёдор/</Item>
+      <Item>/spool/photos sorted/Эдуард/</Item>
+      <Item>/spool/photos sorted/Эдуард/Фотофильм/</Item>
+      <Item>/spool/photos sorted/Эдуард/Документы/</Item>
+      <Item>/spool/photos sorted/Эдуард/1991 Днепропетровск соревнования/</Item>
+      <Item>/spool/photos sorted/Фотоальбом/</Item>
+      <Item>/spool/photos sorted/Ломоносова/20190107/</Item>
+      <Item>/spool/photos sorted/Ломоносова/20180903/</Item>
+      <Item>/spool/photos sorted/Ломоносова/20100509/</Item>
+      <Item>/spool/photos sorted/Давид/</Item>
+      <Item>/spool/photos sorted/Крым 2013/</Item>
+      <Item>/spool/photos sorted/Крым 2012/</Item>
+      <Item>/spool/photos sorted/Константин Документы/</Item>
+      <Item>/spool/photos sorted/Константин Документы/Загран/</Item>
+      <Item>/var/tmp/photos/</Item>
+      <Item>/var/tmp/photos/Школа/</Item>
+      <Item>/var/tmp/photos/Институт/</Item>
+      <Item>/spool/photos sorted/Константин Документы/Институт/</Item>
+      <Item>/spool/photos sorted/Константин Документы/Трудовая/</Item>
+      <Item>/spool/photos sorted/Константин Документы/Школа/</Item>
+      <Item>/home/amazon/</Item>
+      <Item>/home/amazon/redis/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>
@@ -110,6 +111,9 @@
       <Item>*.tex</Item>
     </FileMask>
     <SearchText>
+      <Item Tag="0">fn span_suggestion</Item>
+      <Item Tag="0">span_suggestion</Item>
+      <Item Tag="0">consider making this binding mutable</Item>
       <Item Tag="0">Бобыл</Item>
       <Item Tag="0">Бытен</Item>
       <Item Tag="0">Трёхлит</Item>
@@ -157,9 +161,6 @@
       <Item Tag="0">app/main.l</Item>
       <Item Tag="0">app</Item>
       <Item Tag="0">load</Item>
-      <Item Tag="0">test</Item>
-      <Item Tag="0">locale</Item>
-      <Item Tag="0">медлит</Item>
     </SearchText>
     <SearchTextPath/>
     <ReplaceText>
@@ -169,6 +170,9 @@
     </ReplaceText>
     <ReplaceTextPath/>
     <CreateDirectories>
+      <Item>Институт</Item>
+      <Item>Школа</Item>
+      <Item>photos</Item>
       <Item>spool</Item>
       <Item>museum</Item>
     </CreateDirectories>
@@ -180,6 +184,8 @@
       <Item>[E]</Item>
     </RenameExtMask>
     <SearchDirectories>
+      <Item>/var/tmp/portage/dev-lang/rust-1.62.1/work/rustc-1.62.1-src/</Item>
+      <Item>/var/tmp/portage/dev-lang/rust-1.62.1/work/rustc-1.62.1-src/src/</Item>
       <Item>/usr/local/s2/./</Item>
       <Item>/usr/local/s2/</Item>
       <Item>/ready/fb2/</Item>
@@ -228,8 +234,6 @@
       <Item>/local/portage/bashrc.d/</Item>
       <Item>/var/db/repos/lto-overlay/</Item>
       <Item>/var/db/</Item>
-      <Item>/var/db/repos/</Item>
-      <Item>/var/db/repos/mv/</Item>
     </SearchDirectories>
     <SearchExcludeFiles/>
     <SearchExcludeDirectories/>

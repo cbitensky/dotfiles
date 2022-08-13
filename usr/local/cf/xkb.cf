@@ -91,8 +91,8 @@ xkb_keycodes "c" {
     <RCTL> = 105;
     <KPDV> = 106;
     <PRSC> = 107;
-//    <RALT> = 108;
-    <RALT> = 134;
+    <RALT> = 108;
+//    <RALT> = 134;
     <HOME> = 110;
       <UP> = 111;
     <PGUP> = 112;
@@ -109,8 +109,8 @@ xkb_keycodes "c" {
     <POWR> = 124;
     <PAUS> = 127;
     <LWIN> = 133;
-//    <RWIN> = 134;
-    <RWIN> = 108;
+    <RWIN> = 134;
+//    <RWIN> = 108;
     <MENU> = 135;
     <FRNT> = 140;
     <FIND> = 144;
