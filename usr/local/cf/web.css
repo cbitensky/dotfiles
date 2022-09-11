@@ -1,3 +1,11 @@
+@-moz-document domain("doc.rust-lang.org") {
+	pre { font-family: monospace !important }
+	.hljs-keyword  { color: #5F5    !important }
+	.hljs-number   { color: #5FF    !important }
+	.hljs-built_in { color: #F5F    !important }
+	.hljs-string   { color: #FF7F7F !important }
+	.hljs-title    { color: #FFF    !important }
+}
 @-moz-document domain("e-services.clalit.co.il") {
 	.LeftBarControls, .separator, .loader, .top_menu_upper_gradient, .top_menu_logo_container, .clalit_logo_link, .footer_wrapper, .service-phone, .loginChannelWrapper, .LoginBottomWrapper, #cover-flow, #cover-index, #loginMiddleContainer, #logo-case, [id$="anner"] { display: none !important }
 	.main_menu { margin-top: 5em !important }
@@ -138,7 +146,7 @@
 }
 
 @-moz-document domain("github.com") {
-	footer, .octicon-mark-github, [href="/marketplace"], [href="/explore"] { display: none !important }
+	footer, .octicon-mark-github, [href="/marketplace"], [href="/explore"], [href^="/join?"], [href^="/join?"] ~ * { display: none !important }
 	.avatar { visibility: hidden !important }
 	body, .UnderlineNav-item { line-height: unset !important }
 	.dropdown-menu { opacity: 1 !important }

@@ -15,6 +15,12 @@ pre_src_prepare() {
 
 post_src_prepare() {
 
+	sed -i '
+		/ConfirmFolderUpload/d
+		s/confirmed = false;/confirmed = true;/
+		' dom/html/HTMLInputElement.cpp || die
+	clog Folder upload confirmation removed
+
 #		/function checkAndFixPublicSuffix(info) {/a return info;
 	sed -i 's/if (suffix == typo) {/if (false) {/' docshell/base/URIFixup.jsm || die
 	clog URI typo fixups disabled

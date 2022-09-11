@@ -1,3 +1,4 @@
+net-vpn/i2pd -upnp
 dev-db/redis ssl
 
 games-fps/xonotic alsa ode

@@ -1,12 +1,13 @@
-[build]
-rustflags = [
-"-C", "link-arg=-Wl,-T,/usr/local/rust/elf64-std.ld",
-"-C", "link-arg=-no-pie"
-]
+#[build]
+#rustflags = [
+#	"-C", "link-arg=-Wl,-T,/usr/local/rust/elf64-std.ld",
+#	"-C", "link-arg=-no-pie"
+#	"-C", "link-arg=-nostartfiles"
+#]
 
 [profile.release]
 lto = true
-opt-level = "z"
+opt-level = "s"
 panic = "abort"
 strip = true
 codegen-units = 1

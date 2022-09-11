@@ -7,7 +7,7 @@ set $mod Mod4
 input * {
 	repeat_rate 40
 	repeat_delay 250
-	xkb_file '/usr/local/cf/xkb.cf'
+	xkb_file '/etc/xkb.cf'
 }
 
 default_border normal 0
@@ -20,9 +20,9 @@ floating_modifier $mod normal
 
 exec_always acpi-lid
 
-bindsym --to-code Caps_Lock input * xkb_switch_layout 0
-bindsym --to-code Shift+Caps_Lock input * xkb_switch_layout 1
-bindsym --to-code Control+Caps_Lock input * xkb_switch_layout 2
+#bindsym --to-code Caps_Lock input * xkb_switch_layout 0
+#bindsym --to-code Shift+Caps_Lock input * xkb_switch_layout 1
+#bindsym --to-code Control+Caps_Lock input * xkb_switch_layout 2
 
 bindsym $mod+Print        exec grim /var/spool/grim/$(date +'%Y%m%d%H%M%S.png')
 bindsym $mod+Shift+Print  exec grim -g "$(slurp)" /var/spool/grim/$(date +'%Y%m%d%H%M%S.png') && pngopt /var/spool/grim/$(date +'%Y%m%d%H%M%S.png')

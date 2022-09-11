@@ -7,6 +7,6 @@ post_src_prepare() {
 }
 
 post_src_install() {
-	sed -i '/CHROMIUM_FLAGS/c CHROMIUM_FLAGS="--no-sandbox"' $D/etc/chromium/default || die
-	clog Added flag: --no-sandbox
+	sed -i '/CHROMIUM_FLAGS/c CHROMIUM_FLAGS="--no-sandbox --allow-file-access-from-files --force-dark-mode"' $D/etc/chromium/default || die
+	clog Added flags: --no-sandbox --allow-file-access-from-files --force-dark-mode
 }

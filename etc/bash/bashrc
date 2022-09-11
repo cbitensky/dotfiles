@@ -66,7 +66,6 @@ preexec_command() {
 
 EDITOR="geany"
 
-alias e="$EDITOR"
 alias rm="rm -rf"
 alias cp="cp -R"
 alias du="du -sbx --block-size=\'1"
@@ -93,7 +92,9 @@ alias e-w="e /usr/local/cf/web.css"
 alias git-g="git --git-dir=/usr/local/git/gentoo-overlay.git --work-tree=/var/db/repos/c"
 alias git-d="git --git-dir=/usr/local/git/dotfiles.git --work-tree=/"
 
-
+e() {
+	setsid $EDITOR "$@"
+}
 
 lwd() {
 	[ -f /tmp/lwd ] && cd `cat /tmp/lwd`

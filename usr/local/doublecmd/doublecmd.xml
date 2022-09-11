@@ -1777,63 +1777,63 @@
             <Sortings>
               <Sorting>
                 <Direction>1</Direction>
-                <Function>11</Function>
+                <Function>12</Function>
               </Sorting>
             </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="Светлана">/spool/photos sorted/</Path>
-                  <Path Filename="201502">/spool/photos sorted/Светлана/</Path>
-                  <Path Filename="..">/spool/photos sorted/Светлана/201502/</Path>
-                  <Path Filename="..">/spool/photos sorted/Светлана/</Path>
-                  <Path Filename="Полина">/spool/photos sorted/</Path>
-                  <Path Filename="..">/spool/photos sorted/Полина/</Path>
-                  <Path Filename="Ломоносова">/spool/photos sorted/</Path>
-                  <Path Filename="..">/spool/photos sorted/Ломоносова/</Path>
-                  <Path Filename="Константин">/spool/photos sorted/</Path>
-                  <Path Filename="Правец 8">/spool/photos sorted/Константин/</Path>
-                  <Path Filename="..">/spool/photos sorted/Константин/Правец 8/</Path>
-                  <Path Filename="..">/spool/photos sorted/Константин/</Path>
-                  <Path Filename="Иван">/spool/photos sorted/</Path>
-                  <Path Filename="..">/spool/photos sorted/Иван/</Path>
-                  <Path Filename="Дом">/spool/photos sorted/</Path>
-                  <Path Filename="..">/spool/photos sorted/Дом/</Path>
-                  <Path Filename="Вдовины">/spool/photos sorted/</Path>
-                  <Path Filename="..">/spool/photos sorted/Вдовины/</Path>
-                  <Path Filename="..">/spool/photos sorted/</Path>
-                  <Path Filename="photos">/spool/</Path>
-                  <Path Filename="new">/spool/photos/</Path>
-                  <Path Filename="IMG_2078.JPG">/spool/photos/new/</Path>
-                  <Path Filename="photoarchive">/spool/photos/</Path>
-                  <Path Filename="z">/spool/photos/photoarchive/</Path>
-                  <Path Filename="..">/spool/photos/photoarchive/z/</Path>
-                  <Path Filename="Цветные">/spool/photos/photoarchive/</Path>
-                  <Path Filename="..">/spool/photos/photoarchive/Цветные/</Path>
-                  <Path Filename="..">/spool/photos/photoarchive/</Path>
-                  <Path Filename="Отдать маме">/spool/photos/</Path>
-                  <Path Filename="..">/spool/photos/Отдать маме/</Path>
-                  <Path Filename="Ольга">/spool/photos/</Path>
-                  <Path Filename="..">/spool/photos/Ольга/</Path>
-                  <Path Filename="Непонятно">/spool/photos/</Path>
-                  <Path Filename="..">/spool/photos/Непонятно/</Path>
-                  <Path Filename="Неизвестные">/spool/photos/</Path>
-                  <Path Filename="..">/spool/photos/Неизвестные/</Path>
-                  <Path Filename="Неизвестные">/spool/photos/</Path>
-                  <Path Filename="0583 Павел Максимович после рубки дров просит сигарету. Аня.png">/spool/photos/Неизвестные/</Path>
-                  <Path Filename="Неизвестные">/spool/photos/</Path>
-                  <Path Filename="0818 ПОН БКЭ.png">/spool/photos/Неизвестные/</Path>
-                  <Path Filename="Неизвестные">/spool/photos/</Path>
-                  <Path Filename="photos">/spool/</Path>
-                  <Path Filename="etc">/</Path>
-                  <Path Filename="udev">/etc/</Path>
-                  <Path Filename="etc">/</Path>
-                  <Path Filename="dispatch-conf.conf">/etc/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="Ostrov sokrovish - BLUEBIRD">/var/spool/web/</Path>
+                  <Path Filename="BDMV">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/BDMV/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="aladdin">/var/spool/web/</Path>
+                  <Path Filename="h264.mkv">/var/spool/web/aladdin/</Path>
+                  <Path Filename="aladdin">/var/spool/web/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
                   <Path Filename="home">/</Path>
                   <Path Filename="rust">/home/</Path>
+                  <Path Filename="functions">/home/rust/</Path>
+                  <Path Filename="..">/home/rust/functions/</Path>
+                  <Path Filename="temp">/home/rust/</Path>
+                  <Path Filename="src">/home/rust/temp/</Path>
+                  <Path Filename="main.rs">/home/rust/temp/src/</Path>
+                  <Path Filename="src">/home/rust/temp/</Path>
+                  <Path Filename="guessing_game">/home/rust/</Path>
+                  <Path Filename="src">/home/rust/guessing_game/</Path>
+                  <Path Filename="..">/home/rust/guessing_game/src/</Path>
+                  <Path Filename="src">/home/rust/guessing_game/</Path>
+                  <Path Filename="guessing_game">/home/rust/</Path>
+                  <Path Filename="..">/home/rust/guessing_game/</Path>
+                  <Path Filename="hello_cargo">/home/rust/</Path>
+                  <Path Filename="..">/home/rust/hello_cargo/</Path>
+                  <Path Filename="hello_cargo">/home/rust/</Path>
+                  <Path Filename="rust">/home/</Path>
+                  <Path Filename="usr">/</Path>
+                  <Path Filename="bin">/usr/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="..">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="images">/var/spool/</Path>
+                  <Path Filename="log">/var/</Path>
+                  <Path Filename="spool">/</Path>
+                  <Path Filename="..">/spool/</Path>
                   <Path Filename="home">/</Path>
-                  <Path Filename="..">/home/</Path>
+                  <Path Filename="16tons">/home/</Path>
+                  <Path Filename="spool">/</Path>
+                  <Path Filename="..">/spool/</Path>
+                  <Path Filename="spool">/</Path>
+                  <Path Filename="20220902-yRmOWcWdQAo-OverSimplified-The First Punic War - OverSimplified (Part 1).mkv">/var/spool/youtube/</Path>
+                  <Path Filename="..">/var/spool/web/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2558,63 +2558,63 @@
             <Sortings>
               <Sorting>
                 <Direction>1</Direction>
-                <Function>11</Function>
+                <Function>12</Function>
               </Sorting>
             </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="down">/</Path>
-                  <Path Filename="Tom and Jerry">/down/</Path>
-                  <Path Filename="..">/down/Tom and Jerry/</Path>
-                  <Path Filename="silva">/down/</Path>
-                  <Path Filename="down">/</Path>
-                  <Path Filename="..">/var/tmp/portage/</Path>
-                  <Path Filename="firefox">/var/tmp/</Path>
-                  <Path Filename="..">/var/tmp/firefox/</Path>
-                  <Path Filename="portage">/var/tmp/</Path>
-                  <Path Filename="tmp">/var/</Path>
-                  <Path Filename="usr">/</Path>
-                  <Path Filename="local">/usr/</Path>
-                  <Path Filename="geany">/usr/local/</Path>
-                  <Path Filename="colorschemes">/usr/local/geany/</Path>
-                  <Path Filename="c.conf">/usr/local/geany/colorschemes/</Path>
-                  <Path Filename="colorschemes">/usr/local/geany/</Path>
-                  <Path Filename="doublecmd">/usr/local/</Path>
-                  <Path Filename="doublecmd.xml">/usr/local/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/local/</Path>
-                  <Path Filename="doublecmd.err">/usr/local/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/local/</Path>
-                  <Path Filename="..">/usr/local/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/local/</Path>
-                  <Path Filename="..">/usr/local/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/local/</Path>
-                  <Path Filename="..">/usr/local/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/local/</Path>
-                  <Path Filename="local">/usr/</Path>
-                  <Path Filename="home">/</Path>
-                  <Path Filename="amazon">/home/</Path>
-                  <Path Filename="redis">/home/amazon/</Path>
-                  <Path Filename="MANIFESTO">/home/amazon/redis/</Path>
-                  <Path Filename="redis">/home/amazon/</Path>
-                  <Path Filename="src">/home/amazon/redis/</Path>
-                  <Path Filename="zmalloc.o">/home/amazon/redis/src/</Path>
-                  <Path Filename="src">/home/amazon/redis/</Path>
-                  <Path Filename="redis">/home/amazon/</Path>
-                  <Path Filename="amazon">/home/</Path>
+                  <Path Filename="20220819-nK3w1V4q2c8-MinuteEarth-Volcano VS Glacier.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/web/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="20220819-nK3w1V4q2c8-MinuteEarth-Volcano VS Glacier.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="Top Gun Maverick.2022.1080p IMAX.NewComers.mkv">/var/spool/web/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
                   <Path Filename="var">/</Path>
                   <Path Filename="tmp">/var/</Path>
-                  <Path Filename="photos">/var/tmp/</Path>
-                  <Path Filename="Школа">/var/tmp/photos/</Path>
-                  <Path Filename="..">/var/tmp/photos/Школа/</Path>
-                  <Path Filename="Институт">/var/tmp/photos/</Path>
-                  <Path Filename="..">/var/tmp/photos/Институт/</Path>
-                  <Path Filename="Институт">/var/tmp/photos/</Path>
-                  <Path Filename="..">/var/tmp/photos/Институт/</Path>
-                  <Path Filename="Школа">/var/tmp/photos/</Path>
-                  <Path Filename="..">/var/tmp/photos/Школа/</Path>
-                  <Path Filename="Школа">/var/tmp/photos/</Path>
+                  <Path Filename="var">/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="..">/var/tmp/</Path>
+                  <Path Filename="tmp">/var/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="..">/home/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="20220821-mAgKw__y88I-Bushwacker-Сионизм и возникновение современного Израиля.mkv">/var/spool/youtube/</Path>
+                  <Path Filename="youtube">/var/spool/</Path>
+                  <Path Filename="..">/var/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="telaviv-noise.webp">/home/</Path>
+                  <Path Filename="..">/var/spool/youtube/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="Ostrov sokrovish - BLUEBIRD">/var/spool/web/</Path>
+                  <Path Filename="BDMV">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="STREAM">/var/spool/web/Ostrov sokrovish - BLUEBIRD/BDMV/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/BDMV/STREAM/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/BDMV/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="Ostrov sokrovish - BLUEBIRD">/var/spool/web/</Path>
+                  <Path Filename="BDMV">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/BDMV/</Path>
+                  <Path Filename="..">/var/spool/web/Ostrov sokrovish - BLUEBIRD/</Path>
+                  <Path Filename="aladdin">/var/spool/web/</Path>
+                  <Path Filename="ALaddin HD 720p Hebrew Dubbed (Made by ALiS).mkv">/var/spool/web/aladdin/</Path>
+                  <Path Filename="aladdin">/var/spool/web/</Path>
+                  <Path Filename="ALaddin HD 720p Hebrew Dubbed (Made by ALiS).mkv">/var/spool/web/aladdin/</Path>
+                  <Path Filename="aladdin">/var/spool/web/</Path>
+                  <Path Filename="web">/var/spool/</Path>
+                  <Path Filename="spool">/var/</Path>
+                  <Path Filename="spool">/</Path>
+                  <Path Filename="..">/spool/</Path>
+                  <Path Filename="home">/</Path>
+                  <Path Filename="sessions">/home/</Path>
+                  <Path Filename="spool">/</Path>
+                  <Path Filename="..">/spool/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -2766,7 +2766,9 @@
     <IgnoreListFile>/var/home/root/.config/doublecmd/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="youtube" Path="/var/spool/youtube"/>
+    <HotDir Name="/var/spool/youtube/" Path="/var/spool/youtube"/>
+    <HotDir Name="/var/spool/web/" Path="/var/spool/web"/>
+    <HotDir Name="/var/home/root/" Path="/var/home/root"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
