@@ -1,16 +1,8 @@
-#[build]
-#rustflags = [
-#	"-C", "link-arg=-Wl,-T,/usr/local/rust/elf64-std.ld",
-#	"-C", "link-arg=-no-pie"
-#	"-C", "link-arg=-nostartfiles"
-#]
-
-[profile.release]
-lto = true
-opt-level = "s"
-panic = "abort"
-strip = true
-codegen-units = 1
+[alias]
+b = "build --release"
+c = "check --release"
+t = "test --release"
+r = "run --release"
 
 [cargo-new]
 vcs = "none"

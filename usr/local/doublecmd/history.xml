@@ -2,56 +2,56 @@
 <doublecmd>
   <History>
     <Navigation>
-      <Item>/var/spool/web/</Item>
-      <Item>/var/spool/</Item>
-      <Item>/var/spool/youtube/</Item>
       <Item>/</Item>
-      <Item>/home/</Item>
       <Item>/var/</Item>
-      <Item>/usr/</Item>
-      <Item>/usr/local/</Item>
-      <Item>/usr/local/rust/</Item>
-      <Item>/var/spool/web/aladdin/</Item>
+      <Item>/var/spool/</Item>
       <Item>/var/tmp/</Item>
-      <Item>/var/tmp/portage/</Item>
-      <Item>/var/tmp/portage/sys-libs/</Item>
-      <Item>/var/tmp/portage/sys-libs/glibc-2.35-r8/</Item>
-      <Item>/var/tmp/portage/sys-libs/glibc-2.35-r8/work/</Item>
-      <Item>/var/tmp/portage/sys-libs/glibc-2.35-r8/work/glibc-2.35/</Item>
-      <Item>/var/tmp/portage/sys-libs/glibc-2.35-r8/work/glibc-2.35/dlfcn/</Item>
+      <Item>/var/spool/youtube/</Item>
+      <Item>/home/</Item>
+      <Item>/home/redozubov/</Item>
       <Item>/home/rust/</Item>
-      <Item>/home/rust/helloworld_tiny/</Item>
-      <Item>/home/rust/helloworld_tiny/src/</Item>
-      <Item>/home/rust/helloworld_tiny/.cargo/</Item>
-      <Item>/home/rust/hello_world_tiny/</Item>
-      <Item>/home/rust/hello_world_min_size/</Item>
-      <Item>/home/rust/hello_world_min_size/target/</Item>
-      <Item>/home/rust/hello_world_min_size/target/release/</Item>
-      <Item>/home/rust/hello_world_min_size/src/</Item>
-      <Item>/home/rust/hello_world_min_size/.cargo/</Item>
-      <Item>/home/rust/hello_world_min_size/target/debug/</Item>
+      <Item>/home/rust/hello_syscall/</Item>
+      <Item>/home/rust/hello_syscall/src/</Item>
       <Item>/home/rust/fahrenheit/</Item>
-      <Item>/home/rust/fahrenheit/src/</Item>
+      <Item>/home/rust/guessing_game/</Item>
+      <Item>/home/rust/guessing_game/src/</Item>
+      <Item>/home/books/Суворов Виктор. Кузькина мать/</Item>
+      <Item>/home/books/</Item>
       <Item>/var/home/</Item>
       <Item>/var/home/root/</Item>
       <Item>/var/home/root/.cargo/</Item>
       <Item>/var/home/root/.cargo/registry/</Item>
       <Item>/var/home/root/.cargo/registry/src/</Item>
-      <Item>/home/rust/fahrenheit/target/</Item>
-      <Item>/home/rust/fahrenheit/target/x86_64-unknown-linux-gnu/</Item>
-      <Item>/home/rust/fahrenheit/target/x86_64-unknown-linux-gnu/release/</Item>
-      <Item>/home/rust/fahrenheit/target/x86_64-unknown-linux-gnu/release/deps/</Item>
-      <Item>/home/rust/fahrenheit/target/x86_64-unknown-linux-gnu/release/build/</Item>
-      <Item>/home/rust/fahrenheit/target/x86_64-unknown-linux-gnu/release/build/libc-6c38d0dd11e65725/</Item>
-      <Item>/home/rust/guessing_game/</Item>
-      <Item>/home/rust/guessing_game/src/</Item>
-      <Item>/home/rust/guessing_game/target/</Item>
-      <Item>/home/rust/functions/</Item>
       <Item>/var/home/root/.cargo/registry/src/github.com-1ecc6299db9ec823/</Item>
-      <Item>/home/rust/fahrenheit/target/debug/</Item>
-      <Item>/var/tmp/photos/</Item>
-      <Item>/var/tmp/syscall.rs/</Item>
-      <Item>/var/tmp/syscall.rs/src/</Item>
+      <Item>/var/home/root/.cargo/registry/src/github.com-1ecc6299db9ec823/syscalls-0.6.6/</Item>
+      <Item>/var/home/root/.cargo/registry/src/github.com-1ecc6299db9ec823/syscalls-0.6.6/src/</Item>
+      <Item>/var/home/root/.cargo/registry/src/github.com-1ecc6299db9ec823/syscalls-0.6.6/src/syscall/</Item>
+      <Item>/var/home/root/.cargo/registry/src/github.com-1ecc6299db9ec823/syscalls-0.6.6/src/arch/</Item>
+      <Item>/var/home/root/.cache/</Item>
+      <Item>/usr/</Item>
+      <Item>/usr/local/</Item>
+      <Item>/home/rust/fahrenheit/src/</Item>
+      <Item>/home/rust/fahrenheit/target/</Item>
+      <Item>/usr/local/rust/</Item>
+      <Item>/home/rust/fahrenheit/.cargo/</Item>
+      <Item>/home/rust/hello_libc/</Item>
+      <Item>/home/rust/hello_libc/.cargo/</Item>
+      <Item>/home/rust/hello_libc/.cargo1/</Item>
+      <Item>/home/rust/hello_std/</Item>
+      <Item>/home/rust/hello_std/.cargo/</Item>
+      <Item>/home/rust/hello_syscall/.git/</Item>
+      <Item>/home/rust/hello_syscall/.git/info/</Item>
+      <Item>/home/rust/hello_syscall/.cargo1/</Item>
+      <Item>/home/rust/hello_syscall/.cargo/</Item>
+      <Item>/home/rust/overflow/</Item>
+      <Item>/home/rust/overflow/src/</Item>
+      <Item>/home/rust/functions/</Item>
+      <Item>/home/rust/functions/src/</Item>
+      <Item>/home/rust/variables/</Item>
+      <Item>/home/rust/variables/src/</Item>
+      <Item>/var/spool/web/aladdin/</Item>
+      <Item>/var/spool/web/</Item>
+      <Item>/home/sessions/</Item>
     </Navigation>
     <CommandLine>
       <Item>yo</Item>
@@ -110,6 +110,10 @@
       <Item>adwai</Item>
     </FileMask>
     <SearchText>
+      <Item Tag="0">rela.</Item>
+      <Item Tag="0">world</Item>
+      <Item Tag="0">новая сказка</Item>
+      <Item Tag="0">Новая новая сказка</Item>
       <Item Tag="0">dlopen</Item>
       <Item Tag="0">dlopen_implementation</Item>
       <Item Tag="0">-&gt; !</Item>
@@ -156,10 +160,6 @@
       <Item Tag="0">TStp</Item>
       <Item Tag="0">*TStp</Item>
       <Item Tag="0">u0_a114</Item>
-      <Item Tag="0">#!</Item>
-      <Item Tag="0">,"male"</Item>
-      <Item Tag="0">"Currently edited by</Item>
-      <Item Tag="0">Boolean input expected</Item>
     </SearchText>
     <SearchTextPath/>
     <ReplaceText>
@@ -186,6 +186,9 @@
       <Item>[E]</Item>
     </RenameExtMask>
     <SearchDirectories>
+      <Item>/home/rust/hello_syscall/</Item>
+      <Item>/var/spool/web/Сергей Лукьяненко-Собрание сочинений/</Item>
+      <Item>/var/spool/web/Сергей Лукьяненко-Собрание сочинений/Антологии/</Item>
       <Item>/var/tmp/portage/sys-libs/glibc-2.35-r8/work/glibc-2.35/</Item>
       <Item>/var/tmp/portage/sys-libs/glibc-2.35-r8/work/glibc-2.35/dlfcn/</Item>
       <Item>/var/home/root/.cargo/registry/src/github.com-1ecc6299db9ec823/</Item>
@@ -233,9 +236,6 @@
       <Item>/var/tmp/portage/net-libs/webkit-gtk-2.28.4/work/webkitgtk-2.28.4/Source/WebCore/</Item>
       <Item>/var/tmp/portage/net-libs/webkit-gtk-2.28.4/work/webkitgtk-2.28.4/Tools/MiniBrowser/gtk/</Item>
       <Item>/usr/share/picolisp/lib/</Item>
-      <Item>/etc/portage/package.use/</Item>
-      <Item>/etc/portage/package.accept_keywords/</Item>
-      <Item>/usr/share/texmf-dist/fonts/</Item>
     </SearchDirectories>
     <SearchExcludeFiles/>
     <SearchExcludeDirectories/>

@@ -143,6 +143,7 @@ dev-scheme/guile -deprecated regex
 # pgo doesn’t compile
 media-sound/apulse sdk
 x11-libs/gtk+ X
+x11-libs/libxkbcommon X
 www-client/firefox* bindist eme-free hwaccel lto pulseaudio -screenshot -gmp-autoupdate -pgo -clang
 www-client/firefox-bin -pulseaudio
 sys-devel/llvm gold
@@ -272,7 +273,7 @@ dev-qt/qtwidgets gtk dbus
 dev-qt/qtdeclarative -widgets
 dev-qt/qtmultimedia -widgets
 
-dev-lang/rust clippy doc nightly rls rust-src rustfmt
+dev-lang/rust clippy doc nightly rls rust-analyzer rust-src rustfmt
 virtual/rust rustfmt
 sys-devel/gdb python source-highlight
 

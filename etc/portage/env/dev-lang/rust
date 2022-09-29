@@ -42,6 +42,6 @@ pkg_postinst() {
 	symlinks symlinks_postinst
 }
 
-pkg_postrm() {
-	symlinks symlinks_postrm
-}
+#pkg_postrm() {
+#	symlinks symlinks_postrm
+#}

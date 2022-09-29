@@ -139,7 +139,7 @@
 }
 
 @-moz-document domain("yad2.co.il") {
-	.gallery-popup-side, .new-splash-screen, .recommendation_ads, .mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right, .new_my_yad2, .logo-wrapper, .inner_aside_container, .my_alerts_search_bar_button, .accessibility_btn, .my_alerts_widget_item, .recommended_agencies, .yad1, .y2_footer, .category_header, .magazine_per_category, .externalLink, .footer_wrapper, .leading_element, .tools_elements, .desktop_header, .right_mega, .left_mega, .widget-floating, #INDbtnWrap { display: none !important }
+	.new_projects, .gallery-popup-side, .new-splash-screen, .recommendation_ads, .mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right, .new_my_yad2, .logo-wrapper, .inner_aside_container, .my_alerts_search_bar_button, .accessibility_btn, .my_alerts_widget_item, .recommended_agencies, .yad1, .y2_footer, .category_header, .magazine_per_category, .externalLink, .footer_wrapper, .leading_element, .tools_elements, .desktop_header, .right_mega, .left_mega, .widget-floating, #INDbtnWrap { display: none !important }
 
 	.new_header { border: none !important }
 	* { box-shadow: none !important; transition: none !important }

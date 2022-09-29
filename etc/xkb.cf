@@ -454,10 +454,9 @@ key <RTSH> { [ Shift_R        ] };
 key <LCTL> { [ Control_L      ] };
 key <LWIN> { [ Super_L        ] };
 key <LALT> { [ Alt_L          ] };
-key <RWIN> { type="L2", [ ISO_Last_Group , Super_R   ] };
-key <MENU> { type="L2", [ XF86LogGrabInfo, Menu      ] };
+key <RWIN> { type="L2", [ XF86LogGrabInfo, Super_R   ] };
+key <MENU> { type="L2", [ ISO_Last_Group,  Menu      ] };
 key <RCTL> { type="L2", [ ISO_First_Group, Control_R ] };
-
 
 key  <INS> { [ Insert ] };
 key <HOME> { [   Home ] };
