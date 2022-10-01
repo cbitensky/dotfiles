@@ -1,3 +1,6 @@
+#libjxl
+dev-cpp/highway
+
 net-vpn/i2pd
 
 x11-terms/st **
@@ -39,9 +42,11 @@ dev-libs/wayland
 dev-util/wayland-scanner
 dev-util/meson
 
+games-emulation/dosbox-staging
+media-libs/iir1
+
 games-strategy/fheroes2 **
 media-sound/ocp **
-games-emulation/dosbox-staging
 dev-go/gopls
 app-emacs/go-mode
 media-libs/flif **

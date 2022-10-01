@@ -1,0 +1,13 @@
+diff --git a/tools/make_unicode b/tools/make_unicode
+index 667df5e..6868e57 100755
+--- a/tools/make_unicode
++++ b/tools/make_unicode
+@@ -4652,7 +4652,7 @@ sub build_locale_data()
+ 
+         my $ssortlocale = $loc->{sortlocale} || ($neutral ? "$sname-$territory" : $sname);
+         my $idefaultlanguage = defined $lcnames{$ssortlocale} ? $lcnames{$ssortlocale}->{lcid} : undef;
+-        $idefaultlanguage = $lcnames{"en-US"}->{lcid} unless $ssortlocale;
++        $idefaultlanguage = $lcnames{"uk-UA"}->{lcid} unless $ssortlocale;
+         (my $siso639langname = $sname) =~ s/-.*$//;
+         my $siso639langname2 = $iso639{$siso639langname} || $siso639langname;
+         my $sopentypelang = sprintf "%-4s", locale_entry( $loc, "sopentypelang", uc $siso639langname2 );

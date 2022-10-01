@@ -1,3 +1,6 @@
+@-moz-document domain("lleo.me") {
+	#logindiv { display: none !important  }
+}
 @-moz-document domain("doc.rust-lang.org") {
 	pre { font-family: monospace !important }
 	.hljs-keyword  { color: #5F5    !important }

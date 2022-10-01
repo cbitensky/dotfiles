@@ -18,3 +18,9 @@
 	current = brightcyan
 [init]
 	defaultBranch = main
+[safe]
+	directory = /var/db/repos/slyfox
+	directory = /var/db/repos/mv
+	directory = /var/db/repos/guru
+	directory = /var/db/repos/lto-overlay
+	directory = /var/db/repos/lanodanOverlay

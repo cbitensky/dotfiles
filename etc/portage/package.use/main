@@ -20,13 +20,14 @@ sys-libs/ncurses -minimal
 net-libs/nodejs npm ssl
 
 app-portage/portage-bashrc-mv -ccache -remove-la -title
-
 app-office/scribus -templates
 media-libs/libjxl -skcms -sjpeg -openexr gdk-pixbuf gimp tools
 app-arch/libarchive bzip2
 
+
 gui-apps/foot -themes
-app-emulation/wine* -gecko -mono -realtime -run-exes -udev -udisks -unwind -xcomposite
+app-emulation/wine* X -gecko -mingw -mono -realtime -run-exes -sdl -udev -udisks -unwind -xcomposite
+app-emulation/wine-wayland -X
 
 sys-libs/zlib minizip
 media-sound/ocp X alsa flac
